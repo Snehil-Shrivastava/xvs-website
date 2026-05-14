@@ -10,6 +10,7 @@ const HomeHeading = () => {
           src={spinngLambda}
           alt=""
           className="inline-block 2240p:w-67.5 2xl:-top-11 2xl:-left-2.5 relative"
+          priority={true}
         />
       </span>
       <span>perience</span>
