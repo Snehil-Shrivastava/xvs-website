@@ -25,7 +25,7 @@ export default function Home() {
     //   </div>
     // </div>
 
-    <div className="h-[85vh] relative">
+    <div className="h-screen relative">
       <RepeatingLambdaBg />
     </div>
   );
