@@ -26,7 +26,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav>
+    <nav className="fixed inset-x-0 top-0">
       <div className="flex justify-between px-30 pt-18">
         {/* Navbar Logo */}
         <Link

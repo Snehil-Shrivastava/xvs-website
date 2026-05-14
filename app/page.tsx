@@ -3,6 +3,7 @@
 import Lottie from "lottie-react";
 import lottieAnimation from "@/public/lottie-animation/data.json";
 import RepeatingLambdaBg from "@/components/RepeatingLambdaBg";
+import HomePage from "@/pages/HomePage";
 
 export default function Home() {
   return (
@@ -25,8 +26,9 @@ export default function Home() {
     //   </div>
     // </div>
 
-    <div className="h-screen relative">
+    <>
       <RepeatingLambdaBg />
-    </div>
+      <HomePage />
+    </>
   );
 }

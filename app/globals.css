@@ -4,6 +4,7 @@
   --background: #282828;
   --foreground: #ffffff;
   --brand-orange: #f79839;
+  --brand-orange-light: #ffad40;
 }
 
 @theme inline {
@@ -11,6 +12,7 @@
   --color-foreground: var(--foreground);
   --color-brand-dark: var(--background);
   --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-light: var(--brand-orange-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-calSans: var(--font-cal-sans);

@@ -223,7 +223,7 @@ const RepeatingLambdaBg = ({ className = "" }: { className?: string }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`absolute inset-0 -top-40 md:h-screen max-md:h-80 z-0 select-none overflow-hidden ${className}`}
+      className={`absolute inset-0 md:h-[95vh] max-md:h-80 z-0 select-none overflow-hidden ${className}`}
     >
       <div
         ref={baseRef}
