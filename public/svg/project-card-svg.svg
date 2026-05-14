@@ -1,0 +1,10 @@
+<svg width="184" height="166" viewBox="0 0 184 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="layer">
+<path id="Vector" d="M89.2838 164.283L1.61719 112.865L94.1027 63.5007L181.769 114.918L89.2838 164.283Z" stroke="#F3EDDE" stroke-width="1.58028" stroke-miterlimit="10"/>
+<foreignObject x="-18.3313" y="12.966" width="220.049" height="139.255"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(9.17px);clip-path:url(#bgblur_0_3634_1951_clip_path);height:100%;width:100%"></div></foreignObject><path id="Vector_2" data-figma-bg-blur-radius="18.3313" d="M89.2838 132.984L1.61719 81.5668L94.1027 32.2026L181.769 83.6202L89.2838 132.984Z" fill="#282828" fill-opacity="0.4" stroke="#F79839" stroke-width="1.58028" stroke-miterlimit="10"/>
+<path id="Vector_3" d="M89.2838 101.687L1.61719 50.2696L94.1027 0.905396L181.769 52.323L89.2838 101.687Z" stroke="#F3EDDE" stroke-width="1.58028" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_3634_1951_clip_path" transform="translate(18.3313 -12.966)"><path d="M89.2838 132.984L1.61719 81.5668L94.1027 32.2026L181.769 83.6202L89.2838 132.984Z"/>
+</clipPath></defs>
+</svg>
