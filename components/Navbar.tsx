@@ -115,13 +115,16 @@ export default function Navbar() {
 
         {/* Fullscreen Circular Menu */}
         <div
-          className="fixed inset-0 z-40 bg-brand-dark flex justify-center items-center transition-all duration-700 ease-in-out"
+          className="fixed inset-0 z-40 bg-brand-dark flex justify-center items-center pointer-events-none"
           style={{
             // The magic: Animates from a 0px circle to a 150vw circle.
-            // calc(100% - 3rem) 3rem aligns the circle's origin perfectly with the hamburger button.
+            // calc(100% - 9rem) 3rem aligns the circle's origin perfectly with the hamburger button.
             clipPath: isOpen
-              ? "circle(200vw at calc(100% - 3rem) 3rem)"
-              : "circle(0px at calc(100% - 3rem) 3rem)",
+              ? "circle(200vw at calc(100% - 9rem) 7rem)"
+              : "circle(0px at calc(100% - 9rem) 7rem)",
+            transition: "clip-path 0.8s cubic-bezier(0.76, 0, 0.24, 1)",
+            willChange: "clip-path",
+            pointerEvents: isOpen ? "auto" : "none",
           }}
         >
           <NavMenu />

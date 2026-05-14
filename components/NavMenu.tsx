@@ -92,25 +92,3 @@ const NavMenu = () => {
 };
 
 export default NavMenu;
-
-//   <Link href="https://www.behance.net/xVSCreations" target="_blank">
-//     <Image src={behance} alt="" className="" />
-//   </Link>
-//   <Link href="https://www.instagram.com/xvscreations" target="_blank">
-//     <Image src={instagram} alt="" className="" />
-//   </Link>
-//   <Link href="https://www.dribbble.com/xvscreations" target="_blank">
-//     <Image src={dribble} alt="" className="" />
-//   </Link>
-//   <Link href="https://www.facebook.com/xVSCreations" target="_blank">
-//     <Image src={facebook} alt="" className="" />
-//   </Link>
-//   <Link
-//     href="https://www.linkedin.com/company/xvs-creations"
-//     target="_blank"
-//   >
-//     <Image src={linkedin} alt="" className="" />
-//   </Link>
-//   <Link href="https://x.com/xvscreations" target="_blank">
-//     <Image src={twitter} alt="" className="" />
-//   </Link>
