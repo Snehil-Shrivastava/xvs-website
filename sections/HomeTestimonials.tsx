@@ -1,7 +1,7 @@
 import LogoMarquee from "@/components/LogoMarquee";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import { HomeClientLogos, HomeTestimonial } from "@/lib/data";
+import { HomeClientLogos } from "@/lib/data";
 
 const HomeTestimonials = () => {
   const logos = [...HomeClientLogos, ...HomeClientLogos];

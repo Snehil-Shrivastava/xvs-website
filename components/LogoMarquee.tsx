@@ -52,16 +52,7 @@ export default function LogoMarquee({
           - overflow-hidden clips the scrolling strip
           - mask fades logos in/out at the edges for a polished look
       */}
-      <div
-        className="marquee-root relative w-full overflow-hidden py-10"
-        // style={{
-        //   // Soft edge fade using a CSS mask
-        //   WebkitMaskImage:
-        //     "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
-        //   maskImage:
-        //     "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
-        // }}
-      >
+      <div className="marquee-root relative w-full overflow-hidden py-10">
         {/* Scrolling track — rendered twice inside to create seamless loop */}
         <div className="marquee-track flex w-max" style={{ gap: `${gap}px` }}>
           {track.map((logo, i) => (
