@@ -5,10 +5,12 @@ const SectionHeading = ({
   headingText,
   buttonText,
   buttonIcon,
+  desc,
 }: {
   headingText: string;
   buttonText: string;
   buttonIcon?: string;
+  desc?: string;
 }) => {
   const lastIndex = headingText.length - 1;
 
@@ -42,6 +44,11 @@ const SectionHeading = ({
           {buttonText}
         </span>
       </Link>
+      {desc && (
+        <p className="absolute bottom-5 inset-x-0 text-center text-brand-cream 2240p:text-xl">
+          {desc}
+        </p>
+      )}
     </div>
   );
 };

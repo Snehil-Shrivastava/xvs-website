@@ -15,6 +15,7 @@ import "./styles/ServicesCarousel.css";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import GlowCard from "./Glowcard";
+import Image from "next/image";
 
 const ServicesCarousel = () => {
   const servicesData = HomeServicesData;
@@ -25,7 +26,7 @@ const ServicesCarousel = () => {
   return (
     <Swiper
       effect={"coverflow"}
-      grabCursor={true}
+      grabCursor={false}
       centeredSlides={true}
       loop={true}
       slidesPerView={3}
@@ -55,35 +56,44 @@ const ServicesCarousel = () => {
       className="servicesSwiper h-full"
     >
       {servicesData.map((services, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} className="relative services-slide">
           <GlowCard
             cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(70,70,70,0.5))] backdrop-blur-md flex flex-col justify-center"
             className="backdrop-blur-sm h-full w-full"
             contentStyle="flex flex-col items-center justify-between h-full"
           >
-            <div></div>
-            <div className="text-center flex flex-col gap-5">
+            <div className="w-full h-90"></div>
+            <div className="text-center flex flex-col gap-5 px-12 py-15">
               <h3 className="2240p:text-[68px]/[72px] font-calSans">
                 {services.cardTitle}
               </h3>
               <span className="2240p:text-xl">{services.cardDesc}</span>
             </div>
           </GlowCard>
+          <div className="absolute inset-0 pointer-events-none select-none">
+            <Image
+              src={services.gifSrc}
+              alt={services.gifAlt}
+              width={600}
+              height={350}
+              className={`relative ${services.gifClass}`}
+            />
+          </div>
         </SwiperSlide>
       ))}
       <div
         ref={prevRef}
         aria-label="Previous Slide"
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer"
       >
-        <ArrowLeft />
+        <ArrowLeft size={32} />
       </div>
       <div
         ref={nextRef}
         aria-label="Next Slide"
         className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center"
       >
-        <ArrowRight />
+        <ArrowRight size={32} />
       </div>
     </Swiper>
   );

@@ -36,7 +36,7 @@ export default function GlowCard({
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className={`relative group p-0.5 bg-neutral-200/10 overflow-hidden ${className}`}
+      className={`relative group p-0.5 bg-neutral-200/10 ${className ? className : "overflow-hidden"}`}
     >
       {/* 1. Glowing Border */}
       {/* This div is behind the inner card. It shows a radial gradient that tracks the mouse. */}
@@ -55,7 +55,7 @@ export default function GlowCard({
       {/* Inner Card Container */}
       {/* Notice the slightly smaller border radius (11px vs outer 12px) for perfect nesting */}
       <div
-        className={`relative h-full w-full py-25 px-15 overflow-hidden ${cardStyle ? cardStyle : "bg-brand-dark backdrop-blur-md"}`}
+        className={`relative h-full w-full overflow-hidden ${cardStyle ? cardStyle : "bg-brand-dark backdrop-blur-md py-25 px-15"}`}
       >
         {/* 2. Glowing Background */}
         {/* This creates the softer illumination on the background of the card */}

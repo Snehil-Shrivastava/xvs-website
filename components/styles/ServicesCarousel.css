@@ -1,20 +1,39 @@
-.servicesSwiper > .swiper-pagination {
-  bottom: 0 !important;
-}
-
 .servicesSwiper.swiper {
   overflow-y: visible !important;
   overflow-x: hidden !important;
+}
+
+.servicesSwiper > .swiper-wrapper {
+  overflow-y: visible;
+  align-items: center;
+}
+
+.servicesSwiper > .swiper-wrapper > .swiper-slide {
+  overflow-y: visible;
+  height: 600px;
+  transition: all 0.2s none;
+}
+
+.servicesSwiper > .swiper-wrapper > .swiper-slide:not(.swiper-slide-visible) {
+  visibility: hidden;
+}
+
+.servicesSwiper > .swiper-pagination {
+  bottom: 0 !important;
 }
 
 .swiper-slide-shadow-coverflow {
   background-image: none !important;
 }
 
-.swiper-slide-shadow-left {
+/* .swiper-slide-shadow-left {
   height: 85% !important;
 }
 
 .swiper-slide-shadow-right {
   height: 85% !important;
+} */
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-brand-orange);
 }
