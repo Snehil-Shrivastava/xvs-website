@@ -4,14 +4,8 @@ import { HomeServicesData } from "@/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Swiper as SwiperType } from "swiper";
-import {
-  A11y,
-  Autoplay,
-  EffectCoverflow,
-  Navigation,
-  Pagination,
-  Scrollbar,
-} from "swiper/modules";
+import { NavigationOptions } from "swiper/types";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,7 +15,6 @@ import "./styles/ServicesCarousel.css";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import GlowCard from "./Glowcard";
-import Image from "next/image";
 
 const ServicesCarousel = () => {
   const servicesData = HomeServicesData;
@@ -30,59 +23,6 @@ const ServicesCarousel = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    // <Swiper
-    //   modules={[
-    //     Navigation,
-    //     Pagination,
-    //     Scrollbar,
-    //     A11y,
-    //     EffectCoverflow,
-    //     Autoplay,
-    //   ]}
-    //   onSwiper={(swiper) => {
-    //     swiperRef.current = swiper;
-    //   }}
-    //   slidesPerView="auto"
-    //   coverflowEffect={{
-    //     rotate: 0,
-    //     stretch: 80,
-    //     depth: 600,
-    //     modifier: 1,
-    //     slideShadows: false,
-    //   }}
-    //   loop
-    //   centeredSlides
-    //   navigation={{
-    //     prevEl: prevRef.current,
-    //     nextEl: nextRef.current,
-    //   }}
-    //   onBeforeInit={(swiper) => {
-    //     if (typeof swiper.params.navigation !== "boolean") {
-    //       const navigation = swiper.params.navigation as NavigationOptions;
-    //       navigation.prevEl = prevRef.current;
-    //       navigation.nextEl = nextRef.current;
-    //     }
-    //   }}
-    //   className="relative"
-    // >
-    //   {servicesData.map((service, index) => (
-    //     <SwiperSlide key={index}>{service.cardTitle}</SwiperSlide>
-    //   ))}
-    //   <div
-    //     ref={prevRef}
-    //     aria-label="Previous Slide"
-    //     className="absolute left-0 top-1/2 -translate-y-1/2 z-5"
-    //   >
-    //     <ArrowLeft />
-    //   </div>
-    //   <div
-    //     ref={nextRef}
-    //     aria-label="Next Slide"
-    //     className="absolute right-0 top-1/2 -translate-y-1/2 z-5"
-    //   >
-    //     <ArrowRight />
-    //   </div>
-    // </Swiper>
     <Swiper
       effect={"coverflow"}
       grabCursor={true}
@@ -114,33 +54,6 @@ const ServicesCarousel = () => {
       }}
       className="servicesSwiper h-full"
     >
-      {/* <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-2.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-3.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-4.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-5.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-6.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-7.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-8.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/abstract-9.jpg" />
-      </SwiperSlide> */}
       {servicesData.map((services, index) => (
         <SwiperSlide key={index}>
           <GlowCard
