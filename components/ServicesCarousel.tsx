@@ -91,7 +91,7 @@ const ServicesCarousel = () => {
       <div
         ref={nextRef}
         aria-label="Next Slide"
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer"
       >
         <ArrowRight size={32} />
       </div>

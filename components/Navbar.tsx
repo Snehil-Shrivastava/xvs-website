@@ -57,13 +57,13 @@ export default function Navbar() {
         {isOpen ? (
           <Image
             src={xvslogowhite}
-            alt=""
+            alt="xvs logo"
             className="max-sm:w-10.5 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
           />
         ) : (
           <Image
             src={xvslogo}
-            alt=""
+            alt="xvs logo"
             className="max-sm:w-10.5 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
           />
         )}
