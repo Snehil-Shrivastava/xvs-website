@@ -5,7 +5,7 @@ const HomeServices = () => {
   return (
     <div className="flex flex-col items-center h-full justify-center">
       <SectionHeading headingText="services" buttonText="view services" />
-      <div>
+      <div className="w-full max-w-450 mx-auto min-h-100">
         <ServicesCarousel />
       </div>
     </div>

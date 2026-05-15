@@ -5,9 +5,16 @@ import React, { useRef } from "react";
 interface GlowCardProps {
   children: React.ReactNode;
   className?: string;
+  cardStyle?: string;
+  contentStyle?: string;
 }
 
-export default function GlowCard({ children, className = "" }: GlowCardProps) {
+export default function GlowCard({
+  children,
+  className = "",
+  cardStyle,
+  contentStyle,
+}: GlowCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -47,7 +54,9 @@ export default function GlowCard({ children, className = "" }: GlowCardProps) {
 
       {/* Inner Card Container */}
       {/* Notice the slightly smaller border radius (11px vs outer 12px) for perfect nesting */}
-      <div className="relative h-full w-full bg-brand-dark backdrop-blur-md py-25 px-15 overflow-hidden">
+      <div
+        className={`relative h-full w-full py-25 px-15 overflow-hidden ${cardStyle ? cardStyle : "bg-brand-dark backdrop-blur-md"}`}
+      >
         {/* 2. Glowing Background */}
         {/* This creates the softer illumination on the background of the card */}
         <div
@@ -55,7 +64,7 @@ export default function GlowCard({ children, className = "" }: GlowCardProps) {
           style={{
             background: `radial-gradient(
               850px circle at var(--mouse-x) var(--mouse-y),
-              rgba(247,152,57,0.5),
+              rgba(247,152,57,0.2),
               transparent 40%
             )`,
           }}
@@ -63,7 +72,9 @@ export default function GlowCard({ children, className = "" }: GlowCardProps) {
 
         {/* Content */}
         {/* z-10 ensures your text and elements stay above the background glow */}
-        <div className="relative z-10 text-neutral-100 flex justify-between">
+        <div
+          className={`relative z-10 text-neutral-100 ${contentStyle ? contentStyle : "flex justify-between"}`}
+        >
           {children}
         </div>
       </div>

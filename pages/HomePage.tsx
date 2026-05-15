@@ -2,6 +2,7 @@ import HomeHeading from "@/sections/HomeHeading";
 import HomeReel from "@/sections/HomeReel";
 import HomeServices from "@/sections/HomeServices";
 import HomeStats from "@/sections/HomeStats";
+import HomeTestimonials from "@/sections/HomeTestimonials";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,9 @@ const HomePage = () => {
       </div>
       <div className="h-screen">
         <HomeServices />
+      </div>
+      <div className="h-screen">
+        <HomeTestimonials />
       </div>
     </div>
   );
