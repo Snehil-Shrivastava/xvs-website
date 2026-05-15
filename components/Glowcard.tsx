@@ -29,7 +29,7 @@ export default function GlowCard({ children, className = "" }: GlowCardProps) {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className={`relative group p-px bg-neutral-200/10 overflow-hidden ${className}`}
+      className={`relative group p-0.5 bg-neutral-200/10 overflow-hidden ${className}`}
     >
       {/* 1. Glowing Border */}
       {/* This div is behind the inner card. It shows a radial gradient that tracks the mouse. */}
@@ -54,7 +54,7 @@ export default function GlowCard({ children, className = "" }: GlowCardProps) {
           className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
             background: `radial-gradient(
-              700px circle at var(--mouse-x) var(--mouse-y),
+              850px circle at var(--mouse-x) var(--mouse-y),
               rgba(247,152,57,0.5),
               transparent 40%
             )`,

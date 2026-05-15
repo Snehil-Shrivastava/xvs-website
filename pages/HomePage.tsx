@@ -1,5 +1,6 @@
 import HomeHeading from "@/sections/HomeHeading";
 import HomeReel from "@/sections/HomeReel";
+import HomeServices from "@/sections/HomeServices";
 import HomeStats from "@/sections/HomeStats";
 
 const HomePage = () => {
@@ -13,6 +14,9 @@ const HomePage = () => {
       </div>
       <div className="h-screen">
         <HomeStats />
+      </div>
+      <div className="h-screen">
+        <HomeServices />
       </div>
     </div>
   );
