@@ -17,7 +17,7 @@ export default function LogoMarquee({
   speed = 50,
   pauseOnHover = true,
   direction = "left",
-  gap = 64,
+  gap = 100,
 }: LogoMarqueeProps) {
   // Duplicate the list so the seam is invisible
   const track = [...logos, ...logos];
@@ -52,7 +52,7 @@ export default function LogoMarquee({
           - overflow-hidden clips the scrolling strip
           - mask fades logos in/out at the edges for a polished look
       */}
-      <div className="marquee-root relative w-full overflow-hidden py-10">
+      <div className="marquee-root relative w-full overflow-hidden">
         {/* Scrolling track — rendered twice inside to create seamless loop */}
         <div className="marquee-track flex w-max" style={{ gap: `${gap}px` }}>
           {track.map((logo, i) => (

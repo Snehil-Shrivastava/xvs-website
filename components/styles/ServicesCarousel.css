@@ -19,7 +19,7 @@
 }
 
 .servicesSwiper > .swiper-pagination {
-  bottom: 0 !important;
+  bottom: 30 !important;
 }
 
 .swiper-slide-shadow-coverflow {
