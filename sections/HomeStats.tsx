@@ -9,7 +9,11 @@ const HomeStats = () => {
     <div className="flex items-center justify-center h-full">
       <div className="grid grid-cols-2 gap-15">
         {homeStats.map((stats, index) => (
-          <GlowCard key={index} className={`${stats.cardTitle}-stat max-h-120`}>
+          <GlowCard
+            key={index}
+            className={`${stats.cardTitle}-stat max-h-120`}
+            index={index}
+          >
             <div>
               <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px]">
                 {stats.cardTitle}

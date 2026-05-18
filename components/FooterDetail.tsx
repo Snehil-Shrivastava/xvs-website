@@ -7,7 +7,7 @@ const FooterDetail = () => {
   const socialLinks = Socials;
   const footerServices = FooterServices;
   return (
-    <div className="py-15 max-w-400 mx-auto flex gap-30">
+    <div className="py-15 max-w-400 mx-auto flex gap-30 relative z-5">
       <div className="flex flex-col justify-between gap-10">
         <Image
           src={xvslogo}
