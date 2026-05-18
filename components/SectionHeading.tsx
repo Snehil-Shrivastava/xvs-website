@@ -8,7 +8,7 @@ const SectionHeading = ({
   desc,
 }: {
   headingText: string;
-  buttonText: string;
+  buttonText?: string;
   buttonIcon?: string;
   desc?: string;
 }) => {
@@ -29,21 +29,23 @@ const SectionHeading = ({
           </span>
         ))}
       </h2>
-      <Link
-        href={`#`}
-        className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase`}
-      >
-        <span
-          className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-4 backdrop-blur-xs"
-          style={{
-            background:
-              "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
-            backdropFilter: "blur(5px)",
-          }}
+      {buttonText && (
+        <Link
+          href={`#`}
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase`}
         >
-          {buttonText}
-        </span>
-      </Link>
+          <span
+            className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-4 backdrop-blur-xs"
+            style={{
+              background:
+                "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
+              backdropFilter: "blur(5px)",
+            }}
+          >
+            {buttonText}
+          </span>
+        </Link>
+      )}
       {desc && (
         <p className="absolute bottom-5 inset-x-0 text-center text-brand-cream 2240p:text-xl">
           {desc}

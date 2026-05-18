@@ -11,8 +11,8 @@ const HomeStats = () => {
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
-            className={`${stats.cardTitle}-stat max-h-120`}
-            index={index}
+            className={`${stats.cardTitle}-stat max-h-120 ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
+            cardStyle={`bg-brand-dark backdrop-blur-md py-25 px-15 ${index === 0 ? "content-clip-tl" : index === 3 ? "content-clip-br" : ""}`}
           >
             <div>
               <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px]">

@@ -1,9 +1,15 @@
-const AboutPage = () => {
+import AboutGrid from "@/components/AboutGrid";
+import AboutPage from "@/pages/AboutPage";
+
+const About = () => {
   return (
     <div>
-      <div>AboutPage</div>
+      <div className="h-screen absolute inset-x-0">
+        <AboutGrid />
+      </div>
+      <AboutPage />
     </div>
   );
 };
 
-export default AboutPage;
+export default About;
