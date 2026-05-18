@@ -9,7 +9,7 @@ import facebook from "@/public/svg/facebook.svg";
 import linkedin from "@/public/svg/linkedin.svg";
 import twitter from "@/public/svg/twitter.svg";
 
-const NavMenu = () => {
+const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   const mainNavLinks = NavMenuLinksMain;
   const navLinksBody = NavMenuLinksBody;
   return (
@@ -17,7 +17,7 @@ const NavMenu = () => {
       <div className="px-50 pt-20 pb-15">
         <div className="flex items-center justify-center max-sm:gap-3 sm:max-md:gap-5 md:max-lg:gap-7 lg:max-xl:gap-10 xl:max-1440p:gap-15 1440p:max-2xl:gap-15 2xl:gap-20 max-xs:text-[1rem] max-sm:text-[1.125rem] sm:max-md:text-[1.25rem] md:max-lg:text-[1.5rem] lg:max-xl:text-[1.625rem] xl:max-1440p:text-[1.75rem] 1440p:max-2xl:text-[2rem] 2xl:text-[2.125rem] 1920p:text-[2.25rem] 2240p:text-[2.3rem] font-extralight max-lg:w-[70%] max-xs:w-[85%] max-lg:justify-between">
           {mainNavLinks.map((link, index) => (
-            <Link key={index} href={link.url} scroll={true}>
+            <Link key={index} href={link.url} scroll={true} onClick={closeMenu}>
               {link.label}
             </Link>
           ))}
@@ -36,6 +36,7 @@ const NavMenu = () => {
                   query: { category: link.heading },
                 }}
                 className={`block font-calSans max-sm:text-[36px]/[48px] sm:max-md:text-[1.5rem]/[2rem] md:max-lg:text-[1.8rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-1440p:text-[3rem]/[3.75rem] 1440p:max-2xl:text-[4.5rem]/[4.3rem] 2xl:text-[3.5rem]/[4rem] 2240p:text-[66px]/[72px] 2240p:w-[90%]`}
+                onClick={closeMenu}
               >
                 {link.heading}
               </Link>

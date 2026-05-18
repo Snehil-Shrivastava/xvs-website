@@ -10,6 +10,7 @@ import xvslogowhite from "@/public/svg/xvs-logo-white-svg.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogoWhite, setIsLogoWhite] = useState(false);
 
   // Handle Scroll Locking
   useEffect(() => {
@@ -25,10 +26,30 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (isOpen) {
+      // OPENING: The circle takes time to expand from right to left.
+      // Wait 400ms (adjust this to match when the dark circle hits the logo)
+      timer = setTimeout(() => {
+        setIsLogoWhite(true);
+      }, 550);
+    } else {
+      // CLOSING: The circle shrinks back to the right immediately.
+      // Change the logo back to orange almost instantly so it doesn't disappear against a light background.
+      timer = setTimeout(() => {
+        setIsLogoWhite(false);
+      }, 400);
+    }
+
+    // Cleanup function in case the user clicks the menu really fast
+    return () => clearTimeout(timer);
+  }, [isOpen]);
+
   return (
     <>
       <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none">
-        {/* <div className="flex justify-between px-30 pt-18"> */}
         {/* Fullscreen Circular Menu */}
         <div
           className="fixed inset-0 z-50 bg-brand-dark flex justify-center items-center pointer-events-none"
@@ -43,8 +64,7 @@ export default function Navbar() {
             pointerEvents: isOpen ? "auto" : "none",
           }}
         >
-          <NavMenu />
-          {/* </div> */}
+          <NavMenu closeMenu={() => setIsOpen(false)} />
         </div>
       </nav>
       {/* Navbar Logo */}
@@ -53,8 +73,9 @@ export default function Navbar() {
         className="h-21.25 z-50 fixed left-30 top-18"
         aria-label="home page logo"
         title="home page logo"
+        onClick={() => setIsOpen(false)}
       >
-        {isOpen ? (
+        {isLogoWhite ? (
           <Image
             src={xvslogowhite}
             alt="xvs logo"

@@ -6,7 +6,7 @@ import HomeTestimonials from "@/sections/HomeTestimonials";
 
 const HomePage = () => {
   return (
-    <div className="">
+    <>
       <div className="flex justify-center items-center h-screen">
         <HomeHeading />
       </div>
@@ -22,7 +22,7 @@ const HomePage = () => {
       <div className="h-screen">
         <HomeTestimonials />
       </div>
-    </div>
+    </>
   );
 };
 
