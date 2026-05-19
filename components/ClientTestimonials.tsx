@@ -31,7 +31,6 @@ const ClientTestimonials = () => {
           onClick={() => setTabSelected("clutch")}
         >
           <ClutchLogo
-            // className="max-sm:w-13 sm:max-md:w-8 md:max-lg:w-9.5 lg:max-xl:w-12 xl:max-1440p:w-15.5 1440p:max-2xl:w-15.5 max-sm:h-auto sm:max-md:h-[9px] md:max-lg:h-[11px] lg:max-xl:h-[15px] xl:max-1440p:h-[18px] 1440p:max-2xl:h-[18px] 2xl:h-[22px]"
             fill={`${
               isClutchHovered || tabSelected === "clutch" ? "#0F0D0A" : "white"
             }`}
@@ -44,7 +43,6 @@ const ClientTestimonials = () => {
           onClick={() => setTabSelected("sortlist")}
         >
           <SortlistLogo
-            // className="max-sm:w-13 sm:max-md:w-8 md:max-lg:w-[38px] lg:max-xl:w-12 xl:max-1440p:w-[62px] 1440p:max-2xl:w-[62px] max-sm:h-auto sm:max-md:h-[9px] md:max-lg:h-[9px] lg:max-xl:h-[13px] xl:max-1440p:h-4 1440p:max-2xl:h-4 2xl:h-[22px]"
             fill={`${
               isSortlistHovered || tabSelected === "sortlist"
                 ? "#0F0D0A"
@@ -79,7 +77,7 @@ const ClientTestimonials = () => {
                     </h2>
                     <div className="flex max-sm:gap-1 sm:max-md:gap-1 md:max-lg:gap-1 lg:max-xl:gap-2 xl:max-1440p:gap-2 1440p:max-2xl:gap-2 2xl:gap-2 items-center">
                       {Array.from({ length: client.stars }).map((_, i) => (
-                        <Star key={index} fill="#F79839" stroke="none" />
+                        <Star key={i} fill="#F79839" stroke="none" />
                       ))}
                     </div>
                   </div>

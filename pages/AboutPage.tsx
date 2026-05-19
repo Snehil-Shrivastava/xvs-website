@@ -3,6 +3,8 @@ import aboutxVSlogo from "@/public/svg/about-xvs-logo.svg";
 import AboutText from "@/sections/AboutText";
 import AboutProcess from "@/sections/AboutProcess";
 import AboutClients from "@/sections/AboutClients";
+import AboutMembers from "@/sections/AboutMembers";
+import AboutCareer from "@/sections/AboutCareer";
 
 const AboutPage = () => {
   return (
@@ -33,6 +35,12 @@ const AboutPage = () => {
       </div>
       <div className="h-[120vh]">
         <AboutClients />
+      </div>
+      <div className="h-[205vh]">
+        <AboutMembers />
+      </div>
+      <div className="h-screen">
+        <AboutCareer />
       </div>
     </>
   );
