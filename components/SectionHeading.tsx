@@ -17,7 +17,7 @@ const SectionHeading = ({
   return (
     <div className="relative">
       <h2
-        className="font-calSans text-[15rem] uppercase font-semibold select-none"
+        className="font-calSans text-[15rem] uppercase font-semibold select-none text-center"
         style={{
           maskImage:
             "linear-gradient(rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 78%, rgba(0, 0, 0, 0) 90%)",

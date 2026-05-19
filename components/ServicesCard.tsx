@@ -24,7 +24,7 @@ const ServicesCard = ({ services }: { services: Services }) => {
           aria-hidden="true"
         />
         <div
-          className="border-bottom-right bg-[#f798395d] w-2/5 h-3/5 absolute -bottom-px -right-px content-clip-br"
+          className="border-bottom-right bg-[#f798395d] w-2/5 h-3/5 absolute -bottom-px -right-px"
           aria-hidden="true"
         />
         <div
