@@ -1,0 +1,117 @@
+.border-top-left::before {
+  content: "";
+  background: #282828;
+  position: absolute;
+  inset: 0;
+
+  clip-path: polygon(2px 2px, 0 100%, 100% 100%, 100% 0);
+}
+
+.border-bottom-right {
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(100% - 96px) 100%,
+    100% calc(100% - 96px),
+    100% 0,
+    0 0
+  );
+}
+
+.border-bottom-right::before {
+  content: "";
+  background: #282828;
+  position: absolute;
+  inset: 0;
+
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(100% - 96px - 1px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 96px - 1px),
+    100% 0
+  );
+}
+
+.card-clip {
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(100% - 96px) 100%,
+    100% calc(100% - 96px),
+    100% 0,
+    0 0
+  );
+}
+
+@media screen and (max-width: 641px) {
+  .card-clip {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 52px) 100%,
+      100% calc(100% - 52px),
+      100% 0,
+      0 0
+    );
+  }
+
+  .border-bottom-right {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 52px) 100%,
+      100% calc(100% - 52px),
+      100% 0,
+      0 0
+    );
+  }
+
+  .border-bottom-right::before {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 52px - 1px) calc(100% - 2px),
+      calc(100% - 2px) calc(100% - 52px - 1px),
+      100% 0
+    );
+  }
+}
+
+@keyframes float-mobile {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-div > img {
+    transform: translateY(0);
+    animation: float-mobile 6s ease-in-out infinite;
+  }
+}
+
+@media (min-width: 640px) {
+  .floating-div > img {
+    transform: translateY(0);
+    animation: float 6s ease-in-out infinite;
+  }
+}

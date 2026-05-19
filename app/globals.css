@@ -92,6 +92,10 @@ body {
   );
 }
 
+.services-bg-container mux-video {
+  max-height: inherit !important;
+}
+
 @keyframes pulsingDiv {
   0% {
     transform: scale(1.6);

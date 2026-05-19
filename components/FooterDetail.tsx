@@ -9,11 +9,13 @@ const FooterDetail = () => {
   return (
     <div className="py-15 max-w-400 mx-auto flex gap-30 relative z-5">
       <div className="flex flex-col justify-between gap-10">
-        <Image
-          src={xvslogo}
-          alt="xvs logo"
-          className="h-full max-sm:w-12 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-25 2240p:w-25"
-        />
+        <Link href={`/`}>
+          <Image
+            src={xvslogo}
+            alt="xvs logo"
+            className="h-full max-sm:w-12 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-25 2240p:w-25"
+          />
+        </Link>
         <div className="grid grid-cols-3 gap-y-5 gap-x-5">
           {socialLinks.map((socials, index) => (
             <Link key={index} href={socials.link}>
@@ -52,10 +54,14 @@ const FooterDetail = () => {
               {footerServices.map((service, index) => (
                 <Link
                   key={index}
-                  href={{
-                    pathname: "/work",
-                    query: { category: service.heading },
-                  }}
+                  href={
+                    service.url
+                      ? service.url
+                      : {
+                          pathname: "/work",
+                          query: { category: service.heading },
+                        }
+                  }
                   className="hover:underline"
                 >
                   {service.heading}
@@ -66,8 +72,8 @@ const FooterDetail = () => {
         </div>
 
         {/* dividing lines */}
-        <div className="absolute h-px w-full bg-[#f7983944] top-[18%] right-[-7.4%]" />
-        <div className="absolute h-full w-px bg-[#f7983944] right-[30%] top-[18%]" />
+        <div className="absolute h-px w-full bg-[#f7983944] top-[16%] right-[-7.4%]" />
+        <div className="absolute h-full w-px bg-[#f7983944] right-[30%] top-[16%]" />
       </div>
     </div>
   );
