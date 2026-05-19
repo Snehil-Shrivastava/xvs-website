@@ -1,3 +1,6 @@
+import Image from "next/image";
+import scheduleMeetingSVG from "@/public/svg/schedule-meeting-svg.svg";
+
 const FooterHeading = () => {
   return (
     <div className="border-b border-b-[rgba(247,152,57,0.3)] py-15">
@@ -9,6 +12,7 @@ const FooterHeading = () => {
           <span>creating together</span>
         </h2>
         <button className="flex items-center text-nowrap bg-brand-orange px-9 py-6 rounded-[52px] text-4xl gap-6 font-semibold cursor-pointer select-none">
+          <Image src={scheduleMeetingSVG} alt="schedule a meeting" />
           <span>Schedule A Meeting</span>
         </button>
       </div>
