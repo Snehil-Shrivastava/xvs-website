@@ -25,12 +25,7 @@ const ImageRenderer = ({
     <div className={layoutWrapperMap[imageLayout]}>
       {images.map((img, i) => (
         <div key={i} className={img.containerClassName}>
-          <Image
-            src={img.src}
-            alt=""
-            fill={imageLayout === "stacked"} // use fill for overlap layouts
-            className={img.className}
-          />
+          <Image src={img.src} alt="" className={img.className} />
         </div>
       ))}
     </div>
