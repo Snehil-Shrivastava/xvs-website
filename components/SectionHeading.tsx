@@ -33,7 +33,7 @@ const SectionHeading = ({
       {buttonText && (
         <Link
           href={`#`}
-          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase`}
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase select-none`}
         >
           <span
             className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-4 backdrop-blur-xs btn-clip flex items-center gap-2"
@@ -49,7 +49,7 @@ const SectionHeading = ({
         </Link>
       )}
       {desc && (
-        <p className="absolute bottom-5 inset-x-0 text-center text-brand-cream 2240p:text-xl">
+        <p className="absolute bottom-5 inset-x-0 text-center text-brand-cream 2240p:text-xl select-none">
           {desc}
         </p>
       )}
