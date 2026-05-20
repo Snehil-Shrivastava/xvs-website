@@ -49,7 +49,7 @@ const WorkCategoryFilter = ({ categories }: { categories: string[] }) => {
               <button
                 key={cat}
                 // onClick={() => handleCategoryClick(cat)}
-                className={`${base} text-[#ffffff] hover:text-brand text-base 2xl:text-lg font-extralight`}
+                className={`${base} text-[#ffffff] hover:text-brand text-base 2xl:text-lg font-extralight select-none`}
               >
                 {cat}
               </button>

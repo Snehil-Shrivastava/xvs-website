@@ -1,6 +1,7 @@
 import ClientTestimonials from "@/components/ClientTestimonials";
 import SectionHeading from "@/components/SectionHeading";
 import { HomeClientLogos } from "@/lib/data";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 
 const AboutClients = () => {
@@ -10,6 +11,7 @@ const AboutClients = () => {
       <SectionHeading
         headingText="Clients"
         buttonText="Reviews"
+        buttonIcon={<Heart stroke="none" fill="#f79839" className="scale-80" />}
         desc="Hear from visionaries and experts"
       />
       <div className="max-w-450 mx-auto bg-[#d9d3c7] content-clip-both">

@@ -2,6 +2,7 @@ import LogoMarquee from "@/components/LogoMarquee";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { HomeClientLogos } from "@/lib/data";
+import { Heart } from "lucide-react";
 
 const HomeTestimonials = () => {
   const logos = [...HomeClientLogos, ...HomeClientLogos];
@@ -10,6 +11,7 @@ const HomeTestimonials = () => {
       <SectionHeading
         headingText="words"
         buttonText="reviews"
+        buttonIcon={<Heart stroke="none" fill="#f79839" className="scale-80" />}
         desc="Hear from visionaries and experts"
       />
       <div className="w-full">
