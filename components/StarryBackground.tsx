@@ -1,6 +1,11 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface StarryCanvasProps {
   // children?: React.ReactNode;
@@ -31,6 +36,8 @@ export default function StarryCanvas({
   wanderDistance = 30,
 }: StarryCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const starsRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -124,8 +131,23 @@ export default function StarryCanvas({
     wanderDistance,
   ]);
 
+  useGSAP(() => {
+    gsap.to(starsRef.current, {
+      scrollTrigger: {
+        trigger: starsRef.current,
+        start: "top top",
+        end: "+=320px",
+        scrub: 1,
+      },
+      opacity: 0,
+    });
+  }, []);
+
   return (
-    <div className="relative w-full h-full overflow-hidden bg-background">
+    <div
+      ref={starsRef}
+      className="relative w-full h-full overflow-hidden bg-background"
+    >
       {/* 
         The canvas takes up exactly 1 DOM node.
         Pointer-events-none ensures it doesn't block clicks on your actual content.

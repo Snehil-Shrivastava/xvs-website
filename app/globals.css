@@ -96,6 +96,11 @@ body {
   max-height: inherit !important;
 }
 
+.work-heading > .pin-spacer,
+.work-showcase > .pin-spacer {
+  pointer-events: none;
+}
+
 @keyframes pulsingDiv {
   0% {
     transform: scale(1.6);

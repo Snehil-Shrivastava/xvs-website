@@ -3,13 +3,14 @@ import Link from "next/link";
 import { JSX } from "react";
 
 import "./styles/ServicesCard.css";
+import { StaticImageData } from "next/image";
 
 interface Services {
   id: number;
   title: string;
   subtitle: string;
   description: JSX.Element;
-  image: string;
+  image: StaticImageData[];
 }
 
 const ServicesCard = ({ services }: { services: Services }) => {

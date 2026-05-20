@@ -1,14 +1,24 @@
-import React from "react";
+import React, { RefObject } from "react";
 
-export default function PlanetHorizon() {
+export default function PlanetHorizon({
+  arccontainerRef,
+  arcRef,
+}: {
+  arccontainerRef: RefObject<HTMLDivElement | null>;
+  arcRef: RefObject<HTMLDivElement | null>;
+}) {
   return (
     // The container holds the mask and prevents the giant circle from causing horizontal scroll
-    <div className="absolute inset-x-0 bottom-0 h-full min-h-75 overflow-hidden pointer-events-none select-none z-0">
+    <div
+      ref={arccontainerRef}
+      className="absolute inset-x-0 bottom-0 h-full min-h-75 overflow-hidden pointer-events-none select-none z-0"
+    >
       {/* 
         2. The highly-performant CSS shape replacing your SVG <path>
         We make it 2x the width of the screen (200vw) to get that shallow elliptical curve.
       */}
       <div
+        ref={arcRef}
         className="absolute top-[60%] left-1/2 w-[200vw] sm:w-[150vw] h-550 -translate-x-1/2 rounded-[100%]"
         style={{
           // Maps exactly to your SVG <path> fill
