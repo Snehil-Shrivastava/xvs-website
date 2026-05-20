@@ -7,7 +7,7 @@ interface ImageEntry {
   containerClassName?: string;
 }
 
-type ImageLayout = "single" | "stacked";
+type ImageLayout = string;
 
 const layoutWrapperMap: Record<ImageLayout, string> = {
   single: "w-full h-full",

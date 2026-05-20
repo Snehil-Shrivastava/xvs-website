@@ -6,7 +6,6 @@ import Link from "next/link";
 import { JSX, useRef } from "react";
 
 import "./styles/ServicesCard.css";
-import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -14,13 +13,13 @@ import ImageRenderer from "./ImageRenderer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Services {
+interface ServicesType {
   id: number;
   title: string;
   subtitle: string;
   description: JSX.Element;
   image: any;
-  ImageLayout: "single" | "stacked";
+  imageLayout: string;
 }
 
 const ServicesCard = ({
@@ -28,7 +27,7 @@ const ServicesCard = ({
   index,
   total,
 }: {
-  services: Services;
+  services: ServicesType;
   index: number;
   total: number;
 }) => {
@@ -87,20 +86,9 @@ const ServicesCard = ({
         <p className="font-apercu-bold max-sm:text-[0.7rem] sm:max-md:text-[6px] md:max-lg:text-[6px] lg:max-xl:text-[0.65rem] xl:max-1440p:text-[0.75rem] 1440p:max-2xl:text-[0.75rem] 2xl:text-[0.875rem] 2240p:tetx-[1.6rem] absolute origin-bottom-left bottom-0 rotate-270 text-brand-cream max-sm:tracking-[10px] sm:max-md:tracking-[6px] md:max-lg:tracking-[6px] 2xl:tracking-[10px] tracking-[8px] uppercase max-xs:w-[200%]">
           {services.subtitle}
         </p>
-        {/* ----------- todo: add image here ------------- */}
-        {/* {services.image.map((image, index) => (
-          <Image
-            key={index}
-            src={image.src}
-            alt=""
-            width={600}
-            height={300}
-            className="absolute inset-0"
-          />
-        ))} */}
         <ImageRenderer
           images={services.image}
-          imageLayout={services.ImageLayout}
+          imageLayout={services.imageLayout}
         />
         <div></div>
         <Link
