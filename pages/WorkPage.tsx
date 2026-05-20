@@ -7,7 +7,7 @@ const WorkPage = () => {
       <div className="h-screen">
         <WorkPageHeading />
       </div>
-      <div className="h-screen work-showcase">
+      <div className="min-h-screen work-showcase">
         <WorkShowcase />
       </div>
     </div>

@@ -1,9 +1,16 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
 
 import "./styles/ServicesCard.css";
 import { StaticImageData } from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Services {
   id: number;
@@ -13,11 +20,47 @@ interface Services {
   image: StaticImageData[];
 }
 
-const ServicesCard = ({ services }: { services: Services }) => {
+const ServicesCard = ({
+  services,
+  index,
+  total,
+}: {
+  services: Services;
+  index: number;
+  total: number;
+}) => {
+  const isLast = index === total - 1;
+  const servicesCardRef = useRef(null);
+
+  useGSAP(() => {
+    if (isLast) return;
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: servicesCardRef.current,
+          start: "top top+=220px",
+          end: "+=800",
+          pin: true,
+          pinSpacing: false,
+          scrub: true,
+          // markers: true,
+        },
+      })
+      .to(servicesCardRef.current, {
+        scale: 0.9,
+        opacity: 0,
+        ease: "none",
+      });
+  }, []);
+
   return (
-    <div className="relative 2xl:w-[85%] w-full mx-auto md:pointer-events-none">
+    <div
+      ref={servicesCardRef}
+      className="relative 2xl:w-[85%] w-full mx-auto md:pointer-events-none"
+    >
       <div className="pin-wrapper">
-        <h2 className="font-calSans max-xs:text-[7vw] xs:max-sm:text-[2rem] sm:max-md:text-[2.5rem] md:max-lg:text-[3.5rem] lg:max-xl:text-[4rem] xl:max-1440p:text-[5rem] 1440p:max-2xl:text-[6rem] 2xl:text-[5.5rem] text-brand-orange absolute max-sm:-top-10 sm:max-md:top-[-2.6rem] md:max-lg:-top-15 lg:max-xl:-top-16 xl:max-1440p:-top-21 1440p:max-2xl:-top-25 2xl:-top-23 max-sm:left-1/2 max-sm:translate-x-[-50%] sm:right-0 -z-10 max-sm:w-full text-center">
+        <h2 className="font-calSans max-xs:text-[7vw] xs:max-sm:text-[2rem] sm:max-md:text-[2.5rem] md:max-lg:text-[3.5rem] lg:max-xl:text-[4rem] xl:max-1440p:text-[5rem] 1440p:max-2xl:text-[6rem] 2xl:text-[5.5rem] text-brand-orange absolute max-sm:-top-10 sm:max-md:top-[-2.6rem] md:max-lg:-top-15 lg:max-xl:-top-16 xl:max-1440p:-top-21 1440p:max-2xl:-top-25 2xl:-top-23 max-sm:left-1/2 max-sm:translate-x-[-50%] sm:right-0 -z-10 max-sm:w-full text-center select-none">
           {services.title}
         </h2>
         <div
@@ -29,8 +72,7 @@ const ServicesCard = ({ services }: { services: Services }) => {
           aria-hidden="true"
         />
         <div
-          //   className={`bg-[rgba(67,67,67,0.36)] backdrop-blur-sm relative card-clip max-sm:h-[60vh] max-sm:min-h-[635px] flex max-sm:flex-col ${getCardHeightClass}`}
-          className={`bg-[rgba(67,67,67,0.36)] backdrop-blur-sm relative card-clip max-sm:h-[60vh] max-sm:min-h-158.75 flex max-sm:flex-col`}
+          className={`bg-[rgba(67,67,67,0.36)] backdrop-blur-sm relative services-card-clip max-sm:h-[60vh] max-sm:min-h-158.75 flex max-sm:flex-col`}
         >
           <div className="flex-1" aria-hidden="true" />
           <div className="flex-1">
@@ -42,7 +84,7 @@ const ServicesCard = ({ services }: { services: Services }) => {
         <p className="font-apercu-bold max-sm:text-[0.7rem] sm:max-md:text-[6px] md:max-lg:text-[6px] lg:max-xl:text-[0.65rem] xl:max-1440p:text-[0.75rem] 1440p:max-2xl:text-[0.75rem] 2xl:text-[0.875rem] 2240p:tetx-[1.6rem] absolute origin-bottom-left bottom-0 rotate-270 text-brand-cream max-sm:tracking-[10px] sm:max-md:tracking-[6px] md:max-lg:tracking-[6px] 2xl:tracking-[10px] tracking-[8px] uppercase max-xs:w-[200%]">
           {services.subtitle}
         </p>
-        {/* {card.image} */}
+        {/* ----------- todo: add image here ------------- */}
         <Link
           href={{
             pathname: "/work",

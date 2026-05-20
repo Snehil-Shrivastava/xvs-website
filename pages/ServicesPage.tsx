@@ -13,7 +13,7 @@ const ServicesPage = () => {
           </h3>
         </div>
       </div>
-      <div className="min-h-screen py-25">
+      <div className="min-h-screen pt-25 pb-50">
         <ServicesMain />
       </div>
     </div>

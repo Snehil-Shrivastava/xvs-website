@@ -19,3 +19,33 @@
     52px 1px
   );
 }
+
+.btn-clip {
+  --notch: 16px;
+  clip-path: polygon(
+    0 var(--notch),
+    0 100%,
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
+    100% 0%,
+    var(--notch) 0
+  );
+}
+
+@media screen and (max-width: 1280px) {
+  .btn-clip {
+    --notch: 10px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .btn-clip {
+    --notch: 8px;
+  }
+}
+
+@media (max-width: 639px) {
+  .btn-clip {
+    --notch: 8px;
+  }
+}

@@ -23,6 +23,7 @@ const WorkPageHeading = () => {
         end: "max",
         scrub: 1,
         pin: true,
+        pinSpacing: false,
         // markers: true,
       },
     });
@@ -48,6 +49,13 @@ const WorkPageHeading = () => {
         "<",
       )
       .to(
+        headingContainerRef.current,
+        {
+          background: "#282828",
+        },
+        "<",
+      )
+      .to(
         arccontainerRef.current,
         {
           opacity: 0,
@@ -67,7 +75,7 @@ const WorkPageHeading = () => {
     <div ref={mainContainerRef} className="relative h-full work-heading">
       <div
         ref={headingContainerRef}
-        className="flex flex-col justify-end h-150 relative z-5"
+        className="flex flex-col justify-end h-150 relative z-5 bg-background/0"
       >
         <h1
           ref={headingRef}

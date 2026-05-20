@@ -33,7 +33,7 @@
   );
 }
 
-.card-clip {
+.services-card-clip {
   clip-path: polygon(
     0 0,
     0 100%,
@@ -45,7 +45,7 @@
 }
 
 @media screen and (max-width: 641px) {
-  .card-clip {
+  .services-card-clip {
     clip-path: polygon(
       0 0,
       0 100%,
