@@ -9,6 +9,7 @@ const HomeServices = () => {
         headingText="services"
         buttonText="view services"
         buttonIcon={<ArrowUpRight />}
+        buttonLink="/services"
       />
       <div className="w-full max-w-450 mx-auto min-h-100 h-7/10 flex items-center">
         <ServicesCarousel />

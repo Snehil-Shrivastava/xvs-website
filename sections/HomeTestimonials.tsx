@@ -12,6 +12,7 @@ const HomeTestimonials = () => {
         headingText="words"
         buttonText="reviews"
         buttonIcon={<Heart stroke="none" fill="#f79839" className="scale-80" />}
+        buttonLink="/about#client-testimonial"
         desc="Hear from visionaries and experts"
       />
       <div className="w-full">

@@ -6,11 +6,13 @@ const SectionHeading = ({
   headingText,
   buttonText,
   buttonIcon,
+  buttonLink,
   desc,
 }: {
   headingText: string;
   buttonText?: string;
   buttonIcon?: JSX.Element;
+  buttonLink?: string;
   desc?: string;
 }) => {
   const lastIndex = headingText.length - 1;
@@ -32,7 +34,7 @@ const SectionHeading = ({
       </h2>
       {buttonText && (
         <Link
-          href={`#`}
+          href={`${buttonLink ? buttonLink : "#"}`}
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase select-none`}
         >
           <span

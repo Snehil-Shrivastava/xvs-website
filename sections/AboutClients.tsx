@@ -7,7 +7,7 @@ import Image from "next/image";
 const AboutClients = () => {
   const clientLogos = HomeClientLogos;
   return (
-    <div className="flex flex-col items-center gap-10">
+    <div id="client-testimonial" className="flex flex-col items-center gap-10">
       <SectionHeading
         headingText="Clients"
         buttonText="Reviews"
