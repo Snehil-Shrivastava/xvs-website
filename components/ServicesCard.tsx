@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
@@ -5,10 +6,11 @@ import Link from "next/link";
 import { JSX, useRef } from "react";
 
 import "./styles/ServicesCard.css";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import ImageRenderer from "./ImageRenderer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +19,8 @@ interface Services {
   title: string;
   subtitle: string;
   description: JSX.Element;
-  image: StaticImageData[];
+  image: any;
+  ImageLayout: "single" | "stacked";
 }
 
 const ServicesCard = ({
@@ -85,6 +88,21 @@ const ServicesCard = ({
           {services.subtitle}
         </p>
         {/* ----------- todo: add image here ------------- */}
+        {/* {services.image.map((image, index) => (
+          <Image
+            key={index}
+            src={image.src}
+            alt=""
+            width={600}
+            height={300}
+            className="absolute inset-0"
+          />
+        ))} */}
+        <ImageRenderer
+          images={services.image}
+          imageLayout={services.ImageLayout}
+        />
+        <div></div>
         <Link
           href={{
             pathname: "/work",

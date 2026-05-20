@@ -112,6 +112,6 @@
 @media (min-width: 640px) {
   .floating-div > img {
     transform: translateY(0);
-    animation: float 6s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
   }
 }
