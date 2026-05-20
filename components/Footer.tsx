@@ -25,9 +25,9 @@ const Footer = () => {
         <div className="flex justify-between items-center text-neutral-400 text-sm py-8 bg-background relative z-1 px-5">
           <span>@2026 xVS Creations All Rights Reserved</span>
           <div className="flex items-center gap-15">
-            <Link href={`#`}>Terms & Conditions</Link>
-            <Link href={`#`}>Privacy Policy</Link>
-            <Link href={`#`}>Cookies Policy</Link>
+            <Link href={`/terms-and-conditions`}>Terms & Conditions</Link>
+            <Link href={`/privacy-policy`}>Privacy Policy</Link>
+            <Link href={`/cookies-policy`}>Cookies Policy</Link>
           </div>
         </div>
       </div>

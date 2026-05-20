@@ -1,5 +1,3 @@
-import Image from "next/image";
-import aboutxVSlogo from "@/public/svg/about-xvs-logo.svg";
 import AboutText from "@/sections/AboutText";
 import AboutProcess from "@/sections/AboutProcess";
 import AboutClients from "@/sections/AboutClients";
