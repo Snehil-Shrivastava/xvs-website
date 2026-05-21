@@ -95,7 +95,10 @@ const WorkCategoryFilter = ({
                 : "text-[#7b7b7b] hover:bg-brand hover:text-white text-xs 2xl:text-base"
             }`}
           >
-            <LayoutPanelTop size={16} fill="#fff" />
+            <LayoutPanelTop
+              size={16}
+              fill={`${activeCategory === null ? "#fff" : "transparent"}`}
+            />
             <span>Show All</span>
           </button>
         </div>

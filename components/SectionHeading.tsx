@@ -38,11 +38,16 @@ const SectionHeading = ({
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase select-none`}
         >
           <span
-            className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-4 backdrop-blur-xs btn-clip flex items-center gap-2"
+            className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-3.5 backdrop-blur-xs btn-clip flex items-center gap-2"
+            // style={{
+            //   background:
+            //     "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
+            //   backdropFilter: "blur(5px)",
+            // }}
             style={{
               background:
-                "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
-              backdropFilter: "blur(5px)",
+                "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.5) 100%)",
+              backdropFilter: "blur(10px)",
             }}
           >
             <span>{buttonText}</span>

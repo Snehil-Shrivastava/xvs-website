@@ -18,6 +18,32 @@
   visibility: hidden;
 }
 
+.servicesSwiper > .swiper-wrapper > .swiper-slide-active > .glow-card-outer {
+  clip-path: polygon(
+    0 53px,
+    0 100%,
+    calc(100% - 53px) 100%,
+    100% calc(100% - 53px),
+    100% 0,
+    53px 0
+  );
+}
+
+.servicesSwiper
+  > .swiper-wrapper
+  > .swiper-slide-active
+  > .glow-card-outer
+  > .glow-card-inner {
+  clip-path: polygon(
+    0 52px,
+    0 100%,
+    calc(100% - 52px) 100%,
+    100% calc(100% - 52px),
+    100% 0,
+    52px 0
+  );
+}
+
 .servicesSwiper > .swiper-pagination {
   bottom: 30 !important;
 }

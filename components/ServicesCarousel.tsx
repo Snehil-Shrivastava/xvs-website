@@ -16,6 +16,7 @@ import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import GlowCard from "./Glowcard";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesCarousel = () => {
   const servicesData = HomeServicesData;
@@ -39,8 +40,11 @@ const ServicesCarousel = () => {
       }}
       pagination={true}
       modules={[EffectCoverflow, Pagination, Navigation]}
+      // eslint-disable-next-line react-hooks/refs
       navigation={{
+        // eslint-disable-next-line react-hooks/refs
         prevEl: prevRef.current,
+        // eslint-disable-next-line react-hooks/refs
         nextEl: nextRef.current,
       }}
       onSwiper={(swiper) => {
@@ -58,17 +62,20 @@ const ServicesCarousel = () => {
       {servicesData.map((services, index) => (
         <SwiperSlide key={index} className="relative services-slide">
           <GlowCard
-            cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(70,70,70,0.5))] backdrop-blur-md flex flex-col justify-center"
-            className="backdrop-blur-sm h-full w-full"
+            cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(70,70,70,0.5))] backdrop-blur-md flex flex-col justify-center glow-card-inner"
+            className="backdrop-blur-sm h-full w-full glow-card-outer"
             contentStyle="flex flex-col items-center justify-between h-full"
           >
             <div className="w-full h-90"></div>
-            <div className="text-center flex flex-col gap-5 px-12 py-15">
+            <Link
+              href={`/services#${services.id}`}
+              className="text-center flex flex-col gap-5 px-12 py-15"
+            >
               <h3 className="2240p:text-[68px]/[72px] font-calSans">
                 {services.cardTitle}
               </h3>
               <span className="2240p:text-xl">{services.cardDesc}</span>
-            </div>
+            </Link>
           </GlowCard>
           <div className="absolute inset-0 pointer-events-none select-none">
             <Image

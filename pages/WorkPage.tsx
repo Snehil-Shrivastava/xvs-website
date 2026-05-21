@@ -1,5 +1,6 @@
 import WorkPageHeading from "@/sections/WorkPageHeading";
 import WorkShowcase from "@/sections/WorkShowcase";
+import { Suspense } from "react";
 
 const WorkPage = () => {
   return (
@@ -8,7 +9,9 @@ const WorkPage = () => {
         <WorkPageHeading />
       </div>
       <div className="min-h-screen work-showcase">
-        <WorkShowcase />
+        <Suspense fallback={null}>
+          <WorkShowcase />
+        </Suspense>
       </div>
     </div>
   );

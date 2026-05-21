@@ -7,6 +7,8 @@ interface GlowCardProps {
   className?: string;
   cardStyle?: string;
   contentStyle?: string;
+  cardGlowRadius?: string;
+  cardGlowIntensity?: string;
 }
 
 export default function GlowCard({
@@ -14,6 +16,8 @@ export default function GlowCard({
   className = "",
   cardStyle,
   contentStyle,
+  cardGlowRadius = "850px",
+  cardGlowIntensity = "0.2",
 }: GlowCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -63,8 +67,8 @@ export default function GlowCard({
           className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
             background: `radial-gradient(
-              850px circle at var(--mouse-x) var(--mouse-y),
-              rgba(247,152,57,0.2),
+              ${cardGlowRadius} circle at var(--mouse-x) var(--mouse-y),
+              rgba(247,152,57,${cardGlowIntensity}),
               transparent 40%
             )`,
           }}

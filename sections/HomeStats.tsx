@@ -7,12 +7,14 @@ const HomeStats = () => {
 
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="grid grid-cols-2 gap-15">
+      <div className="grid grid-cols-2 gap-5">
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
             className={`${stats.cardTitle}-stat max-h-120 ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
             cardStyle={`bg-brand-dark backdrop-blur-md py-25 px-15 ${index === 0 ? "content-clip-tl" : index === 3 ? "content-clip-br" : ""}`}
+            cardGlowRadius="1100px"
+            cardGlowIntensity="0.5"
           >
             <div>
               <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px]">

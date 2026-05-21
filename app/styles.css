@@ -21,7 +21,7 @@
 }
 
 .btn-clip {
-  --notch: 16px;
+  --notch: 14px;
   clip-path: polygon(
     0 var(--notch),
     0 100%,
