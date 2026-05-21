@@ -1,23 +1,53 @@
 "use client";
 
 import { SendHorizontal } from "lucide-react";
-import Form from "next/form";
+import { useState } from "react";
 
 const ContactForm = () => {
-  const handleSubmit = async (formData: FormData) => {
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
-      contact: formData.get("contact"),
+      phone: formData.get("phone"),
       message: formData.get("message"),
     };
 
-    // Add your API call or Server Action logic here
-    console.log("Form submitted:", data);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        setErrorMsg(result.error || "Something went wrong.");
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      (e.target as HTMLFormElement).reset();
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+      setStatus("error");
+    }
   };
+
   return (
     <div className="max-w-4/5 w-4/5 mx-auto">
-      <Form action={handleSubmit} className="flex flex-col gap-12 pb-15">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-12 pb-15">
         {/* Name Field */}
         <div className="flex flex-col gap-3 text-2xl">
           <label htmlFor="name" className="text-gray-100 text-lg tracking-wide">
@@ -34,7 +64,7 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Email & Contact Grid */}
+        {/* Email & Phone Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           <div className="flex flex-col gap-3 text-2xl">
             <label
@@ -56,14 +86,14 @@ const ContactForm = () => {
 
           <div className="flex flex-col gap-3 text-2xl">
             <label
-              htmlFor="contact"
+              htmlFor="phone"
               className="text-gray-100 text-lg tracking-wide"
             >
               Contact*
             </label>
             <input
-              id="contact"
-              name="contact"
+              id="phone"
+              name="phone"
               type="tel"
               required
               placeholder="+91-887-887-887"
@@ -92,42 +122,24 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Submit Area with Custom Border Accent */}
-        <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18">
-          {/* Decorative Sci-Fi Corner Border */}
-          {/* <svg
-            className="absolute bottom-0 right-0 w-[80%] h-full pointer-events-none"
-            viewBox="0 0 300 100"
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M 0,99 L 280,99 L 299,80 L 299,0"
-              stroke="url(#fadeGradient)"
-              strokeWidth="1.5"
-            />
-            <defs>
-              <linearGradient
-                id="fadeGradient"
-                x1="0%"
-                y1="100%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stopColor="rgba(255,255,255,0)" />
-                <stop offset="60%" stopColor="rgba(255,255,255,0.8)" />
-                <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-              </linearGradient>
-            </defs>
-          </svg> */}
+        {/* Status messages */}
+        {status === "success" && (
+          <p className="text-green-400 text-sm">
+            Message sent! We&apos;ll get back to you soon.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-red-400 text-sm">{errorMsg}</p>
+        )}
 
-          {/* Submit Button */}
+        <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18">
           <button
             type="submit"
-            className="group relative flex items-center gap-3 z-10 transition-transform active:scale-95 cursor-pointer"
+            disabled={status === "loading"}
+            className="group relative flex items-center gap-3 z-10 transition-transform active:scale-95 cursor-pointer disabled:opacity-50"
           >
             <span className="text-3xl font-bold text-[#E89335] tracking-wide group-hover:text-[#ffaa4e] transition-colors">
-              Send
+              {status === "loading" ? "Sending..." : "Send"}
             </span>
             <SendHorizontal
               fill="#f79839"
@@ -136,7 +148,7 @@ const ContactForm = () => {
             />
           </button>
         </div>
-      </Form>
+      </form>
     </div>
   );
 };
