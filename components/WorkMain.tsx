@@ -2,13 +2,16 @@ import { WorkCardData } from "@/lib/data";
 import ShowcaseCard from "./ShowcaseCard";
 
 type WorkMainProps = {
-  activeCategory: string | null;
+  activeCategories: string[];
 };
 
-const WorkMain = ({ activeCategory }: WorkMainProps) => {
-  const workCards = activeCategory
-    ? WorkCardData.filter((card) => card.category.includes(activeCategory))
-    : WorkCardData;
+const WorkMain = ({ activeCategories }: WorkMainProps) => {
+  const workCards =
+    activeCategories.length === 0
+      ? WorkCardData
+      : WorkCardData.filter((card) =>
+          activeCategories.every((cat) => card.category.includes(cat)),
+        );
   return (
     <div className="w-450 max-w-450 mx-auto pt-20 pb-40">
       <div className="flex flex-col gap-30">
