@@ -96,8 +96,7 @@ body {
   max-height: inherit !important;
 }
 
-.work-heading > .pin-spacer,
-.work-showcase > .pin-spacer {
+.work-heading > .pin-spacer {
   pointer-events: none;
 }
 
