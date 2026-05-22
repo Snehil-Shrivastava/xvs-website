@@ -17,7 +17,7 @@ const AgencyStats = () => {
         <div
           className="bg-background relative py-20"
           style={{
-            clipPath: `Polygon(1px 8%, 1px calc(100% - 1px), 30% 100%, 60% 100%, 70% calc(100% - 1px), 97% calc(100% - 1px), calc(100% - 1px) 92%, 100% 50%, 100% 0, 60% 0, 3% 1px)`,
+            clipPath: `Polygon(1px 8%, 1px calc(100% - 1px), 30% 100%, 60% 100%, 70% calc(100% - 1px), 97% calc(100% - 1px), calc(100% - 1px) 92%, calc(100% - 1px) 60%, 100% 40%, 100% 0, 60% 0, 3% 1px)`,
           }}
         >
           <div className="w-4/5 mx-auto grid grid-cols-2 gap-x-65 gap-y-25 relative">

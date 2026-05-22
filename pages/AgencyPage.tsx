@@ -1,3 +1,4 @@
+import AgencyClients from "@/sections/AgencyClients";
 import AgencyHeading from "@/sections/AgencyHeading";
 import AgencyStats from "@/sections/AgencyStats";
 
@@ -9,6 +10,9 @@ const AgencyPage = () => {
       </div>
       <div className="h-screen">
         <AgencyStats />
+      </div>
+      <div className="h-screen">
+        <AgencyClients />
       </div>
     </div>
   );
