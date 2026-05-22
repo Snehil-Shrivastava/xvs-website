@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
-import CTA from "@/components/CTA";
+import CookiesConsent from "@/components/CookiesConsent";
+import ScheduleMeetingModal from "@/components/ScheduleMeetingModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,8 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </SmoothScroll>
-        <CTA />
+        <ScheduleMeetingModal />
+        <CookiesConsent />
       </body>
     </html>
   );

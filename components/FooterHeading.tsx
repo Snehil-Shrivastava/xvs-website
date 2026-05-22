@@ -1,5 +1,6 @@
 import Image from "next/image";
 import scheduleMeetingSVG from "@/public/svg/schedule-meeting-svg.svg";
+import Link from "next/link";
 
 const FooterHeading = () => {
   return (
@@ -11,10 +12,13 @@ const FooterHeading = () => {
           <span>Let&#39;s start </span>
           <span>creating together</span>
         </h2>
-        <button className="flex items-center text-nowrap bg-brand-orange px-9 py-6 rounded-[52px] text-4xl gap-6 font-semibold cursor-pointer select-none">
+        <Link
+          href={{ query: { category: "schedule-meeting" } }}
+          className="flex items-center text-nowrap bg-brand-orange px-9 py-6 rounded-[52px] text-4xl gap-6 font-semibold cursor-pointer select-none"
+        >
           <Image src={scheduleMeetingSVG} alt="schedule a meeting" />
           <span>Schedule A Meeting</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
