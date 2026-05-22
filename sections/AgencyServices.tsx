@@ -27,7 +27,7 @@ const AgencyServices = () => {
           <p className="font-light font-sans sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl">
             We provide agency-ready creative execution across:
           </p>
-          <div className="w-4/5 mx-auto grid grid-cols-2 gap-y-25 relative">
+          <div className="w-9/10 mx-auto grid grid-cols-2 gap-x-15 gap-y-25 relative">
             <div className="flex gap-10 items-center">
               <LottieAnimation animation={Branding} className="w-40" />
               <div className="flex flex-col gap-2">

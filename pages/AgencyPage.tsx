@@ -5,17 +5,17 @@ import AgencyStats from "@/sections/AgencyStats";
 
 const AgencyPage = () => {
   return (
-    <div className="relative z-5">
+    <div className="relative z-5 flex flex-col gap-80 pb-80">
       <div className="h-screen">
         <AgencyHeading />
       </div>
-      <div className="h-screen">
+      <div>
         <AgencyStats />
       </div>
-      <div className="h-screen">
+      <div>
         <AgencyClients />
       </div>
-      <div className="h-screen">
+      <div>
         <AgencyServices />
       </div>
     </div>
