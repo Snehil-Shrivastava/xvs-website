@@ -97,12 +97,15 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     // Outer wrapper — needed for useGSAP scope, no visual role
-    <div ref={splashRef} className="fixed inset-0 z-99 pointer-events-none">
+    <div
+      ref={splashRef}
+      className="absolute inset-0 z-99 pointer-events-none splash-screen"
+    >
       {/* Background — collapses independently from the gif */}
       <div ref={bgRef} className="absolute inset-0 bg-background" />
 
       {/* Clone gif — centered, travels to heading on animate */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute top-0 left-0 w-full h-dvh flex items-center justify-center">
         <Image
           ref={splashLogoRef}
           src={logo}

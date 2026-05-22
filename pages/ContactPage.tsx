@@ -3,13 +3,30 @@ import SectionHeading from "@/components/SectionHeading";
 import "@/app/styles.css";
 import ContactForm from "@/components/ContactForm";
 import { Heart } from "lucide-react";
+import PulsingDots from "@/components/PulsingDots";
 
 const ContactPage = () => {
   return (
-    <div className="flex flex-col items-center h-full justify-center">
+    <div
+      className="flex flex-col items-center h-full justify-center relative"
+      style={{
+        backgroundImage: `url(/svg/contact-bg-map.svg)`,
+        backgroundRepeat: `no-repeat`,
+        backgroundSize: `cover`,
+      }}
+    >
+      <div
+        className="absolute inset-0 z-0 pointer-events-none bg-background"
+        style={{
+          maskImage:
+            "radial-gradient(1200px, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
+        }}
+      />
+      <PulsingDots />
+      <div className="bg-white/20 w-20 h-20 rounded-full absolute -top-10 left-1/2 -translate-x-1/2 shadow-[0_0_250px_250px_rgba(255,255,255,0.2)] pointer-events-none z-15" />
       <div className="w-450 max-w-450 relative">
-        <div className="absolute inset-0 bg-neutral-600 contact-clip-container" />
-        <div className="bg-background relative z-5 contact-clip-content flex flex-col justify-center">
+        <div className="absolute inset-0 bg-neutral-600/20 backdrop-blur-md contact-clip-container" />
+        <div className="bg-background/20 backdrop-blur-md relative z-5 contact-clip-content flex flex-col justify-center">
           <SectionHeading
             headingText="connect"
             buttonText="contact"

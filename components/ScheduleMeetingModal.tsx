@@ -33,6 +33,8 @@ import {
   isSameMonth,
   startOfWeek,
   endOfWeek,
+  addMonths,
+  isAfter,
 } from "date-fns";
 import Image from "next/image";
 
@@ -199,6 +201,12 @@ function ScheduleModalInner() {
     isBefore(startOfMonth(currentMonth), startOfMonth(new Date())) ||
     isSameMonth(currentMonth, new Date());
 
+  const maxBookingDate = startOfDay(addMonths(new Date(), 1));
+  const isNextMonthDisabled = isBefore(
+    maxBookingDate,
+    startOfMonth(addMonths(currentMonth, 1)),
+  );
+
   // --- Helpers ---
   const formatStep2DateStr = () => {
     if (!selectedDate || !selectedTime) return "";
@@ -228,7 +236,7 @@ function ScheduleModalInner() {
     formData.notes.trim() !== "";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-lg p-4 sm:p-6">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/20 backdrop-blur-lg p-4 sm:p-6">
       {/* Scrollbar Customization Scoped Style */}
       <style
         dangerouslySetInnerHTML={{
@@ -279,7 +287,7 @@ function ScheduleModalInner() {
 
           {/* --- STEP 1 --- */}
           {step === 1 && (
-            <div className="flex flex-col md:flex-row min-h-[450px]">
+            <div className="flex flex-col md:flex-row min-h-112.5">
               {/* Left Column: Calendar */}
               <div className="w-full md:w-[45%] pr-0 md:pr-10 md:border-r border-zinc-700/50 flex flex-col justify-between">
                 <div>
@@ -305,7 +313,7 @@ function ScheduleModalInner() {
                       {format(currentMonth, "MMMM yyyy")}
                     </div>
                     <button
-                      disabled={isLoadingSlots}
+                      disabled={isLoadingSlots || isNextMonthDisabled}
                       onClick={() =>
                         setCurrentMonth(addDays(endOfMonth(currentMonth), 1))
                       }
@@ -334,7 +342,9 @@ function ScheduleModalInner() {
                         day,
                         startOfDay(addDays(new Date(), 1)),
                       );
-                      const blocked = isPast || (!isLoadingSlots && !hasSlots);
+                      const isTooFar = isAfter(day, maxBookingDate);
+                      const blocked =
+                        isPast || isTooFar || (!isLoadingSlots && !hasSlots);
 
                       const selected =
                         selectedDate && isSameDay(day, selectedDate);

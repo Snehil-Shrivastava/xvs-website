@@ -5,7 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Swiper as SwiperType } from "swiper";
 import { NavigationOptions } from "swiper/types";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,6 +35,9 @@ const ServicesCarousel = () => {
       grabCursor={false}
       centeredSlides={true}
       loop={true}
+      autoplay={{
+        delay: 5000,
+      }}
       slidesPerView={3}
       coverflowEffect={{
         rotate: 0,
@@ -39,7 +47,7 @@ const ServicesCarousel = () => {
         slideShadows: true,
       }}
       pagination={true}
-      modules={[EffectCoverflow, Pagination, Navigation]}
+      modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
       // eslint-disable-next-line react-hooks/refs
       navigation={{
         // eslint-disable-next-line react-hooks/refs
