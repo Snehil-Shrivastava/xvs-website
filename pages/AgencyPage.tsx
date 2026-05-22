@@ -1,5 +1,6 @@
 import AgencyClients from "@/sections/AgencyClients";
 import AgencyHeading from "@/sections/AgencyHeading";
+import AgencyServices from "@/sections/AgencyServices";
 import AgencyStats from "@/sections/AgencyStats";
 
 const AgencyPage = () => {
@@ -13,6 +14,9 @@ const AgencyPage = () => {
       </div>
       <div className="h-screen">
         <AgencyClients />
+      </div>
+      <div className="h-screen">
+        <AgencyServices />
       </div>
     </div>
   );
