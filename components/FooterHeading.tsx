@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const FooterHeading = () => {
   return (
-    <div className="border-b border-b-[rgba(247,152,57,0.3)] py-15">
-      <div className="max-w-400 mx-auto flex justify-between items-center">
+    <div className="border-b border-b-[rgba(247,152,57,0.3)] py-25">
+      <div className="max-w-[85%] mx-auto flex justify-between items-center">
         <h2
           className={`text-[3.5rem]/[3.8rem] tracking-wider w-[52%] font-calSans md:flex md:flex-col select-none`}
         >

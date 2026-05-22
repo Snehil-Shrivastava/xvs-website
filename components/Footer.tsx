@@ -5,7 +5,7 @@ import FooterDetail from "./FooterDetail";
 const Footer = () => {
   return (
     <div>
-      <div className="w-4/5 max-w-450 mx-auto relative">
+      <div className="w-9/10 mx-auto relative">
         <div
           className="absolute bg-neutral-500 inset-0 z-0"
           style={{
@@ -15,7 +15,7 @@ const Footer = () => {
         <div
           className="relative overflow-hidden z-1 bg-background"
           style={{
-            clipPath: `Polygon(2px 52px, 0 100%, 100% 100%, 100% 0, 50% 0, 52px 2px)`,
+            clipPath: `Polygon(2px 52px, 0 100%, calc(100% - 2px) 100%, 100% 0, 50% 0, 52px 2px)`,
           }}
         >
           <FooterHeading />

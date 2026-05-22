@@ -70,9 +70,9 @@ const ServicesCarousel = () => {
       {servicesData.map((services, index) => (
         <SwiperSlide key={index} className="relative services-slide">
           <GlowCard
-            cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(70,70,70,0.5))] backdrop-blur-md flex flex-col justify-center glow-card-inner"
+            cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgba(255,166,76,0.8),_rgba(255,255,255,0.5))] backdrop-blur-md flex flex-col justify-center glow-card-inner"
             className="backdrop-blur-sm h-full w-full glow-card-outer"
-            contentStyle="flex flex-col items-center justify-between h-full"
+            contentStyle="flex flex-col items-center justify-between h-full bg-background/50"
           >
             <div className="w-full h-90"></div>
             <Link

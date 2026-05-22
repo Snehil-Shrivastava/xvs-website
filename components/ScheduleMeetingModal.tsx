@@ -262,7 +262,7 @@ function ScheduleModalInner() {
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-8 right-8 text-white hover:text-brand-orange transition-colors z-10"
+            className="absolute top-8 right-8 text-white hover:text-brand-orange transition-colors z-10 cursor-pointer"
           >
             <X className="w-8 h-8 font-light" strokeWidth={1.5} />
           </button>
