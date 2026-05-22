@@ -1,9 +1,17 @@
-const ClutchLogo = ({ fill }: { fill?: string }) => {
+const ClutchLogo = ({
+  fill,
+  width,
+  height,
+}: {
+  fill?: string;
+  width?: string;
+  height?: string;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="63"
-      height="18"
+      width={`${width ? width : "63"}`}
+      height={`${height ? height : "18"}`}
       viewBox="0 0 63 18"
       fill="none"
     >
