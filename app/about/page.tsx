@@ -4,7 +4,7 @@ import AboutPage from "@/pages/AboutPage";
 const About = () => {
   return (
     <div>
-      <div className="h-screen absolute inset-x-0">
+      <div className="h-screen max-md:h-150 absolute inset-x-0">
         <AboutGrid />
       </div>
       <AboutPage />

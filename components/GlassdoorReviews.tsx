@@ -27,7 +27,7 @@ import Image from "next/image";
 
 const GlassdoorReviews = () => {
   return (
-    <div className="relative w-full min-w-0 overflow-hidden flex flex-col gap-6">
+    <div className="relative w-full min-w-0 overflow-hidden flex flex-col gap-6 max-sm:gap-1">
       <div className="flex justify-between items-center max-sm:text-[12px] select-none mb-4">
         <div className="cursor-pointer glassdoor-prev flex gap-2 items-center">
           <ChevronLeft stroke="#f79839" />
@@ -41,7 +41,12 @@ const GlassdoorReviews = () => {
       {/* Swiper Carousel */}
       <Swiper
         modules={[Navigation]}
-        slidesPerView={2}
+        slidesPerView={1}
+        breakpoints={{
+          720: {
+            slidesPerView: 2,
+          },
+        }}
         spaceBetween={20}
         loop={true}
         navigation={{
@@ -64,7 +69,12 @@ const GlassdoorReviews = () => {
                 </div>
                 <div className="flex gap-3 max-sm:gap-1">
                   {Array.from({ length: review.stars }).map((_, i) => (
-                    <Star key={i} stroke="none" fill="#f79839" />
+                    <Star
+                      key={i}
+                      stroke="none"
+                      fill="#f79839"
+                      className="max-sm:w-3"
+                    />
                   ))}
                 </div>
               </div>

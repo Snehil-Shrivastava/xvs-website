@@ -2,10 +2,12 @@ const ClutchLogo = ({
   fill,
   width,
   height,
+  className,
 }: {
   fill?: string;
   width?: string;
   height?: string;
+  className?: string;
 }) => {
   return (
     <svg
@@ -14,6 +16,7 @@ const ClutchLogo = ({
       height={`${height ? height : "18"}`}
       viewBox="0 0 63 18"
       fill="none"
+      className={className && className}
     >
       <path
         d="M16.1494 0H19.0066V17.6398H16.1494V0Z"

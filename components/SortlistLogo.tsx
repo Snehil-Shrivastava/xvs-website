@@ -1,4 +1,10 @@
-const SortlistLogo = ({ fill }: { fill?: string }) => {
+const SortlistLogo = ({
+  fill,
+  className,
+}: {
+  fill?: string;
+  className?: string;
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +12,7 @@ const SortlistLogo = ({ fill }: { fill?: string }) => {
       height="19"
       viewBox="0 0 79 19"
       fill="none"
+      className={className && className}
     >
       <g clipPath="url(#clip0_3595_2190)">
         <path

@@ -72,7 +72,7 @@ export default function LogoMarquee({
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={` object-contain transition-all duration-300 ${logo.imgClass}`}
+                className={` object-cover transition-all duration-300 ${logo.imgClass}`}
                 draggable={false}
               />
             </div>
