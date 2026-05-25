@@ -643,18 +643,18 @@ function ScheduleModalInner() {
                 </div>
 
                 {/* Actions Footer */}
-                <div className="flex items-center justify-between mt-8 pt-4">
+                <div className="flex items-center justify-between mt-8 pt-4 max-sm:text-sm">
                   <button
                     disabled={isSubmitting}
                     onClick={() => setStep(1)}
-                    className="bg-brand-orange hover:bg-brand-orange/70 text-white px-8 py-2.5 rounded flex items-center justify-center font-medium transition-colors disabled:opacity-50"
+                    className="bg-brand-orange hover:bg-brand-orange/70 text-white px-8 max-sm:px-4 py-2.5 rounded flex items-center justify-center font-medium transition-colors disabled:opacity-50"
                   >
                     Back
                   </button>
                   <button
                     disabled={!isStep2Valid || isSubmitting}
                     onClick={handleSchedule}
-                    className="bg-brand-orange hover:bg-brand-orange-light disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-2.5 rounded flex items-center justify-center gap-2 font-medium transition-colors min-w-45"
+                    className="bg-brand-orange hover:bg-brand-orange-light disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 max-sm:px-4 py-2.5 rounded flex items-center justify-center gap-2 font-medium transition-colors min-w-45"
                   >
                     {isSubmitting ? (
                       <>
