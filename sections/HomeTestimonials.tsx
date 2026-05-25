@@ -11,7 +11,9 @@ const HomeTestimonials = () => {
       <SectionHeading
         headingText="words"
         buttonText="reviews"
-        buttonIcon={<Heart stroke="none" fill="#f79839" className="scale-80" />}
+        buttonIcon={
+          <Heart stroke="none" fill="#f79839" className="scale-80 max-sm:w-4" />
+        }
         buttonLink="/about#client-testimonial"
         desc="Hear from visionaries and experts"
       />

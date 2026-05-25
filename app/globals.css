@@ -100,6 +100,58 @@ body {
   pointer-events: none;
 }
 
+@media (max-width: 640px) {
+  .container-clip-both {
+    clip-path: polygon(
+      0 9px,
+      0 100%,
+      calc(100% - 9px) 100%,
+      100% calc(100% - 9px),
+      100% 0,
+      9px 0
+    );
+  }
+
+  .content-clip-both {
+    clip-path: polygon(
+      0 12px,
+      0 100%,
+      calc(100% - 12px) 100%,
+      100% calc(100% - 12px),
+      100% 0,
+      12px 0
+    );
+  }
+
+  .container-clip-tl {
+    clip-path: polygon(0 22px, 0 100%, 100% 100%, 100% 0, 22px 0);
+  }
+
+  .content-clip-tl {
+    clip-path: polygon(0 22px, 0 100%, 100% 100%, 100% 0, 22px 0);
+  }
+
+  .container-clip-br {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 22px) 100%,
+      100% calc(100% - 22px),
+      100% 0
+    );
+  }
+
+  .content-clip-br {
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      calc(100% - 22px) 100%,
+      100% calc(100% - 22px),
+      100% 0
+    );
+  }
+}
+
 @keyframes pulsingDiv {
   0% {
     transform: scale(1.6);

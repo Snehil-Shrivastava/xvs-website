@@ -7,13 +7,13 @@ import HomeTestimonials from "@/sections/HomeTestimonials";
 const HomePage = () => {
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center 2xl:h-screen h-150 max-sm:max-h-180">
         <HomeHeading />
       </div>
-      <div className="h-screen">
+      <div className="h-screen max-sm:h-150">
         <HomeReel />
       </div>
-      <div className="h-screen">
+      <div className="h-screen max-sm:h-auto">
         <HomeStats />
       </div>
       <div className="h-screen">

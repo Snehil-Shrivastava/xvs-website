@@ -70,7 +70,7 @@ export default function Navbar() {
       {/* Navbar Logo */}
       <Link
         href="./"
-        className="h-21.25 z-50 fixed left-30 top-18"
+        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] max-sm:top-[30] max-sm:h-10.25"
         aria-label="home page logo"
         title="home page logo"
         onClick={() => setIsOpen(false)}
@@ -92,7 +92,7 @@ export default function Navbar() {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25"
+        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-sm:top-[30] max-sm:right-[20] max-sm:h-10.25"
         aria-label="Toggle Menu"
         title="Toggle Hamburger Menu"
       >
