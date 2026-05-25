@@ -8,7 +8,7 @@ const FooterHeading = () => {
     <div className="border-b border-b-[rgba(247,152,57,0.3)] py-25 max-sm:py-10">
       <div className="max-w-[85%] mx-auto flex max-sm:flex-col max-sm:gap-5 justify-between items-center">
         <h2
-          className={`text-[3.5rem]/[3.8rem] max-sm:text-[1.5rem]/[2rem] tracking-wider w-[52%] max-sm:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none`}
+          className={`text-[3.5rem]/[3.8rem] max-sm:text-[1.4rem]/[2rem] tracking-wider w-[52%] max-sm:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none max-sm:text-center`}
         >
           <span>Let&#39;s start </span>
           <span>creating together</span>
