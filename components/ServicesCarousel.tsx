@@ -35,10 +35,15 @@ const ServicesCarousel = () => {
       grabCursor={false}
       centeredSlides={true}
       loop={true}
-      autoplay={{
-        delay: 5000,
+      // autoplay={{
+      //   delay: 5000,
+      // }}
+      slidesPerView="auto"
+      breakpoints={{
+        720: {
+          slidesPerView: 3,
+        },
       }}
-      slidesPerView={3}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -65,7 +70,7 @@ const ServicesCarousel = () => {
           navigation.nextEl = nextRef.current;
         }
       }}
-      className="servicesSwiper h-full"
+      className="servicesSwiper h-full max-sm:w-9/10"
     >
       {servicesData.map((services, index) => (
         <SwiperSlide key={index} className="relative services-slide">
@@ -77,12 +82,14 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              className="text-center flex flex-col gap-5 px-12 py-15"
+              className="text-center flex flex-col gap-5 max-sm:gap-1.5 px-12 max-sm:px-6 py-15 max-sm:py-8"
             >
-              <h3 className="2240p:text-[68px]/[72px] font-calSans">
+              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl font-calSans">
                 {services.cardTitle}
               </h3>
-              <span className="2240p:text-xl">{services.cardDesc}</span>
+              <span className="2240p:text-xl max-sm:text-[10px]">
+                {services.cardDesc}
+              </span>
             </Link>
           </GlowCard>
           <div className="absolute inset-0 pointer-events-none select-none">
@@ -99,14 +106,14 @@ const ServicesCarousel = () => {
       <div
         ref={prevRef}
         aria-label="Previous Slide"
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
       >
         <ArrowLeft size={32} />
       </div>
       <div
         ref={nextRef}
         aria-label="Next Slide"
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
       >
         <ArrowRight size={32} />
       </div>

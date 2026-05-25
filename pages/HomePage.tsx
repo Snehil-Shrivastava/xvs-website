@@ -16,10 +16,10 @@ const HomePage = () => {
       <div className="h-screen max-sm:h-auto">
         <HomeStats />
       </div>
-      <div className="h-screen">
+      <div className="h-screen max-sm:h-200">
         <HomeServices />
       </div>
-      <div className="h-screen">
+      <div className="h-screen max-sm:h-150">
         <HomeTestimonials />
       </div>
     </>

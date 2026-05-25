@@ -11,7 +11,7 @@ const HomeServices = () => {
         buttonIcon={<ArrowUpRight className="max-sm:w-4" />}
         buttonLink="/services"
       />
-      <div className="w-full max-w-450 mx-auto min-h-100 h-7/10 flex items-center">
+      <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 flex items-center">
         <ServicesCarousel />
       </div>
     </div>

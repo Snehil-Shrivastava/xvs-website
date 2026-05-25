@@ -55,3 +55,40 @@
 .swiper-pagination-bullet-active {
   background-color: var(--color-brand-orange);
 }
+
+@media (max-width: 640px) {
+  .servicesSwiper > .swiper-wrapper > .swiper-slide {
+    height: 270px;
+    width: 60% !important;
+  }
+
+  .servicesSwiper > .swiper-pagination {
+    bottom: 0 !important;
+  }
+
+  .servicesSwiper > .swiper-wrapper > .swiper-slide-active > .glow-card-outer {
+    clip-path: polygon(
+      0 23px,
+      0 100%,
+      calc(100% - 23px) 100%,
+      100% calc(100% - 23px),
+      100% 0,
+      23px 0
+    );
+  }
+
+  .servicesSwiper
+    > .swiper-wrapper
+    > .swiper-slide-active
+    > .glow-card-outer
+    > .glow-card-inner {
+    clip-path: polygon(
+      0 22px,
+      0 100%,
+      calc(100% - 22px) 100%,
+      100% calc(100% - 22px),
+      100% 0,
+      22px 0
+    );
+  }
+}

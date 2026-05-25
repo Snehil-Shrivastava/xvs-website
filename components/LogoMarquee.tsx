@@ -40,6 +40,11 @@ export default function LogoMarquee({
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
+        @media (max-width: 640px) {
+          .marquee-track {
+            animation-duration: 80s;
+          }
+        }
         ${
           pauseOnHover
             ? `.marquee-root:hover .marquee-track { animation-play-state: paused; }`
@@ -55,8 +60,8 @@ export default function LogoMarquee({
       <div className="marquee-root relative w-full overflow-hidden">
         {/* Scrolling track — rendered twice inside to create seamless loop */}
         <div
-          className="marquee-track flex w-max select-none"
-          style={{ gap: `${gap}px` }}
+          className={`marquee-track flex w-max select-none gap-[${gap}px] max-sm:gap-0`}
+          // style={{ gap: `${gap}px` }}
         >
           {track.map((logo, i) => (
             <div
@@ -67,7 +72,7 @@ export default function LogoMarquee({
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={`h-10 w-auto object-contain transition-all duration-300 ${logo.imgClass}`}
+                className={` object-contain transition-all duration-300 ${logo.imgClass}`}
                 draggable={false}
               />
             </div>

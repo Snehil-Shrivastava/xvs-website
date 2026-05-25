@@ -32,6 +32,21 @@
   );
 }
 
+.footer-container-clip {
+  clip-path: Polygon(0 51px, 0 100%, 100% 100%, 100% 0, 51px 0);
+}
+
+.footer-content-clip {
+  clip-path: Polygon(
+    2px 52px,
+    0 100%,
+    calc(100% - 2px) 100%,
+    100% 0,
+    50% 0,
+    52px 2px
+  );
+}
+
 @media screen and (max-width: 1280px) {
   .btn-clip {
     --notch: 10px;
@@ -44,8 +59,23 @@
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .btn-clip {
     --notch: 8px;
+  }
+
+  .footer-container-clip {
+    clip-path: Polygon(0 21px, 0 100%, 100% 100%, 100% 0, 21px 0);
+  }
+
+  .footer-content-clip {
+    clip-path: Polygon(
+      2px 22px,
+      0 100%,
+      calc(100% - 2px) 100%,
+      100% 0,
+      50% 0,
+      22px 2px
+    );
   }
 }
