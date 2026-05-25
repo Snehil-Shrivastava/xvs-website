@@ -25,17 +25,23 @@ const WorkCategoryFilter = ({
 
   useGSAP(
     () => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: categoryFilterContainerRef.current,
-          start: "top top+=299px",
-          end: "max",
-          pin: true,
-          pinSpacing: false,
-          scrub: 1,
-          // markers: true,
-        },
-      });
+      const mm = gsap.matchMedia();
+
+      const buildTimeline = (offset: string) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: categoryFilterContainerRef.current,
+            start: `top top+=${offset}`,
+            end: "max",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+          },
+        });
+      };
+
+      mm.add("(max-width: 639px)", () => buildTimeline("149px"));
+      mm.add("(min-width: 640px)", () => buildTimeline("299px"));
     },
     { scope: categoryFilterContainerRef },
   );
@@ -44,9 +50,9 @@ const WorkCategoryFilter = ({
     <>
       <div
         ref={categoryFilterContainerRef}
-        className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 max-md:hidden bg-background relative z-10 pb-5"
+        className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 bg-background relative z-10 pb-5"
       >
-        <div className="flex flex-wrap gap-4 max-sm:gap-1">
+        <div className="flex flex-wrap gap-4 max-sm:gap-1 max-sm:w-[90%] max-sm:mx-auto">
           {categories.map((cat) => (
             <button
               key={cat}

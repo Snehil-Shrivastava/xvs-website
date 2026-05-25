@@ -49,8 +49,11 @@ const ContactForm = () => {
     <div className="max-w-4/5 w-4/5 mx-auto">
       <form onSubmit={handleSubmit} className="flex flex-col gap-12 pb-15">
         {/* Name Field */}
-        <div className="flex flex-col gap-3 text-2xl">
-          <label htmlFor="name" className="text-gray-100 text-lg tracking-wide">
+        <div className="flex flex-col gap-3 text-2xl max-sm:text-base">
+          <label
+            htmlFor="name"
+            className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
+          >
             Name*
           </label>
           <input
@@ -66,10 +69,10 @@ const ContactForm = () => {
 
         {/* Email & Phone Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-          <div className="flex flex-col gap-3 text-2xl">
+          <div className="flex flex-col gap-3 text-2xl max-sm:text-base">
             <label
               htmlFor="email"
-              className="text-gray-100 text-lg tracking-wide"
+              className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
             >
               Email*
             </label>
@@ -84,10 +87,10 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-3 text-2xl">
+          <div className="flex flex-col gap-3 text-2xl max-sm:text-base">
             <label
               htmlFor="phone"
-              className="text-gray-100 text-lg tracking-wide"
+              className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
             >
               Contact*
             </label>
@@ -104,10 +107,10 @@ const ContactForm = () => {
         </div>
 
         {/* Message Field */}
-        <div className="flex flex-col gap-3 text-2xl">
+        <div className="flex flex-col gap-3 text-2xl max-sm:text-base">
           <label
             htmlFor="message"
-            className="text-gray-100 text-lg tracking-wide"
+            className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
           >
             Message*
           </label>

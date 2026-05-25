@@ -16,70 +16,76 @@ const WorkPageHeading = () => {
   const arcRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: headingContainerRef.current,
-        start: "top top",
-        end: "max",
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-        // markers: true,
-      },
-    });
+    const mm = gsap.matchMedia();
 
-    gsap
-      .timeline({
+    const buildTimeline = (targetHeight: string) => {
+      gsap.timeline({
         scrollTrigger: {
-          trigger: mainContainerRef.current,
+          trigger: headingContainerRef.current,
           start: "top top",
-          end: "bottom center",
+          end: "max",
           scrub: 1,
+          pin: true,
+          pinSpacing: false,
           // markers: true,
         },
-      })
-      .to(headingContainerRef.current, {
-        height: "300px",
-      })
-      .to(
-        headingRef.current,
-        {
-          scale: 0.45,
-        },
-        "<",
-      )
-      .to(
-        headingContainerRef.current,
-        {
-          background: "#282828",
-        },
-        "<",
-      )
-      .to(
-        arccontainerRef.current,
-        {
-          opacity: 0,
-        },
-        "<",
-      )
-      .to(
-        arcRef.current,
-        {
-          scale: 2.5,
-        },
-        "<-=0.1",
-      );
+      });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: mainContainerRef.current,
+            start: "top top",
+            end: "bottom center",
+            scrub: 1,
+          },
+        })
+        .to(headingContainerRef.current, {
+          height: targetHeight,
+        })
+        .to(
+          headingRef.current,
+          {
+            scale: 0.45,
+          },
+          "<",
+        )
+        .to(
+          headingContainerRef.current,
+          {
+            background: "#282828",
+          },
+          "<",
+        )
+        .to(
+          arccontainerRef.current,
+          {
+            opacity: 0,
+          },
+          "<",
+        )
+        .to(
+          arcRef.current,
+          {
+            scale: 2.5,
+          },
+          "<-=0.1",
+        );
+    };
+
+    mm.add("(max-width: 639px)", () => buildTimeline("150px"));
+    mm.add("(min-width: 640px)", () => buildTimeline("300px"));
   }, []);
 
   return (
     <div ref={mainContainerRef} className="relative h-full work-heading">
       <div
         ref={headingContainerRef}
-        className="flex flex-col justify-end h-150 relative z-5 bg-background/0"
+        className="flex flex-col justify-end h-150 max-sm:h-[52vh] relative z-5 bg-background/0"
       >
         <h1
           ref={headingRef}
-          className="font-semibold text-[180px] relative text-center select-none z-5"
+          className="font-semibold text-[180px] max-sm:text-5xl relative text-center select-none z-5"
         >
           {"SHOWCASE".split("").map((letter, index) => (
             <span
@@ -87,7 +93,7 @@ const WorkPageHeading = () => {
               className={`${
                 index === 0
                   ? ""
-                  : "max-sm:ml-3 sm:max-md:ml-4.5 md:max-lg:ml-7 lg:max-xl:ml-10.5 xl:max-1440p:ml-13 1440p:max-2xl:ml-13 2xl:ml-15.5 2240p:ml-18"
+                  : "max-sm:ml-1.5 sm:max-md:ml-4.5 md:max-lg:ml-7 lg:max-xl:ml-10.5 xl:max-1440p:ml-13 1440p:max-2xl:ml-13 2xl:ml-15.5 2240p:ml-18"
               }`}
             >
               {letter}

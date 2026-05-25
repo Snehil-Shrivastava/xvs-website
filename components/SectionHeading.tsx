@@ -8,19 +8,21 @@ const SectionHeading = ({
   buttonIcon,
   buttonLink,
   desc,
+  className,
 }: {
   headingText: string;
   buttonText?: string;
   buttonIcon?: JSX.Element;
   buttonLink?: string;
   desc?: string;
+  className?: string;
 }) => {
   const lastIndex = headingText.length - 1;
 
   return (
     <div className="relative">
       <h2
-        className="font-calSans text-[15rem] max-sm:text-[4.5rem] uppercase font-semibold select-none text-center"
+        className={`font-calSans text-[15rem] uppercase font-semibold select-none text-center ${className ? className : "max-sm:text-[4.5rem]"}`}
         style={{
           maskImage:
             "linear-gradient(rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 78%, rgba(0, 0, 0, 0) 90%)",

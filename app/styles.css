@@ -97,6 +97,28 @@
     --notch: 8px;
   }
 
+  .contact-clip-container {
+    clip-path: polygon(
+      0 21px,
+      0 100%,
+      100% 100%,
+      100% 21px,
+      calc(100% - 21px) 0,
+      21px 0
+    );
+  }
+
+  .contact-clip-content {
+    clip-path: polygon(
+      1px 22px,
+      1px calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) 22px,
+      calc(100% - 22px) 1px,
+      22px 1px
+    );
+  }
+
   .footer-container-clip {
     clip-path: Polygon(0 21px, 0 100%, 100% 100%, 100% 0, 21px 0);
   }

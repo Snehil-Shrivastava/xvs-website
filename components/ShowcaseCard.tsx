@@ -28,9 +28,9 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex justify-between gap-25 ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-sm:flex-col justify-between gap-25 max-sm:gap-10 ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
-      <div className={`h-inherit flex-[1.5] relative`}>
+      <div className={`h-inherit max-sm:h-50 xl:flex-[1.5] relative`}>
         <Image
           src={card.image}
           alt={`${card.heading}`}
@@ -59,7 +59,7 @@ const ShowcaseCard = ({
               className={`font-extralight text-brand-orange cursor-pointer uppercase btn-clip`}
             >
               <span
-                className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 py-4 backdrop-blur-xs flex gap-2"
+                className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-sm:px-4 py-4 max-sm:py-1.5 backdrop-blur-xs flex gap-2 max-sm:gap-1 max-sm:text-[10px] items-center"
                 style={{
                   background:
                     "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
@@ -68,7 +68,7 @@ const ShowcaseCard = ({
               >
                 <span className="text-nowrap">{link.linkTo}</span>
                 <span className="text-nowrap">
-                  <ArrowUpRight />
+                  <ArrowUpRight className="max-sm:w-4" />
                 </span>
               </span>
             </Link>
