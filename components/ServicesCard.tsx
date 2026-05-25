@@ -62,7 +62,7 @@ const ServicesCard = ({
       className="relative 2xl:w-[85%] w-full mx-auto md:pointer-events-none"
       id={services.id}
     >
-      <div className="pin-wrapper">
+      <div className="">
         <h2 className="font-calSans max-xs:text-[7vw] xs:max-sm:text-[2rem] sm:max-md:text-[2.5rem] md:max-lg:text-[3.5rem] lg:max-xl:text-[4rem] xl:max-1440p:text-[5rem] 1440p:max-2xl:text-[6rem] 2xl:text-[5.5rem] text-brand-orange absolute max-sm:-top-10 sm:max-md:top-[-2.6rem] md:max-lg:-top-15 lg:max-xl:-top-16 xl:max-1440p:-top-21 1440p:max-2xl:-top-25 2xl:-top-23 max-sm:left-1/2 max-sm:translate-x-[-50%] sm:right-0 -z-10 max-sm:w-full text-center select-none">
           {services.title}
         </h2>
@@ -91,17 +91,19 @@ const ServicesCard = ({
           images={services.image}
           imageLayout={services.imageLayout}
         />
-        <div></div>
         <Link
           href={{
             pathname: "/work",
             query: { category: services.subtitle },
           }}
-          className="absolute bottom-0 right-0 md:pointer-events-auto"
+          className="absolute bottom-0 right-0 max-sm:-right-1 max-sm:-bottom-1 md:pointer-events-auto"
           aria-label={`View ${services.subtitle} projects`}
           prefetch={false}
         >
-          <ArrowUpRight stroke="#f79839" className="scale-300 origin-center" />
+          <ArrowUpRight
+            stroke="#f79839"
+            className="scale-300 origin-center max-sm:scale-150"
+          />
         </Link>
       </div>
     </div>
