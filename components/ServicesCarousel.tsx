@@ -35,9 +35,9 @@ const ServicesCarousel = () => {
       grabCursor={false}
       centeredSlides={true}
       loop={true}
-      // autoplay={{
-      //   delay: 5000,
-      // }}
+      autoplay={{
+        delay: 5000,
+      }}
       slidesPerView="auto"
       breakpoints={{
         720: {
@@ -82,9 +82,9 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              className="text-center flex flex-col gap-5 max-sm:gap-1.5 px-12 max-sm:px-6 py-15 max-sm:py-8"
+              className="text-center flex flex-col gap-5 max-sm:gap-1.5 px-12 max-sm:px-4 py-15 max-sm:py-8"
             >
-              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl font-calSans">
+              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
               <span className="2240p:text-xl max-sm:text-[10px]">

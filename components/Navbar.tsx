@@ -52,13 +52,21 @@ export default function Navbar() {
       <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none">
         {/* Fullscreen Circular Menu */}
         <div
-          className="fixed inset-0 z-50 bg-brand-dark flex justify-center items-center pointer-events-none"
+          className={`fixed inset-0 z-9999 bg-brand-dark flex justify-center items-center pointer-events-none
+            
+            [--menu-origin-x:calc(100%-9rem)] [--menu-origin-y:7rem] [--menu-radius:200vw]
+            
+            max-sm:[--menu-origin-x:calc(100%-2.5rem)] max-sm:[--menu-origin-y:2.5rem] max-sm:[--menu-radius:120vh]
+            
+            md:max-lg:[--menu-origin-x:calc(100%-6rem)] md:max-lg:[--menu-origin-y:5rem]
+            
+          `}
           style={{
-            // The magic: Animates from a 0px circle to a 150vw circle.
-            // calc(100% - 9rem) 3rem aligns the circle's origin perfectly with the hamburger button.
+            // The magic: Animates from a 0px circle to a 200vw circle.
+            // calc(100% - 9rem) 7rem aligns the circle's origin perfectly with the hamburger button.
             clipPath: isOpen
-              ? "circle(200vw at calc(100% - 9rem) 7rem)"
-              : "circle(0px at calc(100% - 9rem) 7rem)",
+              ? "circle(var(--menu-radius) at var(--menu-origin-x) var(--menu-origin-y))"
+              : "circle(0px at var(--menu-origin-x) var(--menu-origin-y))",
             transition: "clip-path 1s cubic-bezier(0.76, 0, 0.24, 1)",
             willChange: "clip-path",
             pointerEvents: isOpen ? "auto" : "none",
