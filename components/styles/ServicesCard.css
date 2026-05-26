@@ -8,11 +8,12 @@
 }
 
 .border-bottom-right {
+  --notch: 96px;
   clip-path: polygon(
     0 0,
     0 100%,
-    calc(100% - 96px) 100%,
-    100% calc(100% - 96px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0,
     0 0
   );
@@ -24,57 +25,40 @@
   position: absolute;
   inset: 0;
 
+  --notch: 96px;
+
   clip-path: polygon(
     0 0,
     0 100%,
-    calc(100% - 96px - 1px) calc(100% - 2px),
-    calc(100% - 2px) calc(100% - 96px - 1px),
+    calc(100% - var(--notch) - 1px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - var(--notch) - 1px),
     100% 0
   );
 }
 
 .services-card-clip {
+  --notch: 96px;
   clip-path: polygon(
     0 0,
     0 100%,
-    calc(100% - 96px) 100%,
-    100% calc(100% - 96px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0,
     0 0
   );
 }
 
-@media screen and (max-width: 641px) {
+@media (max-width: 768px) {
   .services-card-clip {
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      calc(100% - 52px) 100%,
-      100% calc(100% - 52px),
-      100% 0,
-      0 0
-    );
+    --notch: 52px;
   }
 
   .border-bottom-right {
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      calc(100% - 52px) 100%,
-      100% calc(100% - 52px),
-      100% 0,
-      0 0
-    );
+    --notch: 52px;
   }
 
   .border-bottom-right::before {
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      calc(100% - 52px - 1px) calc(100% - 2px),
-      calc(100% - 2px) calc(100% - 52px - 1px),
-      100% 0
-    );
+    --notch: 52px;
   }
 }
 

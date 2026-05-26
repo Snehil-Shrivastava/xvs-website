@@ -33,7 +33,7 @@ const ServicesMain = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-80 max-sm:gap-50 relative max-w-450 max-sm:w-full mx-auto">
+    <div className="flex flex-col gap-80 max-md:gap-50 relative max-w-450 max-md:w-full mx-auto">
       {servicesCardsData.map((services, index) => (
         <ServicesCard
           key={index}

@@ -79,12 +79,12 @@ const ServicesCard = ({
         >
           <div className="flex-1" aria-hidden="true" />
           <div className="flex-1">
-            <p className="max-sm:text-[15px]/[25px] sm:max-md:text-[0.75rem] md:max-lg:text-[0.85rem]/[1.5rem] lg:max-xl:text-[1rem]/[1.8rem] xl:max-1440p:text-[1.25rem]/[2rem] 1440p:max-2xl:text-[1.25rem]/[2rem] 2xl:text-[1.3rem]/[2rem] 1920p:text-[1.5rem]/[2.3rem] 2240p:text-[1.8rem]/[2.8rem] font-thin max-sm:h-full w-full max-sm:mt-auto sm:ml-auto max-sm:py-8 sm:max-md:py-15 md:max-lg:py-15 lg:max-xl:py-20 xl:max-1440p:py-25 1440p:max-2xl:py-25 2xl:py-30 max-sm:px-8 sm:max-md:pr-10 md:max-lg:pr-12 lg:max-xl:pr-15 xl:max-1440p:pr-20 1440p:max-2xl:pr-20 2xl:pr-25 max-sm:flex max-sm:items-center">
+            <p className="max-sm:text-[15px]/[25px] sm:max-md:text-sm md:max-lg:text-[0.85rem]/[1.5rem] lg:max-xl:text-[1rem]/[1.8rem] xl:max-1440p:text-[1.25rem]/[2rem] 1440p:max-2xl:text-[1.25rem]/[2rem] 2xl:text-[1.3rem]/[2rem] 1920p:text-[1.5rem]/[2.3rem] 2240p:text-[1.8rem]/[2.8rem] font-thin max-sm:h-full w-full max-sm:mt-auto sm:ml-auto max-sm:py-8 sm:max-md:py-15 md:max-lg:py-15 lg:max-xl:py-20 xl:max-1440p:py-25 1440p:max-2xl:py-25 2xl:py-30 max-sm:px-8 sm:max-md:pr-10 md:max-lg:pr-12 lg:max-xl:pr-15 xl:max-1440p:pr-20 1440p:max-2xl:pr-20 2xl:pr-25 max-sm:flex max-sm:items-center">
               {services.description}
             </p>
           </div>
         </div>
-        <p className="font-apercu-bold max-sm:text-[0.7rem] sm:max-md:text-[6px] md:max-lg:text-[6px] lg:max-xl:text-[0.65rem] xl:max-1440p:text-[0.75rem] 1440p:max-2xl:text-[0.75rem] 2xl:text-[0.875rem] 2240p:tetx-[1.6rem] absolute origin-bottom-left bottom-0 rotate-270 text-brand-cream max-sm:tracking-[10px] sm:max-md:tracking-[6px] md:max-lg:tracking-[6px] 2xl:tracking-[10px] tracking-[8px] uppercase max-xs:w-[200%]">
+        <p className="font-apercu-bold max-sm:text-[0.7rem] sm:max-md:text-[8px] md:max-lg:text-[6px] lg:max-xl:text-[0.65rem] xl:max-1440p:text-[0.75rem] 1440p:max-2xl:text-[0.75rem] 2xl:text-[0.875rem] 2240p:tetx-[1.6rem] absolute origin-bottom-left bottom-0 rotate-270 text-brand-cream max-sm:tracking-[10px] sm:max-md:tracking-[6px] md:max-lg:tracking-[6px] 2xl:tracking-[10px] tracking-[8px] uppercase max-xs:w-[200%]">
           {services.subtitle}
         </p>
         <ImageRenderer
@@ -102,7 +102,7 @@ const ServicesCard = ({
         >
           <ArrowUpRight
             stroke="#f79839"
-            className="scale-300 origin-center max-sm:scale-150"
+            className="scale-300 origin-center max-sm:scale-150 sm:max-md:w-3"
           />
         </Link>
       </div>

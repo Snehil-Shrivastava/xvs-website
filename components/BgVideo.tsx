@@ -4,14 +4,14 @@ import { Asset } from "next-video/dist/assets.js";
 const BgVideo = ({ bgVideo }: { bgVideo: Asset }) => {
   return (
     <div
-      className="overflow-hidden max-sm:w-[250vw]"
+      className="overflow-hidden max-sm:w-[250vw] sm:max-md:w-[180vw]"
       style={{
         maskImage: "linear-gradient(to bottom, black, transparent 95% 100%)",
       }}
     >
       <Video
         src={bgVideo}
-        className="-scale-x-100 services-bg-container h-[95vh] max-sm:h-full"
+        className="-scale-x-100 services-bg-container h-[95vh] max-md:h-full"
         controls={false}
         autoPlay
         loop

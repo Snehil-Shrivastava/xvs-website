@@ -5,7 +5,7 @@ import servicsBg from "@/videos/services-light.mp4";
 const Services = () => {
   return (
     <div>
-      <div className="h-screen max-md:h-150 absolute z-0 inset-x-0 overflow-hidden brightness-50">
+      <div className="h-screen max-sm:h-150 sm:max-md:h-220 absolute z-0 inset-x-0 overflow-hidden brightness-50">
         <BgVideo bgVideo={servicsBg} />
       </div>
       <ServicesPage />
