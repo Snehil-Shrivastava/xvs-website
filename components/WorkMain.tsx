@@ -13,7 +13,7 @@ const WorkMain = ({ activeCategories }: WorkMainProps) => {
           activeCategories.every((cat) => card.category.includes(cat)),
         );
   return (
-    <div className="w-450 max-sm:w-9/10 max-w-450 mx-auto pt-20 pb-40">
+    <div className="w-450 max-md:w-9/10 max-w-450 mx-auto pt-20 pb-40">
       <div className="flex flex-col gap-30">
         {workCards.map((card, index) => (
           <ShowcaseCard key={index} card={card} index={index} />

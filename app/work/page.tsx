@@ -9,7 +9,7 @@ const Work = () => {
           starCount={150}
           minSpeed={0.002}
           maxSpeed={0.004}
-          wanderDistance={150} // Moves a lot further across the screen
+          wanderDistance={150}
         />
       </div>
       <WorkPage />

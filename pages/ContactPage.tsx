@@ -8,7 +8,7 @@ import PulsingDots from "@/components/PulsingDots";
 const ContactPage = () => {
   return (
     <div
-      className="flex flex-col items-center h-full justify-center relative max-sm:w-9/10 max-sm:mx-auto"
+      className="flex flex-col items-center h-full justify-center relative max-md:w-9/10 max-md:mx-auto"
       style={{
         backgroundImage: `url(/svg/contact-bg-map.svg)`,
         backgroundRepeat: `no-repeat`,
@@ -24,18 +24,18 @@ const ContactPage = () => {
       />
       <PulsingDots />
       <div className="bg-white/20 w-20 h-20 rounded-full absolute -top-10 left-1/2 -translate-x-1/2 shadow-[0_0_250px_250px_rgba(255,255,255,0.2)] pointer-events-none z-15" />
-      <div className="w-450 max-sm:w-full max-w-450 relative">
+      <div className="w-450 max-md:w-full max-w-450 relative">
         <div className="absolute inset-0 bg-neutral-600/20 backdrop-blur-md contact-clip-container" />
         <div className="bg-background/20 backdrop-blur-md relative z-5 contact-clip-content flex flex-col justify-center">
           <SectionHeading
-            className="max-sm:text-[3.7rem]"
+            className="max-sm:text-[3.7rem] sm:max-md:text-[5rem]"
             headingText="connect"
             buttonText="contact"
             buttonIcon={
               <Heart
                 stroke="none"
                 fill="#f79839"
-                className="scale-80 max-sm:w-4"
+                className="scale-80 max-sm:w-4 sm:max-md:w-5"
               />
             }
           />

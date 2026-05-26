@@ -18,7 +18,7 @@ const WorkPageHeading = () => {
   useGSAP(() => {
     const mm = gsap.matchMedia();
 
-    const buildTimeline = (targetHeight: string) => {
+    const buildTimeline = (targetHeight: string, targetScale: number) => {
       gsap.timeline({
         scrollTrigger: {
           trigger: headingContainerRef.current,
@@ -46,7 +46,7 @@ const WorkPageHeading = () => {
         .to(
           headingRef.current,
           {
-            scale: 0.45,
+            scale: targetScale,
           },
           "<",
         )
@@ -73,19 +73,22 @@ const WorkPageHeading = () => {
         );
     };
 
-    mm.add("(max-width: 639px)", () => buildTimeline("150px"));
-    mm.add("(min-width: 640px)", () => buildTimeline("300px"));
+    mm.add("(max-width: 639px)", () => buildTimeline("150px", 0.45));
+    mm.add("(min-width: 640px) and (max-width: 767px)", () =>
+      buildTimeline("180px", 0.8),
+    );
+    mm.add("(min-width: 768px)", () => buildTimeline("300px", 0.45));
   }, []);
 
   return (
     <div ref={mainContainerRef} className="relative h-full work-heading">
       <div
         ref={headingContainerRef}
-        className="flex flex-col justify-end h-150 max-sm:h-[52vh] relative z-5 bg-background/0"
+        className="flex flex-col justify-end h-150 max-sm:h-[52vh] sm:max-md:h-[52vh] relative z-5 bg-background/0"
       >
         <h1
           ref={headingRef}
-          className="font-semibold text-[180px] max-sm:text-5xl relative text-center select-none z-5"
+          className="font-semibold text-[180px] max-sm:text-5xl sm:max-md:text-6xl relative text-center select-none z-5"
         >
           {"SHOWCASE".split("").map((letter, index) => (
             <span

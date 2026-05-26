@@ -42,7 +42,10 @@ const WorkCategoryFilter = ({
       };
 
       mm.add("(max-width: 639px)", () => buildTimeline("149px"));
-      mm.add("(min-width: 640px)", () => buildTimeline("299px"));
+      mm.add("(min-width: 640px) and (max-width: 767px)", () =>
+        buildTimeline("179px"),
+      );
+      mm.add("(min-width: 768px)", () => buildTimeline("299px"));
     },
     { scope: categoryFilterContainerRef },
   );
@@ -65,13 +68,13 @@ const WorkCategoryFilter = ({
         className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 bg-background relative z-10 pb-5"
       >
         {/* Main Layout: Flex-Col on Mobile (Show All on bottom), Flex-Wrap on Desktop */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-4 max-sm:gap-4 max-sm:w-[95%] max-sm:mx-auto items-center justify-center w-full sm:w-auto">
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 max-sm:gap-4 max-sm:w-[95%] max-sm:mx-auto items-center justify-center w-full md:w-auto">
           {/* Mobile Carousel Layout */}
-          <div className="flex items-center w-full sm:contents gap-1">
+          <div className="flex items-center w-full md:contents gap-1">
             {/* Left Chevron (Mobile Only) */}
             <button
               onClick={() => scroll("left")}
-              className="sm:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
+              className="md:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
               aria-label="Scroll left"
             >
               <ChevronLeft size={24} />
@@ -80,7 +83,7 @@ const WorkCategoryFilter = ({
             {/* Scrollable Container */}
             <div
               ref={scrollContainerRef}
-              className="flex flex-1 min-w-0 sm:flex-wrap items-center gap-4 max-sm:gap-2 overflow-x-auto scroll-smooth sm:contents [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
+              className="flex flex-1 min-w-0 md:flex-wrap items-center gap-4 max-sm:gap-2 overflow-x-auto scroll-smooth md:contents [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
             >
               {categories.map((cat) => (
                 <button
@@ -102,7 +105,7 @@ const WorkCategoryFilter = ({
             {/* Right Chevron (Mobile Only) */}
             <button
               onClick={() => scroll("right")}
-              className="sm:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
+              className="md:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
               aria-label="Scroll right"
             >
               <ChevronRight size={24} />

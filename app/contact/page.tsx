@@ -3,7 +3,7 @@ import ContactPage from "@/pages/ContactPage";
 const Contact = () => {
   return (
     <>
-      <div className="h-screen max-sm:h-280">
+      <div className="h-screen max-md:h-280">
         <ContactPage />
       </div>
     </>
