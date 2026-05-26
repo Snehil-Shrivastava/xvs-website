@@ -8,13 +8,13 @@ import product3d from "@/public/lottie-animation/3D-product.json";
 const AgencyServices = () => {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="max-w-350 w-4/5 max-md:w-9/10 mx-auto relative font-calSans">
-        <span className="text-brand-orange text-5xl max-sm:text-3xl capitalize absolute -top-8 max-sm:-top-5 z-99">
+      <div className="max-w-350 w-4/5 max-md:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
+        <span className="text-brand-orange text-5xl max-sm:text-3xl sm:max-md:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
           what we deliver
         </span>
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
         <div className="bg-background relative py-20 max-md:py-8 px-20 max-md:px-10 flex flex-col gap-15 max-md:gap-8 agency-client-content">
-          <p className="font-light font-sans max-sm:text-xl text-3xl">
+          <p className="font-light font-sans max-sm:text-xl sm:max-md:text-2xl text-3xl">
             We provide agency-ready creative execution across:
           </p>
           <div className="w-9/10 max-md:w-full mx-auto grid grid-cols-2 max-md:grid-cols-1 gap-x-15 gap-y-25 max-md:gap-y-10 relative">

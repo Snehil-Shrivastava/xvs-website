@@ -24,16 +24,16 @@ const AgencyUSP = () => {
       <div>
         <div className="flex items-center justify-center h-full">
           <div className="max-w-350 w-4/5 max-md:w-9/10 mx-auto relative font-calSans">
-            <span className="text-brand-orange text-5xl max-sm:text-3xl capitalize absolute -top-8 max-sm:-top-5 z-99">
+            <span className="text-brand-orange text-5xl max-sm:text-3xl sm:max-md:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
               proven & trusted
             </span>
             <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
             <div className="bg-background relative py-20 flex flex-col gap-20 agency-client-content">
               <div className="flex max-md:flex-col max-md:gap-10 justify-around items-center relative">
                 <div className="absolute w-3/10 max-md:w-7/10 left-1/2 -translate-1/2 top-1/2 h-full max-md:h-[35%] md:border-x md:border-x-brand-orange/50 max-md:border-y max-md:border-y-brand-orange/50 pointer-events-none" />
-                <div className="flex gap-10 items-center max-md:w-50">
+                <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl max-sm:text-5xl">
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl">
                       4.8
                     </span>
                     <Star
@@ -53,8 +53,8 @@ const AgencyUSP = () => {
                     />
                   </div>
                 </div>
-                <div className="flex gap-10 items-center max-md:w-50">
-                  <div className="text-7xl max-sm:text-5xl">
+                <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
+                  <div className="text-7xl max-sm:text-5xl sm:max-md:text-6xl">
                     <span className="text-brand-orange">19</span>
                     <span>+</span>
                   </div>
@@ -67,9 +67,9 @@ const AgencyUSP = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex gap-10 items-center max-md:w-50">
+                <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl max-sm:text-5xl">
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl">
                       4.8
                     </span>
                     <Star
@@ -97,9 +97,9 @@ const AgencyUSP = () => {
                     <Image
                       src={Communication}
                       alt="communication"
-                      className="w-15 max-sm:w-12.5"
+                      className="w-15 max-sm:w-12.5 sm:max-md:w-15"
                     />
-                    <span className="text-[28px] max-sm:text-sm">
+                    <span className="text-[28px] max-sm:text-sm sm:max-md:text-lg">
                       Commnication
                     </span>
                   </div>
@@ -107,9 +107,9 @@ const AgencyUSP = () => {
                     <Image
                       src={Responsiveness}
                       alt="communication"
-                      className="w-15 max-sm:w-12.5"
+                      className="w-15 max-sm:w-12.5 sm:max-md:w-15"
                     />
-                    <span className="text-[28px] max-sm:text-sm">
+                    <span className="text-[28px] max-sm:text-sm sm:max-md:text-lg">
                       Responsiveness
                     </span>
                   </div>
@@ -117,9 +117,9 @@ const AgencyUSP = () => {
                     <Image
                       src={Reliability}
                       alt="communication"
-                      className="w-15 max-sm:w-12.5"
+                      className="w-15 max-sm:w-12.5 sm:max-md:w-15"
                     />
-                    <span className="text-[28px] max-sm:text-sm">
+                    <span className="text-[28px] max-sm:text-sm sm:max-md:text-lg">
                       Reliability
                     </span>
                   </div>
@@ -127,9 +127,9 @@ const AgencyUSP = () => {
                     <Image
                       src={Delivery}
                       alt="communication"
-                      className="w-15 max-sm:w-12.5"
+                      className="w-15 max-sm:w-12.5 sm:max-md:w-15"
                     />
-                    <span className="text-[28px] max-sm:text-sm">
+                    <span className="text-[28px] max-sm:text-sm sm:max-md:text-lg">
                       Quality Delivery
                     </span>
                   </div>

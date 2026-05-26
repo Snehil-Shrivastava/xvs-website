@@ -134,6 +134,64 @@
   }
 }
 
+@media (min-width: 640px) and (max-width: 768px) {
+  .agency-stat-container {
+    clip-path: Polygon(
+      0 30px,
+      0 100%,
+      calc(100% - 25px) 100%,
+      100% calc(100% - 30px),
+      100% 0,
+      25px 0
+    );
+  }
+
+  .agency-stat-content {
+    clip-path: Polygon(
+      1px 30px,
+      1px calc(100% - 1px),
+      30% 100%,
+      60% 100%,
+      70% calc(100% - 1px),
+      calc(100% - 25px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 30px),
+      calc(100% - 1px) 60%,
+      100% 40%,
+      100% 0,
+      60% 0,
+      25px 1px
+    );
+  }
+
+  .agency-client-container {
+    clip-path: Polygon(
+      0 0,
+      0 calc(100% - 30px),
+      25px 100%,
+      100% 100%,
+      100% 30px,
+      calc(100% - 25px) 0
+    );
+  }
+
+  .agency-client-content {
+    clip-path: Polygon(
+      0 0,
+      0 30%,
+      1px 50%,
+      1px calc(100% - 30px),
+      25px calc(100% - 1px),
+      10% 100%,
+      50% 100%,
+      100% calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 1px),
+      calc(100% - 1px) 30px,
+      calc(100% - 25px) 1px,
+      70% 0
+    );
+  }
+}
+
 @media (max-width: 640px) {
   .btn-clip {
     --notch: 8px;

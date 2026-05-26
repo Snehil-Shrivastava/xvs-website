@@ -7,7 +7,7 @@ import AgencyUSP from "@/sections/AgencyUSP";
 const AgencyPage = () => {
   return (
     <div className="relative z-5 flex flex-col gap-80 max-md:gap-40 pb-80">
-      <div className="h-screen max-sm:h-auto">
+      <div className="h-screen max-md:h-auto">
         <AgencyHeading />
       </div>
       <div>
