@@ -27,7 +27,7 @@ import Image from "next/image";
 
 const GlassdoorReviews = () => {
   return (
-    <div className="relative w-full min-w-0 overflow-hidden flex flex-col gap-6 max-sm:gap-1">
+    <div className="relative w-full min-w-0 overflow-hidden flex flex-col gap-6 max-md:gap-1">
       <div className="flex justify-between items-center max-sm:text-[12px] select-none mb-4">
         <div className="cursor-pointer glassdoor-prev flex gap-2 items-center">
           <ChevronLeft stroke="#f79839" />
@@ -43,7 +43,7 @@ const GlassdoorReviews = () => {
         modules={[Navigation]}
         slidesPerView={1}
         breakpoints={{
-          720: {
+          768: {
             slidesPerView: 2,
           },
         }}

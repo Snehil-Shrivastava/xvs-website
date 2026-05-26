@@ -141,21 +141,21 @@ body {
     --notch: 28px;
   }
 
-  /* .container-clip-tl {
-    --notch: 22px;
+  .container-clip-tl {
+    --notch: 28px;
   }
 
   .content-clip-tl {
-    --notch: 22px;
+    --notch: 28px;
   }
 
   .container-clip-br {
-    --notch: 22px;
+    --notch: 28px;
   }
 
   .content-clip-br {
-    --notch: 22px;
-  } */
+    --notch: 28px;
+  }
 }
 
 @keyframes pulsingDiv {

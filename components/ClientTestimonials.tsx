@@ -45,7 +45,7 @@ const ClientTestimonials = () => {
             fill={`${
               isClutchHovered || tabSelected === "clutch" ? "#0F0D0A" : "white"
             }`}
-            className="max-sm:w-13"
+            className="max-sm:w-13 sm:max-md:w-16"
           />
         </div>
         <div
@@ -60,7 +60,7 @@ const ClientTestimonials = () => {
                 ? "#0F0D0A"
                 : "white"
             }`}
-            className="max-sm:w-14"
+            className="max-sm:w-14 sm:max-md:w-18"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ const ClientTestimonials = () => {
               <Swiper
                 slidesPerView={1}
                 breakpoints={{
-                  720: {
+                  768: {
                     slidesPerView: 3,
                   },
                 }}
@@ -100,15 +100,15 @@ const ClientTestimonials = () => {
                       className="flex flex-col text-black flex-1 gap-3 h-full"
                     >
                       <div>
-                        <h4 className="text-xl max-sm:text-sm font-semibold">
+                        <h4 className="text-xl max-sm:text-sm sm:max-md:text-lg font-semibold">
                           {client.name}
                         </h4>
-                        <p className="text-sm max-sm:text-[12px] text-[#00000080] max-w-4/5">
+                        <p className="text-sm max-sm:text-[12px] sm:max-md:text-sm text-[#00000080] max-w-4/5">
                           {client.designation}
                         </p>
                       </div>
                       <div className="flex gap-4 items-center">
-                        <h2 className="max-sm:text-lg sm:max-md:text-[1rem] md:max-lg:text-[1.2rem] lg:max-xl:text-[1.8rem] xl:max-1440p:text-[2rem] 1440p:max-2xl:text-[2rem] 2xl:text-[2.5rem] font-semibold">
+                        <h2 className="max-sm:text-lg sm:max-md:text-2xl md:max-lg:text-[1.2rem] lg:max-xl:text-[1.8rem] xl:max-1440p:text-[2rem] 1440p:max-2xl:text-[2rem] 2xl:text-[2.5rem] font-semibold">
                           {client.rating}
                         </h2>
                         <div className="flex max-sm:gap-1 sm:max-md:gap-1 md:max-lg:gap-1 lg:max-xl:gap-2 xl:max-1440p:gap-2 1440p:max-2xl:gap-2 2xl:gap-2 items-center">
@@ -117,7 +117,7 @@ const ClientTestimonials = () => {
                               key={i}
                               fill="#F79839"
                               stroke="none"
-                              className="max-sm:w-3"
+                              className="max-sm:w-3 sm:max-md:w-5"
                             />
                           ))}
                         </div>
@@ -147,7 +147,7 @@ const ClientTestimonials = () => {
           <Link
             target="_blank"
             href={`${tabSelected === "clutch" ? "https://clutch.co/profile/xvs-creations?page=1#reviews" : "https://www.sortlist.com/agency/xvs-creations"}`}
-            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm cursor-pointer select-none"
+            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm sm:max-md:text-lg cursor-pointer select-none"
           >
             View more reviews
           </Link>
