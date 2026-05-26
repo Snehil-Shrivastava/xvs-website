@@ -1,6 +1,4 @@
 import SectionHeading from "@/components/SectionHeading";
-
-import "@/app/styles.css";
 import ContactForm from "@/components/ContactForm";
 import { Heart } from "lucide-react";
 import PulsingDots from "@/components/PulsingDots";

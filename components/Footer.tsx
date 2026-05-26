@@ -2,8 +2,6 @@ import Link from "next/link";
 import FooterHeading from "./FooterHeading";
 import FooterDetail from "./FooterDetail";
 
-import "@/app/styles.css";
-
 const Footer = () => {
   return (
     <div>

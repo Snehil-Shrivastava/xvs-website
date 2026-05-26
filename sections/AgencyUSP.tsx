@@ -11,68 +11,80 @@ import Delivery from "@/public/svg/Delivery.svg";
 const AgencyUSP = () => {
   return (
     <div className="flex flex-col gap-30">
-      <div className="flex flex-col gap-15">
-        <p className="text-center capitalize text-4xl font-extralight font-sans tracking-wider">
+      <div className="flex flex-col gap-15 max-md:gap-8">
+        <p className="text-center capitalize text-4xl max-md:text-2xl font-extralight font-sans tracking-wider">
           why agencies choose
         </p>
-        <Image src={xvslogo} alt="xvs logo" className="mx-auto w-50" />
+        <Image
+          src={xvslogo}
+          alt="xvs logo"
+          className="mx-auto w-50 max-md:w-25"
+        />
       </div>
       <div>
         <div className="flex items-center justify-center h-full">
-          <div className="max-w-350 w-4/5 mx-auto relative font-calSans">
-            <span className="text-brand-orange text-5xl capitalize absolute -top-8 z-99">
+          <div className="max-w-350 w-4/5 max-md:w-9/10 mx-auto relative font-calSans">
+            <span className="text-brand-orange text-5xl max-sm:text-3xl capitalize absolute -top-8 max-sm:-top-5 z-99">
               proven & trusted
             </span>
-            <div
-              className="absolute bg-neutral-500 inset-0 z-0"
-              style={{
-                clipPath: `Polygon(0 0, 0 92%, 3% 100%, 100% 100%, 100% 8%, 97% 0)`,
-              }}
-            />
-            <div
-              className="bg-background relative py-20 flex flex-col gap-20"
-              style={{
-                clipPath: `Polygon(0 0, 0 30%, 1px 50%, 1px 92%, 3% calc(100% - 1px), 30% 100%, 50% 100%, 60% calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 8%, 97% 1px, 40% 0)`,
-              }}
-            >
-              <div className="flex justify-around items-center relative">
-                <div className="absolute w-3/10 left-1/2 -translate-1/2 top-1/2 h-full border-x border-x-brand-orange/50 pointer-events-none" />
-                <div className="flex gap-10 items-center">
+            <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
+            <div className="bg-background relative py-20 flex flex-col gap-20 agency-client-content">
+              <div className="flex max-md:flex-col max-md:gap-10 justify-around items-center relative">
+                <div className="absolute w-3/10 max-md:w-7/10 left-1/2 -translate-1/2 top-1/2 h-full max-md:h-[35%] md:border-x md:border-x-brand-orange/50 max-md:border-y max-md:border-y-brand-orange/50 pointer-events-none" />
+                <div className="flex gap-10 items-center max-md:w-50">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl">4.8</span>
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl">
+                      4.8
+                    </span>
                     <Star
-                      className="absolute w-12 -top-5 -right-10"
+                      className="absolute w-12 max-md:w-5 -top-5 -right-10 max-md:-right-5"
                       fill="#fff"
                       stroke="none"
                     />
                   </div>
                   <div>
-                    <span className="text-xl font-medium">Rated on</span>
-                    <ClutchLogo width="112" height="40" />
+                    <span className="text-xl max-sm:text-sm font-medium">
+                      Rated on
+                    </span>
+                    <ClutchLogo
+                      width="112"
+                      height="40"
+                      className="max-sm:w-20"
+                    />
                   </div>
                 </div>
-                <div className="flex gap-10 items-center">
-                  <div className="text-7xl">
+                <div className="flex gap-10 items-center max-md:w-50">
+                  <div className="text-7xl max-sm:text-5xl">
                     <span className="text-brand-orange">19</span>
                     <span>+</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-medium">Verified</span>
-                    <span className="text-4xl font-medium">Reviews</span>
+                    <span className="text-xl max-sm:text-sm font-medium">
+                      Verified
+                    </span>
+                    <span className="text-4xl max-sm:text-2xl font-medium max-md:font-sans">
+                      Reviews
+                    </span>
                   </div>
                 </div>
-                <div className="flex gap-10 items-center">
+                <div className="flex gap-10 items-center max-md:w-50">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl">4.8</span>
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl">
+                      4.8
+                    </span>
                     <Star
-                      className="absolute w-12 -top-5 -right-10"
+                      className="absolute w-12 max-md:w-5 -top-5 -right-10 max-md:-right-5"
                       fill="#fff"
                       stroke="none"
                     />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-medium">willingness to</span>
-                    <span className="text-4xl font-medium">Refer</span>
+                    <span className="text-xl max-sm:text-sm font-medium">
+                      willingness to
+                    </span>
+                    <span className="text-4xl max-sm:text-2xl font-medium max-md:font-sans">
+                      Refer
+                    </span>
                   </div>
                 </div>
               </div>
@@ -81,37 +93,45 @@ const AgencyUSP = () => {
                   We provide agency-ready creative execution across:
                 </p>
                 <div className="w-7/10 mx-auto grid grid-cols-2 gap-x-15 gap-y-25 relative pt-15 justify-center">
-                  <div className="flex gap-10 items-center justify-start max-w-80">
+                  <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Communication}
                       alt="communication"
-                      className="w-15"
+                      className="w-15 max-sm:w-12.5"
                     />
-                    <span className="text-[28px]">Commnication</span>
+                    <span className="text-[28px] max-sm:text-sm">
+                      Commnication
+                    </span>
                   </div>
-                  <div className="flex gap-10 items-center justify-start max-w-80">
+                  <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Responsiveness}
                       alt="communication"
-                      className="w-15"
+                      className="w-15 max-sm:w-12.5"
                     />
-                    <span className="text-[28px]">Responsiveness</span>
+                    <span className="text-[28px] max-sm:text-sm">
+                      Responsiveness
+                    </span>
                   </div>
-                  <div className="flex gap-10 items-center justify-start max-w-80">
+                  <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Reliability}
                       alt="communication"
-                      className="w-15"
+                      className="w-15 max-sm:w-12.5"
                     />
-                    <span className="text-[28px]">Reliability</span>
+                    <span className="text-[28px] max-sm:text-sm">
+                      Reliability
+                    </span>
                   </div>
-                  <div className="flex gap-10 items-center justify-start max-w-80">
+                  <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Delivery}
                       alt="communication"
-                      className="w-15"
+                      className="w-15 max-sm:w-12.5"
                     />
-                    <span className="text-[28px]">Quality Delivery</span>
+                    <span className="text-[28px] max-sm:text-sm">
+                      Quality Delivery
+                    </span>
                   </div>
                 </div>
               </div>

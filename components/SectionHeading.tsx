@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "@/app/styles.css";
 import { JSX } from "react";
 
 const SectionHeading = ({

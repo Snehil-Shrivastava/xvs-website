@@ -3,8 +3,6 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import "@/app/styles.css";
-
 interface WorkCardType {
   id: number;
   heading: string;

@@ -6,7 +6,7 @@ import agencyBg from "@/videos/agenciesBg.mp4";
 const Agency = () => {
   return (
     <div>
-      <div className="h-screen absolute z-0 inset-x-0 overflow-hidden brightness-50">
+      <div className="h-screen max-sm:h-150 absolute z-0 inset-x-0 overflow-hidden brightness-50">
         <BgVideo bgVideo={agencyBg} />
       </div>
       <AgencyPage />
