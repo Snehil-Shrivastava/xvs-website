@@ -23,7 +23,7 @@ const AgencyUSP = () => {
       </div>
       <div>
         <div className="flex items-center justify-center h-full">
-          <div className="max-w-350 w-4/5 max-md:w-9/10 mx-auto relative font-calSans">
+          <div className="max-w-350 w-4/5 max-md:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
             <span className="text-brand-orange text-5xl max-sm:text-3xl sm:max-md:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
               proven & trusted
             </span>
