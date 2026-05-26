@@ -3,6 +3,7 @@ import AgencyHeading from "@/sections/AgencyHeading";
 import AgencyServices from "@/sections/AgencyServices";
 import AgencyStats from "@/sections/AgencyStats";
 import AgencyUSP from "@/sections/AgencyUSP";
+import AgencyWorkflow from "@/sections/AgencyWorkflow";
 
 const AgencyPage = () => {
   return (
@@ -21,6 +22,9 @@ const AgencyPage = () => {
       </div>
       <div>
         <AgencyUSP />
+      </div>
+      <div>
+        <AgencyWorkflow />
       </div>
     </div>
   );

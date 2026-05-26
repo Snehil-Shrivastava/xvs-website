@@ -15,9 +15,11 @@
   --color-brand-orange: var(--brand-orange);
   --color-brand-orange-light: var(--brand-orange-light);
   --color-brand-cream: var(--brand-cream);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-calSans: var(--font-cal-sans);
+  --font-apercu-black: var(--font-apercu-black);
+  --font-apercu-bold: var(--font-apercu-bold);
+  --font-apercu-regular: var(--font-apercu-regular);
+  --font-poppins: var(--font-poppins);
 }
 
 @theme {

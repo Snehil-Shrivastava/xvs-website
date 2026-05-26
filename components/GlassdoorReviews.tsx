@@ -57,7 +57,7 @@ const GlassdoorReviews = () => {
       >
         {AboutGlassdoorReview.map((review, index) => (
           <SwiperSlide key={index} className="h-auto bg-white rounded-md py-6">
-            <div className="text-black w-4/5 max-sm:w-[90%] mx-auto flex flex-col gap-4 max-sm:gap-1.5 justify-between h-full">
+            <div className="text-black w-[85%] max-sm:w-[90%] mx-auto flex flex-col gap-4 max-sm:gap-1.5 justify-between h-full">
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
                   <span className="w-10 h-10 max-sm:w-4 max-sm:h-4 rounded-full bg-transparent inline-block">
@@ -67,13 +67,13 @@ const GlassdoorReviews = () => {
                     {review.name}
                   </span>
                 </div>
-                <div className="flex gap-3 max-sm:gap-1">
+                <div className="flex gap-1">
                   {Array.from({ length: review.stars }).map((_, i) => (
                     <Star
                       key={i}
                       stroke="none"
                       fill="#f79839"
-                      className="max-sm:w-3"
+                      className="w-5 max-sm:w-3"
                     />
                   ))}
                 </div>

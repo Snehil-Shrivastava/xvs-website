@@ -15,7 +15,7 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   return (
     <div className="absolute inset-0 flex flex-col">
       <div className="px-50 pt-20 pb-15 max-sm:pt-25 sm:max-md:pt-30 max-sm:px-10 sm:max-md:px-35 max-sm:pb-20">
-        <div className="flex items-center justify-center sm:max-md:justify-between max-sm:gap-3 sm:max-md:gap-6 gap-20 max-sm:text-[1.125rem] sm:max-md:text-2xl text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
+        <div className="font-poppins flex items-center justify-center sm:max-md:justify-between max-sm:gap-3 sm:max-md:gap-6 gap-20 max-sm:text-[1.125rem] sm:max-md:text-2xl text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
           {mainNavLinks.map((link, index) => (
             <Link
               key={index}
@@ -33,7 +33,7 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
         <div className="max-md:w-full xl:max-1440p:w-[65%] 1440p:max-2xl:w-[85%] 2xl:max-2240p:w-[65%] 2240p:w-[60%] max-xl:flex max-xl:flex-col grid grid-cols-2 max-sm:gap-[2dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[4dvh] xl:max-1440p:gap-[7dvh] 1440p:max-2xl:gap-x-[7dvh] 1440p:max-2xl:gap-y-[12dvh] 2xl:gap-[8dvh] 2240p:gap-y-[7dvh] 2240p:gap-x-[9dvh]">
           {navLinksBody.map((link, index) => (
             <div key={index} className="">
-              <h3 className="max-sm:text-[10px] sm:max-md:text-[0.75rem] md:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] xl:max-1440p:text-[1.2rem] 1440p:max-2xl:text-[1.2rem] 2xl:text-[1.5rem] 2240p:text-[30px]">
+              <h3 className="font-poppins max-sm:text-[10px] sm:max-md:text-[0.75rem] md:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] xl:max-1440p:text-[1.2rem] 1440p:max-2xl:text-[1.2rem] 2xl:text-[1.5rem] 2240p:text-[30px]">
                 {link.subheading}
               </h3>
               <Link

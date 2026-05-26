@@ -30,17 +30,17 @@ const AboutProcess = () => {
                   fill
                 />
               </div>
-              <span className="text-brand-cream text-[64px] max-sm:text-3xl sm:max-md:text-4xl font-semibold">
+              <span className="font-calSans text-brand-cream text-[64px] max-sm:text-3xl sm:max-md:text-4xl">
                 {process.cardTitle}
               </span>
             </div>
-            <p className="w-full text-2xl font-light max-sm:text-sm sm:max-md:text-lg">
+            <p className="w-full text-2xl font-poppins font-light max-sm:text-sm sm:max-md:text-lg">
               {process.cardDesc}
             </p>
           </GlowCard>
         ))}
       </div>
-      <p className="text-brand-cream text-xl max-sm:text-sm sm:max-md:text-base font-light text-center">
+      <p className="text-brand-cream text-xl max-sm:text-sm sm:max-md:text-base font-poppins font-light text-center">
         At xVS we design using tools but it&apos;s more than that, it&apos;s the
         aspiration of all who come together to make inspiration a reality.
       </p>

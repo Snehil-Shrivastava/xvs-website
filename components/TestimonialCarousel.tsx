@@ -30,7 +30,7 @@ const TestimonialCarousel = () => {
             <Link
               href={"#"}
               target="_blank"
-              className="text-black flex flex-col gap-8 max-md:gap-4 w-7/10 max-sm:w-4/5 mx-auto pb-15 max-sm:pb-8 select-none"
+              className="text-black flex flex-col gap-8 max-md:gap-4 w-7/10 max-sm:w-4/5 mx-auto pb-15 max-sm:pb-8 select-none font-poppins "
             >
               <p className="font-semibold w-full text-3xl max-sm:text-[12px] sm:max-md:text-base text-center">
                 {`"${testimonial.quote}"`}

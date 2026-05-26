@@ -6,7 +6,7 @@ const HomeStats = () => {
   const homeStats = HomeStatsData;
 
   return (
-    <div className="flex items-center justify-center h-full">
+    <div className="flex items-center justify-center h-full font-calSans">
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:w-9/10">
         {homeStats.map((stats, index) => (
           <GlowCard
@@ -17,20 +17,20 @@ const HomeStats = () => {
             cardGlowIntensity="0.5"
           >
             <div>
-              <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px] max-sm:text-lg sm:max-md:text-2xl">
+              <h3 className="text-xl text-brand-cream 2240p:text-[38px] max-sm:text-lg sm:max-md:text-2xl">
                 {stats.cardTitle}
               </h3>
-              <span className="font-calSans 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl text-brand-orange">
+              <span className="font-apercu-black 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl text-brand-orange">
                 {stats.cardStat}
               </span>
-              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
                 {stats.cardText1}
               </p>
-              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
                 {stats.cardText2}
               </p>
               {stats.descriptor && (
-                <p className="text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] sm:max-md:text-sm italic">
+                <p className="font-poppins text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] sm:max-md:text-sm italic">
                   {stats.descriptor}
                 </p>
               )}

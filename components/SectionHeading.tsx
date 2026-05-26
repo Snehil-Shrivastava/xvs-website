@@ -21,7 +21,7 @@ const SectionHeading = ({
   return (
     <div className="relative">
       <h2
-        className={`font-calSans text-[15rem] uppercase font-semibold select-none text-center ${className ? className : "max-sm:text-[4.5rem] sm:max-md:text-[7.5rem]"}`}
+        className={`font-apercu-black text-[15rem] uppercase font-semibold select-none text-center ${className ? className : "max-sm:text-[4.5rem] sm:max-md:text-[7.5rem]"}`}
         style={{
           maskImage:
             "linear-gradient(rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 78%, rgba(0, 0, 0, 0) 90%)",
@@ -42,7 +42,7 @@ const SectionHeading = ({
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase select-none`}
         >
           <span
-            className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-md:px-4 py-3.5 max-md:py-1.5 backdrop-blur-xs btn-clip flex items-center gap-2 max-sm:text-[10px] sm:max-md:text-sm"
+            className="text-brand-orange tracking-wider font-medium font-apercu-regular bg-neutral-900/40 px-8 max-md:px-4 py-3.5 max-md:py-1.5 backdrop-blur-xs btn-clip flex items-center gap-2 max-sm:text-[10px] sm:max-md:text-sm"
             // style={{
             //   background:
             //     "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
@@ -60,7 +60,7 @@ const SectionHeading = ({
         </Link>
       )}
       {desc && (
-        <p className="absolute bottom-5 max-md:bottom-0 inset-x-0 text-center text-brand-cream 2240p:text-xl max-md:text-sm select-none">
+        <p className="font-poppins absolute bottom-5 max-md:bottom-0 inset-x-0 text-center text-brand-cream 2240p:text-xl max-md:text-sm select-none">
           {desc}
         </p>
       )}

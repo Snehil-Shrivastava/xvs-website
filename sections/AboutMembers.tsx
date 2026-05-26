@@ -26,7 +26,7 @@ const AboutMembers = () => {
               <h3 className="font-calSans text-3xl max-sm:text-lg sm:max-md:text-2xl">
                 {member.name}
               </h3>
-              <span className="text-xl font-light max-sm:text-sm sm:max-md:text-base">
+              <span className="text-xl font-poppins font-light max-sm:text-sm sm:max-md:text-base">
                 {member.designation}
               </span>
             </div>

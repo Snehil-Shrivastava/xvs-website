@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cal_Sans } from "next/font/google";
+import { Cal_Sans, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import "./styles.css";
 import Navbar from "@/components/Navbar";
@@ -8,20 +9,35 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CookiesConsent from "@/components/CookiesConsent";
 import ScheduleMeetingModal from "@/components/ScheduleMeetingModal";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const calSans = Cal_Sans({
   variable: "--font-cal-sans",
   weight: ["400"],
   subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const apercuBlack = localFont({
+  src: "../public/fonts/Apercu-Pro-Black.ttf",
+  variable: "--font-apercu-black",
+  display: "swap",
+});
+
+const apercuBold = localFont({
+  src: "../public/fonts/apercu_bold_pro.otf",
+  variable: "--font-apercu-bold",
+  display: "swap",
+});
+
+const apercuRegular = localFont({
+  src: "../public/fonts/apercu_regular_pro.otf",
+  variable: "--font-apercu-regular",
   display: "swap",
 });
 
@@ -39,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${calSans.variable} h-full antialiased`}
+      className={`${calSans.variable} ${apercuBlack.variable} ${apercuBold.variable} ${apercuRegular.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

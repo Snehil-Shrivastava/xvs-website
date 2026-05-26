@@ -15,7 +15,7 @@ const FooterHeading = () => {
         </h2>
         <Link
           href={{ query: { category: "schedule-meeting" } }}
-          className="flex items-center text-nowrap bg-brand-orange px-9 max-md:px-4 py-6 max-md:py-2.5 rounded-[52px] text-4xl max-sm:text-sm sm:max-md:text-lg max-sm:font-semibold gap-6 max-md:gap-3 font-semibold cursor-pointer select-none"
+          className="flex items-center text-nowrap bg-brand-orange px-9 max-md:px-4 py-6 max-md:py-2.5 rounded-[52px] text-4xl max-sm:text-sm sm:max-md:text-lg max-sm:font-semibold gap-6 max-md:gap-3 font-semibold cursor-pointer select-none font-poppins"
         >
           <Image
             src={scheduleMeetingSVG}

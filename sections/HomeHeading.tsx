@@ -4,7 +4,7 @@ import spinngLambda from "@/public/gifs/spinning-lambda.webp";
 const HomeHeading = () => {
   return (
     <div className="flex flex-col">
-      <p className="text-center font-extralight tracking-wide text-[37.5px] max-sm:text-sm sm:max-md:text-base">
+      <p className="text-center font-poppins font-extralight tracking-wide text-[37.5px] max-sm:text-sm sm:max-md:text-base">
         Creating Unforgettable Design
       </p>
       <h1 className="text-[20rem]/[20.5rem] max-sm:text-[4.5rem]/[4.5rem] sm:max-md:text-[7.5rem]/[7rem] inline-block relative z-5 pointer-events-none font-calSans text-brand-orange-light max-sm:flex">

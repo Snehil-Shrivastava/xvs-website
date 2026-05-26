@@ -33,7 +33,7 @@ const ClientTestimonials = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="flex flex-col gap-10 py-10 relative">
+    <div className="flex flex-col gap-10 py-10 relative font-poppins">
       <div className="flex gap-10 justify-center sm:max-md:items-center items-stretch">
         <div
           className="relative border-b border-[#34343417] pb-2 cursor-pointer"

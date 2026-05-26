@@ -29,19 +29,23 @@ const FooterDetail = () => {
             ))}
           </div>
         </div>
-        <div className="flex-1 relative">
+        <div className="flex-1 relative font-poppins">
           <div className="flex justify-between w-4/5 max-sm:w-full sm:max-md:w-9/10 mx-auto h-full max-sm:gap-5">
             <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-md:flex-[0.65]">
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg">
                 Contact
               </span>
               <div className="flex flex-col justify-between flex-1">
-                <p className="flex flex-col text-xl max-sm:text-[10px] sm:max-md:text-sm">
-                  <span>2nd Floor, 1/23 Rajni Khand, Sharda Nagar,</span>
-                  <span>Lucknow, UP (226002), India.</span>
-                </p>
+                <ul className="flex flex-col text-xl max-sm:text-[10px] sm:max-md:text-sm">
+                  <li className="before:content-['-'] before:mr-1">
+                    Lucknow, Uttar Pradesh, India.
+                  </li>
+                  <li className="before:content-['-'] before:mr-1">
+                    Sheridan, Wyoming, US.
+                  </li>
+                </ul>
                 <div className="flex max-md:flex-col items-end max-md:items-start gap-10 max-md:gap-3">
-                  <h3 className="text-[78px]/[58px] max-sm:text-[28px]/[28px] sm:max-md:text-4xl font-calSans">
+                  <h3 className="text-[78px]/[80px] max-sm:text-[28px]/[28px] sm:max-md:text-4xl font-calSans">
                     Say Hi!
                   </h3>
                   <p className="flex flex-col text-xl max-sm:text-[10px] sm:max-md:text-sm">
@@ -49,6 +53,7 @@ const FooterDetail = () => {
                       info@xvscreations.com
                     </Link>
                     <Link href="tel:+918115128777">+91-8115128777</Link>
+                    <Link href="tel:+13072962002">+1 (307) 296-2002</Link>
                   </p>
                 </div>
               </div>

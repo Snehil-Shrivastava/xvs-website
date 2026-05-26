@@ -87,7 +87,7 @@ const ServicesCarousel = () => {
               <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
-              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm">
+              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm font-poppins">
                 {services.cardDesc}
               </span>
             </Link>

@@ -46,7 +46,7 @@ const AboutClients = () => {
             </div>
           ))}
         </div>
-        <div className="border-b border-b-black/10 py-8">
+        <div className="border-b border-b-black/10 py-8 md:hidden">
           <LogoMarquee logos={row1Logos} />
           <LogoMarquee logos={row2Logos} />
         </div>
