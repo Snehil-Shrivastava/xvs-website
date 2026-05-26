@@ -14,8 +14,8 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   const navLinksBody = NavMenuLinksBody;
   return (
     <div className="absolute inset-0 flex flex-col">
-      <div className="px-50 pt-20 pb-15 max-sm:pt-25 max-sm:px-10 max-sm:pb-20">
-        <div className="flex items-center justify-center max-sm:gap-3 gap-20 max-sm:text-[1.125rem] text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
+      <div className="px-50 pt-20 pb-15 max-sm:pt-25 sm:max-md:pt-30 max-sm:px-10 sm:max-md:px-35 max-sm:pb-20">
+        <div className="flex items-center justify-center sm:max-md:justify-between max-sm:gap-3 sm:max-md:gap-6 gap-20 max-sm:text-[1.125rem] sm:max-md:text-2xl text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
           {mainNavLinks.map((link, index) => (
             <Link
               key={index}
@@ -29,8 +29,8 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center max-xs:h-105 max-xs:overflow-y-scroll max-lg:w-[70%] max-lg:justify-start text-brand-orange py-20 max-sm:py-0 max-sm:mx-auto">
-        <div className="max-sm:w-full xl:max-1440p:w-[65%] 1440p:max-2xl:w-[85%] 2xl:max-2240p:w-[65%] 2240p:w-[60%] max-xl:flex max-xl:flex-col grid grid-cols-2 max-sm:gap-[2dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[4dvh] xl:max-1440p:gap-[7dvh] 1440p:max-2xl:gap-x-[7dvh] 1440p:max-2xl:gap-y-[12dvh] 2xl:gap-[8dvh] 2240p:gap-y-[7dvh] 2240p:gap-x-[9dvh]">
+      <div className="flex justify-center max-xs:h-105 max-xs:overflow-y-scroll sm:max-md:h-120 sm:max-md:overflow-y-scroll max-lg:w-[70%] max-lg:justify-start text-brand-orange py-20 max-md:py-0 max-md:mx-auto">
+        <div className="max-md:w-full xl:max-1440p:w-[65%] 1440p:max-2xl:w-[85%] 2xl:max-2240p:w-[65%] 2240p:w-[60%] max-xl:flex max-xl:flex-col grid grid-cols-2 max-sm:gap-[2dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[4dvh] xl:max-1440p:gap-[7dvh] 1440p:max-2xl:gap-x-[7dvh] 1440p:max-2xl:gap-y-[12dvh] 2xl:gap-[8dvh] 2240p:gap-y-[7dvh] 2240p:gap-x-[9dvh]">
           {navLinksBody.map((link, index) => (
             <div key={index} className="">
               <h3 className="max-sm:text-[10px] sm:max-md:text-[0.75rem] md:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] xl:max-1440p:text-[1.2rem] 1440p:max-2xl:text-[1.2rem] 2xl:text-[1.5rem] 2240p:text-[30px]">
@@ -50,46 +50,46 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
           ))}
         </div>
       </div>
-      <div className="flex justify-end max-sm:justify-center gap-10 px-30 max-sm:px-0 mt-auto mb-25 max-sm:mb-10 max-sm:mt-10">
+      <div className="flex justify-end max-md:justify-center gap-10 px-30 max-sm:px-0 mt-auto mb-25 max-sm:mb-10 max-md:mt-10">
         <Link
           href="https://www.behance.net/xVSCreations"
           target="_blank"
-          className="max-sm:w-4 md:max-lg:w-4.5 2240p:w-8 2240p:h-8"
+          className="max-sm:w-4 sm:max-md:w-8 md:max-lg:w-4.5 2240p:w-8 2240p:h-8"
         >
           <Image src={behance} alt="" className="" />
         </Link>
         <Link
           href="https://www.instagram.com/xvscreations"
           target="_blank"
-          className="max-sm:w-3.5 md:max-lg:w-4 2240p:w-6 2240p:h-8"
+          className="max-sm:w-3.5 sm:max-md:w-6 md:max-lg:w-4 2240p:w-6 2240p:h-8"
         >
           <Image src={instagram} alt="" className="" />
         </Link>
         <Link
           href="https://www.dribbble.com/xvscreations"
           target="_blank"
-          className="max-sm:w-3.5 md:max-lg:w-4 2240p:w-6 2240p:h-8"
+          className="max-sm:w-3.5 sm:max-md:w-6 md:max-lg:w-4 2240p:w-6 2240p:h-8"
         >
           <Image src={dribble} alt="" className="" />
         </Link>
         <Link
           href="https://www.facebook.com/xVSCreations"
           target="_blank"
-          className="max-sm:w-3.5 md:max-lg:w-4 2240p:w-6 2240p:h-8"
+          className="max-sm:w-3.5 sm:max-md:w-6 md:max-lg:w-4 2240p:w-6 2240p:h-8"
         >
           <Image src={facebook} alt="" className="" />
         </Link>
         <Link
           href="https://www.linkedin.com/company/xvs-creations"
           target="_blank"
-          className="max-sm:w-3.5 md:max-lg:w-4 2240p:w-6 2240p:h-8"
+          className="max-sm:w-3.5 sm:max-md:w-6 md:max-lg:w-4 2240p:w-6 2240p:h-8"
         >
           <Image src={linkedin} alt="" className="" />
         </Link>
         <Link
           href="https://x.com/xvscreations"
           target="_blank"
-          className="max-sm:w-3.5 md:max-lg:w-4 2240p:w-6 2240p:h-8"
+          className="max-sm:w-3.5 sm:max-md:w-6 md:max-lg:w-4 2240p:w-6 2240p:h-8"
         >
           <Image src={twitter} alt="" className="" />
         </Link>

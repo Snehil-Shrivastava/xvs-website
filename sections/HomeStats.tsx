@@ -7,7 +7,7 @@ const HomeStats = () => {
 
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5 max-sm:w-9/10">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:w-9/10">
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
@@ -17,29 +17,29 @@ const HomeStats = () => {
             cardGlowIntensity="0.5"
           >
             <div>
-              <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px] max-sm:text-lg">
+              <h3 className="text-xl font-semibold text-brand-cream 2240p:text-[38px] max-sm:text-lg sm:max-md:text-2xl">
                 {stats.cardTitle}
               </h3>
-              <span className="font-calSans 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl text-brand-orange">
+              <span className="font-calSans 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl text-brand-orange">
                 {stats.cardStat}
               </span>
-              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm">
+              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
                 {stats.cardText1}
               </p>
-              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm">
+              <p className="text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg">
                 {stats.cardText2}
               </p>
               {stats.descriptor && (
-                <p className="text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] italic">
+                <p className="text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] sm:max-md:text-sm italic">
                   {stats.descriptor}
                 </p>
               )}
             </div>
-            <div className="max-sm:absolute inset-x-0">
+            <div className="max-md:absolute inset-x-0">
               <Image
                 src={stats.SVGIcon}
                 alt={`${stats.cardTitle}`}
-                className={`max-w-80 relative max-sm:absolute ${index === 0 ? "-top-10 max-sm:max-w-20 max-sm:-right-25 max-sm:-top-15" : index === 1 ? "-top-10 max-sm:max-w-20 max-sm:-right-20 max-sm:-top-15" : index === 2 ? "-top-20 max-sm:-right-25 max-sm:max-w-30" : "-top-10 max-sm:max-w-20 max-sm:-right-12 max-sm:-top-15"}`}
+                className={`max-w-80 relative max-md:absolute ${index === 0 ? "-top-10 max-sm:max-w-20 max-sm:-right-25 sm:max-md:right-0 max-sm:-top-15" : index === 1 ? "-top-10 max-sm:max-w-20 sm:max-md:max-w-40 max-sm:-right-20 sm:max-md:right-0 max-sm:-top-15" : index === 2 ? "-top-20 max-sm:-right-25 sm:max-md:-right-5 max-sm:max-w-30 sm:max-md:max-w-65" : "-top-10 max-sm:max-w-20 sm:max-md:max-w-35 max-sm:-right-12 sm:max-md:right-0 max-sm:-top-15"}`}
               />
             </div>
           </GlowCard>

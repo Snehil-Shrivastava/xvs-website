@@ -57,6 +57,8 @@ export default function Navbar() {
             [--menu-origin-x:calc(100%-9rem)] [--menu-origin-y:7rem] [--menu-radius:200vw]
             
             max-sm:[--menu-origin-x:calc(100%-2.5rem)] max-sm:[--menu-origin-y:2.5rem] max-sm:[--menu-radius:120vh]
+
+            sm:max-md:[--menu-origin-x:calc(100%-3rem)] sm:max-md:[--menu-origin-y:3.5rem] sm:max-md:[--menu-radius:180vh]
             
             md:max-lg:[--menu-origin-x:calc(100%-6rem)] md:max-lg:[--menu-origin-y:5rem]
             
@@ -78,7 +80,7 @@ export default function Navbar() {
       {/* Navbar Logo */}
       <Link
         href="./"
-        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] max-sm:top-[30] max-sm:h-10.25"
+        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] sm:max-md:left-[40] max-md:top-[30] max-sm:h-10.25 sm:max-md:h-14.5"
         aria-label="home page logo"
         title="home page logo"
         onClick={() => setIsOpen(false)}
@@ -87,20 +89,20 @@ export default function Navbar() {
           <Image
             src={xvslogowhite}
             alt="xvs logo"
-            className="max-sm:w-10.5 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
+            className="max-sm:w-10.5 sm:max-md:w-15 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
           />
         ) : (
           <Image
             src={xvslogo}
             alt="xvs logo"
-            className="max-sm:w-10.5 sm:max-md:w-12 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
+            className="max-sm:w-10.5 sm:max-md:w-15 md:max-lg:w-18 lg:max-1440p:w-20 1440p:max-2xl:w-20 2xl:w-22 1920p:w-18 2240p:w-22"
           />
         )}
       </Link>
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-sm:top-[30] max-sm:right-[20] max-sm:h-10.25"
+        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-md:top-[30] max-sm:right-[20] sm:max-md:right-[40] max-sm:h-10.25 sm:max-md:h-14.5"
         aria-label="Toggle Menu"
         title="Toggle Hamburger Menu"
       >

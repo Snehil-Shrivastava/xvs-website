@@ -7,18 +7,22 @@ import { Heart } from "lucide-react";
 const HomeTestimonials = () => {
   const logos = [...HomeClientLogos, ...HomeClientLogos];
   return (
-    <div className="flex flex-col items-center h-full justify-start max-sm:gap-10">
+    <div className="flex flex-col items-center h-full justify-start max-md:gap-10">
       <SectionHeading
         headingText="words"
         buttonText="reviews"
         buttonIcon={
-          <Heart stroke="none" fill="#f79839" className="scale-80 max-sm:w-4" />
+          <Heart
+            stroke="none"
+            fill="#f79839"
+            className="scale-80 max-sm:w-4 sm:max-md:w-5"
+          />
         }
         buttonLink="/about#client-testimonial"
         desc="Hear from visionaries and experts"
       />
       <div className="w-full">
-        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-sm:w-9/10 mx-auto py-20 max-sm:py-10 content-clip-both">
+        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-md:w-9/10 mx-auto py-20 max-md:py-10 content-clip-both">
           <TestimonialCarousel />
           <LogoMarquee logos={logos} />
         </div>

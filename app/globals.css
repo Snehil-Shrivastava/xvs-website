@@ -43,51 +43,57 @@ body {
 }
 
 .container-clip-both {
+  --notch: 49px;
   clip-path: polygon(
-    0 49px,
+    0 var(--notch),
     0 100%,
-    calc(100% - 49px) 100%,
-    100% calc(100% - 49px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0,
-    49px 0
+    var(--notch) 0
   );
 }
 
 .content-clip-both {
+  --notch: 52px;
   clip-path: polygon(
-    0 52px,
+    0 var(--notch),
     0 100%,
-    calc(100% - 52px) 100%,
-    100% calc(100% - 52px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0,
-    52px 0
+    var(--notch) 0
   );
 }
 
 .container-clip-tl {
-  clip-path: polygon(0 52px, 0 100%, 100% 100%, 100% 0, 52px 0);
+  --notch: 52px;
+  clip-path: polygon(0 var(--notch), 0 100%, 100% 100%, 100% 0, var(--notch) 0);
 }
 
 .content-clip-tl {
-  clip-path: polygon(0 52px, 0 100%, 100% 100%, 100% 0, 52px 0);
+  --notch: 52px;
+  clip-path: polygon(0 var(--notch), 0 100%, 100% 100%, 100% 0, var(--notch) 0);
 }
 
 .container-clip-br {
+  --notch: 52px;
   clip-path: polygon(
     0 0,
     0 100%,
-    calc(100% - 52px) 100%,
-    100% calc(100% - 52px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0
   );
 }
 
 .content-clip-br {
+  --notch: 52px;
   clip-path: polygon(
     0 0,
     0 100%,
-    calc(100% - 52px) 100%,
-    100% calc(100% - 52px),
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
     100% 0
   );
 }
@@ -102,54 +108,54 @@ body {
 
 @media (max-width: 640px) {
   .container-clip-both {
-    clip-path: polygon(
-      0 9px,
-      0 100%,
-      calc(100% - 9px) 100%,
-      100% calc(100% - 9px),
-      100% 0,
-      9px 0
-    );
+    --notch: 9px;
   }
 
   .content-clip-both {
-    clip-path: polygon(
-      0 12px,
-      0 100%,
-      calc(100% - 12px) 100%,
-      100% calc(100% - 12px),
-      100% 0,
-      12px 0
-    );
+    --notch: 12px;
   }
 
   .container-clip-tl {
-    clip-path: polygon(0 22px, 0 100%, 100% 100%, 100% 0, 22px 0);
+    --notch: 22px;
   }
 
   .content-clip-tl {
-    clip-path: polygon(0 22px, 0 100%, 100% 100%, 100% 0, 22px 0);
+    --notch: 22px;
   }
 
   .container-clip-br {
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      calc(100% - 22px) 100%,
-      100% calc(100% - 22px),
-      100% 0
-    );
+    --notch: 22px;
   }
 
   .content-clip-br {
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      calc(100% - 22px) 100%,
-      100% calc(100% - 22px),
-      100% 0
-    );
+    --notch: 22px;
   }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .container-clip-both {
+    --notch: 25px;
+  }
+
+  .content-clip-both {
+    --notch: 28px;
+  }
+
+  /* .container-clip-tl {
+    --notch: 22px;
+  }
+
+  .content-clip-tl {
+    --notch: 22px;
+  }
+
+  .container-clip-br {
+    --notch: 22px;
+  }
+
+  .content-clip-br {
+    --notch: 22px;
+  } */
 }
 
 @keyframes pulsingDiv {

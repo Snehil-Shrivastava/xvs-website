@@ -35,12 +35,12 @@ const ServicesCarousel = () => {
       grabCursor={false}
       centeredSlides={true}
       loop={true}
-      autoplay={{
-        delay: 5000,
-      }}
+      // autoplay={{
+      //   delay: 5000,
+      // }}
       slidesPerView="auto"
       breakpoints={{
-        720: {
+        768: {
           slidesPerView: 3,
         },
       }}
@@ -70,7 +70,7 @@ const ServicesCarousel = () => {
           navigation.nextEl = nextRef.current;
         }
       }}
-      className="servicesSwiper h-full max-sm:w-9/10"
+      className="servicesSwiper h-full max-md:w-9/10"
     >
       {servicesData.map((services, index) => (
         <SwiperSlide key={index} className="relative services-slide">
@@ -82,12 +82,12 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              className="text-center flex flex-col gap-5 max-sm:gap-1.5 px-12 max-sm:px-4 py-15 max-sm:py-8"
+              className="text-center flex flex-col gap-5 max-md:gap-1.5 px-12 max-md:px-4 py-15 max-md:py-8"
             >
-              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl max-sm:leading-7 font-calSans">
+              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
-              <span className="2240p:text-xl max-sm:text-[10px]">
+              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm">
                 {services.cardDesc}
               </span>
             </Link>
