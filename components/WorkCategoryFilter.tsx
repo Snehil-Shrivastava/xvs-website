@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { LayoutPanelTop } from "lucide-react";
+import { LayoutPanelTop, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,7 +21,8 @@ const WorkCategoryFilter = ({
   onCategoryChange,
   onShowAll,
 }: CategoryProps) => {
-  const categoryFilterContainerRef = useRef(null);
+  const categoryFilterContainerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -46,26 +47,73 @@ const WorkCategoryFilter = ({
     { scope: categoryFilterContainerRef },
   );
 
+  // Handles the horizontal scroll when Chevrons are clicked
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 200; // You can adjust scroll distance here
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <div
         ref={categoryFilterContainerRef}
         className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 bg-background relative z-10 pb-5"
       >
-        <div className="flex flex-wrap gap-4 max-sm:gap-1 max-sm:w-[90%] max-sm:mx-auto">
-          {categories.map((cat) => (
+        {/* Main Layout: Flex-Col on Mobile (Show All on bottom), Flex-Wrap on Desktop */}
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 max-sm:gap-4 max-sm:w-[95%] max-sm:mx-auto items-center justify-center w-full sm:w-auto">
+          {/* Mobile Carousel Layout */}
+          <div className="flex items-center w-full sm:contents gap-1">
+            {/* Left Chevron (Mobile Only) */}
             <button
-              key={cat}
-              onClick={() => onCategoryChange(cat)}
-              className={`pr-8 py-2 rounded-4xl font-medium transition-colors cursor-pointer select-none text-base 2xl:text-lg
-              ${activeCategories.includes(cat) ? "text-brand-orange" : "text-[#ffffff] hover:text-brand-orange"}`}
+              onClick={() => scroll("left")}
+              className="sm:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
+              aria-label="Scroll left"
             >
-              {cat}
+              <ChevronLeft size={24} />
             </button>
-          ))}
+
+            {/* Scrollable Container */}
+            <div
+              ref={scrollContainerRef}
+              className="flex flex-1 min-w-0 sm:flex-wrap items-center gap-4 max-sm:gap-2 overflow-x-auto scroll-smooth sm:contents [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none"
+            >
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => onCategoryChange(cat)}
+                  // Added `whitespace-nowrap flex-shrink-0` to prevent text wrapping on mobile
+                  className={`pr-8 py-2 rounded-4xl font-medium transition-colors cursor-pointer select-none text-base 2xl:text-lg whitespace-nowrap shrink-0
+                  ${
+                    activeCategories.includes(cat)
+                      ? "text-brand-orange"
+                      : "text-[#ffffff] hover:text-brand-orange"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Right Chevron (Mobile Only) */}
+            <button
+              onClick={() => scroll("right")}
+              className="sm:hidden shrink-0 p-1 text-[#ffffff] hover:text-brand-orange transition-colors cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          {/* Show All Button */}
           <button
             onClick={onShowAll}
-            className={`px-4 py-2 rounded-4xl font-medium transition-colors flex items-center gap-2 cursor-pointer select-none ${
+            // Added `whitespace-nowrap flex-shrink-0` here as well
+            className={`px-4 py-2 rounded-4xl font-medium transition-colors flex items-center gap-2 cursor-pointer select-none whitespace-nowrap shrink-0 ${
               activeCategories.length === 0
                 ? "bg-brand-orange text-white text-xs 2xl:text-base"
                 : "text-[#7b7b7b] hover:bg-brand hover:text-white text-xs 2xl:text-base"
