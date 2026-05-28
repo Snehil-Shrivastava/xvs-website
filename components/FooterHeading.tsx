@@ -8,10 +8,14 @@ const FooterHeading = () => {
     <div className="border-b border-b-[rgba(247,152,57,0.3)] py-25 max-sm:py-10 sm:max-md:py-12">
       <div className="max-w-[85%] mx-auto flex max-md:flex-col max-md:gap-5 justify-between items-center">
         <h2
-          className={`text-[3.5rem]/[3.8rem] max-sm:text-[1.4rem]/[2rem] sm:max-md:text-[2rem]/[3rem] tracking-wider w-[52%] max-md:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none max-md:text-center`}
+          className={`tracking-wider w-[52%] max-md:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none max-md:text-center`}
         >
-          <span>Let&#39;s start </span>
-          <span>creating together</span>
+          <span className="text-[3.5rem]/[4.5rem] max-sm:text-[1.4rem]/[2rem] sm:max-md:text-[2rem]/[3rem]">
+            Let&#39;s Build Together{" "}
+          </span>
+          <span className="font-poppins text-2xl font-light">
+            Looking for a creative partner you can rely on?
+          </span>
         </h2>
         <Link
           href={{ query: { category: "schedule-meeting" } }}
@@ -22,7 +26,7 @@ const FooterHeading = () => {
             alt="schedule a meeting"
             className="max-sm:w-5 sm:max-md:w-7"
           />
-          <span>Schedule A Meeting</span>
+          <span>Book a 15-min Intro Call</span>
         </Link>
 
         <Link href={`/`}>

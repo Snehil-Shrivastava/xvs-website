@@ -97,6 +97,31 @@
   );
 }
 
+.consent-banner-outer-clip {
+  clip-path: polygon(
+    0 12px,
+    0 100%,
+    calc(100% - 12px) 100%,
+    100% calc(100% - 12px),
+    100% 0,
+    12px 0
+  );
+}
+
+.consent-banner-clip {
+  clip-path: polygon(
+    1px 12px,
+    1px 100%,
+    30% 100%,
+    50% calc(100% - 1px),
+    calc(100% - 12px) calc(100% - 1px),
+    calc(100% - 1px) calc(100% - 12px),
+    calc(100% - 1px) 1px,
+    80% 0,
+    12px 1px
+  );
+}
+
 @keyframes marquee {
   0% {
     transform: "translateX(0)";
