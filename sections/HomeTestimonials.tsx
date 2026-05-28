@@ -15,14 +15,14 @@ const HomeTestimonials = () => {
           <Heart
             stroke="none"
             fill="#f79839"
-            className="scale-80 max-sm:w-4 sm:max-md:w-5"
+            className="scale-80 max-sm:w-4 sm:max-lg:w-5"
           />
         }
         buttonLink="/about#client-testimonial"
         desc="Hear from visionaries and experts"
       />
       <div className="w-full">
-        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-md:w-9/10 mx-auto py-20 max-md:py-10 content-clip-both">
+        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-md:w-9/10 md:max-lg:w-9/10 mx-auto py-20 max-md:py-10 md:max-lg:py-12 content-clip-both">
           <TestimonialCarousel />
           <LogoMarquee logos={logos} />
         </div>

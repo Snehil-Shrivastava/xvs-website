@@ -80,7 +80,7 @@ export default function Navbar() {
       {/* Navbar Logo */}
       <Link
         href="./"
-        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] sm:max-md:left-[40] max-md:top-[30] max-sm:h-10.25 sm:max-md:h-14.5"
+        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] sm:max-md:left-[40] md:max-lg:left-[40] max-md:top-[30] md:max-lg:top-[40] max-sm:h-10.25 sm:max-md:h-14.5 md:max-lg:h-auto"
         aria-label="home page logo"
         title="home page logo"
         onClick={() => setIsOpen(false)}
@@ -102,7 +102,7 @@ export default function Navbar() {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-md:top-[30] max-sm:right-[20] sm:max-md:right-[40] max-sm:h-10.25 sm:max-md:h-14.5"
+        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-md:top-[30] md:max-lg:top-[40] max-sm:right-[20] sm:max-md:right-[40] md:max-lg:right-[40] max-sm:h-10.25 sm:max-md:h-14.5 md:max-lg:h-17.5"
         aria-label="Toggle Menu"
         title="Toggle Hamburger Menu"
       >

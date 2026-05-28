@@ -160,6 +160,32 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-clip-both {
+    --notch: 35px;
+  }
+
+  .content-clip-both {
+    --notch: 38px;
+  }
+
+  .container-clip-tl {
+    --notch: 38px;
+  }
+
+  .content-clip-tl {
+    --notch: 38px;
+  }
+
+  .container-clip-br {
+    --notch: 38px;
+  }
+
+  .content-clip-br {
+    --notch: 38px;
+  }
+}
+
 @keyframes pulsingDiv {
   0% {
     transform: scale(1.6);

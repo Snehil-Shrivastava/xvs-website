@@ -8,10 +8,12 @@ const HomeServices = () => {
       <SectionHeading
         headingText="services"
         buttonText="view services"
-        buttonIcon={<ArrowUpRight className="max-sm:w-4 sm:max-md:w-4.5" />}
+        buttonIcon={
+          <ArrowUpRight className="max-sm:w-4 sm:max-md:w-4.5 md:max-lg:w-5" />
+        }
         buttonLink="/services"
       />
-      <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 sm:max-md:h-120 flex items-center">
+      <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 sm:max-md:h-120 md:max-lg:h-160 flex items-center">
         <ServicesCarousel />
       </div>
     </div>

@@ -105,3 +105,23 @@
     --notch: 32px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .servicesSwiper > .swiper-wrapper > .swiper-slide {
+    height: 400px;
+    width: 80% !important;
+    max-width: 380px;
+  }
+
+  .servicesSwiper > .swiper-wrapper > .swiper-slide-active > .glow-card-outer {
+    --notch: 33px;
+  }
+
+  .servicesSwiper
+    > .swiper-wrapper
+    > .swiper-slide-active
+    > .glow-card-outer
+    > .glow-card-inner {
+    --notch: 32px;
+  }
+}

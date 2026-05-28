@@ -9,7 +9,6 @@ type LogoMarqueeProps = {
   speed?: number; // seconds for one full loop
   pauseOnHover?: boolean;
   direction?: "left" | "right";
-  gap?: number; // px gap between logo slots
 };
 
 export default function LogoMarquee({
@@ -17,7 +16,6 @@ export default function LogoMarquee({
   speed = 50,
   pauseOnHover = true,
   direction = "left",
-  gap = 100,
 }: LogoMarqueeProps) {
   // Duplicate the list so the seam is invisible
   const track = [...logos, ...logos];
@@ -60,7 +58,7 @@ export default function LogoMarquee({
       <div className="marquee-root relative w-full overflow-hidden">
         {/* Scrolling track — rendered twice inside to create seamless loop */}
         <div
-          className={`marquee-track flex w-max select-none gap-25 max-sm:gap-0 sm:max-md:gap-5`}
+          className={`marquee-track flex w-max select-none gap-25 max-sm:gap-0 sm:max-md:gap-5 md:max-lg:gap-8`}
           // style={{ gap: `${gap}px` }}
         >
           {track.map((logo, i) => (

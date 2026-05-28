@@ -40,7 +40,7 @@ const ServicesCarousel = () => {
       // }}
       slidesPerView="auto"
       breakpoints={{
-        768: {
+        1280: {
           slidesPerView: 3,
         },
       }}
@@ -82,12 +82,12 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              className="text-center flex flex-col gap-5 max-md:gap-1.5 px-12 max-md:px-4 py-15 max-md:py-8"
+              className="text-center flex flex-col gap-5 max-md:gap-1.5 md:max-lg:gap-2 px-12 max-md:px-4 py-15 max-md:py-8 md:max-lg:py-10"
             >
-              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl max-sm:leading-7 font-calSans">
+              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
-              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm font-poppins">
+              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm font-poppins font-light">
                 {services.cardDesc}
               </span>
             </Link>
@@ -106,16 +106,16 @@ const ServicesCarousel = () => {
       <div
         ref={prevRef}
         aria-label="Previous Slide"
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-50 p-10 md:max-lg:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
       >
-        <ArrowLeft size={32} />
+        <ArrowLeft size={32} className="md:max-lg:w-5" />
       </div>
       <div
         ref={nextRef}
         aria-label="Next Slide"
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-5 p-10 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-50 p-10 md:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
       >
-        <ArrowRight size={32} />
+        <ArrowRight size={32} className="md:max-lg:w-5" />
       </div>
     </Swiper>
   );
