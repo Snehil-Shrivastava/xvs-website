@@ -42,7 +42,7 @@ const SectionHeading = ({
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 uppercase select-none`}
         >
           <span
-            className="text-brand-orange tracking-wider font-medium font-apercu-regular bg-neutral-900/40 px-8 max-md:px-4 py-3.5 max-md:py-1.5 backdrop-blur-xs btn-clip flex items-center gap-2 max-sm:text-[10px] sm:max-md:text-sm"
+            className="text-brand-orange tracking-wider font-medium font-apercu-regular bg-neutral-900/40 px-8 max-md:px-4 py-3.5 max-sm:py-0.5 sm:max-md:py-1.5 backdrop-blur-xs btn-clip flex items-center gap-2 max-sm:text-[8px] sm:max-md:text-[10px]"
             // style={{
             //   background:
             //     "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",

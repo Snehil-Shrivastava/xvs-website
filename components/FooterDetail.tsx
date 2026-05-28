@@ -30,23 +30,13 @@ const FooterDetail = () => {
           </div>
         </div>
         <div className="flex-1 relative font-poppins">
-          {/* <div className="flex justify-between w-4/5 max-sm:w-full sm:max-md:w-9/10 mx-auto h-full max-sm:gap-5"> */}
           <div className="flex justify-between w-full max-sm:w-full sm:max-md:w-9/10 mx-auto h-full max-sm:gap-5">
             <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-md:flex-[0.65]">
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg">
                 We are here
               </span>
               <div className="flex flex-col justify-between flex-1 md:gap-15">
-                {/* <ul className="flex flex-col text-xl max-sm:text-[10px] sm:max-md:text-sm">
-                  <li className="before:content-['-'] before:mr-1">
-                    Lucknow, Uttar Pradesh, India.
-                  </li>
-                  <li className="before:content-['-'] before:mr-1">
-                    Sheridan, Wyoming, US.
-                  </li>
-                </ul> */}
                 <div className="flex gap-20 max-sm:gap-12 sm:max-md:gap-25 md:justify-between relative">
-                  {/* <div className="absolute h-[150%] max-md:h-3/5 w-px bg-[#f7983944] left-1/2 -translate-x-1/2 max-sm:right-[40%] sm:max-md:right-[45%] -top-6 max-sm:top-[12%] sm:max-md:top-[15%]" /> */}
                   <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-md:text-sm">
                     <span className="font-bold">Lucknow,</span>
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px]">
@@ -81,7 +71,6 @@ const FooterDetail = () => {
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg">
                 Services
               </span>
-              {/* <div className="flex flex-col gap-2"> */}
               <div className="grid grid-cols-2 gap-x-15 gap-y-2 max-md:flex max-md:flex-col max-md:gap-2 text-brand-cream">
                 {footerServices.map((service, index) => (
                   <Link

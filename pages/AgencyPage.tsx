@@ -1,7 +1,13 @@
+import AgencyBenefits from "@/sections/AgencyBenefits";
+import AgencyBudgetRange from "@/sections/AgencyBudgetRange";
 import AgencyClients from "@/sections/AgencyClients";
+import AgencyEngagementModel from "@/sections/AgencyEngagementModel";
 import AgencyHeading from "@/sections/AgencyHeading";
+import AgencyIntegration from "@/sections/AgencyIntegration";
+import AgencyProcess from "@/sections/AgencyProcess";
 import AgencyServices from "@/sections/AgencyServices";
 import AgencyStats from "@/sections/AgencyStats";
+import AgencyTestimonials from "@/sections/AgencyTestimonials";
 import AgencyUSP from "@/sections/AgencyUSP";
 import AgencyWorkflow from "@/sections/AgencyWorkflow";
 
@@ -25,6 +31,24 @@ const AgencyPage = () => {
       </div>
       <div>
         <AgencyWorkflow />
+      </div>
+      <div>
+        <AgencyIntegration />
+      </div>
+      <div>
+        <AgencyBudgetRange />
+      </div>
+      <div>
+        <AgencyProcess />
+      </div>
+      <div>
+        <AgencyTestimonials />
+      </div>
+      <div>
+        <AgencyEngagementModel />
+      </div>
+      <div>
+        <AgencyBenefits />
       </div>
     </div>
   );
