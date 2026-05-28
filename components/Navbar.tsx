@@ -60,7 +60,7 @@ export default function Navbar() {
 
             sm:max-md:[--menu-origin-x:calc(100%-3rem)] sm:max-md:[--menu-origin-y:3.5rem] sm:max-md:[--menu-radius:180vh]
             
-            md:max-lg:[--menu-origin-x:calc(100%-6rem)] md:max-lg:[--menu-origin-y:5rem]
+            md:max-lg:[--menu-origin-x:calc(100%-4rem)] md:max-lg:[--menu-origin-y:5rem]
             
           `}
           style={{
