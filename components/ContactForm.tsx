@@ -135,13 +135,13 @@ const ContactForm = () => {
           <p className="text-red-400 text-sm">{errorMsg}</p>
         )}
 
-        <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18">
+        <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18 font-calSans">
           <button
             type="submit"
             disabled={status === "loading"}
             className="group relative flex items-center gap-3 z-10 transition-transform active:scale-95 cursor-pointer disabled:opacity-50"
           >
-            <span className="text-3xl font-bold text-[#E89335] tracking-wide group-hover:text-[#ffaa4e] transition-colors">
+            <span className="text-3xl text-[#E89335] tracking-wide group-hover:text-[#ffaa4e] transition-colors">
               {status === "loading" ? "Sending..." : "Send"}
             </span>
             <SendHorizontal

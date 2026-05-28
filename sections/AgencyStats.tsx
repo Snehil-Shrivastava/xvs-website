@@ -16,7 +16,7 @@ const AgencyStats = () => {
             <hr className="absolute left-1/2 -translate-x-1/2 h-full w-px border-l border-brand-orange/50 max-md:hidden" />
             <div className="flex gap-20 max-md:gap-15 items-center max-md:justify-center">
               <div className="relative">
-                <span className="text-brand-orange text-8xl max-sm:text-5xl sm:max-md:text-6xl">
+                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl">
                   4.8
                 </span>
                 <Image
@@ -33,7 +33,7 @@ const AgencyStats = () => {
               </div>
             </div>
             <div className="flex gap-15 items-center max-md:justify-center">
-              <div>
+              <div className="font-apercu-black">
                 <span className="text-brand-orange text-8xl max-sm:text-5xl sm:max-md:text-6xl">
                   19
                 </span>
@@ -60,7 +60,7 @@ const AgencyStats = () => {
                 </span>
               </div>
               <div>
-                <span className="text-brand-orange text-8xl max-sm:text-5xl sm:max-md:text-6xl">
+                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl">
                   2014
                 </span>
               </div>

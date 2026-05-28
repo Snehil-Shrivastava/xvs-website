@@ -65,7 +65,7 @@ const WorkCategoryFilter = ({
     <>
       <div
         ref={categoryFilterContainerRef}
-        className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 bg-background relative z-10 pb-5"
+        className="flex flex-wrap items-center justify-center gap-4 2xl:gap-5 bg-background relative z-10 pb-5 font-poppins"
       >
         {/* Main Layout: Flex-Col on Mobile (Show All on bottom), Flex-Wrap on Desktop */}
         <div className="flex flex-col md:flex-row flex-wrap gap-4 max-sm:gap-4 max-sm:w-[95%] max-sm:mx-auto items-center justify-center w-full md:w-auto">

@@ -88,7 +88,7 @@ const WorkPageHeading = () => {
       >
         <h1
           ref={headingRef}
-          className="font-semibold text-[180px] max-sm:text-5xl sm:max-md:text-6xl relative text-center select-none z-5"
+          className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl relative text-center select-none z-5"
         >
           {"SHOWCASE".split("").map((letter, index) => (
             <span

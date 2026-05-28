@@ -12,7 +12,7 @@ const AgencyUSP = () => {
   return (
     <div className="flex flex-col gap-30">
       <div className="flex flex-col gap-15 max-md:gap-8">
-        <p className="text-center capitalize text-4xl max-md:text-2xl font-extralight font-sans tracking-wider">
+        <p className="text-center font-poppins capitalize text-4xl max-md:text-2xl font-extralight font-sans tracking-wider">
           why agencies choose
         </p>
         <Image
@@ -24,7 +24,7 @@ const AgencyUSP = () => {
       <div>
         <div className="flex items-center justify-center h-full">
           <div className="max-w-350 w-4/5 max-md:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
-            <span className="text-brand-orange text-5xl max-sm:text-3xl sm:max-md:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
+            <span className="text-brand-orange font-calSans text-5xl max-sm:text-3xl sm:max-md:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
               proven & trusted
             </span>
             <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
@@ -33,7 +33,7 @@ const AgencyUSP = () => {
                 <div className="absolute w-3/10 max-md:w-7/10 left-1/2 -translate-1/2 top-1/2 h-full max-md:h-[35%] md:border-x md:border-x-brand-orange/50 max-md:border-y max-md:border-y-brand-orange/50 pointer-events-none" />
                 <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl">
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl font-apercu-black">
                       4.8
                     </span>
                     <Star
@@ -54,7 +54,7 @@ const AgencyUSP = () => {
                   </div>
                 </div>
                 <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
-                  <div className="text-7xl max-sm:text-5xl sm:max-md:text-6xl">
+                  <div className="text-7xl max-sm:text-5xl sm:max-md:text-6xl font-apercu-black">
                     <span className="text-brand-orange">19</span>
                     <span>+</span>
                   </div>
@@ -69,7 +69,7 @@ const AgencyUSP = () => {
                 </div>
                 <div className="flex gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
                   <div className="relative">
-                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl">
+                    <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl font-apercu-black">
                       4.8
                     </span>
                     <Star
@@ -89,10 +89,10 @@ const AgencyUSP = () => {
                 </div>
               </div>
               <div>
-                <p className="font-extralight font-sans sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl w-9/10 mx-auto tracking-wider">
+                <p className="font-extralight font-poppins sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl w-9/10 mx-auto tracking-wider">
                   We provide agency-ready creative execution across:
                 </p>
-                <div className="w-7/10 mx-auto grid grid-cols-2 gap-x-15 gap-y-25 relative pt-15 justify-center">
+                <div className="w-7/10 mx-auto grid grid-cols-2 gap-x-15 gap-y-25 relative pt-15 justify-center font-calSans">
                   <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Communication}

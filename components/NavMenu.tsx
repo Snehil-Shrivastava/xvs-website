@@ -30,7 +30,7 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
         </div>
       </div>
       <div className="flex justify-center max-xs:h-105 max-xs:overflow-y-scroll sm:max-md:h-120 md:max-lg:h-180 sm:max-lg:overflow-y-scroll max-lg:w-[70%] max-lg:justify-start text-brand-orange py-20 max-lg:py-0 mx-auto">
-        <div className="max-md:w-full xl:max-1440p:w-[65%] 1440p:max-2xl:w-[85%] 2xl:max-2240p:w-[65%] 2240p:w-[60%] max-xl:flex max-xl:flex-col grid grid-cols-2 max-sm:gap-[2dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[4dvh] xl:max-1440p:gap-[7dvh] 1440p:max-2xl:gap-x-[7dvh] 1440p:max-2xl:gap-y-[12dvh] 2xl:gap-[8dvh] 2240p:gap-y-[7dvh] 2240p:gap-x-[9dvh]">
+        <div className="max-md:w-full xl:max-1440p:w-[65%] 1440p:max-2xl:w-[85%] 2xl:max-2240p:w-[65%] 2240p:w-[70%] max-xl:flex max-xl:flex-col grid grid-cols-2 max-sm:gap-[2dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[4dvh] xl:max-1440p:gap-[7dvh] 1440p:max-2xl:gap-x-[7dvh] 1440p:max-2xl:gap-y-[12dvh] 2xl:gap-[8dvh] 2240p:gap-y-[7dvh] 2240p:gap-x-[9dvh]">
           {navLinksBody.map((link, index) => (
             <div key={index} className="">
               <h3 className="font-poppins max-sm:text-[10px] sm:max-md:text-[0.75rem] md:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] xl:max-1440p:text-[1.2rem] 1440p:max-2xl:text-[1.2rem] 2xl:text-[1.5rem] 2240p:text-[30px]">

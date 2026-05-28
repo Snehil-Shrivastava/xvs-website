@@ -26,7 +26,7 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex max-md:flex-col justify-between gap-25 max-sm:gap-10 sm:max-md:gap-8 ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-md:flex-col justify-between gap-25 max-sm:gap-10 sm:max-md:gap-8 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
         className={`h-inherit max-sm:h-50 sm:max-md:h-100 xl:flex-[1.5] relative`}

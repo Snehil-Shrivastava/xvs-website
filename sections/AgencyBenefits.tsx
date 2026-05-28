@@ -11,7 +11,7 @@ const AgencyBenefits = () => {
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
         <div className="bg-background relative py-20 max-md:py-15 flex flex-col gap-20 max-md:gap-8 agency-client-content">
           <div>
-            <p className="font-extralight font-sans sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl w-9/10 mx-auto tracking-wider">
+            <p className="font-extralight font-poppins sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl w-9/10 mx-auto tracking-wider">
               We&apos;re a strong fit if:
             </p>
             <ul className="w-9/10 mx-auto flex flex-col gap-10 2xl:gap-15 relative pt-10 md:pt-15 justify-center font-poppins font-extralight max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl xl:max-2xl:text-3xl 2xl:text-4xl">

@@ -6,7 +6,7 @@ import PulsingDots from "@/components/PulsingDots";
 const ContactPage = () => {
   return (
     <div
-      className="flex flex-col items-center h-full justify-center relative max-md:w-9/10 max-md:mx-auto"
+      className="flex flex-col items-center h-full justify-center relative max-md:w-9/10 max-md:mx-auto font-poppins"
       style={{
         backgroundImage: `url(/svg/contact-bg-map.svg)`,
         backgroundRepeat: `no-repeat`,

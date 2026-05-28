@@ -3,14 +3,14 @@ const AgencyBudgetRange = () => {
     <div className="flex items-center justify-center h-full">
       <div className="max-w-350 w-4/5 max-md:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans bg-brand-orange py-12 max-md:py-5 content-clip-both">
         <div className="flex flex-col items-center gap-15 max-md:gap-10">
-          <span className="capitalize text-4xl max-md:text-2xl mx-auto">
+          <span className="capitalize font-calSans text-4xl max-md:text-2xl mx-auto">
             Built for real budgets
           </span>
           <div className="flex flex-col items-center gap-5 max-md:gap-3">
             <span className="font-poppins font-light text-2xl max-md:text-sm">
               Most of our agency collaborations fall in the
             </span>
-            <div className="text-6xl max-md:text-4xl flex flex-row md:gap-1.5 max-md:flex-col items-center">
+            <div className="text-6xl font-calSans max-md:text-4xl flex flex-row md:gap-1.5 max-md:flex-col items-center">
               <span>$5,000-$10,000</span>
               <span>project range</span>
             </div>

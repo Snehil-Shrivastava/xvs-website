@@ -5,7 +5,7 @@ const ServicesPage = () => {
     <div className="relative z-1">
       <div className="h-screen max-sm:h-150 sm:max-md:h-150">
         <div className="flex flex-col max-sm:gap-4 items-center justify-center h-full">
-          <span className="text-[2.2rem] max-sm:text-xl sm:max-md:text-2xl font-extralight">
+          <span className="text-[2.2rem] max-sm:text-xl sm:max-md:text-2xl font-poppins font-extralight">
             Services
           </span>
           <h3 className="font-calSans text-[9rem]/[9.5rem] max-sm:text-[40px]/[44px] sm:max-md:text-6xl text-brand-cream text-center select-none">

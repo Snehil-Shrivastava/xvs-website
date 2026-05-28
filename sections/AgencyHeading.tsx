@@ -3,12 +3,12 @@ import React from "react";
 const AgencyHeading = () => {
   return (
     <div className="h-full flex flex-col items-center justify-center gap-8 max-md:gap-4 select-none max-md:py-50">
-      <h3 className="capitalize text-brand-cream text-[100px]/[110px] max-sm:text-3xl sm:max-md:text-4xl font-bold">
+      <h3 className="capitalize font-calSans text-brand-cream text-[100px]/[110px] max-sm:text-3xl sm:max-md:text-4xl">
         <span>a creative partner</span>
         <br />
         <span>built for agencies</span>
       </h3>
-      <p className="text-3xl max-sm:text-sm sm:max-md:text-xl w-[45%] max-md:w-9/10 text-center font-extralight">
+      <p className="text-3xl max-sm:text-sm sm:max-md:text-xl w-[45%] max-md:w-9/10 text-center font-extralight font-poppins">
         White-label branding UI/UX, motion and digital execution support for
         agencies, media houses, and growing brands.
       </p>
