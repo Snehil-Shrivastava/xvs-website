@@ -21,7 +21,7 @@ const SectionHeading = ({
   return (
     <div className="relative">
       <h2
-        className={`font-apercu-black text-[15rem] uppercase font-semibold select-none text-center ${className ? className : "max-sm:text-[4.5rem] sm:max-md:text-[7.5rem] md:max-lg:text-[8rem] lg:max-xl:text-[10rem] xl:max-1440p:text-[11.5rem]"}`}
+        className={`font-apercu-black text-[15rem] uppercase font-semibold select-none text-center ${className ? className : "max-sm:text-[4.5rem] sm:max-md:text-[7.5rem] md:max-lg:text-[8rem] lg:max-xl:text-[10rem] xl:max-1440p:text-[11.5rem] 1440p:text-[12.5rem]"}`}
         style={{
           maskImage:
             "linear-gradient(rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 78%, rgba(0, 0, 0, 0) 90%)",

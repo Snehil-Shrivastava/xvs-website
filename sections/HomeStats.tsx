@@ -17,20 +17,20 @@ const HomeStats = () => {
             cardGlowIntensity="0.5"
           >
             <div>
-              <h3 className="text-xl text-brand-cream 2240p:text-[38px] max-sm:text-lg sm:max-md:text-2xl lg:max-1440p:text-2xl">
+              <h3 className="text-brand-cream 2240p:text-[38px] max-sm:text-lg sm:max-md:text-2xl md:max-lg:text-xl lg:max-1440p:text-2xl 1440p:text-3xl">
                 {stats.cardTitle}
               </h3>
-              <span className="font-apercu-black 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl md:max-lg:text-5xl lg:max-xl:text-7xl xl:max-1440p:text-8xl text-brand-orange">
+              <span className="font-apercu-black 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl md:max-lg:text-5xl lg:max-xl:text-7xl xl:max-1440p:text-8xl 1440p:text-[7rem]/[7.5rem] text-brand-orange">
                 {stats.cardStat}
               </span>
-              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
                 {stats.cardText1}
               </p>
-              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
                 {stats.cardText2}
               </p>
               {stats.descriptor && (
-                <p className="font-poppins text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] sm:max-md:text-sm md:max-lg:text-[12px] lg:max-xl:text-sm xl:max-1440p:text-base italic">
+                <p className="font-poppins text-brand-cream 2240p:text-[1.2rem] max-sm:text-[10px] sm:max-md:text-sm md:max-lg:text-[12px] lg:max-xl:text-sm xl:max-1440p:text-base 1440p:text-lg italic">
                   {stats.descriptor}
                 </p>
               )}
@@ -39,7 +39,7 @@ const HomeStats = () => {
               <Image
                 src={stats.SVGIcon}
                 alt={`${stats.cardTitle}`}
-                className={`max-w-80 absolute ${index === 0 ? "-top-10 max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 right-0 max-sm:-right-25 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 1 ? "-top-10 max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 right-0 max-sm:-right-20 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 2 ? "-top-20 md:max-xl:-top-10 right-0 max-sm:-right-25 sm:max-md:-right-5 md:max-lg:-right-2 lg:max-xl:-right-3 max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52" : "-top-10 max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 right-0 max-sm:-right-12 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5"}`}
+                className={`max-w-80 absolute ${index === 0 ? "-top-10 max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 1440p:w-40 right-0 max-sm:-right-25 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 1 ? "-top-10 max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 1440p:w-40 right-0 max-sm:-right-20 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 2 ? "-top-20 md:max-xl:-top-10 right-0 max-sm:-right-25 sm:max-md:-right-5 md:max-lg:-right-2 lg:max-xl:-right-3 max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52 1440p:w-60" : "-top-10 max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 1440p:w-34 right-0 max-sm:-right-12 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5"}`}
               />
             </div>
           </GlowCard>
