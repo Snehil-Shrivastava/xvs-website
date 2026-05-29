@@ -22,7 +22,7 @@ const HomeTestimonials = () => {
         desc="Hear from visionaries and experts"
       />
       <div className="w-full">
-        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-md:w-9/10 md:max-xl:w-9/10 mx-auto py-20 max-md:py-10 md:max-xl:py-12 content-clip-both">
+        <div className="bg-brand-cream h-auto w-3/5 max-w-350 max-md:w-9/10 md:max-1440p:w-9/10 mx-auto py-20 max-md:py-10 md:max-xl:py-12 content-clip-both">
           <TestimonialCarousel />
           <LogoMarquee logos={logos} />
         </div>

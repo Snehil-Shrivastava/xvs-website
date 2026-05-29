@@ -26,7 +26,7 @@ const ContactPage = () => {
         <div className="absolute inset-0 bg-neutral-600/20 backdrop-blur-md contact-clip-container" />
         <div className="bg-background/20 backdrop-blur-md relative z-5 contact-clip-content flex flex-col md:max-lg:gap-5 lg:max-xl:gap-10 justify-center md:max-xl:py-10">
           <SectionHeading
-            className="max-sm:text-[3.7rem] sm:max-md:text-[5rem] md:max-lg:text-8xl lg:max-xl:text-9xl"
+            className="max-sm:text-[3.7rem] sm:max-md:text-[5rem] md:max-lg:text-8xl lg:max-xl:text-9xl xl:max-1440p:text-[150px]"
             headingText="connect"
             buttonText="contact"
             buttonIcon={

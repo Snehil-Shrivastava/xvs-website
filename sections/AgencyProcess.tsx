@@ -22,7 +22,7 @@ const AgencyProcess = () => {
         <div className="bg-background agency-client-content">
           <div className="w-4/5 mx-auto flex flex-col max-sm:gap-12 sm:max-md:gap-18 gap-15 max-md:py-10 py-15">
             <div className="flex max-md:flex-col items-center gap-10 max-sm:gap-2 sm:max-md:gap-3 md:max-lg:gap-6">
-              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25">
+              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25 h-40">
                 <LottieAnimation
                   animation={discoveryAnimatiion}
                   className="w-full"
@@ -39,7 +39,7 @@ const AgencyProcess = () => {
               </div>
             </div>
             <div className="flex max-md:flex-col items-center gap-10 max-sm:gap-2 sm:max-md:gap-3 md:max-lg:gap-6">
-              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25">
+              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25 h-40">
                 <LottieAnimation
                   animation={agileAnimatiion}
                   className="w-full"
@@ -55,7 +55,7 @@ const AgencyProcess = () => {
               </div>
             </div>
             <div className="flex max-md:flex-col items-center gap-10 max-sm:gap-2 sm:max-md:gap-3 md:max-lg:gap-6">
-              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25">
+              <div className="aspect-square max-sm:w-25 sm:max-md:w-30 md:max-lg:h-25 h-40">
                 <LottieAnimation
                   animation={deliveryAnimatiion}
                   className="w-full"

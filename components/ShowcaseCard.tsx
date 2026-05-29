@@ -26,10 +26,10 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 xl:max-1440p:gap-15 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
-        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:flex-[1.5] relative`}
+        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:max-1440p:min-h-90 xl:flex-[1.5] relative`}
       >
         <Image
           src={card.image}
@@ -38,7 +38,7 @@ const ShowcaseCard = ({
           className="object-cover content-clip-both"
         />
       </div>
-      <div className="flex-1 flex flex-col max-sm:gap-6 sm:max-md:gap-8 md:max-lg:gap-8 lg:gap-6 xl:max-1440p:gap-3 1440p:max-2xl:gap-6 2xl:max-1920p:gap-8 1920p:max-2240p:gap-10 2240p:gap-10 h-full">
+      <div className="flex-1 flex flex-col max-sm:gap-6 sm:max-md:gap-8 md:max-lg:gap-8 lg:gap-6 xl:max-1440p:gap-3 1440p:max-2xl:gap-6 2xl:max-1920p:gap-8 1920p:max-2240p:gap-10 2240p:gap-10 1440p:h-full xl:max-1440p:h-inherit">
         <div className="flex flex-col xl:gap-1.5 2240p:gap-4">
           <h2 className="font-calSans text-brand-cream max-sm:text-lg sm:max-md:text-xl md:max-lg:text-2xl lg:max-xl:text-3xl xl:max-1440p:text-2xl 1440p:max-2xl:text-3xl 2xl:text-[2rem] 1920p:text-[2.5rem] 2240p:text-5xl">
             {card.heading}

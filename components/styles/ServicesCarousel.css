@@ -126,7 +126,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .servicesSwiper > .swiper-wrapper > .swiper-slide {
     height: 460px;
     width: 80% !important;
@@ -147,5 +147,11 @@
 
   .servicesSwiper > .swiper-pagination {
     bottom: 120 !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .servicesSwiper > .swiper-wrapper > .swiper-slide {
+    height: 500px;
   }
 }
