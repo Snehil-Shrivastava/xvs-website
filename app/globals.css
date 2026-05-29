@@ -162,11 +162,11 @@ body {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .container-clip-both {
-    --notch: 35px;
+    --notch: 18px;
   }
 
   .content-clip-both {
-    --notch: 38px;
+    --notch: 20px;
   }
 
   .container-clip-tl {

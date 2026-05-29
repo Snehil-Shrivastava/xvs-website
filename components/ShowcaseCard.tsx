@@ -26,10 +26,10 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex max-md:flex-col justify-between gap-25 max-sm:gap-10 sm:max-md:gap-8 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-lg:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
-        className={`h-inherit max-sm:h-50 sm:max-md:h-100 xl:flex-[1.5] relative`}
+        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 xl:flex-[1.5] relative`}
       >
         <Image
           src={card.image}
@@ -38,7 +38,7 @@ const ShowcaseCard = ({
           className="object-cover content-clip-both"
         />
       </div>
-      <div className="flex-1 flex flex-col max-sm:gap-6 sm:max-md:gap-8 md:max-lg:gap-4 lg:gap-6 xl:max-1440p:gap-3 1440p:max-2xl:gap-6 2xl:max-1920p:gap-8 1920p:max-2240p:gap-10 2240p:gap-10 h-full">
+      <div className="flex-1 flex flex-col max-sm:gap-6 sm:max-md:gap-8 md:max-lg:gap-8 lg:gap-6 xl:max-1440p:gap-3 1440p:max-2xl:gap-6 2xl:max-1920p:gap-8 1920p:max-2240p:gap-10 2240p:gap-10 h-full">
         <div className="flex flex-col xl:gap-1.5 2240p:gap-4">
           <h2 className="font-calSans text-brand-cream max-sm:text-lg sm:max-md:text-xl md:max-lg:text-2xl lg:max-xl:text-3xl xl:max-1440p:text-2xl 1440p:max-2xl:text-3xl 2xl:text-[2rem] 1920p:text-[2.5rem] 2240p:text-5xl">
             {card.heading}
@@ -60,7 +60,7 @@ const ShowcaseCard = ({
                 className={`font-extralight text-brand-orange cursor-pointer uppercase btn-clip`}
               >
                 <span
-                  className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-md:px-4 py-4 max-md:py-1.5 backdrop-blur-xs flex gap-2 max-sm:gap-1 max-sm:text-[10px] sm:max-md:text-sm items-center"
+                  className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-md:px-4 py-4 max-md:py-1.5 md:max-lg:py-2.5 backdrop-blur-xs flex gap-2 max-sm:gap-1 max-sm:text-[10px] sm:max-md:text-sm items-center"
                   style={{
                     background:
                       "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
@@ -69,7 +69,7 @@ const ShowcaseCard = ({
                 >
                   <span className="text-nowrap">{link.linkTo}</span>
                   <span className="text-nowrap">
-                    <ArrowUpRight className="max-sm:w-4 sm:max-md:w-5" />
+                    <ArrowUpRight className="max-sm:w-4 sm:max-lg:w-5" />
                   </span>
                 </span>
               </Link>

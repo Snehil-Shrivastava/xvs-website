@@ -45,7 +45,7 @@ const ClientTestimonials = () => {
             fill={`${
               isClutchHovered || tabSelected === "clutch" ? "#0F0D0A" : "white"
             }`}
-            className="max-sm:w-13 sm:max-md:w-16"
+            className="max-sm:w-13 sm:max-md:w-16 md:max-lg:w-13"
           />
         </div>
         <div
@@ -60,7 +60,7 @@ const ClientTestimonials = () => {
                 ? "#0F0D0A"
                 : "white"
             }`}
-            className="max-sm:w-14 sm:max-md:w-18"
+            className="max-sm:w-14 sm:max-md:w-18 md:max-lg:w-15"
           />
         </div>
       </div>
@@ -76,6 +76,7 @@ const ClientTestimonials = () => {
                 breakpoints={{
                   768: {
                     slidesPerView: 3,
+                    spaceBetween: 32,
                   },
                 }}
                 loop={true}
@@ -100,10 +101,10 @@ const ClientTestimonials = () => {
                       className="flex flex-col text-black flex-1 gap-3 h-full"
                     >
                       <div>
-                        <h4 className="text-xl max-sm:text-sm sm:max-md:text-lg font-semibold">
+                        <h4 className="text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-[12px] font-semibold">
                           {client.name}
                         </h4>
-                        <p className="text-sm max-sm:text-[12px] sm:max-md:text-sm text-[#00000080] max-w-4/5">
+                        <p className="text-sm max-sm:text-[12px] sm:max-md:text-sm md:max-lg:text-[8px] text-[#00000080] max-w-4/5">
                           {client.designation}
                         </p>
                       </div>
@@ -117,12 +118,14 @@ const ClientTestimonials = () => {
                               key={i}
                               fill="#F79839"
                               stroke="none"
-                              className="max-sm:w-3 sm:max-md:w-5"
+                              className="max-sm:w-3 sm:max-md:w-5 md:max-lg:w-3"
                             />
                           ))}
                         </div>
                       </div>
-                      <p className="text-sm">{client.review}</p>
+                      <p className="text-sm md:max-lg:text-[10px]">
+                        {client.review}
+                      </p>
                     </Link>
                   </SwiperSlide>
                 ))}
@@ -147,7 +150,7 @@ const ClientTestimonials = () => {
           <Link
             target="_blank"
             href={`${tabSelected === "clutch" ? "https://clutch.co/profile/xvs-creations?page=1#reviews" : "https://www.sortlist.com/agency/xvs-creations"}`}
-            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm sm:max-md:text-lg cursor-pointer select-none"
+            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-base cursor-pointer select-none"
           >
             View more reviews
           </Link>

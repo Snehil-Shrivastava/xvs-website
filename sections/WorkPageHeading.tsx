@@ -77,7 +77,10 @@ const WorkPageHeading = () => {
     mm.add("(min-width: 640px) and (max-width: 767px)", () =>
       buildTimeline("180px", 0.8),
     );
-    mm.add("(min-width: 768px)", () => buildTimeline("300px", 0.45));
+    mm.add("(min-width: 768px) and (max-width: 1023px)", () =>
+      buildTimeline("200px", 0.45),
+    );
+    mm.add("(min-width: 1024px)", () => buildTimeline("300px", 0.45));
   }, []);
 
   return (
@@ -88,7 +91,7 @@ const WorkPageHeading = () => {
       >
         <h1
           ref={headingRef}
-          className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl relative text-center select-none z-5"
+          className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-8xl relative text-center select-none z-5"
         >
           {"SHOWCASE".split("").map((letter, index) => (
             <span

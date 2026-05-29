@@ -43,7 +43,7 @@ const GlassdoorReviews = () => {
         modules={[Navigation]}
         slidesPerView={1}
         breakpoints={{
-          768: {
+          1024: {
             slidesPerView: 2,
           },
         }}
