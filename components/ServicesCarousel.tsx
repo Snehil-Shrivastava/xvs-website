@@ -82,9 +82,9 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              className="text-center flex flex-col gap-5 max-md:gap-1.5 md:max-lg:gap-2 px-12 max-md:px-4 py-15 max-md:py-8 md:max-lg:py-10"
+              className="text-center flex flex-col gap-5 max-md:gap-1.5 md:max-lg:gap-2 px-12 max-md:px-4 md:max-lg:px-6 py-15 max-md:py-8 md:max-lg:py-10"
             >
-              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] max-sm:leading-7 font-calSans">
+              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] lg:max-xl:text-4xl max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
               <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm font-poppins font-light">

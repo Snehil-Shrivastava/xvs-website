@@ -7,7 +7,7 @@ import HomeTestimonials from "@/sections/HomeTestimonials";
 const HomePage = () => {
   return (
     <>
-      <div className="flex justify-center items-center 2xl:h-screen h-150 md:max-lg:h-200">
+      <div className="flex justify-center items-center lg:h-screen h-150 md:max-lg:h-200">
         <HomeHeading />
       </div>
       <div className="h-screen max-sm:h-150 sm:max-md:h-220 md:max-lg:h-250">
@@ -19,7 +19,7 @@ const HomePage = () => {
       <div className="h-screen max-sm:h-200 sm:max-md:h-280 md:max-lg:h-300">
         <HomeServices />
       </div>
-      <div className="h-screen max-sm:h-150 sm:max-lg:h-220">
+      <div className="h-screen max-sm:h-150 sm:max-lg:h-220 lg:max-xl:h-240">
         <HomeTestimonials />
       </div>
     </>

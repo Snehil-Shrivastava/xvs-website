@@ -58,7 +58,7 @@ export default function LogoMarquee({
       <div className="marquee-root relative w-full overflow-hidden">
         {/* Scrolling track — rendered twice inside to create seamless loop */}
         <div
-          className={`marquee-track flex w-max select-none gap-25 max-sm:gap-0 sm:max-md:gap-5 md:max-lg:gap-8`}
+          className={`marquee-track flex w-max select-none gap-25 max-sm:gap-0 sm:max-md:gap-5 md:max-lg:gap-8 lg:max-xl:gap-10`}
           // style={{ gap: `${gap}px` }}
         >
           {track.map((logo, i) => (

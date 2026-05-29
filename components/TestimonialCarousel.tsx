@@ -30,15 +30,15 @@ const TestimonialCarousel = () => {
             <Link
               href={"#"}
               target="_blank"
-              className="text-black flex flex-col gap-8 max-md:gap-4 md:max-lg:gap-6 w-7/10 max-sm:w-4/5 md:max-lg:w-4/5 mx-auto pb-15 max-sm:pb-8 md:max-lg:pb-10 select-none font-poppins "
+              className="text-black flex flex-col gap-8 max-md:gap-4 md:max-lg:gap-6 w-7/10 max-sm:w-4/5 md:max-lg:w-4/5 lg:max-xl:w-[85%] mx-auto pb-15 max-sm:pb-8 md:max-lg:pb-10 select-none font-poppins "
             >
-              <p className="font-semibold w-full text-3xl max-sm:text-[12px] sm:max-md:text-base md:max-lg:text-lg text-center">
-                {`"${testimonial.quote}"`}
-              </p>
+              <q className="font-semibold w-full text-3xl max-sm:text-[12px] sm:max-md:text-base md:max-lg:text-lg lg:max-xl:text-xl text-center">
+                {testimonial.quote}
+              </q>
 
               <p
                 key={index}
-                className="text-lg max-sm:text-[8px] sm:max-lg:text-[12px] w-full mx-auto text-center"
+                className="text-lg max-sm:text-[8px] sm:max-lg:text-[12px] lg:max-xl:text-sm w-full mx-auto text-center"
               >
                 {parts.map((part, i) => (
                   <React.Fragment key={i}>
