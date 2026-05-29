@@ -55,7 +55,7 @@ const AgencyIntegration = () => {
             </div>
           </div>
           <hr className="w-4/5 mx-auto h-px border-brand-orange/50" />
-          <p className="font-light font-sans max-sm:text-sm sm:max-lg:text-base lg:max-2xl:text-lg 2xl:max-1728p:text-xl 1728p:text-2xl text-center px-25 max-lg:px-0">
+          <p className="font-light font-poppins max-sm:text-sm sm:max-lg:text-base lg:max-2xl:text-lg 2xl:max-1728p:text-xl 1728p:text-2xl text-center px-25 max-lg:px-0">
             Clear timelines. Predictable delivery.
           </p>
         </div>

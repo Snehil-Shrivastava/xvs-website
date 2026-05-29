@@ -62,7 +62,7 @@ const AgencyUSP = () => {
                     <span className="text-xl max-sm:text-sm md:max-lg:text-[12px] font-medium">
                       Verified
                     </span>
-                    <span className="text-4xl max-sm:text-2xl md:max-lg:text-2xl font-medium max-md:font-sans">
+                    <span className="text-4xl max-sm:text-2xl md:max-lg:text-2xl font-medium max-md:font-calSans">
                       Reviews
                     </span>
                   </div>
@@ -82,7 +82,7 @@ const AgencyUSP = () => {
                     <span className="text-xl max-sm:text-sm md:max-lg:text-[12px] font-medium">
                       willingness to
                     </span>
-                    <span className="text-4xl max-sm:text-2xl md:max-lg:text-2xl font-medium max-md:font-sans">
+                    <span className="text-4xl max-sm:text-2xl md:max-lg:text-2xl font-medium max-md:font-calSans">
                       Refer
                     </span>
                   </div>

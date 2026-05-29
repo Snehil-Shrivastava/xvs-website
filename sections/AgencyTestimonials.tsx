@@ -67,7 +67,7 @@ const AgencyTestimonials = () => {
                   <span className="text-xl max-sm:text-sm font-medium">
                     Verified
                   </span>
-                  <span className="text-4xl max-sm:text-2xl md:max-lg:text-3xl font-medium max-md:font-sans">
+                  <span className="text-4xl max-sm:text-2xl md:max-lg:text-3xl font-medium max-md:font-calSans">
                     Reviews
                   </span>
                 </div>

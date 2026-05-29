@@ -49,7 +49,7 @@ const AgencyStats = () => {
                 <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg font-medium">
                   Verified
                 </span>
-                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-lg:text-3xl font-medium max-md:font-sans">
+                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-lg:text-3xl font-medium max-md:font-calSans">
                   Reviews
                 </span>
               </div>
