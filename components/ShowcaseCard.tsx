@@ -26,10 +26,10 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex max-lg:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
-        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 xl:flex-[1.5] relative`}
+        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:flex-[1.5] relative`}
       >
         <Image
           src={card.image}

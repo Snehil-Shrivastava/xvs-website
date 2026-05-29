@@ -8,14 +8,14 @@ const ServicesPage = () => {
           <span className="text-[2.2rem] max-sm:text-xl sm:max-md:text-2xl md:max-lg:text-3xl font-poppins font-extralight">
             Services
           </span>
-          <h3 className="font-calSans text-[9rem]/[9.5rem] max-sm:text-[40px]/[44px] sm:max-md:text-6xl md:max-lg:text-7xl text-brand-cream text-center select-none">
+          <h3 className="font-calSans text-[9rem]/[9.5rem] max-sm:text-[40px]/[44px] sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl text-brand-cream text-center select-none">
             <span>The right expertise</span>
             <br />
             <span>at every step</span>
           </h3>
         </div>
       </div>
-      <div className="min-h-screen pt-25 sm:max-md:pt-40 pb-50 max-sm:w-9/10 sm:max-md:w-4/5 md:max-lg:w-[85%] max-lg:mx-auto">
+      <div className="min-h-screen pt-25 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-4/5 md:max-lg:w-[85%] mx-auto">
         <ServicesMain />
       </div>
     </div>

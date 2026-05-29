@@ -25,7 +25,7 @@ const AboutPage = () => {
       <div className="h-[120vh] max-lg:h-auto">
         <AboutClients />
       </div>
-      <div className="h-[205vh] max-lg:h-auto">
+      <div className="h-[205vh] max-xl:h-auto">
         <AboutMembers />
       </div>
       <div className="h-screen max-sm:min-h-150 sm:max-md:min-h-220 max-lg:h-auto">

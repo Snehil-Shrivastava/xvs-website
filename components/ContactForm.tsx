@@ -49,10 +49,10 @@ const ContactForm = () => {
     <div className="max-w-4/5 w-4/5 mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-12 pb-15 md:max-lg:pb-0"
+        className="flex flex-col gap-12 pb-15 md:max-xl:pb-0"
       >
         {/* Name Field */}
-        <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-lg:text-xl">
+        <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-xl:text-xl">
           <label
             htmlFor="name"
             className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
@@ -72,7 +72,7 @@ const ContactForm = () => {
 
         {/* Email & Phone Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-          <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-lg:text-xl">
+          <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-xl:text-xl">
             <label
               htmlFor="email"
               className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
@@ -90,7 +90,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-lg:text-xl">
+          <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-xl:text-xl">
             <label
               htmlFor="phone"
               className="text-gray-100 text-lg max-sm:text-sm tracking-wide"
@@ -110,7 +110,7 @@ const ContactForm = () => {
         </div>
 
         {/* Message Field */}
-        <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-lg:text-xl">
+        <div className="flex flex-col gap-3 text-2xl max-sm:text-base sm:max-xl:text-xl">
           <label
             htmlFor="message"
             className="text-gray-100 text-lg max-sm:text-sm tracking-wide"

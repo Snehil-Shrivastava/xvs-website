@@ -101,10 +101,10 @@ const ClientTestimonials = () => {
                       className="flex flex-col text-black flex-1 gap-3 h-full"
                     >
                       <div>
-                        <h4 className="text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-[12px] font-semibold">
+                        <h4 className="text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-[12px] lg:max-xl:text-sm font-semibold">
                           {client.name}
                         </h4>
-                        <p className="text-sm max-sm:text-[12px] sm:max-md:text-sm md:max-lg:text-[8px] text-[#00000080] max-w-4/5">
+                        <p className="text-sm max-sm:text-[12px] sm:max-md:text-sm md:max-lg:text-[8px] lg:max-xl:text-[10px] text-[#00000080] max-w-4/5">
                           {client.designation}
                         </p>
                       </div>
@@ -118,12 +118,12 @@ const ClientTestimonials = () => {
                               key={i}
                               fill="#F79839"
                               stroke="none"
-                              className="max-sm:w-3 sm:max-md:w-5 md:max-lg:w-3"
+                              className="max-sm:w-3 sm:max-md:w-5 md:max-lg:w-3 lg:max-xl:w-5"
                             />
                           ))}
                         </div>
                       </div>
-                      <p className="text-sm md:max-lg:text-[10px]">
+                      <p className="text-sm md:max-lg:text-[10px] lg:max-xl:text-[12px]">
                         {client.review}
                       </p>
                     </Link>
@@ -150,7 +150,7 @@ const ClientTestimonials = () => {
           <Link
             target="_blank"
             href={`${tabSelected === "clutch" ? "https://clutch.co/profile/xvs-creations?page=1#reviews" : "https://www.sortlist.com/agency/xvs-creations"}`}
-            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-base cursor-pointer select-none"
+            className="text-black hover:text-white hover:bg-brand-orange border border-black hover:border-brand-orange transition-colors ease-in-out px-6 py-1.5 text-xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-base lg:max-xl:text-lg cursor-pointer select-none"
           >
             View more reviews
           </Link>

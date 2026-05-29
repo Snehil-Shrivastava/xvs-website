@@ -11,7 +11,7 @@ const AboutMembers = () => {
         buttonText="team"
         desc="A job worth doing is worth doing together..."
       />
-      <div className="py-15 max-sm:py-6 md:max-lg:py-0 gap-30 w-4/5 md:max-xl:w-9/10 mx-auto grid grid-cols-4 max-md:grid-cols-2 md:max-lg:grid-cols-3 max-sm:gap-10 md:max-lg:gap-x-15">
+      <div className="py-15 max-sm:py-6 md:max-lg:py-0 gap-30 w-4/5 md:max-xl:w-9/10 mx-auto grid grid-cols-4 max-md:grid-cols-2 md:max-xl:grid-cols-3 max-sm:gap-10 md:max-lg:gap-x-15 lg:max-xl:gap-x-15">
         {membersData.map((member, index) => (
           <div key={index} className="inline-flex flex-col gap-10">
             <div className="inline-block">
@@ -23,10 +23,10 @@ const AboutMembers = () => {
               />
             </div>
             <div className="text-center flex flex-col gap-3 max-md:gap-1.5">
-              <h3 className="font-calSans text-3xl max-sm:text-lg sm:max-md:text-2xl md:max-lg:text-xl">
+              <h3 className="font-calSans text-3xl max-sm:text-lg sm:max-md:text-2xl md:max-lg:text-xl lg:max-xl:text-2xl">
                 {member.name}
               </h3>
-              <span className="text-xl font-poppins font-light max-sm:text-sm sm:max-md:text-base md:max-lg:text-base">
+              <span className="text-xl font-poppins font-light max-sm:text-sm sm:max-md:text-base md:max-lg:text-base lg:max-xl:text-lg">
                 {member.designation}
               </span>
             </div>

@@ -24,13 +24,13 @@ const AboutClients = () => {
           <Heart
             stroke="none"
             fill="#f79839"
-            className="scale-80 max-sm:w-4 sm:max-md:w-5 md:max-lg:w-4"
+            className="scale-80 max-sm:w-4 sm:max-md:w-5 md:max-lg:w-4 lg:max-xl:w-5"
           />
         }
         desc="Hear from visionaries and experts"
       />
-      <div className="max-w-450 max-lg:max-w-full md:max-lg:w-9/10 mx-auto bg-[#d9d3c7] content-clip-both">
-        <div className="grid grid-cols-5 border-b border-b-black/10 py-15 md:max-lg:py-10 md:max-lg:px-10 select-none gap-y-12 md:max-lg:gap-y-4 gap-x-5.5 md:max-lg:gap-x-0 max-sm:gap-0 max-md:hidden">
+      <div className="max-w-450 max-lg:max-w-full md:max-xl:w-9/10 mx-auto bg-[#d9d3c7] content-clip-both">
+        <div className="grid grid-cols-5 border-b border-b-black/10 py-15 md:max-lg:py-10 md:max-lg:px-10 lg:max-xl:px-15 select-none gap-y-12 md:max-lg:gap-y-4 lg:max-xl:gap-y-5 gap-x-5.5 md:max-lg:gap-x-0 max-sm:gap-0 max-md:hidden">
           {clientLogos.map((clientLogo, index) => (
             <div
               key={index}
