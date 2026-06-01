@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import scheduleMeetingSVG from "@/public/svg/schedule-meeting-svg.svg";
 import Link from "next/link";
 import xvslogo from "@/public/svg/xvs-logo-svg.svg";
+import { useRouter } from "next/navigation";
 
 const FooterHeading = () => {
+  const router = useRouter();
+
+  const handleScheduleClick = () => {
+    router.push("?category=schedule-meeting", { scroll: false });
+  };
+
   return (
     <div className="border-b border-b-[rgba(247,152,57,0.3)] py-25 max-sm:py-10 sm:max-md:py-12 md:max-lg:py-15 lg:max-xl:py-16">
       <div className="max-w-[85%] mx-auto flex max-md:flex-col max-md:gap-5 justify-between items-center">
@@ -13,8 +22,9 @@ const FooterHeading = () => {
           <span>Let&#39;s start </span>
           <span>creating together</span>
         </h2>
-        <Link
-          href={{ query: { category: "schedule-meeting" } }}
+        <button
+          // href={{ query: { category: "schedule-meeting" } }}
+          onClick={handleScheduleClick}
           className="flex items-center text-nowrap bg-brand-orange px-9 max-md:px-4 md:max-lg:px-5 lg:max-xl:px-6 py-6 max-md:py-2.5 md:max-xl:py-3 rounded-[52px] text-4xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl xl:max-1440p:text-3xl max-sm:font-semibold gap-6 max-md:gap-3 md:max-lg:gap-4 lg:max-xl:gap-5 font-semibold cursor-pointer select-none font-poppins"
         >
           <Image
@@ -23,7 +33,7 @@ const FooterHeading = () => {
             className="max-sm:w-5 sm:max-md:w-7 md:max-lg:w-8 lg:max-xl:w-10"
           />
           <span>Schedule A Meeting</span>
-        </Link>
+        </button>
 
         <Link href={`/`}>
           <Image

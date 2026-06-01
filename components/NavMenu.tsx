@@ -41,7 +41,7 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
                   pathname: "/work",
                   query: { category: link.heading },
                 }}
-                className={`block font-calSans max-sm:text-[36px]/[48px] sm:max-md:text-[1.5rem]/[2rem] md:max-lg:text-[1.8rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-1440p:text-[3rem]/[3.75rem] 1440p:max-2xl:text-[4.5rem]/[4.3rem] 2xl:text-[3.5rem]/[4rem] 2240p:text-[66px]/[72px] 2240p:w-[90%]`}
+                className={`block font-calSans max-sm:text-[36px]/[48px] sm:max-md:text-[1.5rem]/[2rem] md:max-lg:text-[1.8rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-1440p:text-[3rem]/[3.75rem] 1440p:max-2xl:text-[4.5rem]/[4.3rem] 2xl:text-[3.5rem]/[4rem] 2240p:text-[82px]/[100px] 2240p:w-[90%]`}
                 onClick={closeMenu}
               >
                 {link.heading}
