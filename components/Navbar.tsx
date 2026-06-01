@@ -1,16 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import NavMenu from "./NavMenu";
 import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import xvslogo from "@/public/svg/xvs-logo-svg.svg";
 import xvslogowhite from "@/public/svg/xvs-logo-white-svg.svg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogoWhite, setIsLogoWhite] = useState(false);
+
+  const backdropRef = useRef<HTMLDivElement>(null);
 
   // Handle Scroll Locking
   useEffect(() => {
@@ -20,7 +27,6 @@ export default function Navbar() {
       document.body.style.overflow = "";
     }
 
-    // Cleanup function to ensure scrolling is restored if component unmounts
     return () => {
       document.body.style.overflow = "";
     };
@@ -30,26 +36,55 @@ export default function Navbar() {
     let timer: NodeJS.Timeout;
 
     if (isOpen) {
-      // OPENING: The circle takes time to expand from right to left.
-      // Wait 400ms (adjust this to match when the dark circle hits the logo)
       timer = setTimeout(() => {
         setIsLogoWhite(true);
       }, 550);
     } else {
-      // CLOSING: The circle shrinks back to the right immediately.
-      // Change the logo back to orange almost instantly so it doesn't disappear against a light background.
       timer = setTimeout(() => {
         setIsLogoWhite(false);
       }, 400);
     }
 
-    // Cleanup function in case the user clicks the menu really fast
     return () => clearTimeout(timer);
   }, [isOpen]);
 
+  // GSAP ScrollTrigger — fade in backdrop layer on scroll
+  useGSAP(() => {
+    gsap.fromTo(
+      backdropRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top", // starts animating immediately on scroll
+          end: "+=150", // fully faded in after 150px of scroll
+          scrub: true, // ties opacity directly to scroll position
+        },
+      },
+    );
+  }, []);
+
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none">
+      <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none h-42">
+        {/* GSAP-controlled backdrop layer — starts invisible, fades in on scroll */}
+        <div
+          ref={backdropRef}
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: 0,
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(10, 10, 10, 1), transparent)",
+            backdropFilter: "blur(12px)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 50%, transparent 100%)",
+            maskImage:
+              "linear-gradient(to bottom, black 50%, transparent 100%)",
+          }}
+        />
+
         {/* Fullscreen Circular Menu */}
         <div
           className={`fixed inset-0 z-9999 bg-brand-dark flex justify-center items-center pointer-events-none
@@ -72,8 +107,6 @@ export default function Navbar() {
             
           `}
           style={{
-            // The magic: Animates from a 0px circle to a 200vw circle.
-            // calc(100% - 9rem) 7rem aligns the circle's origin perfectly with the hamburger button.
             clipPath: isOpen
               ? "circle(var(--menu-radius) at var(--menu-origin-x) var(--menu-origin-y))"
               : "circle(0px at var(--menu-origin-x) var(--menu-origin-y))",
@@ -85,6 +118,7 @@ export default function Navbar() {
           <NavMenu closeMenu={() => setIsOpen(false)} />
         </div>
       </nav>
+
       {/* Navbar Logo */}
       <Link
         href="./"
@@ -107,6 +141,7 @@ export default function Navbar() {
           />
         )}
       </Link>
+
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -169,8 +204,6 @@ export default function Navbar() {
           </svg>
         )}
       </button>
-
-      <div className="fixed inset-x-0 top-0 h-50 z-10" />
     </>
   );
 }
