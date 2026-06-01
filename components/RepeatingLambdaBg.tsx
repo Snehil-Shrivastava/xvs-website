@@ -6,7 +6,7 @@ import { useEffect, useRef, useId } from "react";
 const LERP_SPEED = 0.08;
 const BASE_OPACITY = 0.3;
 const BASE_OPACITY_HOVER = 0.18;
-const GLOW_RADIUS = 200;
+const GLOW_RADIUS = 300;
 const GLOW_RADIUS_LG = 400;
 const LG_BREAKPOINT = 1920;
 
