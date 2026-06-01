@@ -235,7 +235,7 @@ function ScheduleModalInner() {
     formData.notes.trim() !== "";
 
   return (
-    <div className="fixed inset-0 z-9999 overflow-y-auto bg-black/20 backdrop-blur-lg custom-scroll">
+    <div className="fixed inset-0 z-9999 overflow-y-auto bg-black/20 backdrop-blur-lg custom-scroll font-poppins">
       <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
         {/* Scrollbar Customization Scoped Style */}
         <style
@@ -243,16 +243,15 @@ function ScheduleModalInner() {
             __html: `
         .custom-scroll::-webkit-scrollbar { width: 6px; }
         .custom-scroll::-webkit-scrollbar-track { background: transparent; }
-        .custom-scroll::-webkit-scrollbar-thumb { background-color: #4b5563; border-radius: 10px; }
-        .custom-scroll:hover::-webkit-scrollbar-thumb { background-color: #f97316; }
+        .custom-scroll::-webkit-scrollbar-thumb { background-color: #f7983999; border-radius: 10px; }
       `,
           }}
         />
 
         {/* Outer Border wrapper for Sci-Fi cut corners */}
-        <div className="relative w-full max-w-5xl p-px shadow-2xl content-clip-both">
+        <div className="relative w-full md:max-w-290 p-px shadow-2xl content-clip-both">
           {/* Main Modal Container */}
-          <div className="bg-background/85 backdrop-blur-md w-full h-full flex flex-col p-8 sm:p-10 content-clip-both">
+          <div className="bg-linear-[-25deg,rgba(247,152,57,0.3)_0%,rgba(121,97,73,0.3)_20%,rgba(44,44,44,0.756)_40%,rgba(29,29,29,0.734)_100%] backdrop-blur-md w-full h-full flex flex-col p-8 sm:p-12 content-clip-both">
             {/* Close Button */}
             <button
               onClick={handleClose}
@@ -270,10 +269,10 @@ function ScheduleModalInner() {
               </div>
               <div className="w-px h-12 bg-zinc-700 max-md:hidden"></div>
               <div className="flex flex-col">
-                <span className="text-brand-orange text-sm font-medium tracking-wide max-sm:text-center">
+                <span className="text-brand-orange text-xl font-medium tracking-wide max-sm:text-center">
                   xVS Creations
                 </span>
-                <span className="text-brand-cream text-2xl max-sm:text-lg font-bold tracking-wide max-sm:text-center">
+                <span className="text-brand-cream text-3xl max-sm:text-lg font-bold tracking-wide max-sm:text-center">
                   Book a Free Consultation
                 </span>
               </div>
@@ -286,7 +285,7 @@ function ScheduleModalInner() {
               <div className="flex flex-col md:flex-row min-h-112.5">
                 {/* Left Column: Calendar */}
                 <div
-                  className={`w-full md:w-[45%] pr-0 md:pr-10 md:border-r border-zinc-700/50 flex flex-col justify-between ${mobileStep === "time" ? "hidden md:flex" : "flex"}`}
+                  className={`w-full md:w-auto pr-0 md:pr-10 md:border-r border-zinc-700/50 flex flex-col justify-between ${mobileStep === "time" ? "hidden md:flex" : "flex"}`}
                 >
                   <div>
                     <h2 className="text-white text-lg font-semibold mb-6 max-sm:text-center">
@@ -396,7 +395,7 @@ function ScheduleModalInner() {
 
                 {/* Right Column: Time Slots */}
                 <div
-                  className={`w-full md:w-[55%] pl-0 md:pl-10 mt-10 max-sm:mt-0 md:mt-0 flex flex-col relative ${mobileStep === "date" ? "hidden md:flex" : "flex"}`}
+                  className={`w-full md:w-auto md:flex-1 pl-0 md:pl-10 mt-10 max-sm:mt-0 md:mt-0 flex flex-col relative ${mobileStep === "date" ? "hidden md:flex" : "flex"}`}
                 >
                   <button
                     onClick={() => setMobileStep("date")}
@@ -409,7 +408,7 @@ function ScheduleModalInner() {
                   <div className="flex flex-col gap-3 mb-6">
                     <div className="flex items-center gap-3 text-white">
                       <Clock className="w-4 h-4" />
-                      <span className="text-sm">{duration} min</span>
+                      <span className="text-base">{duration} min</span>
                       <div className="flex gap-2 ml-1">
                         <button
                           disabled={isLoadingSlots}
@@ -429,7 +428,7 @@ function ScheduleModalInner() {
                         </button>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3 text-white text-sm">
+                    <div className="flex items-center gap-3 text-white text-base">
                       <Video className="w-4 h-4" />
                       <span>
                         Web conferencing details provided upon confirmation.
@@ -461,7 +460,7 @@ function ScheduleModalInner() {
                                 key={slot.time}
                                 disabled={!slot.available}
                                 onClick={() => setSelectedTime(slot.time)}
-                                className={`py-2 px-4 rounded border transition-all duration-200 text-sm font-medium
+                                className={`py-2 px-4 rounded border transition-all duration-200 text-base font-medium
             ${
               !slot.available
                 ? "border-zinc-700/50 text-zinc-600 cursor-not-allowed bg-zinc-800/30"
@@ -671,6 +670,8 @@ function ScheduleModalInner() {
               </div>
             )}
           </div>
+          <div className="modal-border-left absolute -top-px -left-px -z-1 bg-white/50 w-3/5 h-[70%] modal-border-tl" />
+          <div className="modal-border-right absolute -bottom-px -right-px -z-1 bg-white/50 w-full h-[90%] modal-border-br" />
         </div>
       </div>
     </div>

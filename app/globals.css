@@ -45,7 +45,7 @@ body {
 }
 
 .container-clip-both {
-  --notch: 49px;
+  --notch: 51px;
   clip-path: polygon(
     0 var(--notch),
     0 100%,

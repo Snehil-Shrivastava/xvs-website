@@ -7,11 +7,11 @@ const HomeStats = () => {
 
   return (
     <div className="flex items-center justify-center h-full font-calSans">
-      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 w-9/10 max-w-450">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1.5 w-9/10 max-w-450">
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
-            className={`${stats.cardTitle}-stat max-h-120 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
+            className={`max-h-120 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
             cardStyle={`bg-brand-dark backdrop-blur-md py-25 max-sm:py-10 md:max-lg:py-10 lg:max-xl:py-15 xl:max-1440p:py-18 px-15 max-sm:px-8 md:max-lg:px-8 lg:max-xl:px-12 max-sm:flex max-sm:items-end ${index === 0 ? "content-clip-tl" : index === 3 ? "content-clip-br" : ""}`}
             cardGlowRadius="1100px"
             cardGlowIntensity="0.5"

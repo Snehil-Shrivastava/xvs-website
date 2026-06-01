@@ -126,6 +126,21 @@
   );
 }
 
+.modal-border-tl {
+  clip-path: polygon(100% 0, 52px 0, 0 52px, 0 100%, 2px 53px, 53px 2px);
+}
+
+.modal-border-br {
+  clip-path: polygon(
+    0 calc(100% - 2px),
+    calc(100% - 54px) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - 54px),
+    calc(100% - 2px) 0,
+    100% calc(100% - 54px),
+    calc(100% - 54px) 100%
+  );
+}
+
 @keyframes marquee {
   0% {
     transform: "translateX(0)";

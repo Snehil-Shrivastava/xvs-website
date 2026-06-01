@@ -62,7 +62,7 @@ const ServicesCard = ({
   return (
     <div
       ref={servicesCardRef}
-      className="relative 2xl:w-[85%] w-full mx-auto md:pointer-events-none"
+      className="relative 2xl:w-full 1920p:w-4/5 w-full mx-auto md:pointer-events-none"
       id={services.id}
     >
       <div className="">

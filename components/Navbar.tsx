@@ -65,6 +65,10 @@ export default function Navbar() {
             lg:max-xl:[--menu-origin-x:calc(100%-4rem)] lg:max-xl:[--menu-origin-y:6rem]
 
             xl:max-1440p:[--menu-origin-x:calc(100%-4rem)] xl:max-1440p:[--menu-origin-y:6rem]
+
+            1440p:max-2xl:[--menu-origin-x:calc(100%-5rem)] 1440p:max-2xl:[--menu-origin-y:7rem]
+
+            2xl:max-2240p:[--menu-origin-x:calc(100%-5rem)] 2xl:max-2240p:[--menu-origin-y:7rem]
             
           `}
           style={{
@@ -84,7 +88,7 @@ export default function Navbar() {
       {/* Navbar Logo */}
       <Link
         href="./"
-        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] lg:max-xl:top-[50] xl:max-1440p:top-[60] sm:max-md:left-[40] md:max-lg:left-[40] lg:max-xl:left-[50] xl:max-1440p:left-[60] max-md:top-[30] md:max-lg:top-[40] max-sm:h-10.25 sm:max-md:h-14.5 md:max-xl:h-auto"
+        className="h-21.25 z-50 fixed left-30 top-18 max-sm:left-[20] lg:max-xl:top-[50] xl:max-1440p:top-[60] sm:max-md:left-[40] md:max-lg:left-[40] lg:max-xl:left-[50] xl:max-1440p:left-[60] 1440p:max-2xl:left-[70] 2xl:max-2240p:left-[80] max-md:top-[30] md:max-lg:top-[40] max-sm:h-10.25 sm:max-md:h-14.5 md:max-xl:h-auto"
         aria-label="home page logo"
         title="home page logo"
         onClick={() => setIsOpen(false)}
@@ -106,7 +110,7 @@ export default function Navbar() {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-md:top-[30] md:max-lg:top-[40] lg:max-xl:top-[50] xl:max-1440p:top-[60] max-sm:right-[20] sm:max-md:right-[40] md:max-lg:right-[40] lg:max-xl:right-[50] xl:max-1440p:right-[60] max-sm:h-10.25 sm:max-md:h-14.5 md:max-lg:h-17.5"
+        className="fixed top-18 right-30 z-50 flex flex-col justify-center gap-1.5 outline-none cursor-pointer h-21.25 max-md:top-[30] md:max-lg:top-[40] lg:max-xl:top-[50] xl:max-1440p:top-[60] max-sm:right-[20] sm:max-md:right-[40] md:max-lg:right-[40] lg:max-xl:right-[50] xl:max-1440p:right-[60] 1440p:max-2xl:right-[70] 2xl:max-2240p:right-[80] max-sm:h-10.25 sm:max-md:h-14.5 md:max-lg:h-17.5"
         aria-label="Toggle Menu"
         title="Toggle Hamburger Menu"
       >
@@ -165,6 +169,8 @@ export default function Navbar() {
           </svg>
         )}
       </button>
+
+      <div className="fixed inset-x-0 top-0 h-50 z-10" />
     </>
   );
 }

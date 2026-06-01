@@ -92,13 +92,13 @@ const ServicesCarousel = () => {
               </span>
             </Link>
           </GlowCard>
-          <div className="absolute inset-0 pointer-events-none select-none">
+          <div className="absolute inset-0 pointer-events-none select-none services-gif-container">
             <Image
               src={services.gifSrc}
               alt={services.gifAlt}
               width={600}
               height={350}
-              className={`relative ${services.gifClass}`}
+              className={`relative services-gif ${services.gifClass}`}
             />
           </div>
         </SwiperSlide>

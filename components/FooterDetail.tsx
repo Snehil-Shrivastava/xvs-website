@@ -8,13 +8,13 @@ const FooterDetail = () => {
   const footerServices = FooterServices;
   return (
     <div className="relative">
-      <div className="py-15 max-md:pt-3 max-md:pb-5 2xl:max-w-[85%] max-sm:w-9/10 md:max-lg:w-9/10 lg:max-xl:w-[95%] xl:max-1440p:w-9/10 mx-auto flex gap-70 md:max-lg:gap-15 lg:max-xl:gap-20 xl:max-1440p:gap-25 relative z-5">
+      <div className="py-15 max-md:pt-3 max-md:pb-5 w-[85%] max-sm:w-9/10 md:max-lg:w-9/10 lg:max-xl:w-[95%] xl:max-1440p:w-9/10 mx-auto flex gap-70 md:max-lg:gap-15 lg:max-xl:gap-20 xl:max-1440p:gap-25 1440p:max-2240p:gap-30 relative z-5">
         <div className="flex flex-col justify-between gap-10 max-md:hidden">
           <Link href={`/`}>
             <Image
               src={xvslogo}
               alt="xvs logo"
-              className="h-full max-sm:w-12 sm:max-md:w-12 md:max-lg:w-18 lg:max-xl:w-20 xl:max-1440p:w-28 1440p:max-2xl:w-20 2xl:w-22 1920p:w-25 2240p:w-30"
+              className="h-full max-sm:w-12 sm:max-md:w-12 md:max-lg:w-18 lg:max-xl:w-20 xl:max-1440p:w-28 1440p:max-2xl:w-32 2xl:w-34"
             />
           </Link>
           <div className="grid grid-cols-3 gap-y-5 gap-x-6 md:max-lg:gap-x-3">
@@ -31,7 +31,7 @@ const FooterDetail = () => {
         </div>
         <div className="flex-1 relative font-poppins">
           <div className="flex justify-between w-full max-sm:w-full sm:max-md:w-9/10 mx-auto h-full max-sm:gap-5 md:max-lg:gap-8">
-            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-1440p:flex-[0.55]">
+            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-2240p:flex-[0.55]">
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl">
                 Contact
               </span>
@@ -57,7 +57,7 @@ const FooterDetail = () => {
                     </span>
                     <span>Hi!</span>
                   </h3>
-                  <p className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base text-brand-cream">
+                  <p className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base 1440p:max-2xl:text-lg text-brand-cream">
                     <Link href="mailto:info@xvscreations.com">
                       info@xvscreations.com
                     </Link>
@@ -67,7 +67,7 @@ const FooterDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-1440p:flex-[0.45]">
+            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-2240p:flex-[0.45]">
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl">
                 Services
               </span>
@@ -83,7 +83,7 @@ const FooterDetail = () => {
                             query: { category: service.heading },
                           }
                     }
-                    className="hover:underline text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base"
+                    className="hover:underline text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base 1440p:max-2xl:text-lg"
                   >
                     {service.heading}
                   </Link>
@@ -109,7 +109,7 @@ const FooterDetail = () => {
       {/* dividing lines */}
       <div className="absolute h-px w-[75%] max-md:w-full md:max-lg:w-[78%] lg:max-xl:w-4/5 xl:max-1440p:w-[78%] bg-[#f7983944] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%] right-0" />
       <div className="absolute h-1/2 max-md:h-3/5 w-px bg-[#f7983944] right-[40%] max-sm:right-[40%] sm:max-md:right-[45%] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%]" />
-      <div className="absolute h-[18%] max-md:h-[16%] w-px bg-[#f7983944] right-[65.5%] max-sm:right-[69%] sm:max-md:right-[73%] md:max-lg:right-[58%] lg:max-xl:right-[60%] xl:max-1440p:right-[57%] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%]" />
+      <div className="absolute h-[18%] max-md:h-[16%] w-px bg-[#f7983944] right-[65.5%] max-sm:right-[69%] sm:max-md:right-[73%] md:max-lg:right-[58%] lg:max-xl:right-[60%] xl:max-2xl:right-[57%] 2xl:max-2240p:right-[59%] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%]" />
     </div>
   );
 };

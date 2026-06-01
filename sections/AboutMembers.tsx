@@ -11,7 +11,7 @@ const AboutMembers = () => {
         buttonText="team"
         desc="A job worth doing is worth doing together..."
       />
-      <div className="py-15 max-sm:py-6 md:max-lg:py-0 gap-30 w-4/5 md:max-xl:w-9/10 mx-auto grid grid-cols-4 max-md:grid-cols-2 md:max-1440p:grid-cols-3 max-sm:gap-10 md:max-lg:gap-x-15 lg:max-1440p:gap-x-15">
+      <div className="py-15 max-sm:py-6 md:max-lg:py-0 gap-30 w-4/5 md:max-xl:w-9/10 mx-auto grid grid-cols-4 max-md:grid-cols-2 md:max-2xl:grid-cols-3 max-sm:gap-10 md:max-lg:gap-x-15 lg:max-1440p:gap-x-15 1440p:max-2240p:gap-x-25">
         {membersData.map((member, index) => (
           <div key={index} className="inline-flex flex-col gap-10">
             <div className="inline-block">

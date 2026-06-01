@@ -10,8 +10,14 @@
 
 .servicesSwiper > .swiper-wrapper > .swiper-slide {
   overflow-y: visible;
-  height: 600px;
+  height: 660px;
   transition: all 0.2s none;
+}
+
+.services-slide.swiper-slide:not(.swiper-slide-active)
+  .services-gif-container
+  .services-gif {
+  visibility: hidden;
 }
 
 .servicesSwiper > .swiper-wrapper > .swiper-slide:not(.swiper-slide-visible) {

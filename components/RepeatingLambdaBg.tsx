@@ -11,9 +11,9 @@ const GLOW_RADIUS_LG = 400;
 const LG_BREAKPOINT = 1920;
 
 const BASE_STROKE = "gray";
-const GLOW_STROKE = "#ffaf5f";
+const GLOW_STROKE = "#ffaf5f80";
 const GLOW_FILTER =
-  "drop-shadow(0 0 8px #fa8b1d) drop-shadow(0 0 15px #fa8b1d)";
+  "drop-shadow(0 0 8px #fa8b1d80) drop-shadow(0 0 15px #fa8b1d80)";
 
 const PATTERN_W = 220;
 const PATTERN_H = 1600;
