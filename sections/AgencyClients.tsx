@@ -16,7 +16,7 @@ const AgencyClients = () => {
           <p className="font-light font-poppins max-sm:text-xl sm:max-md:text-2xl md:max-lg:text-xl lg:max-xl:text-2xl text-3xl">
             We work with:
           </p>
-          <div className="w-9/10 max-lg:w-9/10 lg:max-xl:w-full mx-auto grid grid-cols-2 max-md:grid-cols-1 gap-x-65 md:max-xl:gap-x-10 gap-y-25 max-md:gap-y-10 md:max-xl:gap-y-15 relative font-calSans">
+          <div className="w-9/10 max-lg:w-9/10 lg:max-xl:w-full mx-auto grid grid-cols-2 max-md:grid-cols-1 gap-x-65 md:max-xl:gap-x-10 xl:max-2xl:gap-15 gap-y-25 max-md:gap-y-10 md:max-xl:gap-y-15 relative font-calSans">
             <div className="flex gap-10 md:max-lg:gap-6 items-center">
               <Image
                 src={MarketingSVG}

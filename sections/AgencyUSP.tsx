@@ -30,7 +30,7 @@ const AgencyUSP = () => {
             <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
             <div className="bg-background relative py-20 md:max-xl:py-15 flex flex-col gap-20 md:max-xl:gap-10 agency-client-content">
               <div className="flex max-md:flex-col max-md:gap-10 justify-around items-center relative">
-                <div className="absolute w-3/10 max-md:w-7/10 md:max-lg:w-[35%] lg:max-xl:w-[34%] left-1/2 lg:max-xl:left-[49%] -translate-1/2 top-1/2 h-full max-md:h-[35%] md:border-x md:border-x-brand-orange/50 max-md:border-y max-md:border-y-brand-orange/50 pointer-events-none" />
+                <div className="absolute w-3/10 max-md:w-7/10 md:max-lg:w-[35%] lg:max-xl:w-[34%] xl:max-2xl:w-[35%] left-1/2 lg:max-xl:left-[49%] -translate-1/2 top-1/2 h-full max-md:h-[35%] md:border-x md:border-x-brand-orange/50 max-md:border-y max-md:border-y-brand-orange/50 pointer-events-none" />
                 <div className="flex gap-10 md:max-lg:gap-8 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
                   <div className="relative">
                     <span className="text-brand-orange text-7xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-[2.5rem] lg:max-xl:text-6xl font-apercu-black md:max-lg:relative md:max-lg:inset-x-0 md:max-lg:top-1.5">

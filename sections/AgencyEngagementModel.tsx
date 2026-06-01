@@ -11,8 +11,8 @@ const AgencyEngagementModel = () => {
           engagement models
         </span>
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
-        <div className="bg-background relative py-20 max-lg:py-15 lg:max-xl:py-0 flex flex-col gap-20 max-md:gap-8 agency-client-content">
-          <div className="w-4/5 md:max-lg:w-9/10 mx-auto flex max-md:flex-col max-sm:gap-15 sm:max-md:gap-18 md:max-lg:gap-8 lg:max-xl:gap-10 gap-15 max-md:py-10 md:max-lg:py-0 py-15">
+        <div className="bg-background relative py-20 max-lg:py-15 lg:max-2xl:py-0 flex flex-col gap-20 max-md:gap-8 agency-client-content">
+          <div className="w-4/5 md:max-lg:w-9/10 xl:max-2xl:w-[90%] mx-auto flex max-md:flex-col max-sm:gap-15 sm:max-md:gap-18 md:max-lg:gap-8 lg:max-xl:gap-10 gap-15 max-md:py-10 md:max-lg:py-0 py-15">
             <div className="flex flex-col items-center max-md:gap-6 gap-10">
               <LottieAnimation
                 animation={projectAnimation}

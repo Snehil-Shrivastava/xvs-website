@@ -17,7 +17,7 @@ const AgencyWorkflow = () => {
             <p className="font-extralight font-poppins sm:max-md:text-lg md:max-lg:text-xl lg:max-2xl:text-2xl 2xl:max-1728p:text-[26px] 1728p:text-3xl w-9/10 mx-auto tracking-wider">
               We understand agency dynamics.
             </p>
-            <div className="w-7/10 md:max-xl:w-4/5 mx-auto grid grid-cols-2 gap-x-15 max-md:gap-x-8 md:max-xl:gap-x-10 gap-y-25 max-md:gap-y-15 md:max-xl:gap-y-15 relative pt-15 justify-center font-calSans">
+            <div className="w-7/10 md:max-2xl:w-4/5 mx-auto grid grid-cols-2 gap-x-15 max-md:gap-x-8 md:max-xl:gap-x-10 gap-y-25 max-md:gap-y-15 md:max-xl:gap-y-15 relative pt-15 justify-center font-calSans">
               <div className="flex max-md:flex-col gap-10 max-md:gap-5 md:max-lg:gap-6 items-center justify-start">
                 <Image
                   src={NDA}

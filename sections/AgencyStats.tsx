@@ -10,7 +10,7 @@ const AgencyStats = () => {
       <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-stat-container" />
         <div className="bg-background relative py-20 max-md:py-10 md:max-lg:py-12 agency-stat-content">
-          <div className="w-4/5 md:max-xl:w-[85%] mx-auto grid grid-cols-2 max-md:flex max-md:flex-col gap-x-65 md:max-lg:gap-x-12 lg:max-xl:gap-x-20 gap-y-25 max-md:gap-y-10 md:max-lg:gap-y-12 relative sm:max-md:items-center">
+          <div className="w-4/5 md:max-xl:w-[85%] mx-auto grid grid-cols-2 max-md:flex max-md:flex-col gap-x-65 md:max-lg:gap-x-12 lg:max-xl:gap-x-20 xl:max-2xl:gap-x-25 gap-y-25 max-md:gap-y-10 md:max-lg:gap-y-12 relative sm:max-md:items-center">
             <hr className="absolute top-1/2 -translate-y-1/2 max-sm:top-20 sm:max-md:top-22 w-full h-px border-brand-orange/50" />
             <hr className="absolute top-1/2 -translate-y-1/2 w-full h-px border-brand-orange/50" />
             <hr className="absolute left-1/2 -translate-x-1/2 h-full w-px border-l border-brand-orange/50 max-md:hidden" />

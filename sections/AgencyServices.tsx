@@ -17,7 +17,7 @@ const AgencyServices = () => {
           <p className="font-light max-sm:text-xl sm:max-md:text-2xl md:max-lg:text-xl lg:max-xl:text-2xl text-3xl font-poppins">
             We provide agency-ready creative execution across:
           </p>
-          <div className="w-9/10 max-md:w-full lg:max-xl:w-full mx-auto grid grid-cols-2 max-lg:grid-cols-1 gap-x-15 gap-y-25 max-md:gap-y-10 md:max-xl:gap-y-15 relative font-calSans">
+          <div className="w-9/10 max-md:w-full lg:max-2xl:w-full mx-auto grid grid-cols-2 max-lg:grid-cols-1 gap-x-15 gap-y-25 max-md:gap-y-10 md:max-xl:gap-y-15 relative font-calSans">
             <div className="flex gap-10 max-sm:gap-4 md:max-lg:gap-6 lg:max-xl:gap-6 items-center">
               <div className="max-sm:h-15 sm:max-md:h-20 md:max-lg:h-25 lg:max-xl:h-30 h-35 aspect-square">
                 <LottieAnimation animation={Branding} className="w-full" />

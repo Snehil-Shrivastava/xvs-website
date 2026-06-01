@@ -15,7 +15,7 @@ const AgencyProcess = () => {
         buttonIcon={
           <Scaling className="max-sm:w-3 sm:max-md:w-4 md:max-lg:w-4" />
         }
-        className="max-sm:text-[40px] sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl"
+        className="max-sm:text-[40px] sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl xl:max-2xl:text-[6.5rem]/[6rem]"
       />
       <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
