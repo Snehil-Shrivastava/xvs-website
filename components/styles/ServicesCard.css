@@ -62,6 +62,20 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  .services-card-clip {
+    --notch: 62px;
+  }
+
+  .border-bottom-right {
+    --notch: 62px;
+  }
+
+  .border-bottom-right::before {
+    --notch: 62px;
+  }
+}
+
 @keyframes float-mobile {
   0% {
     transform: translateY(0);

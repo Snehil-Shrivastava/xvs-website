@@ -7,16 +7,16 @@ import ratingCardSVG from "@/public/svg/rating-card-svg.svg";
 const AgencyStats = () => {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="max-w-350 w-4/5 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
+      <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-stat-container" />
         <div className="bg-background relative py-20 max-md:py-10 md:max-lg:py-12 agency-stat-content">
-          <div className="w-4/5 md:max-lg:w-[85%] mx-auto grid grid-cols-2 max-md:flex max-md:flex-col gap-x-65 md:max-lg:gap-x-12 gap-y-25 max-md:gap-y-10 md:max-lg:gap-y-12 relative sm:max-md:items-center">
+          <div className="w-4/5 md:max-xl:w-[85%] mx-auto grid grid-cols-2 max-md:flex max-md:flex-col gap-x-65 md:max-lg:gap-x-12 lg:max-xl:gap-x-20 gap-y-25 max-md:gap-y-10 md:max-lg:gap-y-12 relative sm:max-md:items-center">
             <hr className="absolute top-1/2 -translate-y-1/2 max-sm:top-20 sm:max-md:top-22 w-full h-px border-brand-orange/50" />
             <hr className="absolute top-1/2 -translate-y-1/2 w-full h-px border-brand-orange/50" />
             <hr className="absolute left-1/2 -translate-x-1/2 h-full w-px border-l border-brand-orange/50 max-md:hidden" />
             <div className="flex gap-20 max-md:gap-15 md:max-lg:gap-15 items-center max-md:justify-center">
               <div className="relative">
-                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl">
+                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl lg:max-xl:text-7xl">
                   4.8
                 </span>
                 <Image
@@ -26,7 +26,7 @@ const AgencyStats = () => {
                 />
               </div>
               <div className="">
-                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg font-medium">
+                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg lg:max-xl:text-xl font-medium">
                   Rated on
                 </span>
                 <ClutchLogo
@@ -36,35 +36,35 @@ const AgencyStats = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-15 md:max-lg:gap-10 items-center max-md:justify-center">
+            <div className="flex gap-15 md:max-xl:gap-10 items-center max-md:justify-center">
               <div className="font-apercu-black">
-                <span className="text-brand-orange text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl">
+                <span className="text-brand-orange text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl lg:max-xl:text-7xl">
                   19
                 </span>
-                <span className="text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl">
+                <span className="text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl lg:max-xl:text-7xl">
                   +
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg font-medium">
+                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg lg:max-xl:text-xl font-medium">
                   Verified
                 </span>
-                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-lg:text-3xl font-medium max-md:font-calSans">
+                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-xl:text-3xl font-medium max-md:font-calSans">
                   Reviews
                 </span>
               </div>
             </div>
-            <div className="flex gap-15 md:max-lg:gap-10 items-center justify-start max-md:justify-center">
+            <div className="flex gap-15 md:max-xl:gap-10 items-center justify-start max-md:justify-center">
               <div className="flex flex-col-reverse">
-                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg font-medium">
+                <span className="text-2xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-lg lg:max-xl:text-xl font-medium">
                   Since
                 </span>
-                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-lg:text-3xl font-medium">
+                <span className="text-5xl max-sm:text-2xl sm:max-md:text-4xl md:max-xl:text-3xl font-medium">
                   Trusted
                 </span>
               </div>
               <div>
-                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl">
+                <span className="text-brand-orange font-apercu-black text-8xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl lg:max-xl:text-7xl">
                   2014
                 </span>
               </div>
@@ -72,7 +72,7 @@ const AgencyStats = () => {
             <div>
               <Link
                 href={{ query: { category: "schedule-meeting" } }}
-                className="flex items-center text-nowrap bg-brand-orange px-9 max-sm:px-4 py-6 max-lg:py-2.5 rounded-[72px] text-4xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-xl gap-6 md:max-lg:gap-4 font-semibold cursor-pointer select-none"
+                className="flex items-center text-nowrap bg-brand-orange px-9 max-sm:px-4 py-6 max-lg:py-2.5 rounded-[72px] text-4xl max-sm:text-sm sm:max-md:text-xl md:max-lg:text-xl lg:max-xl:text-3xl gap-6 md:max-lg:gap-4 font-semibold cursor-pointer select-none"
               >
                 <Image
                   src={scheduleMeetingSVG}
@@ -81,7 +81,7 @@ const AgencyStats = () => {
                 />
                 <div className="flex flex-col">
                   <span className="tracking-wider">Book a 15min</span>
-                  <span className="font-medium text-3xl md:max-lg:text-sm">
+                  <span className="font-medium text-3xl md:max-lg:text-sm lg:max-xl:text-2xl">
                     Intro Call
                   </span>
                 </div>

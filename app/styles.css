@@ -81,22 +81,31 @@
 }
 
 .agency-client-container {
-  clip-path: Polygon(0 0, 0 92%, 3% 100%, 100% 100%, 100% 8%, 97% 0);
+  --notch: 52px;
+  clip-path: Polygon(
+    0 0,
+    0 calc(100% - var(--notch)),
+    var(--notch) 100%,
+    100% 100%,
+    100% var(--notch),
+    calc(100% - var(--notch)) 0
+  );
 }
 
 .agency-client-content {
+  --notch: 52px;
   clip-path: Polygon(
     0 0,
     0 30%,
     1px 50%,
-    1px 92%,
-    3% calc(100% - 1px),
+    1px calc(100% - var(--notch)),
+    var(--notch) calc(100% - 1px),
     30% 100%,
     50% 100%,
     60% calc(100% - 1px),
     calc(100% - 1px) calc(100% - 1px),
-    calc(100% - 1px) 8%,
-    97% 1px,
+    calc(100% - 1px) var(--notch),
+    calc(100% - var(--notch)) 1px,
     40% 0
   );
 }
@@ -127,17 +136,26 @@
 }
 
 .modal-border-tl {
-  clip-path: polygon(100% 0, 52px 0, 0 52px, 0 100%, 2px 53px, 53px 2px);
+  --notch: 53px;
+  clip-path: polygon(
+    100% 0,
+    var(--notch) 0,
+    0 var(--notch),
+    0 100%,
+    2px var(--notch),
+    var(--notch) 2px
+  );
 }
 
 .modal-border-br {
+  --notch: 54px;
   clip-path: polygon(
     0 calc(100% - 2px),
-    calc(100% - 54px) calc(100% - 2px),
-    calc(100% - 2px) calc(100% - 54px),
+    calc(100% - var(--notch)) calc(100% - 2px),
+    calc(100% - 2px) calc(100% - var(--notch)),
     calc(100% - 2px) 0,
-    100% calc(100% - 54px),
-    calc(100% - 54px) 100%
+    100% calc(100% - var(--notch)),
+    calc(100% - var(--notch)) 100%
   );
 }
 
@@ -169,85 +187,6 @@
 @media screen and (max-width: 1280px) {
   .btn-clip {
     --notch: 10px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .btn-clip {
-    --notch: 8px;
-  }
-
-  .footer-container-clip {
-    --notch: 31px;
-  }
-
-  .footer-content-clip {
-    --notch: 32px;
-  }
-  .contact-clip-container {
-    --notch: 31px;
-  }
-
-  .contact-clip-content {
-    --notch: 32px;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 768px) {
-  .agency-stat-container {
-    clip-path: Polygon(
-      0 30px,
-      0 100%,
-      calc(100% - 25px) 100%,
-      100% calc(100% - 30px),
-      100% 0,
-      25px 0
-    );
-  }
-
-  .agency-stat-content {
-    clip-path: Polygon(
-      1px 30px,
-      1px calc(100% - 1px),
-      30% 100%,
-      60% 100%,
-      70% calc(100% - 1px),
-      calc(100% - 25px) calc(100% - 1px),
-      calc(100% - 1px) calc(100% - 30px),
-      calc(100% - 1px) 60%,
-      100% 40%,
-      100% 0,
-      60% 0,
-      25px 1px
-    );
-  }
-
-  .agency-client-container {
-    clip-path: Polygon(
-      0 0,
-      0 calc(100% - 30px),
-      25px 100%,
-      100% 100%,
-      100% 30px,
-      calc(100% - 25px) 0
-    );
-  }
-
-  .agency-client-content {
-    clip-path: Polygon(
-      0 0,
-      0 30%,
-      1px 50%,
-      1px calc(100% - 30px),
-      25px calc(100% - 1px),
-      10% 100%,
-      50% 100%,
-      100% calc(100% - 1px),
-      calc(100% - 1px) calc(100% - 1px),
-      calc(100% - 1px) 30px,
-      calc(100% - 25px) 1px,
-      70% 0
-    );
   }
 }
 
@@ -301,30 +240,101 @@
   }
 
   .agency-client-container {
-    clip-path: Polygon(
-      0 0,
-      0 calc(100% - 25px),
-      18px 100%,
-      100% 100%,
-      100% 25px,
-      calc(100% - 18px) 0
-    );
+    --notch: 25px;
   }
 
   .agency-client-content {
+    --notch: 25px;
+  }
+
+  .modal-border-tl {
+    --notch: 13px;
+  }
+
+  .modal-border-br {
+    --notch: 14px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .agency-stat-container {
     clip-path: Polygon(
-      0 0,
-      0 30%,
-      1px 50%,
-      1px calc(100% - 25px),
-      18px calc(100% - 1px),
-      10% 100%,
-      50% 100%,
-      100% calc(100% - 1px),
-      calc(100% - 1px) calc(100% - 1px),
-      calc(100% - 1px) 25px,
-      calc(100% - 18px) 1px,
-      70% 0
+      0 30px,
+      0 100%,
+      calc(100% - 25px) 100%,
+      100% calc(100% - 30px),
+      100% 0,
+      25px 0
     );
+  }
+
+  .agency-stat-content {
+    clip-path: Polygon(
+      1px 30px,
+      1px calc(100% - 1px),
+      30% 100%,
+      60% 100%,
+      70% calc(100% - 1px),
+      calc(100% - 25px) calc(100% - 1px),
+      calc(100% - 1px) calc(100% - 30px),
+      calc(100% - 1px) 60%,
+      100% 40%,
+      100% 0,
+      60% 0,
+      25px 1px
+    );
+  }
+
+  .agency-client-container {
+    --notch: 30px;
+  }
+
+  .agency-client-content {
+    --notch: 30px;
+  }
+
+  .modal-border-tl {
+    --notch: 29px;
+  }
+
+  .modal-border-br {
+    --notch: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-clip {
+    --notch: 8px;
+  }
+
+  .footer-container-clip {
+    --notch: 31px;
+  }
+
+  .footer-content-clip {
+    --notch: 32px;
+  }
+  .contact-clip-container {
+    --notch: 31px;
+  }
+
+  .contact-clip-content {
+    --notch: 32px;
+  }
+
+  .agency-client-container {
+    --notch: 40px;
+  }
+
+  .agency-client-content {
+    --notch: 40px;
+  }
+
+  .modal-border-tl {
+    --notch: 21px;
+  }
+
+  .modal-border-br {
+    --notch: 22px;
   }
 }

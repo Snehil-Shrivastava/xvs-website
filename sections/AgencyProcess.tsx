@@ -8,16 +8,16 @@ import deliveryAnimatiion from "@/public/lottie-animation/support-animation.json
 
 const AgencyProcess = () => {
   return (
-    <div className="flex flex-col max-md:gap-10 md:max-lg:gap-25 items-center justify-center h-full">
+    <div className="flex flex-col gap-25 max-md:gap-10 md:max-lg:gap-25 items-center justify-center h-full">
       <SectionHeading
         headingText="our process"
         buttonText="simple and scalable"
         buttonIcon={
           <Scaling className="max-sm:w-3 sm:max-md:w-4 md:max-lg:w-4" />
         }
-        className="max-sm:text-[40px] sm:max-md:text-6xl md:max-lg:text-7xl"
+        className="max-sm:text-[40px] sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl"
       />
-      <div className="max-w-350 w-4/5 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
+      <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
         <div className="bg-background agency-client-content">
           <div className="w-4/5 mx-auto flex flex-col max-sm:gap-12 sm:max-md:gap-18 gap-15 max-md:py-10 py-15">

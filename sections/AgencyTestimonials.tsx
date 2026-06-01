@@ -8,12 +8,12 @@ import lambda from "@/public/svg/lambda.svg";
 const AgencyTestimonials = () => {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="max-w-350 w-4/5 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
+      <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans">
         <span className="text-brand-orange font-calSans text-5xl max-sm:text-3xl sm:max-lg:text-4xl capitalize absolute -top-8 max-sm:-top-5 sm:max-md:-top-6 z-99">
           what our clients say
         </span>
         <div className="absolute bg-neutral-500 inset-0 z-0 agency-client-container" />
-        <div className="bg-background relative py-20 max-lg:py-15 flex flex-col gap-20 max-md:gap-8 md:max-lg:gap-10 agency-client-content">
+        <div className="bg-background relative py-20 max-xl:py-15 flex flex-col gap-20 max-md:gap-8 md:max-xl:gap-10 agency-client-content">
           <div className="font-poppins flex flex-col gap-15 max-md:gap-10 md:max-lg:text-xl lg:max-xl:text-2xl xl:max-2xl:text-3xl 2xl:max-1728p:text-4xl 1728p:text-[40px] text-center max-lg:px-10 px-15 font-light">
             <q>
               <b className="font-bold">xVS Creations</b> felt like an extension
@@ -27,7 +27,7 @@ const AgencyTestimonials = () => {
           </div>
           <hr className="w-4/5 mx-auto h-px border-brand-orange/50" />
           <div className="flex max-md:flex-col max-md:items-center max-sm:gap-10 sm:max-md:gap-15 justify-between md:w-4/5 md:mx-auto">
-            <div className="flex flex-col max-md:gap-4 gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
+            <div className="flex flex-col justify-between max-md:gap-4 gap-10 items-center max-sm:w-50 sm:max-md:w-80 sm:max-md:justify-center">
               <div className="flex max-md:flex-col max-md:gap-4 gap-10 items-center">
                 <div className="relative">
                   <span className="text-brand-orange font-apercu-black text-7xl max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-5xl">

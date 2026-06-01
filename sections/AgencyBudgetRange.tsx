@@ -1,7 +1,7 @@
 const AgencyBudgetRange = () => {
   return (
     <div className="flex items-center justify-center h-full">
-      <div className="max-w-350 w-4/5 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans bg-brand-orange py-12 max-md:py-5 md:max-lg:py-8 content-clip-both">
+      <div className="max-w-350 w-9/10 max-lg:w-9/10 sm:max-md:max-w-130 mx-auto relative font-calSans bg-brand-orange py-12 max-md:py-5 md:max-lg:py-8 content-clip-both">
         <div className="flex flex-col items-center gap-15 max-lg:gap-10">
           <span className="capitalize font-calSans text-4xl max-md:text-2xl md:max-lg:text-4xl mx-auto">
             Built for real budgets

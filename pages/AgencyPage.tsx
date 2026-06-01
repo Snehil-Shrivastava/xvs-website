@@ -14,7 +14,7 @@ import AgencyWorkflow from "@/sections/AgencyWorkflow";
 const AgencyPage = () => {
   return (
     <div className="relative z-5 flex flex-col gap-80 max-md:gap-40 md:max-lg:gap-45 pb-80">
-      <div className="h-screen max-lg:h-auto">
+      <div className="h-screen max-md:h-auto md:max-lg:h-220">
         <AgencyHeading />
       </div>
       <div>
