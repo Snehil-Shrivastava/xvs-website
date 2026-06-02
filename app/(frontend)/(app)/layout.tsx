@@ -24,19 +24,19 @@ const poppins = Poppins({
 });
 
 const apercuBlack = localFont({
-  src: "../public/fonts/Apercu-Pro-Black.ttf",
+  src: "../../../public/fonts/Apercu-Pro-Black.ttf",
   variable: "--font-apercu-black",
   display: "swap",
 });
 
 const apercuBold = localFont({
-  src: "../public/fonts/apercu_bold_pro.otf",
+  src: "../../../public/fonts/apercu_bold_pro.otf",
   variable: "--font-apercu-bold",
   display: "swap",
 });
 
 const apercuRegular = localFont({
-  src: "../public/fonts/apercu_regular_pro.otf",
+  src: "../../../public/fonts/apercu_regular_pro.otf",
   variable: "--font-apercu-regular",
   display: "swap",
 });
