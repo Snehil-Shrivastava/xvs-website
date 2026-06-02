@@ -14,6 +14,7 @@
     "@payloadcms/db-postgres": "^3.85.0",
     "@payloadcms/next": "^3.85.0",
     "@payloadcms/richtext-lexical": "^3.85.0",
+    "@payloadcms/storage-vercel-blob": "^3.85.0",
     "cookies-next": "^6.1.1",
     "date-fns": "^4.2.1",
     "dayjs": "^1.11.20",
