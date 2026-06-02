@@ -1,4 +1,4 @@
-import BlogsPage from "@/pages/BlogsPage";
+import BlogsPage from "@/page/BlogsPage";
 import blogBg from "@/videos/blog.mp4";
 import Video from "next-video";
 

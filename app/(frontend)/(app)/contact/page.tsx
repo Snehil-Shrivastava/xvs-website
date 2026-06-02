@@ -1,4 +1,4 @@
-import ContactPage from "@/pages/ContactPage";
+import ContactPage from "@/page/ContactPage";
 
 const Contact = () => {
   return (

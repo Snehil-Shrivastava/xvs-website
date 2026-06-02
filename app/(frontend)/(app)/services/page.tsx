@@ -1,5 +1,5 @@
 import BgVideo from "@/components/BgVideo";
-import ServicesPage from "@/pages/ServicesPage";
+import ServicesPage from "@/page/ServicesPage";
 import servicsBg from "@/videos/services-light.mp4";
 
 const Services = () => {

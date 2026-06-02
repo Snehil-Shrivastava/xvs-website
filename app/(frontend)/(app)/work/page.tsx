@@ -1,5 +1,5 @@
 import StarryBackground from "@/components/StarryBackground";
-import WorkPage from "@/pages/WorkPage";
+import WorkPage from "@/page/WorkPage";
 
 const Work = () => {
   return (

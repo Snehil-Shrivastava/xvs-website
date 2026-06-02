@@ -1,5 +1,5 @@
 import BgVideo from "@/components/BgVideo";
-import AgencyPage from "@/pages/AgencyPage";
+import AgencyPage from "@/page/AgencyPage";
 
 import agencyBg from "@/videos/agenciesBg.mp4";
 

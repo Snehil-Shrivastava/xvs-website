@@ -1,5 +1,5 @@
 import AboutGrid from "@/components/AboutGrid";
-import AboutPage from "@/pages/AboutPage";
+import AboutPage from "@/page/AboutPage";
 
 const About = () => {
   return (
