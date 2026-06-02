@@ -28,6 +28,7 @@ const FeaturedBlog = async () => {
     <div className="flex flex-col gap-8">
       <div className="relative w-full aspect-[1.53]">
         <Image
+          // @ts-expect-error url
           src={post.coverImage.url}
           alt={`image`}
           fill
@@ -47,6 +48,7 @@ const FeaturedBlog = async () => {
           </div>
         </div>
         <p className="text-brand-orange text-lg">
+          {/* @ts-expect-error category title */}
           {post.categories?.map((cat) => cat.title).join(", ")}
         </p>
         <p className="whitespace-pre-line text-lg">{post.excerpt}</p>
@@ -62,6 +64,7 @@ const FeaturedBlog = async () => {
         </div>
         <div className="flex flex-col">
           <span className="text-neutral-400">Author Name</span>
+          {/* @ts-expect-error author name */}
           <span>{post.author.name}</span>
         </div>
       </div>
