@@ -11,15 +11,20 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@payloadcms/db-postgres": "^3.85.0",
+    "@payloadcms/next": "^3.85.0",
+    "@payloadcms/richtext-lexical": "^3.85.0",
     "cookies-next": "^6.1.1",
     "date-fns": "^4.2.1",
     "dayjs": "^1.11.20",
     "googleapis": "^172.0.0",
+    "graphql": "^16.14.1",
     "gsap": "^3.15.0",
     "lottie-react": "^2.4.1",
     "lucide-react": "^1.14.0",
     "next": "16.2.6",
     "next-video": "^2.7.1",
+    "payload": "^3.85.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-email": "^6.1.5",
@@ -36,5 +41,6 @@
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }
