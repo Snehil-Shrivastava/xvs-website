@@ -4,7 +4,12 @@ import Video from "next-video";
 
 export const revalidate = 600;
 
-const Blogs = () => {
+interface PageProps {
+  searchParams: Promise<{ category?: string; tag?: string }>;
+}
+
+const Blogs = async ({ searchParams }: PageProps) => {
+  const resolvedParams = await searchParams; // Await the params
   return (
     <div>
       <div
@@ -24,7 +29,10 @@ const Blogs = () => {
           />
         </div>
       </div>
-      <BlogsPage />
+      <BlogsPage
+        activeCategory={resolvedParams.category}
+        activeTag={resolvedParams.tag}
+      />
     </div>
   );
 };

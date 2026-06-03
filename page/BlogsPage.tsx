@@ -1,6 +1,11 @@
 import BlogMain from "@/sections/BlogMain";
 
-const BlogsPage = () => {
+interface BlogsPageProps {
+  activeCategory?: string;
+  activeTag?: string;
+}
+
+const BlogsPage = ({ activeCategory, activeTag }: BlogsPageProps) => {
   return (
     <div className="relative z-1">
       <div className="h-[65vh] max-sm:h-150 sm:max-md:h-150 md:max-lg:h-220">
@@ -14,7 +19,7 @@ const BlogsPage = () => {
         </div>
       </div>
       <div className="min-h-screen max-w-450 pt-50 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-4/5 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
-        <BlogMain />
+        <BlogMain activeCategory={activeCategory} activeTag={activeTag} />
       </div>
     </div>
   );

@@ -1,14 +1,25 @@
 import FeaturedBlog from "@/sections/FeaturedBlog";
 import BlogSidebar from "./BlogSidebar";
+import BlogGrid from "./BlogGrid";
 
-const BlogMain = () => {
+interface BlogMainProps {
+  activeCategory?: string;
+  activeTag?: string;
+}
+
+const BlogMain = ({ activeCategory, activeTag }: BlogMainProps) => {
+  const isFiltered = !!activeCategory || !!activeTag;
   return (
     <div className="flex gap-20">
       <div className="flex-[0.7] font-poppins">
-        <FeaturedBlog />
+        {isFiltered ? (
+          <BlogGrid activeCategory={activeCategory} activeTag={activeTag} />
+        ) : (
+          <FeaturedBlog />
+        )}
       </div>
       <div className="flex-[0.3]">
-        <BlogSidebar />
+        <BlogSidebar activeCategory={activeCategory} activeTag={activeTag} />
       </div>
     </div>
   );

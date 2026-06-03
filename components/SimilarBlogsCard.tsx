@@ -16,11 +16,12 @@ const SimialrBlogsCard = ({
   return (
     <div className="flex flex-col gap-6 font-poppins">
       <div className="relative w-full aspect-[2.3]">
+        <div className="absolute inset-0 bg-brand-orange/10 similar-blog-img-container" />
         <Image
           src={coverImage}
           alt="image"
           fill
-          className="object-cover btn-clip"
+          className="object-cover similar-blog-img"
         />
       </div>
       <div className="flex flex-col gap-2.5">
@@ -30,7 +31,7 @@ const SimialrBlogsCard = ({
       <div>
         <BlogButton
           buttonText="Read More"
-          buttonIcon={<ArrowUpRight />}
+          buttonIcon={<ArrowUpRight strokeWidth={1} />}
           buttonLink={`/blogs/${slug}`}
         />
       </div>
