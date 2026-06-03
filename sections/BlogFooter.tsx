@@ -52,7 +52,9 @@ const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
             key={blog.id}
             title={blog.title}
             // Show the first category as the tag label
+            // @ts-expect-error title
             tag={blog.categories?.[0] ? blog.categories[0].title : "Blog"}
+            // @ts-expect-error url
             coverImage={blog.coverImage ? blog.coverImage.url : ""}
             slug={blog.slug}
           />
