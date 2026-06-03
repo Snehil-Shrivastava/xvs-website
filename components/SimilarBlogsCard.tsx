@@ -31,7 +31,12 @@ const SimialrBlogsCard = ({
       <div>
         <BlogButton
           buttonText="Read More"
-          buttonIcon={<ArrowUpRight strokeWidth={1} />}
+          buttonIcon={
+            <ArrowUpRight
+              strokeWidth={1}
+              className="max-1440p:w-5 max-md:w-4"
+            />
+          }
           buttonLink={`/blogs/${slug}`}
         />
       </div>

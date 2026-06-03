@@ -68,7 +68,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
       {/* ── RECENT POSTS ── */}
       <section>
         <div className="flex w-full pb-8 gap-4">
-          <h3 className="text-brand-orange-light font-calSans text-3xl border-b border-neutral-800">
+          <h3 className="text-brand-orange-light font-calSans 1920p:text-3xl xl:text-2xl lg:text-xl max-lg:text-lg border-b border-neutral-800">
             Recent Posts
           </h3>
           <div className="border-b border-b-brand-orange flex-1 h-6" />
@@ -81,7 +81,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
               className="flex gap-3 group items-start"
             >
               <Image src={recentPostsBullet} alt="bullet" />
-              <p className="text-base leading-snug group-hover:text-brand-orange transition-colors">
+              <p className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px] leading-snug group-hover:text-brand-orange transition-colors">
                 {post.title}
               </p>
             </Link>
@@ -92,7 +92,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
       {/* ── CATEGORIES ── */}
       <section>
         <div className="flex w-full pb-8 gap-4">
-          <h3 className="text-brand-orange-light font-calSans text-3xl border-b border-neutral-800">
+          <h3 className="text-brand-orange-light font-calSans 1920p:text-3xl xl:text-2xl lg:text-xl max-lg:text-lg border-b border-neutral-800">
             Categories
           </h3>
           <div className="border-b border-b-brand-orange flex-1 h-6" />
@@ -122,7 +122,9 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
                       : "text-brand-orange/50 group-hover:text-brand-orange"
                   }
                 />
-                <span className="text-base">{cat.title}</span>
+                <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
+                  {cat.title}
+                </span>
                 <sup
                   className={`text-[12px] ml-1 ${isActive ? "text-brand-orange" : "text-neutral-500"}`}
                 >
@@ -137,7 +139,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
       {/* ── TAGS ── */}
       <section>
         <div className="flex w-full pb-8 gap-4">
-          <h3 className="text-brand-orange-light font-calSans text-3xl border-b border-neutral-800">
+          <h3 className="text-brand-orange-light font-calSans 1920p:text-3xl xl:text-2xl lg:text-xl max-lg:text-lg border-b border-neutral-800">
             Tags
           </h3>
           <div className="border-b border-b-brand-orange flex-1 h-6" />

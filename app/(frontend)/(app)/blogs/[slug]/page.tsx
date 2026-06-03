@@ -57,20 +57,20 @@ const IndividualBlog = async ({ params }: PageProps) => {
 
   return (
     <div>
-      <div className="max-w-450 w-4/5 max-sm:w-9/10 sm:max-md:w-4/5 md:max-lg:w-[85%] mx-auto pt-40 pb-50 font-poppins">
-        <div className="flex flex-col gap-25">
+      <div className="max-w-450 w-4/5 max-sm:w-9/10 sm:max-md:w-9/10 md:max-lg:w-[85%] mx-auto pt-50 max-xl:pt-40 pb-50 font-poppins">
+        <div className="flex flex-col gap-25 max-xl:gap-15">
           <div className="flex flex-col gap-8">
-            <div className="flex items-center gap-12 justify-between">
-              <h1 className="font-calSans text-[42px]/[50px] flex-[0.6]">
+            <div className="flex max-md:flex-col max-md:items-start items-center gap-12 max-md:gap-4 justify-between">
+              <h1 className="font-calSans text-[42px]/[50px] max-2xl:text-4xl max-lg:text-3xl max-md:text-2xl flex-[0.6]">
                 {post.title}
               </h1>
-              <div className="flex gap-5 justify-center text-xl text-neutral-400 flex-[0.4]">
+              <div className="flex gap-5 justify-center text-xl max-2xl:text-lg max-lg:text-sm text-neutral-400 flex-[0.4]">
                 {post.tags?.map((tag, i) => (
                   <span key={i}>#{tag.tag}</span>
                 ))}
               </div>
             </div>
-            <p className="text-brand-orange text-2xl">
+            <p className="text-brand-orange text-2xl max-2xl:text-xl max-lg:text-lg max-md:text-sm">
               {/* @ts-expect-error category title */}
               {post.categories?.map((cat) => cat.title).join(", ")}
             </p>
@@ -84,7 +84,7 @@ const IndividualBlog = async ({ params }: PageProps) => {
               className="object-cover content-clip-both"
             />
           </div>
-          <div className="blog-body">
+          <div className="blog-body max-xl:font-light">
             <RichText data={post.body} />
           </div>
           <div className="flex gap-12 justify-between py-10 border-y border-y-neutral-600">

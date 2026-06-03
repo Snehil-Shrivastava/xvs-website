@@ -216,6 +216,9 @@
   .btn-clip {
     --notch: 10px;
   }
+  .blog-body p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 640px) {

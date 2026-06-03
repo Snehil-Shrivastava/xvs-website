@@ -59,7 +59,7 @@ const BlogGrid = async ({ activeCategory, activeTag }: BlogGridProps) => {
   return (
     <div className="flex flex-col gap-10">
       <div className="flex justify-between items-center border-b border-neutral-800 pb-4">
-        <h2 className="text-2xl font-poppins font-medium text-neutral-300 uppercase">
+        <h2 className="text-2xl max-xl:text-lg max-lg:text-base font-poppins font-medium text-neutral-300 uppercase select-none">
           {filterTitle}
         </h2>
         <span className="text-neutral-500 text-sm">
@@ -72,7 +72,7 @@ const BlogGrid = async ({ activeCategory, activeTag }: BlogGridProps) => {
           No blogs found matching this filter.
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
           {posts.map((post) => (
             <SimilarBlogsCard
               key={post.id}

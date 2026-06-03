@@ -46,7 +46,7 @@ const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
   return (
     <div className="py-10 font-poppins border-t border-neutral-800 mt-12">
       <h4 className="text-neutral-400 text-xl font-medium">Similar Blogs</h4>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-12">
+      <div className="grid grid-cols-1 1920p:grid-cols-3 xl:grid-cols-2 gap-10 pt-12">
         {similarBlogs.map((blog) => (
           <SimilarBlogsCard
             key={blog.id}

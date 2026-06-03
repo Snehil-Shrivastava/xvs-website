@@ -18,7 +18,7 @@ const BlogsPage = ({ activeCategory, activeTag }: BlogsPageProps) => {
           </span>
         </div>
       </div>
-      <div className="min-h-screen max-w-450 pt-50 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-4/5 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
+      <div className="min-h-screen max-w-450 pt-50 max-lg:pt-30 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-9/10 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
         <BlogMain activeCategory={activeCategory} activeTag={activeTag} />
       </div>
     </div>
