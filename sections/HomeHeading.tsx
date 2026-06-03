@@ -13,7 +13,7 @@ const HomeHeading = () => {
           <Image
             id="main-logo"
             src={spinngLambda}
-            alt=""
+            alt="lambda"
             className="inline-block 2240p:w-67.5 max-sm:w-12 sm:max-md:w-20 md:max-lg:w-22 lg:max-xl:w-35 xl:max-1440p:w-40 1440p:max-2xl:w-45 2xl:w-52 2xl:-top-10 max-sm:-top-0.5 sm:max-md:-top-1.5 md:max-lg:-top-2 lg:max-xl:-top-3.5 xl:max-1440p:-top-4 1440p:max-2xl:-top-5 2xl:-left-4 max-sm:-left-0.5 sm:max-md:-left-1 md:max-lg:-left-1.5 lg:max-xl:-left-4 xl:max-1440p:-left-4.5 1440p:max-2xl:-left-5 relative"
             priority={true}
             unoptimized

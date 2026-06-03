@@ -106,7 +106,7 @@ const AgencyUSP = () => {
                   <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Responsiveness}
-                      alt="communication"
+                      alt="Responsiveness"
                       className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-10"
                     />
                     <span className="text-[28px] max-sm:text-sm sm:max-lg:text-xl lg:max-xl:text-2xl">
@@ -116,7 +116,7 @@ const AgencyUSP = () => {
                   <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Reliability}
-                      alt="communication"
+                      alt="Reliability"
                       className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-10"
                     />
                     <span className="text-[28px] max-sm:text-sm sm:max-lg:text-xl lg:max-xl:text-2xl">
@@ -126,7 +126,7 @@ const AgencyUSP = () => {
                   <div className="flex max-md:flex-col gap-10 max-md:gap-5 items-center justify-start max-w-80">
                     <Image
                       src={Delivery}
-                      alt="communication"
+                      alt="Delivery"
                       className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-10"
                     />
                     <span className="text-[28px] max-sm:text-sm sm:max-lg:text-xl lg:max-xl:text-2xl">

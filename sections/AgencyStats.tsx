@@ -21,7 +21,7 @@ const AgencyStats = () => {
                 </span>
                 <Image
                   src={ratingCardSVG}
-                  alt=""
+                  alt="rating svg"
                   className="absolute w-12 max-md:w-8 md:max-lg:w-10 -top-5 -right-15 max-md:-right-10 md:max-lg:-right-12"
                 />
               </div>

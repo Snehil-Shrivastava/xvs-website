@@ -23,34 +23,34 @@ const AgencyIntegration = () => {
             </p>
             <div className="w-9/10 mx-auto flex gap-10 max-lg:grid max-md:grid-cols-3 md:max-lg:grid-cols-4 max-md:gap-x-8 max-md:gap-y-15 relative pt-15 justify-center">
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto max-sm:w-full sm:max-md:w-4/5 md:max-lg:w-4/5">
-                <Image src={slack} alt="" />
+                <Image src={slack} alt="slack" />
               </div>
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto">
-                <Image src={figma} alt="" />
+                <Image src={figma} alt="figma" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto">
-                <Image src={notion} alt="" />
+                <Image src={notion} alt="notion" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto max-sm:w-full sm:max-md:w-4/5 md:max-lg:w-4/5">
-                <Image src={zoom} alt="" />
+                <Image src={zoom} alt="zoom" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto max-sm:w-full sm:max-md:w-4/5 md:max-lg:w-4/5">
-                <Image src={clickup} alt="" />
+                <Image src={clickup} alt="clickup" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto max-sm:w-full sm:max-md:w-4/5 md:max-lg:w-4/5">
-                <Image src={asana} alt="" />
+                <Image src={asana} alt="asana" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto">
-                <Image src={monday} alt="" />
+                <Image src={monday} alt="monday" />
               </div>
 
               <div className="flex items-center justify-center w-12 h-12 relative flex-1 mx-auto">
-                <Image src={teams} alt="" />
+                <Image src={teams} alt="teams" />
               </div>
             </div>
           </div>

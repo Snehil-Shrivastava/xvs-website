@@ -21,7 +21,7 @@ const AgencyWorkflow = () => {
               <div className="flex max-md:flex-col gap-10 max-md:gap-5 md:max-lg:gap-6 items-center justify-start">
                 <Image
                   src={NDA}
-                  alt="communication"
+                  alt="NDA"
                   className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-12"
                 />
                 <span className="text-[28px] max-sm:text-lg sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl max-md:text-center">
@@ -31,7 +31,7 @@ const AgencyWorkflow = () => {
               <div className="flex max-md:flex-col gap-10 max-md:gap-5 md:max-lg:gap-6 items-center justify-start">
                 <Image
                   src={NoPoaching}
-                  alt="communication"
+                  alt="NoPoaching"
                   className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-12"
                 />
                 <span className="text-[28px] max-sm:text-lg sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl max-md:text-center">
@@ -41,7 +41,7 @@ const AgencyWorkflow = () => {
               <div className="flex max-md:flex-col gap-10 max-md:gap-5 md:max-lg:gap-6 items-center justify-start">
                 <Image
                   src={Execution}
-                  alt="communication"
+                  alt="Execution"
                   className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-12"
                 />
                 <span className="text-[28px] max-sm:text-lg sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl max-md:text-center">
@@ -51,7 +51,7 @@ const AgencyWorkflow = () => {
               <div className="flex max-md:flex-col gap-10 max-md:gap-5 md:max-lg:gap-6 items-center justify-start">
                 <Image
                   src={Collab}
-                  alt="communication"
+                  alt="Collab"
                   className="w-15 max-sm:w-12.5 sm:max-md:w-15 md:max-lg:w-12"
                 />
                 <span className="text-[28px] max-sm:text-lg sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl max-md:text-center">

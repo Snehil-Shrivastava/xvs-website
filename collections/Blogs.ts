@@ -1,10 +1,15 @@
 import { formatSlug } from "@/utilities/formatSlug";
+import { revalidateTag } from "@/utilities/revalidate";
 import { CollectionConfig } from "payload";
 
 export const Blogs: CollectionConfig = {
   slug: "blogs",
   admin: { useAsTitle: "title" },
   access: { read: () => true },
+  hooks: {
+    afterChange: [revalidateTag(["/blogs", "/blogs/[Slug]"])],
+    afterDelete: [revalidateTag(["/blogs", "/blogs/[slug]"])],
+  },
   fields: [
     // ── Core Content ──────────────────────────────
     {

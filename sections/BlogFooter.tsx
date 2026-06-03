@@ -1,11 +1,62 @@
-const BlogFooter = () => {
+import { getPayload } from "payload";
+import configPromise from "@payload-config";
+import SimilarBlogsCard from "@/components/SimilarBlogsCard";
+
+const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
+  const payload = await getPayload({ config: configPromise });
+
+  // 1. Extract IDs/Values for the query
+  const categoryIds =
+    (await currentPost.categories?.map((cat: any) => cat.id)) || [];
+
+  const tagNames = currentPost.tags?.map((t: any) => t.tag) || [];
+
+  // 2. Fetch similar blogs
+  // Logic: Find blogs where (Category matches OR Tag matches) AND ID is not current
+  const relatedResult = await payload.find({
+    collection: "blogs",
+    limit: 3,
+    where: {
+      and: [
+        {
+          id: { not_equals: currentPost.id }, // Exclude current post
+        },
+        {
+          or: [
+            {
+              categories: {
+                in: categoryIds,
+              },
+            },
+            {
+              "tags.tag": {
+                in: tagNames,
+              },
+            },
+          ],
+        },
+      ],
+    },
+  });
+
+  const similarBlogs = relatedResult.docs;
+
+  if (similarBlogs.length === 0) return null;
+
   return (
-    <div className="py-10 font-poppins">
+    <div className="py-10 font-poppins border-t border-neutral-800 mt-12">
       <h4 className="text-neutral-400 text-xl font-medium">Similar Blogs</h4>
-      <div className="flex justify-between gap-10 pt-12">
-        <div>similar blog 1</div>
-        <div>similar blog 2</div>
-        <div>similar blog 3</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-12">
+        {similarBlogs.map((blog) => (
+          <SimilarBlogsCard
+            key={blog.id}
+            title={blog.title}
+            // Show the first category as the tag label
+            tag={blog.categories?.[0] ? blog.categories[0].title : "Blog"}
+            coverImage={blog.coverImage ? blog.coverImage.url : ""}
+            slug={blog.slug}
+          />
+        ))}
       </div>
     </div>
   );

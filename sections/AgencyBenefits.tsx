@@ -16,25 +16,25 @@ const AgencyBenefits = () => {
             </p>
             <ul className="w-9/10 mx-auto flex flex-col gap-10 2xl:gap-15 relative pt-10 md:pt-15 justify-center font-poppins font-extralight max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl xl:max-2xl:text-3xl 2xl:text-4xl">
               <li className="flex max-md:gap-5 gap-10 items-center">
-                <Image src={lambda} alt="lambda" className="max-md:w-5" />
+                <Image src={lambda} alt="bullet-point" className="max-md:w-5" />
                 <span className="max-sm:w-full">
                   You&apos;re an agency scaling client work
                 </span>
               </li>
               <li className="flex max-md:gap-5 gap-10 items-center">
-                <Image src={lambda} alt="lambda" className="max-md:w-5" />
+                <Image src={lambda} alt="bullet-point" className="max-md:w-5" />
                 <span className="max-sm:w-full">
                   You need reliable white-label creative execution
                 </span>
               </li>
               <li className="flex max-md:gap-5 gap-10 items-center">
-                <Image src={lambda} alt="lambda" className="max-md:w-5" />
+                <Image src={lambda} alt="bullet-point" className="max-md:w-5" />
                 <span className="max-sm:w-full">
                   You value communication and structured processes
                 </span>
               </li>
               <li className="flex max-md:gap-5 gap-10 items-center">
-                <Image src={lambda} alt="lambda" className="max-md:w-5" />
+                <Image src={lambda} alt="bullet-point" className="max-md:w-5" />
                 <span className="max-sm:w-full">
                   You want quality without increasing headcount
                 </span>

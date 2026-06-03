@@ -159,6 +159,10 @@
   );
 }
 
+.blog-body p {
+  font-size: 20px;
+}
+
 @keyframes marquee {
   0% {
     transform: "translateX(0)";
