@@ -26,6 +26,7 @@ const Blogs = async ({ searchParams }: PageProps) => {
             autoPlay
             loop
             muted
+            playsInline
           />
         </div>
       </div>
