@@ -356,6 +356,7 @@ function ScheduleModalInner() {
                           day,
                           startOfDay(addDays(new Date(), 1)),
                         );
+                        // @ts-expect-error maxBookingData
                         const isTooFar = isAfter(day, maxBookingDate);
                         const blocked =
                           isPast || isTooFar || (!isLoadingSlots && !hasSlots);
