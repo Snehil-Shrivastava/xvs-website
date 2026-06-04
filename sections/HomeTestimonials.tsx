@@ -3,6 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { HomeClientLogos } from "@/lib/data";
 import { Heart } from "lucide-react";
+import { Suspense } from "react";
 
 const HomeTestimonials = () => {
   const logos = [...HomeClientLogos, ...HomeClientLogos];
@@ -23,7 +24,9 @@ const HomeTestimonials = () => {
       />
       <div className="w-full">
         <div className="bg-brand-cream h-auto w-9/10 max-w-350 mx-auto py-20 max-md:py-10 md:max-xl:py-12 content-clip-both">
-          <TestimonialCarousel />
+          <Suspense fallback={null}>
+            <TestimonialCarousel />
+          </Suspense>
           <LogoMarquee logos={logos} />
         </div>
       </div>
