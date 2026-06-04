@@ -54,7 +54,7 @@ function ScheduleModalInner() {
   // Core State
   const [step, setStep] = useState<1 | 2>(1);
   const [mobileStep, setMobileStep] = useState<"date" | "time">("date"); // NEW: Tracks mobile view split
-  const [currentMonth, setCurrentMonth] = useState<Date>(
+  const [currentMonth, setCurrentMonth] = useState<Date>(() =>
     startOfMonth(addDays(new Date(), 1)),
   );
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -196,15 +196,30 @@ function ScheduleModalInner() {
   const endDate = endOfWeek(monthEnd, { weekStartsOn: 1 });
   const calendarDays = eachDayOfInterval({ start: startDate, end: endDate });
 
-  const isPrevMonthDisabled =
-    isBefore(startOfMonth(currentMonth), startOfMonth(new Date())) ||
-    isSameMonth(currentMonth, new Date());
+  // const isPrevMonthDisabled =
+  //   isBefore(startOfMonth(currentMonth), startOfMonth(new Date())) ||
+  //   isSameMonth(currentMonth, new Date());
 
-  const maxBookingDate = startOfDay(addMonths(new Date(), 1));
-  const isNextMonthDisabled = isBefore(
-    maxBookingDate,
-    startOfMonth(addMonths(currentMonth, 1)),
-  );
+  // const maxBookingDate = startOfDay(addMonths(new Date(), 1));
+  // const isNextMonthDisabled = isBefore(
+  //   maxBookingDate,
+  //   startOfMonth(addMonths(currentMonth, 1)),
+  // );
+
+  const today = currentMonth // only compute when we have a real date
+    ? new Date()
+    : null;
+
+  const isPrevMonthDisabled = today
+    ? isBefore(startOfMonth(currentMonth), startOfMonth(today)) ||
+      isSameMonth(currentMonth, today)
+    : true;
+
+  const maxBookingDate = today ? startOfDay(addMonths(today, 1)) : null;
+
+  const isNextMonthDisabled = maxBookingDate
+    ? isBefore(maxBookingDate, startOfMonth(addMonths(currentMonth, 1)))
+    : false;
 
   // --- Helpers ---
   const formatStep2DateStr = () => {
