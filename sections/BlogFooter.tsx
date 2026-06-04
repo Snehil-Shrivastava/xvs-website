@@ -10,8 +10,7 @@ const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
   const payload = await getPayload({ config: configPromise });
 
   // 1. Extract IDs/Values for the query
-  const categoryIds =
-    (await currentPost.categories?.map((cat: any) => cat.id)) || [];
+  const categoryIds = currentPost.categories?.map((cat: any) => cat.id) || [];
 
   const tagNames = currentPost.tags?.map((t: any) => t.tag) || [];
 

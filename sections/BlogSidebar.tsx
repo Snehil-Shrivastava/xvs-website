@@ -24,8 +24,9 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
       payload.find({ collection: "categories" }),
       payload.find({
         collection: "blogs",
-        limit: 100,
+        limit: 20,
         select: { tags: true, categories: true },
+        depth: 0,
       }),
     ]);
 
