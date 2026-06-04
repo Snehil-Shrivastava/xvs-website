@@ -26,7 +26,6 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
         collection: "blogs",
         limit: 20,
         select: { tags: true, categories: true },
-        depth: 0,
       }),
     ]);
 
