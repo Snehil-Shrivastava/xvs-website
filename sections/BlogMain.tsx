@@ -13,24 +13,24 @@ const BlogMain = async ({ searchParams }: PageProps) => {
   return (
     <div className="flex gap-20 max-lg:gap-10">
       <div className="sm:flex-[0.7] font-poppins">
-        {/* <Suspense fallback={<FeaturedBlogSkeleton />}> */}
-        {isFiltered ? (
-          <BlogGrid
+        <Suspense fallback={<FeaturedBlogSkeleton />}>
+          {isFiltered ? (
+            <BlogGrid
+              activeCategory={resolvedParams.category}
+              activeTag={resolvedParams.tag}
+            />
+          ) : (
+            <FeaturedBlog />
+          )}
+        </Suspense>
+      </div>
+      <div className="flex-[0.3] max-sm:hidden">
+        <Suspense fallback={<SidebarSkeleton />}>
+          <BlogSidebar
             activeCategory={resolvedParams.category}
             activeTag={resolvedParams.tag}
           />
-        ) : (
-          <FeaturedBlog />
-        )}
-        {/* </Suspense> */}
-      </div>
-      <div className="flex-[0.3] max-sm:hidden">
-        {/* <Suspense fallback={<SidebarSkeleton />}> */}
-        <BlogSidebar
-          activeCategory={resolvedParams.category}
-          activeTag={resolvedParams.tag}
-        />
-        {/* </Suspense> */}
+        </Suspense>
       </div>
     </div>
   );

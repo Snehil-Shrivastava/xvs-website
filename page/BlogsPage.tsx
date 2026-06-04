@@ -31,17 +31,17 @@ const BlogMainSkeleton = () => (
   <div className="flex gap-20 max-lg:gap-10 animate-pulse">
     {/* Left Column (Featured Blog) Skeleton */}
     <div className="flex-[0.7] flex flex-col gap-8">
-      <div className="w-full aspect-[1.53] bg-neutral-800 rounded-2xl" />
-      <div className="h-10 w-3/4 bg-neutral-800 rounded" />
-      <div className="h-4 w-1/4 bg-neutral-800 rounded" />
-      <div className="h-24 w-full bg-neutral-800 rounded" />
+      <div className="w-full aspect-[1.53] bg-neutral-600 rounded-2xl" />
+      <div className="h-10 w-3/4 bg-neutral-600 rounded" />
+      <div className="h-4 w-1/4 bg-neutral-600 rounded" />
+      <div className="h-24 w-full bg-neutral-600 rounded" />
     </div>
     {/* Right Column (Sidebar) Skeleton */}
     <div className="flex-[0.3] max-sm:hidden flex flex-col gap-12">
       <div>
-        <div className="h-8 w-1/2 bg-neutral-800 rounded mb-4" />
-        <div className="h-4 w-full bg-neutral-800 rounded mb-2" />
-        <div className="h-4 w-5/6 bg-neutral-800 rounded" />
+        <div className="h-8 w-1/2 bg-neutral-600 rounded mb-4" />
+        <div className="h-4 w-full bg-neutral-600 rounded mb-2" />
+        <div className="h-4 w-5/6 bg-neutral-600 rounded" />
       </div>
     </div>
   </div>
