@@ -1,6 +1,7 @@
 import { getPayload } from "payload";
 import configPromise from "@payload-config";
 import SimilarBlogsCard from "@/components/SimilarBlogsCard"; // Reusable card!
+import { cacheLife, cacheTag } from "next/cache";
 
 interface BlogGridProps {
   activeCategory?: string;
@@ -8,6 +9,9 @@ interface BlogGridProps {
 }
 
 const BlogGrid = async ({ activeCategory, activeTag }: BlogGridProps) => {
+  "use cache";
+  cacheTag("blogs", "categories");
+  cacheLife("minutes");
   const payload = await getPayload({ config: configPromise });
 
   let whereQuery: any = {};

@@ -3,15 +3,31 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 import recentPostsBullet from "@/public/svg/recent-post-bullet.svg";
-import { getSidebarData } from "@/lib/blog-queries";
-
+import { getPayload } from "payload";
+import configPromise from "@payload-config";
+import { cacheLife, cacheTag } from "next/cache";
 interface BlogSidebarProps {
   activeCategory?: string;
   activeTag?: string;
 }
 
 const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
-  const { recentPosts, categories, allPostsForTags } = await getSidebarData();
+  "use cache";
+  cacheTag("blogs", "categories");
+  cacheLife("hours");
+
+  const payload = await getPayload({ config: configPromise });
+
+  const [recentPostsResult, categoriesResult, allPostsForTags] =
+    await Promise.all([
+      payload.find({ collection: "blogs", limit: 3, sort: "-publishedAt" }),
+      payload.find({ collection: "categories" }),
+      payload.find({
+        collection: "blogs",
+        limit: 100,
+        select: { tags: true, categories: true },
+      }),
+    ]);
 
   // // 1. Fetch 3 Recent Posts
   // const recentPostsResult = await payload.find({
@@ -73,7 +89,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-col gap-6">
-          {recentPosts.docs.map((post) => (
+          {recentPostsResult.docs.map((post) => (
             <Link
               href={`/blogs/${post.slug}`}
               key={post.id}
@@ -97,7 +113,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-col gap-6">
-          {categories.docs.map((cat) => {
+          {categoriesResult.docs.map((cat) => {
             const count = getCategoryCount(cat.id);
             const isActive = activeCategory === cat.slug;
 

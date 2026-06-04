@@ -1,8 +1,12 @@
 import { getPayload } from "payload";
 import configPromise from "@payload-config";
 import SimilarBlogsCard from "@/components/SimilarBlogsCard";
+import { cacheLife, cacheTag } from "next/cache";
 
 const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
+  "use cache";
+  cacheTag("blogs");
+  cacheLife("hours");
   const payload = await getPayload({ config: configPromise });
 
   // 1. Extract IDs/Values for the query
