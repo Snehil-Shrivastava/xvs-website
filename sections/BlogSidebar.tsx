@@ -11,7 +11,7 @@ interface BlogSidebarProps {
   activeTag?: string;
 }
 
-const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
+const BlogSidebar = async () => {
   const payload = await getPayload({ config: configPromise });
 
   // 1. Fetch 3 Recent Posts
@@ -100,33 +100,39 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
         <div className="flex flex-col gap-6">
           {categoriesResult.docs.map((cat) => {
             const count = getCategoryCount(cat.id);
-            const isActive = activeCategory === cat.slug;
+            // const isActive = activeCategory === cat.slug;
 
             // If active, link back to /blogs (deselect), otherwise filter
-            const href = isActive ? "/blogs" : `/blogs?category=${cat.slug}`;
+            // const href = isActive ? "/blogs" : `/blogs?category=${cat.slug}`;
 
             return (
               <Link
-                href={href}
+                // href={href}
+                href={`#`}
                 key={cat.id}
-                className={`flex items-center gap-2 group transition-colors ${
-                  isActive
-                    ? "text-brand-orange"
-                    : "text-neutral-300 hover:text-white"
-                }`}
+                // className={`flex items-center gap-2 group transition-colors ${
+                //   isActive
+                //     ? "text-brand-orange"
+                //     : "text-neutral-300 hover:text-white"
+                // }`}
+                className={`flex items-center gap-2 group transition-colors text-neutral-300 hover:text-white`}
               >
                 <ArrowRight
+                  // className={
+                  //   isActive
+                  //     ? "text-brand-orange"
+                  //     : "text-brand-orange/50 group-hover:text-brand-orange"
+                  // }
                   className={
-                    isActive
-                      ? "text-brand-orange"
-                      : "text-brand-orange/50 group-hover:text-brand-orange"
+                    "text-brand-orange/50 group-hover:text-brand-orange"
                   }
                 />
                 <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
                   {cat.title}
                 </span>
                 <sup
-                  className={`text-[12px] ml-1 ${isActive ? "text-brand-orange" : "text-neutral-500"}`}
+                  // className={`text-[12px] ml-1 ${isActive ? "text-brand-orange" : "text-neutral-500"}`}
+                  className={`text-[12px] ml-1 text-neutral-500`}
                 >
                   {count}
                 </sup>
@@ -146,18 +152,20 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-2">
           {uniqueTags.map((tag) => {
-            const isActive = activeTag === tag;
-            const href = isActive ? "/blogs" : `/blogs?tag=${tag}`;
+            // const isActive = activeTag === tag;
+            // const href = isActive ? "/blogs" : `/blogs?tag=${tag}`;
 
             return (
               <Link
-                href={href}
+                // href={href}
+                href={`#`}
                 key={tag}
-                className={`text-sm transition-colors ${
-                  isActive
-                    ? "text-brand-orange font-medium"
-                    : "text-neutral-500 hover:text-brand-orange"
-                }`}
+                // className={`text-sm transition-colors ${
+                //   isActive
+                //     ? "text-brand-orange font-medium"
+                //     : "text-neutral-500 hover:text-brand-orange"
+                // }`}
+                className={`text-sm transition-colors text-neutral-500 hover:text-brand-orange`}
               >
                 #{tag}
               </Link>

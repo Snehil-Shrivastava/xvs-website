@@ -7,19 +7,19 @@ interface BlogMainProps {
   activeTag?: string;
 }
 
-const BlogMain = ({ activeCategory, activeTag }: BlogMainProps) => {
-  const isFiltered = !!activeCategory || !!activeTag;
+const BlogMain = () => {
+  // const isFiltered = !!activeCategory || !!activeTag;
   return (
     <div className="flex gap-20 max-lg:gap-10">
       <div className="flex-[0.7] font-poppins">
-        {isFiltered ? (
-          <BlogGrid activeCategory={activeCategory} activeTag={activeTag} />
-        ) : (
-          <FeaturedBlog />
-        )}
+        {/* {isFiltered ? ( */}
+        {/* <BlogGrid activeCategory={activeCategory} activeTag={activeTag} /> */}
+        {/* ) : ( */}
+        <FeaturedBlog />
+        {/* )} */}
       </div>
       <div className="flex-[0.3]">
-        <BlogSidebar activeCategory={activeCategory} activeTag={activeTag} />
+        <BlogSidebar />
       </div>
     </div>
   );

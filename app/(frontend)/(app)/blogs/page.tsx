@@ -8,8 +8,8 @@ interface PageProps {
   searchParams: Promise<{ category?: string; tag?: string }>;
 }
 
-const Blogs = async ({ searchParams }: PageProps) => {
-  const resolvedParams = await searchParams; // Await the params
+const Blogs = async () => {
+  // const resolvedParams = await searchParams;
   return (
     <div>
       <div
@@ -30,8 +30,8 @@ const Blogs = async ({ searchParams }: PageProps) => {
         </div>
       </div>
       <BlogsPage
-        activeCategory={resolvedParams.category}
-        activeTag={resolvedParams.tag}
+      // activeCategory={resolvedParams.category}
+      // activeTag={resolvedParams.tag}
       />
     </div>
   );
