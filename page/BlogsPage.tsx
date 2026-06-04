@@ -1,4 +1,5 @@
 import BlogMain from "@/sections/BlogMain";
+import { Suspense } from "react";
 
 interface BlogsPageProps {
   activeCategory?: string;
@@ -19,7 +20,9 @@ const BlogsPage = ({ activeCategory, activeTag }: BlogsPageProps) => {
         </div>
       </div>
       <div className="min-h-screen max-w-450 pt-50 max-lg:pt-30 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-9/10 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
-        <BlogMain activeCategory={activeCategory} activeTag={activeTag} />
+        <Suspense fallback={null}>
+          <BlogMain activeCategory={activeCategory} activeTag={activeTag} />
+        </Suspense>
       </div>
     </div>
   );
