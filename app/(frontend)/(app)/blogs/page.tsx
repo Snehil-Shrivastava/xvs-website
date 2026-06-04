@@ -2,7 +2,7 @@ import BlogsPage from "@/page/BlogsPage";
 import blogBg from "@/videos/blog.mp4";
 import Video from "next-video";
 
-export const revalidate = 600;
+// export const revalidate = 600;
 
 interface PageProps {
   searchParams: Promise<{ category?: string; tag?: string }>;
