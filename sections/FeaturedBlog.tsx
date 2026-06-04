@@ -1,21 +1,10 @@
-import { getPayload } from "payload";
-import configPromise from "@payload-config";
 import Image from "next/image";
 import BlogButton from "@/components/BlogButton";
 import BlogFooter from "./BlogFooter";
+import { getFeaturedBlog } from "@/lib/blog-queries";
 
 const FeaturedBlog = async () => {
-  const payload = await getPayload({ config: configPromise });
-  const result = await payload.find({
-    collection: "blogs",
-    where: {
-      featured: {
-        equals: true,
-      },
-    },
-    limit: 1,
-    depth: 2,
-  });
+  const result = await getFeaturedBlog();
 
   const post = result.docs[0];
 
