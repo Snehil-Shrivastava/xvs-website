@@ -1,16 +1,12 @@
-// import BlogPageSkeleton from "@/components/BlogPageSkeleton";
 import BlogsPage from "@/page/BlogsPage";
 import blogBg from "@/videos/blog.mp4";
 import Video from "next-video";
-// import { Suspense } from "react";
-
 interface PageProps {
   searchParams: Promise<{ category?: string; tag?: string }>;
 }
 
 const Blogs = async ({ searchParams }: PageProps) => {
   return (
-    // <Suspense fallback={<BlogPageSkeleton />}>
     <div>
       <div
         className="h-auto max-sm:h-150 sm:max-lg:h-220 absolute z-0 inset-x-0 overflow-hidden brightness-50"
@@ -32,7 +28,6 @@ const Blogs = async ({ searchParams }: PageProps) => {
       </div>
       <BlogsPage searchParams={searchParams} />
     </div>
-    // </Suspense>
   );
 };
 
