@@ -13,27 +13,6 @@ interface BlogSidebarProps {
 const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
   const { recentPosts, categories, allPostsForTags } = await getSidebarData();
 
-  // // 1. Fetch 3 Recent Posts
-  // const recentPostsResult = await payload.find({
-  //   collection: "blogs",
-  //   limit: 3,
-  //   sort: "-publishedAt",
-  // });
-
-  // // 2. Fetch all Categories
-  // const categoriesResult = await payload.find({
-  //   collection: "categories",
-  // });
-
-  // // 3. Fetch all Blogs to extract unique tags (Since tags are an array field in Blogs)
-  // // Note: In a huge site, you'd want a separate "Tags" collection,
-  // // but for now, we extract them from the posts.
-  // const allPostsForTags = await payload.find({
-  //   collection: "blogs",
-  //   limit: 100,
-  //   select: { tags: true, categories: true }, // Only fetch what we need
-  // });
-
   // Extract unique tags
   const uniqueTags = Array.from(
     new Set(
