@@ -7,7 +7,6 @@ interface PageProps {
 }
 
 const Blogs = async ({ searchParams }: PageProps) => {
-  const resolvedParams = await searchParams; // Await the params
   return (
     <div>
       <div
@@ -28,10 +27,7 @@ const Blogs = async ({ searchParams }: PageProps) => {
           />
         </div>
       </div>
-      <BlogsPage
-        activeCategory={resolvedParams.category}
-        activeTag={resolvedParams.tag}
-      />
+      <BlogsPage searchParams={searchParams} />
     </div>
   );
 };

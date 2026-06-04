@@ -3,28 +3,34 @@ import BlogSidebar from "./BlogSidebar";
 import BlogGrid from "./BlogGrid";
 import { Suspense } from "react";
 
-interface BlogMainProps {
-  activeCategory?: string;
-  activeTag?: string;
+interface PageProps {
+  searchParams: Promise<{ category?: string; tag?: string }>;
 }
 
-const BlogMain = ({ activeCategory, activeTag }: BlogMainProps) => {
-  const isFiltered = !!activeCategory || !!activeTag;
+const BlogMain = async ({ searchParams }: PageProps) => {
+  const resolvedParams = await searchParams;
+  const isFiltered = !!resolvedParams.category || !!resolvedParams.tag;
   return (
     <div className="flex gap-20 max-lg:gap-10">
       <div className="sm:flex-[0.7] font-poppins">
-        <Suspense fallback={<FeaturedBlogSkeleton />}>
-          {isFiltered ? (
-            <BlogGrid activeCategory={activeCategory} activeTag={activeTag} />
-          ) : (
-            <FeaturedBlog />
-          )}
-        </Suspense>
+        {/* <Suspense fallback={<FeaturedBlogSkeleton />}> */}
+        {isFiltered ? (
+          <BlogGrid
+            activeCategory={resolvedParams.category}
+            activeTag={resolvedParams.tag}
+          />
+        ) : (
+          <FeaturedBlog />
+        )}
+        {/* </Suspense> */}
       </div>
       <div className="flex-[0.3] max-sm:hidden">
-        <Suspense fallback={<SidebarSkeleton />}>
-          <BlogSidebar activeCategory={activeCategory} activeTag={activeTag} />
-        </Suspense>
+        {/* <Suspense fallback={<SidebarSkeleton />}> */}
+        <BlogSidebar
+          activeCategory={resolvedParams.category}
+          activeTag={resolvedParams.tag}
+        />
+        {/* </Suspense> */}
       </div>
     </div>
   );
