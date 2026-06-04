@@ -1,54 +1,40 @@
+import { getPayload } from "payload";
+import configPromise from "@payload-config";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 import recentPostsBullet from "@/public/svg/recent-post-bullet.svg";
-import { getPayload } from "payload";
-import configPromise from "@payload-config";
-import { cacheLife, cacheTag } from "next/cache";
+import { getSidebarData } from "@/lib/blog-queries";
+
 interface BlogSidebarProps {
   activeCategory?: string;
   activeTag?: string;
 }
 
 const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
-  "use cache";
-  cacheTag("blogs", "categories");
-  cacheLife("hours");
+  const { recentPosts, categories, allPostsForTags } = await getSidebarData();
 
-  const payload = await getPayload({ config: configPromise });
+  // 1. Fetch 3 Recent Posts
+  const recentPostsResult = await payload.find({
+    collection: "blogs",
+    limit: 3,
+    sort: "-publishedAt",
+  });
 
-  const [recentPostsResult, categoriesResult, allPostsForTags] =
-    await Promise.all([
-      payload.find({ collection: "blogs", limit: 3, sort: "-publishedAt" }),
-      payload.find({ collection: "categories" }),
-      payload.find({
-        collection: "blogs",
-        limit: 20,
-        select: { tags: true, categories: true },
-      }),
-    ]);
+  // 2. Fetch all Categories
+  const categoriesResult = await payload.find({
+    collection: "categories",
+  });
 
-  // // 1. Fetch 3 Recent Posts
-  // const recentPostsResult = await payload.find({
-  //   collection: "blogs",
-  //   limit: 3,
-  //   sort: "-publishedAt",
-  // });
-
-  // // 2. Fetch all Categories
-  // const categoriesResult = await payload.find({
-  //   collection: "categories",
-  // });
-
-  // // 3. Fetch all Blogs to extract unique tags (Since tags are an array field in Blogs)
-  // // Note: In a huge site, you'd want a separate "Tags" collection,
-  // // but for now, we extract them from the posts.
-  // const allPostsForTags = await payload.find({
-  //   collection: "blogs",
-  //   limit: 100,
-  //   select: { tags: true, categories: true }, // Only fetch what we need
-  // });
+  // 3. Fetch all Blogs to extract unique tags (Since tags are an array field in Blogs)
+  // Note: In a huge site, you'd want a separate "Tags" collection,
+  // but for now, we extract them from the posts.
+  const allPostsForTags = await payload.find({
+    collection: "blogs",
+    limit: 100,
+    select: { tags: true, categories: true }, // Only fetch what we need
+  });
 
   // Extract unique tags
   const uniqueTags = Array.from(

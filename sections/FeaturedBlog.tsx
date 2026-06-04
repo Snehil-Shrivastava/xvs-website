@@ -1,22 +1,12 @@
+import { getPayload } from "payload";
+import configPromise from "@payload-config";
 import Image from "next/image";
 import BlogButton from "@/components/BlogButton";
 import BlogFooter from "./BlogFooter";
-import { cacheLife, cacheTag } from "next/cache";
-import { getPayload } from "payload";
-import configPromise from "@payload-config";
+import { getFeaturedBlog } from "@/lib/blog-queries";
 
 const FeaturedBlog = async () => {
-  "use cache";
-  cacheTag("blogs");
-  cacheLife("hours");
-
-  const payload = await getPayload({ config: configPromise });
-  const result = await payload.find({
-    collection: "blogs",
-    where: { featured: { equals: true } },
-    limit: 1,
-    depth: 2,
-  });
+  const result = await getFeaturedBlog();
 
   const post = result.docs[0];
   if (!post) return null;
