@@ -1,5 +1,3 @@
-import { getPayload } from "payload";
-import configPromise from "@payload-config";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -15,26 +13,26 @@ interface BlogSidebarProps {
 const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
   const { recentPosts, categories, allPostsForTags } = await getSidebarData();
 
-  // 1. Fetch 3 Recent Posts
-  const recentPostsResult = await payload.find({
-    collection: "blogs",
-    limit: 3,
-    sort: "-publishedAt",
-  });
+  // // 1. Fetch 3 Recent Posts
+  // const recentPostsResult = await payload.find({
+  //   collection: "blogs",
+  //   limit: 3,
+  //   sort: "-publishedAt",
+  // });
 
-  // 2. Fetch all Categories
-  const categoriesResult = await payload.find({
-    collection: "categories",
-  });
+  // // 2. Fetch all Categories
+  // const categoriesResult = await payload.find({
+  //   collection: "categories",
+  // });
 
-  // 3. Fetch all Blogs to extract unique tags (Since tags are an array field in Blogs)
-  // Note: In a huge site, you'd want a separate "Tags" collection,
-  // but for now, we extract them from the posts.
-  const allPostsForTags = await payload.find({
-    collection: "blogs",
-    limit: 100,
-    select: { tags: true, categories: true }, // Only fetch what we need
-  });
+  // // 3. Fetch all Blogs to extract unique tags (Since tags are an array field in Blogs)
+  // // Note: In a huge site, you'd want a separate "Tags" collection,
+  // // but for now, we extract them from the posts.
+  // const allPostsForTags = await payload.find({
+  //   collection: "blogs",
+  //   limit: 100,
+  //   select: { tags: true, categories: true }, // Only fetch what we need
+  // });
 
   // Extract unique tags
   const uniqueTags = Array.from(
@@ -75,7 +73,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-col gap-6">
-          {recentPostsResult.docs.map((post) => (
+          {recentPosts.docs.map((post) => (
             <Link
               href={`/blogs/${post.slug}`}
               key={post.id}
@@ -99,7 +97,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-col gap-6">
-          {categoriesResult.docs.map((cat) => {
+          {categories.docs.map((cat) => {
             const count = getCategoryCount(cat.id);
             const isActive = activeCategory === cat.slug;
 

@@ -1,5 +1,3 @@
-import { getPayload } from "payload";
-import configPromise from "@payload-config";
 import Image from "next/image";
 import BlogButton from "@/components/BlogButton";
 import BlogFooter from "./BlogFooter";

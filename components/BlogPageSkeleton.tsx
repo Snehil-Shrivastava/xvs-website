@@ -38,4 +38,4 @@ const BlogPageSkeleton = () => {
   );
 };
 
-// export default BlogPageSkeleton;
+export default BlogPageSkeleton;
