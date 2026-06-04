@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import ClutchLogo from "./ClutchLogo";
 import Link from "next/link";
 import { ClientTestimonialData } from "@/lib/data";
@@ -70,7 +70,7 @@ const ClientTestimonials = () => {
           className="scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden w-full"
         >
           <div className="flex gap-12 justify-between w-auto max-sm:w-full">
-            <>
+            <Suspense fallback={null}>
               <Swiper
                 slidesPerView={1}
                 breakpoints={{
@@ -143,7 +143,7 @@ const ClientTestimonials = () => {
               >
                 <ChevronLeft />
               </div>
-            </>
+            </Suspense>
           </div>
         </div>
         <div className="flex items-center justify-center">

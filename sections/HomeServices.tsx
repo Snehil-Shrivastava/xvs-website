@@ -1,6 +1,7 @@
 import SectionHeading from "@/components/SectionHeading";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import { ArrowUpRight } from "lucide-react";
+import { Suspense } from "react";
 
 const HomeServices = () => {
   return (
@@ -14,7 +15,9 @@ const HomeServices = () => {
         buttonLink="/services"
       />
       <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 sm:max-md:h-120 md:max-lg:h-160 1440p:max-2xl:h-180 flex items-center">
-        <ServicesCarousel />
+        <Suspense fallback={null}>
+          <ServicesCarousel />
+        </Suspense>
       </div>
     </div>
   );
