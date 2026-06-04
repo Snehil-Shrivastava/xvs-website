@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { RichText } from "@/components/RichTextRender";
 import BlogFooter from "@/sections/BlogFooter";
+import { Suspense } from "react";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -98,7 +99,9 @@ const IndividualBlog = async ({ params }: PageProps) => {
               <span>{post.author.name}</span>
             </div>
           </div>
-          <BlogFooter currentPost={post} />
+          <Suspense fallback={null}>
+            <BlogFooter currentPost={post} />
+          </Suspense>
         </div>
       </div>
     </div>
