@@ -6,15 +6,14 @@ import recentPostsBullet from "@/public/svg/recent-post-bullet.svg";
 import { getSidebarData } from "@/lib/blog-queries";
 
 interface Props {
-  activeCategory?: string; // category ID currently selected, if any
-  activeTag?: string; // tag string currently selected, if any
+  activeCategory?: string;
+  activeTag?: string;
 }
 
 const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
   const { recentPosts, categories, allPostsForTags, categoryCounts } =
     await getSidebarData();
 
-  // Extract unique tags from the cached post list
   const uniqueTags = Array.from(
     new Set(
       allPostsForTags.docs.flatMap(
@@ -35,7 +34,6 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
         </div>
         <div className="flex flex-col gap-6">
           {recentPosts.docs.map((post) => (
-            // Each post is now a link to its individual page
             <Link
               key={post.id}
               href={`/blogs/${post.slug}`}
@@ -65,8 +63,6 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
             return (
               <Link
                 key={cat.id}
-                // Clicking an already-active category deselects it (goes back
-                // to the featured post). Clicking a new one filters by it.
                 href={isActive ? "/blogs" : `/blogs?category=${cat.id}`}
                 className={`flex items-center gap-2 group transition-colors ${
                   isActive
@@ -84,7 +80,6 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
                 <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
                   {cat.title}
                 </span>
-                {/* Count from pre-computed map — zero computation on render */}
                 <sup
                   className={`text-[12px] ml-1 ${
                     isActive ? "text-brand-orange/70" : "text-neutral-500"
@@ -113,7 +108,6 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
             return (
               <Link
                 key={tag}
-                // Same toggle-off pattern as categories
                 href={
                   isActive ? "/blogs" : `/blogs?tag=${encodeURIComponent(tag!)}`
                 }

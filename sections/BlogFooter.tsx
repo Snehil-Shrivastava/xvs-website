@@ -9,20 +9,17 @@ const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
   cacheLife("hours");
   const payload = await getPayload({ config: configPromise });
 
-  // 1. Extract IDs/Values for the query
   const categoryIds = currentPost.categories?.map((cat: any) => cat.id) || [];
 
   const tagNames = currentPost.tags?.map((t: any) => t.tag) || [];
 
-  // 2. Fetch similar blogs
-  // Logic: Find blogs where (Category matches OR Tag matches) AND ID is not current
   const relatedResult = await payload.find({
     collection: "blogs",
     limit: 3,
     where: {
       and: [
         {
-          id: { not_equals: currentPost.id }, // Exclude current post
+          id: { not_equals: currentPost.id },
         },
         {
           or: [
@@ -54,7 +51,6 @@ const BlogFooter = async ({ currentPost }: { currentPost: any }) => {
           <SimilarBlogsCard
             key={blog.id}
             title={blog.title}
-            // Show the first category as the tag label
             // @ts-expect-error title
             tag={blog.categories?.[0] ? blog.categories[0].title : "Blog"}
             // @ts-expect-error url
