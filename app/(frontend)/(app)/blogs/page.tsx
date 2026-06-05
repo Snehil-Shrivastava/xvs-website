@@ -2,7 +2,12 @@ import BlogsPage from "@/page/BlogsPage";
 import blogBg from "@/videos/blog.mp4";
 import Video from "next-video";
 
-const Blogs = () => {
+interface PageProps {
+  searchParams: Promise<{ category?: string; tag?: string }>;
+}
+
+const Blogs = async ({ searchParams }: PageProps) => {
+  const params = await searchParams;
   return (
     <div>
       <div
@@ -23,7 +28,7 @@ const Blogs = () => {
           />
         </div>
       </div>
-      <BlogsPage />
+      <BlogsPage searchParams={params} />
     </div>
   );
 };
