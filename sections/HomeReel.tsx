@@ -9,6 +9,7 @@ const HomeReel = () => {
           src={showreel}
           className="video-container p-px shadow-[0_0_10px_8px_rgba(255,173,64,0.1)] content-clip-both"
           controls={false}
+          disableTracking
           autoPlay
           loop
           muted

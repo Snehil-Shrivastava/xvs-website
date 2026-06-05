@@ -52,7 +52,7 @@ const ServicesCarousel = () => {
         slideShadows: true,
       }}
       pagination={true}
-      modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+      modules={[EffectCoverflow, Navigation, Autoplay]}
       // eslint-disable-next-line react-hooks/refs
       navigation={{
         // eslint-disable-next-line react-hooks/refs
@@ -76,7 +76,7 @@ const ServicesCarousel = () => {
         <SwiperSlide key={index} className="relative services-slide">
           <GlowCard
             cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgba(255,166,76,0.8),_rgba(255,255,255,0.5))] backdrop-blur-md flex flex-col justify-center glow-card-inner"
-            className="backdrop-blur-sm h-full w-full glow-card-outer"
+            className="backdrop-blur-md h-full w-full glow-card-outer"
             contentStyle="flex flex-col items-center justify-between h-full bg-background/50"
           >
             <div className="w-full h-90"></div>
