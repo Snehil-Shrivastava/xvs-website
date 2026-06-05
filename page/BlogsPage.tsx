@@ -1,9 +1,4 @@
 import BlogMain from "@/sections/BlogMain";
-import { Suspense } from "react";
-
-interface BlogsPageProps {
-  searchParams: Promise<{ category?: string; tag?: string }>;
-}
 
 const BlogsPage = () => {
   return (
@@ -19,32 +14,30 @@ const BlogsPage = () => {
         </div>
       </div>
       <div className="min-h-screen max-w-450 pt-50 max-lg:pt-30 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-9/10 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
-        <Suspense fallback={<BlogMainSkeleton />}>
-          <BlogMain />
-        </Suspense>
+        <BlogMain />
       </div>
     </div>
   );
 };
 
-const BlogMainSkeleton = () => (
-  <div className="flex gap-20 max-lg:gap-10 animate-pulse">
-    {/* Left Column (Featured Blog) Skeleton */}
-    <div className="flex-[0.7] flex flex-col gap-8">
-      <div className="w-full aspect-[1.53] bg-neutral-600 rounded-2xl" />
-      <div className="h-10 w-3/4 bg-neutral-600 rounded" />
-      <div className="h-4 w-1/4 bg-neutral-600 rounded" />
-      <div className="h-24 w-full bg-neutral-600 rounded" />
-    </div>
-    {/* Right Column (Sidebar) Skeleton */}
-    <div className="flex-[0.3] max-sm:hidden flex flex-col gap-12">
-      <div>
-        <div className="h-8 w-1/2 bg-neutral-600 rounded mb-4" />
-        <div className="h-4 w-full bg-neutral-600 rounded mb-2" />
-        <div className="h-4 w-5/6 bg-neutral-600 rounded" />
-      </div>
-    </div>
-  </div>
-);
+// const BlogMainSkeleton = () => (
+//   <div className="flex gap-20 max-lg:gap-10 animate-pulse">
+//     {/* Left Column (Featured Blog) Skeleton */}
+//     <div className="flex-[0.7] flex flex-col gap-8">
+//       <div className="w-full aspect-[1.53] bg-neutral-600 rounded-2xl" />
+//       <div className="h-10 w-3/4 bg-neutral-600 rounded" />
+//       <div className="h-4 w-1/4 bg-neutral-600 rounded" />
+//       <div className="h-24 w-full bg-neutral-600 rounded" />
+//     </div>
+//     {/* Right Column (Sidebar) Skeleton */}
+//     <div className="flex-[0.3] max-sm:hidden flex flex-col gap-12">
+//       <div>
+//         <div className="h-8 w-1/2 bg-neutral-600 rounded mb-4" />
+//         <div className="h-4 w-full bg-neutral-600 rounded mb-2" />
+//         <div className="h-4 w-5/6 bg-neutral-600 rounded" />
+//       </div>
+//     </div>
+//   </div>
+// );
 
 export default BlogsPage;

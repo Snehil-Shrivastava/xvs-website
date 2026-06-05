@@ -1,19 +1,17 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 import recentPostsBullet from "@/public/svg/recent-post-bullet.svg";
 import { getSidebarData } from "@/lib/blog-queries";
 
-interface BlogSidebarProps {
-  activeCategory?: string;
-  activeTag?: string;
-}
+const BlogSidebar = async () => {
+  // categoryCounts is now included — pre-computed inside getSidebarData's
+  // cache function so there's zero computation work here on render
+  const { recentPosts, categories, allPostsForTags, categoryCounts } =
+    await getSidebarData();
 
-const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
-  const { recentPosts, categories, allPostsForTags } = await getSidebarData();
-
-  // Extract unique tags
+  // Extract unique tags (still done here since it's just a Set dedup on
+  // already-fetched data, not an extra DB call)
   const uniqueTags = Array.from(
     new Set(
       allPostsForTags.docs.flatMap(
@@ -22,27 +20,8 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
     ),
   ).filter(Boolean);
 
-  // Helper to count posts per category
-  const getCategoryCount = (catId: string | number) => {
-    return allPostsForTags.docs.filter((post) =>
-      post.categories?.some((c) =>
-        typeof c === "object" ? c.id === catId : c === catId,
-      ),
-    ).length;
-  };
-
   return (
     <aside className="flex flex-col gap-12 w-full font-poppins">
-      {/* ── todo: search bar ── */}
-      {/* <div className="relative">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full bg-transparent border border-neutral-700 rounded-full py-2 px-4 focus:outline-none focus:border-brand-orange transition-colors"
-        />
-        <span className="absolute right-4 top-2.5 text-neutral-500">🔍</span>
-      </div> */}
-
       {/* ── RECENT POSTS ── */}
       <section>
         <div className="flex w-full pb-8 gap-4">
@@ -53,16 +32,12 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
         </div>
         <div className="flex flex-col gap-6">
           {recentPosts.docs.map((post) => (
-            <Link
-              href={`/blogs/${post.slug}`}
-              key={post.id}
-              className="flex gap-3 group items-start"
-            >
+            <div key={post.id} className="flex gap-3 group items-start">
               <Image src={recentPostsBullet} alt="bullet" />
               <p className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px] leading-snug group-hover:text-brand-orange transition-colors">
                 {post.title}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -76,41 +51,21 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-col gap-6">
-          {categories.docs.map((cat) => {
-            const count = getCategoryCount(cat.id);
-            const isActive = activeCategory === cat.slug;
-
-            // If active, link back to /blogs (deselect), otherwise filter
-            const href = isActive ? "/blogs" : `/blogs?category=${cat.slug}`;
-
-            return (
-              <Link
-                href={href}
-                key={cat.id}
-                className={`flex items-center gap-2 group transition-colors ${
-                  isActive
-                    ? "text-brand-orange"
-                    : "text-neutral-300 hover:text-white"
-                }`}
-              >
-                <ArrowRight
-                  className={
-                    isActive
-                      ? "text-brand-orange"
-                      : "text-brand-orange/50 group-hover:text-brand-orange"
-                  }
-                />
-                <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
-                  {cat.title}
-                </span>
-                <sup
-                  className={`text-[12px] ml-1 ${isActive ? "text-brand-orange" : "text-neutral-500"}`}
-                >
-                  {count}
-                </sup>
-              </Link>
-            );
-          })}
+          {categories.docs.map((cat) => (
+            <div
+              key={cat.id}
+              className="flex items-center gap-2 group transition-colors text-neutral-300 hover:text-white"
+            >
+              <ArrowRight className="text-brand-orange/50 group-hover:text-brand-orange" />
+              <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
+                {cat.title}
+              </span>
+              {/* No more .filter() loop — just a direct lookup on the pre-computed map */}
+              <sup className="text-[12px] ml-1 text-neutral-500">
+                {categoryCounts[cat.id] ?? 0}
+              </sup>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -123,24 +78,14 @@ const BlogSidebar = async ({ activeCategory, activeTag }: BlogSidebarProps) => {
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-2">
-          {uniqueTags.map((tag) => {
-            const isActive = activeTag === tag;
-            const href = isActive ? "/blogs" : `/blogs?tag=${tag}`;
-
-            return (
-              <Link
-                href={href}
-                key={tag}
-                className={`text-sm transition-colors ${
-                  isActive
-                    ? "text-brand-orange font-medium"
-                    : "text-neutral-500 hover:text-brand-orange"
-                }`}
-              >
-                #{tag}
-              </Link>
-            );
-          })}
+          {uniqueTags.map((tag) => (
+            <div
+              key={tag}
+              className="text-sm transition-colors text-neutral-500 hover:text-brand-orange"
+            >
+              #{tag}
+            </div>
+          ))}
         </div>
       </section>
     </aside>

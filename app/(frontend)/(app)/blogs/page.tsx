@@ -1,9 +1,6 @@
 import BlogsPage from "@/page/BlogsPage";
 import blogBg from "@/videos/blog.mp4";
 import Video from "next-video";
-interface PageProps {
-  searchParams: Promise<{ category?: string; tag?: string }>;
-}
 
 const Blogs = () => {
   return (

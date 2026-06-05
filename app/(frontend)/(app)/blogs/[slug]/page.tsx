@@ -5,21 +5,54 @@ import Image from "next/image";
 import { RichText } from "@/components/RichTextRender";
 import BlogFooter from "@/sections/BlogFooter";
 import { Suspense } from "react";
+import { cacheTag, cacheLife } from "next/cache";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
+// ─── Issue 6: generateStaticParams ───────────────────────────────────────────
+// Pre-builds every blog post page at deploy time so they're served instantly
+// from CDN — no server wait, no DB hit on every visit.
+export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise });
+  const blogs = await payload.find({
+    collection: "blogs",
+    limit: 1000,
+    select: { slug: true }, // only fetch the slug field, nothing else
+  });
+  return blogs.docs.map((blog) => ({ slug: blog.slug }));
+}
 
-  const result = await payload.find({
+// New slugs published after the build still work — they're rendered on-demand
+// on the first visit, then cached for all subsequent visitors.
+// export const dynamicParams = true;
+
+// ─── Issue 5: Cached fetch function ──────────────────────────────────────────
+// Wrapping the Payload query in a "use cache" function means:
+//  - First visitor after a cache miss hits the DB once
+//  - Every visitor after that gets the cached result instantly
+//  - cacheTag("blogs") lets you bust this via revalidateTag("blogs") in a
+//    Payload hook when a post is updated/published
+async function getBlogPost(slug: string) {
+  "use cache";
+  cacheTag("blogs", `blog-${slug}`);
+  cacheLife("minutes"); // 10 min default — adjust to taste
+
+  const payload = await getPayload({ config: configPromise });
+  return payload.find({
     collection: "blogs",
     where: { slug: { equals: slug } },
+    depth: 2,
   });
+}
 
+// generateMetadata now reuses the same cached fetch — no extra DB hit
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const result = await getBlogPost(slug);
   const post = result.docs[0];
+
   if (!post) return { title: "Post Not Found" };
 
   return {
@@ -30,22 +63,13 @@ export async function generateMetadata({ params }: PageProps) {
 
 const IndividualBlog = async ({ params }: PageProps) => {
   const { slug } = await params;
-  const payload = await getPayload({ config: configPromise });
 
-  // 1. Fetch the specific blog post
-  const result = await payload.find({
-    collection: "blogs",
-    where: {
-      slug: {
-        equals: slug,
-      },
-    },
-    depth: 2,
-  });
-
+  // Calling getBlogPost a second time (already called in generateMetadata)
+  // costs nothing — Next.js deduplicates cached function calls within the
+  // same request automatically.
+  const result = await getBlogPost(slug);
   const post = result.docs[0];
 
-  // 2. Handle 404
   if (!post) {
     return notFound();
   }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import BlogButton from "@/components/BlogButton";
 import BlogFooter from "./BlogFooter";
 import { getFeaturedBlog } from "@/lib/blog-queries";
+import { Suspense } from "react";
 
 const FeaturedBlog = async () => {
   const result = await getFeaturedBlog();
@@ -70,7 +71,9 @@ const FeaturedBlog = async () => {
           />
         </div>
       </div>
-      <BlogFooter currentPost={post} />
+      <Suspense fallback={null}>
+        <BlogFooter currentPost={post} />
+      </Suspense>
     </>
   );
 };
