@@ -5,7 +5,7 @@ interface PageProps {
   searchParams: Promise<{ category?: string; tag?: string }>;
 }
 
-const Blogs = async ({ searchParams }: PageProps) => {
+const Blogs = () => {
   return (
     <div>
       <div
@@ -26,7 +26,7 @@ const Blogs = async ({ searchParams }: PageProps) => {
           />
         </div>
       </div>
-      <BlogsPage searchParams={searchParams} />
+      <BlogsPage />
     </div>
   );
 };

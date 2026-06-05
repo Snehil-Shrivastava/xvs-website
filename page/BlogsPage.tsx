@@ -5,7 +5,7 @@ interface BlogsPageProps {
   searchParams: Promise<{ category?: string; tag?: string }>;
 }
 
-const BlogsPage = ({ searchParams }: BlogsPageProps) => {
+const BlogsPage = () => {
   return (
     <div className="relative z-1">
       <div className="h-[65vh] max-sm:h-150 sm:max-md:h-150 md:max-lg:h-220">
@@ -20,7 +20,7 @@ const BlogsPage = ({ searchParams }: BlogsPageProps) => {
       </div>
       <div className="min-h-screen max-w-450 pt-50 max-lg:pt-30 sm:max-md:pt-40 pb-50 w-4/5 max-sm:w-9/10 sm:max-md:w-9/10 md:max-lg:w-[85%] mx-auto flex flex-col gap-15">
         <Suspense fallback={<BlogMainSkeleton />}>
-          <BlogMain searchParams={searchParams} />
+          <BlogMain />
         </Suspense>
       </div>
     </div>
