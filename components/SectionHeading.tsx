@@ -55,7 +55,8 @@ const SectionHeading = ({
         </Link>
       )}
       {desc && (
-        <p className="font-poppins absolute bottom-5 max-md:bottom-0 inset-x-0 text-center text-brand-cream 2240p:text-xl max-md:text-sm select-none">
+        // <p className="font-apercu-regular absolute bottom-5 max-md:bottom-0 inset-x-0 text-center text-brand-cream 2240p:text-xl max-md:text-sm select-none">
+        <p className="font-apercu-regular absolute bottom-5 max-md:bottom-0 inset-x-0 text-center text-brand-cream 2240p:text-xl max-md:text-sm select-none md:max-lg:tracking-wide max-sm:text-[12px] sm:max-md:text-[0.5rem] md:max-lg:text-[0.75rem] lg:max-xl:text-[1rem] xl:max-1440p:text-[1.125rem] 1440p:max-2xl:text-[1.125rem] 2xl:text-[1.2rem] 1920p:text-[1.5rem] 2240p:text-[30px]">
           {desc}
         </p>
       )}
