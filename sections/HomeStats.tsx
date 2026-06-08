@@ -23,10 +23,10 @@ const HomeStats = () => {
               <span className="font-apercu-black 2240p:text-[8rem]/[8.5rem] max-sm:text-5xl sm:max-md:text-7xl md:max-lg:text-5xl lg:max-xl:text-7xl xl:max-1440p:text-8xl 1440p:text-[7rem]/[7.5rem] text-brand-orange">
                 {stats.cardStat}
               </span>
-              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[38px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
                 {stats.cardText1}
               </p>
-              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[32px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
+              <p className="font-poppins text-brand-cream 2240p:text-[28px]/[38px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-lg xl:max-1440p:text-xl 1440p:text-2xl">
                 {stats.cardText2}
               </p>
               {stats.descriptor && (

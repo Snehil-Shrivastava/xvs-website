@@ -83,14 +83,14 @@ const WorkPageHeading = () => {
     mm.add("(min-width: 1024px) and (max-width: 1279px)", () =>
       buildTimeline("210px", 0.45),
     );
-    mm.add("(min-width: 1280px)", () => buildTimeline("300px", 0.45));
+    mm.add("(min-width: 1280px)", () => buildTimeline("260px", 0.45));
   }, []);
 
   return (
     <div ref={mainContainerRef} className="relative h-full work-heading">
       <div
         ref={headingContainerRef}
-        className="flex flex-col justify-end h-150 max-sm:h-[52vh] sm:max-md:h-[52vh] relative z-5 bg-background/0"
+        className="flex flex-col justify-end h-1/2 max-sm:h-[52vh] sm:max-md:h-[52vh] relative z-5 bg-background/0"
       >
         <h1
           ref={headingRef}
