@@ -8,7 +8,7 @@ const FooterDetail = () => {
   const footerServices = FooterServices;
   return (
     <div className="relative">
-      <div className="py-15 max-md:pt-3 max-md:pb-5 w-[85%] max-sm:w-full sm:max-md:w-full md:max-lg:w-9/10 lg:max-xl:w-[95%] xl:max-1440p:w-9/10 mx-auto flex md:max-lg:gap-15 lg:max-xl:gap-20 xl:max-2xl:gap-25 2xl:max-1920p:gap-20 1920p:max-2240p:gap-25 2240p:gap-35 relative z-5">
+      <div className="py-15 max-md:pt-3 max-md:pb-5 w-[85%] max-sm:w-full sm:max-md:w-full md:max-lg:w-9/10 lg:max-xl:w-[95%] xl:max-1440p:w-9/10 mx-auto flex md:max-lg:gap-15 lg:max-xl:gap-20 xl:max-2xl:gap-25 2xl:max-1920p:gap-20 1920p:max-2240p:gap-25 2240p:gap-80 relative z-5">
         <div className="flex flex-col justify-between gap-10 max-md:hidden">
           <Link href={`/`}>
             <Image
@@ -74,7 +74,7 @@ const FooterDetail = () => {
                 Services
               </span>
               <div className="grid grid-cols-2 gap-x-15 md:max-lg:gap-x-8 gap-y-2 max-md:flex max-md:flex-col max-md:gap-2 text-brand-cream relative">
-                <div className="absolute h-[120%] max-sm:h-[105%] bg-[#f7983944] w-px -left-20 max-lg:-left-10 max-md:-left-5 max-sm:-top-2 -top-5.5" />
+                <div className="absolute h-[120%] max-sm:h-[105%] bg-[#f7983944] w-px -left-20 max-xl:-left-15 max-lg:-left-10 max-md:-left-5 max-sm:-top-2 -top-5.5" />
                 {footerServices.map((service, index) => (
                   <Link
                     key={index}
@@ -108,10 +108,6 @@ const FooterDetail = () => {
           </Link>
         ))}
       </div>
-
-      {/* dividing lines */}
-      {/* <div className="absolute h-px w-[75%] max-md:w-full md:max-lg:w-[78%] lg:max-xl:w-4/5 xl:max-1440p:w-[78%] 2xl:max-1920p:w-[78%] 1920p:max-2240p:w-4/5 bg-[#f7983944] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%] right-0" />
-      <div className="absolute h-1/2 max-md:h-3/5 w-px bg-[#f7983944] right-[40%] max-sm:right-[40%] sm:max-md:right-[45%] top-[28%] max-sm:top-[12%] sm:max-md:top-[15%] lg:max-xl:top-[28%]" /> */}
     </div>
   );
 };

@@ -23,7 +23,6 @@ const FooterHeading = () => {
           <span>creating together</span>
         </h2>
         <button
-          // href={{ query: { category: "schedule-meeting" } }}
           onClick={handleScheduleClick}
           className="flex items-center text-nowrap bg-brand-orange px-9 max-md:px-4 md:max-lg:px-5 lg:max-xl:px-6 py-6 max-md:py-2.5 md:max-xl:py-3 rounded-[52px] text-4xl max-sm:text-sm sm:max-md:text-lg md:max-lg:text-xl lg:max-xl:text-2xl xl:max-1440p:text-3xl max-sm:font-semibold gap-6 max-md:gap-3 md:max-lg:gap-4 lg:max-xl:gap-5 font-semibold cursor-pointer select-none font-poppins"
         >
