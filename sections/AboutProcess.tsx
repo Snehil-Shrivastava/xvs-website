@@ -6,7 +6,7 @@ import Image from "next/image";
 const AboutProcess = () => {
   const aboutProcess = AboutProcessData;
   return (
-    <div className="flex flex-col items-center gap-10 lg:max-xl:justify-center h-full w-9/10 sm:max-md:max-w-150 mx-auto max-md:pb-40 md:max-lg:pb-50">
+    <div className="flex flex-col items-center gap-10 lg:max-xl:justify-center h-full w-9/10 sm:max-md:max-w-150 mx-auto">
       <SectionHeading
         headingText="Process"
         desc="We keep it simple and listen..."

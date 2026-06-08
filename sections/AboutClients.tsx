@@ -15,7 +15,7 @@ const AboutClients = () => {
   return (
     <div
       id="client-testimonial"
-      className="flex flex-col items-center gap-10 max-md:w-9/10 max-md:mx-auto max-md:pb-40 md:max-lg:pb-50"
+      className="flex flex-col items-center gap-10 max-md:w-9/10 max-md:mx-auto"
     >
       <SectionHeading
         headingText="Clients"

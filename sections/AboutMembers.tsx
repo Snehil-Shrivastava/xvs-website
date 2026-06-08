@@ -5,7 +5,7 @@ import Image from "next/image";
 const AboutMembers = () => {
   const membersData = AboutMembersData;
   return (
-    <div className="flex flex-col items-center gap-10 max-md:pb-40 md:max-lg:pb-50">
+    <div className="flex flex-col items-center gap-10">
       <SectionHeading
         headingText="Members"
         buttonText="team"

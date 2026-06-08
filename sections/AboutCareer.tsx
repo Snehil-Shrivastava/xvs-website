@@ -7,7 +7,7 @@ import GlassdoorReviews from "@/components/GlassdoorReviews";
 
 const AboutCareer = () => {
   return (
-    <div className="flex items-center justify-center h-full max-md:pb-40 md:max-lg:pb-60 font-poppins">
+    <div className="flex items-center justify-center h-full font-poppins">
       <div className="flex max-xl:flex-col gap-5 max-w-400 w-9/10 mx-auto">
         <div className="bg-linear-[135deg,rgba(114,113,113,0.329),rgba(40,40,40,1)] flex-[0.8] px-12 max-md:px-8 py-10 max-md:py-4 content-clip-tl flex flex-col gap-5 w-full min-w-0">
           <div className="flex gap-15 items-center">
