@@ -11,7 +11,7 @@ const HomeStats = () => {
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
-            className={`max-h-120 md:max-lg:h-55 lg:max-xl:h-70 xl:max-1440p:h-90 1440p:max-2xl:h-100 1920p:max-2240p:h-110 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
+            className={`max-h-120 h-80 md:max-lg:h-60 lg:max-xl:h-80 xl:max-1440p:h-90 1440p:max-2xl:h-100 1920p:max-2240p:h-110 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
             cardStyle={`bg-brand-dark backdrop-blur-md max-sm:px-5 sm:max-lg:px-[30px] lg:max-xl:px-12 xl:max-1440p:px-[55px] 1440p:max-2xl:px-[55px] 2xl:px-[62px] 2240p:px-[100px] max-sm:py-5 sm:max-lg:py-[30px] lg:max-xl:py-12 xl:max-1440p:py-[55px] 1440p:max-2xl:py-[55px] 2xl:py-[62px] 2240p:py-[82px] max-sm:flex max-sm:items-end flex flex-1 items-end ${index === 0 ? "content-clip-tl" : index === 3 ? "content-clip-br" : ""}`}
             cardGlowRadius="1100px"
             cardGlowIntensity="0.5"
@@ -40,7 +40,7 @@ const HomeStats = () => {
               <Image
                 src={stats.SVGIcon}
                 alt={`${stats.cardTitle}`}
-                className={`max-w-80 absolute ${index === 0 ? "max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 1440p:w-40 right-0 -top-5 max-sm:-top-15 md:max-lg:-top-10 lg:max-xl:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25" : index === 1 ? "max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 1440p:w-40 right-0 -top-5 max-sm:-top-15 md:max-lg:-top-10 lg:max-xl:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25" : index === 2 ? "max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52 1440p:w-60 right-0 xl:max-1440p:-right-5 -top-15 xl:max-1440p:-top-25 1440p:max-2xl:-top-30 1920p:max-2240p:-top-35" : "max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 1440p:w-34 right-0 -top-5 max-sm:-top-15 md:max-lg:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25"}`}
+                className={`max-w-80 absolute ${index === 0 ? "max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 1440p:w-40 right-0 -top-5 max-sm:-top-15 sm:max-md:-top-20 md:max-lg:-top-10 lg:max-xl:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25" : index === 1 ? "max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 1440p:w-40 right-0 -top-5 max-sm:-top-15 sm:max-md:-top-20 md:max-lg:-top-10 lg:max-xl:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25" : index === 2 ? "max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52 1440p:w-60 right-0 sm:max-md:-right-5 xl:max-1440p:-right-5 -top-15 sm:max-md:-top-30 xl:max-1440p:-top-25 1440p:max-2xl:-top-30 1920p:max-2240p:-top-35" : "max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 1440p:w-34 right-0 -top-5 max-sm:-top-15 sm:max-md:-top-20 md:max-lg:-top-10 xl:max-1440p:-top-15 1440p:max-2xl:-top-20 1920p:max-2240p:-top-25"}`}
               />
             </div>
           </GlowCard>

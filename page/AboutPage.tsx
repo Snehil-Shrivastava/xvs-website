@@ -32,7 +32,7 @@ const AboutPage = () => {
     //     <AboutCareer />
     //   </div>
     // </>
-    <div className="flex flex-col gap-100 max-md:gap-30 md:max-lg:gap-40 lg:max-xl:gap-50 pb-50">
+    <div className="pb-50">
       <div className="h-screen max-md:h-150 md:max-lg:h-180 flex items-center justify-center relative z-1 pointer-events-none">
         <header className="flex flex-col items-center gap-20">
           <h1 className="text-[120px]/[130px] max-sm:text-4xl sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl font-calSans text-brand-cream text-center">
@@ -42,20 +42,22 @@ const AboutPage = () => {
           </h1>
         </header>
       </div>
-      <div className="h-auto">
-        <AboutText />
-      </div>
-      <div className="h-auto">
-        <AboutProcess />
-      </div>
-      <div className="h-auto">
-        <AboutClients />
-      </div>
-      <div className="h-auto">
-        <AboutMembers />
-      </div>
-      <div className="h-auto">
-        <AboutCareer />
+      <div className="flex flex-col gap-100 max-md:gap-30 md:max-lg:gap-40 lg:max-xl:gap-50">
+        <div className="h-auto">
+          <AboutText />
+        </div>
+        <div className="h-auto">
+          <AboutProcess />
+        </div>
+        <div className="h-auto">
+          <AboutClients />
+        </div>
+        <div className="h-auto">
+          <AboutMembers />
+        </div>
+        <div className="h-auto">
+          <AboutCareer />
+        </div>
       </div>
     </div>
   );
