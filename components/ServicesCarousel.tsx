@@ -63,11 +63,16 @@ const ServicesCarousel = () => {
       className="servicesSwiper"
     >
       {servicesData.map((services, index) => (
-        <SwiperSlide key={index} className="relative services-slide">
+        <SwiperSlide
+          key={index}
+          className="relative services-slide select-none"
+        >
           <GlowCard
             cardStyle="bg-[radial-gradient(circle_at_bottom_right,_rgba(255,166,76,0.8),_rgba(255,255,255,0.5))] backdrop-blur-xl flex flex-col justify-center glow-card-inner"
             className="backdrop-blur-xl h-full w-full glow-card-outer"
             contentStyle="flex flex-col items-center justify-between h-full bg-background/50"
+            cardGlowIntensity="0.8"
+            cardGlowRadius="1200px"
           >
             <div className="w-full h-90"></div>
             <Link
@@ -78,7 +83,7 @@ const ServicesCarousel = () => {
               <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] lg:max-xl:text-4xl xl:max-1440p:text-5xl 1440p:text-[52px]/[56px] max-sm:leading-7 font-calSans">
                 {services.cardTitle}
               </h3>
-              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm 1440p:text-lg font-poppins font-light">
+              <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm 1440p:text-lg font-poppins font-light text-brand-cream">
                 {services.cardDesc}
               </span>
             </Link>

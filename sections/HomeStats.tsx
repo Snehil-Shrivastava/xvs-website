@@ -6,7 +6,7 @@ const HomeStats = () => {
   const homeStats = HomeStatsData;
 
   return (
-    <div className="flex items-center justify-center h-full font-calSans">
+    <div className="flex items-center justify-center h-full font-calSans select-none">
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1.5 w-9/10 max-w-450">
         {homeStats.map((stats, index) => (
           <GlowCard
@@ -39,7 +39,7 @@ const HomeStats = () => {
               <Image
                 src={stats.SVGIcon}
                 alt={`${stats.cardTitle}`}
-                className={`max-w-80 absolute ${index === 0 ? "-top-10 max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 1440p:w-40 right-0 max-sm:-right-25 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 1 ? "-top-10 max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 1440p:w-40 right-0 max-sm:-right-20 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 2 ? "-top-20 md:max-xl:-top-10 right-0 max-sm:-right-25 sm:max-md:-right-5 md:max-lg:-right-2 lg:max-xl:-right-3 max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52 1440p:w-60" : "-top-10 max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 1440p:w-34 right-0 max-sm:-right-12 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5"}`}
+                className={`max-w-80 absolute ${index === 0 ? "-top-10 max-sm:max-w-20 md:max-lg:max-w-20 lg:max-xl:w-28 xl:max-1440p:w-32 1440p:w-40 right-0 max-xs:-right-15 max-sm:-right-25 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 1 ? "-top-10 max-sm:max-w-20 sm:max-md:max-w-40 md:max-lg:max-w-20 lg:max-xl:w-26 xl:max-1440p:w-30 1440p:w-40 right-0 max-xs:-right-10 max-sm:-right-20 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5" : index === 2 ? "-top-20 md:max-xl:-top-10 right-0 max-xs:-right-15 max-sm:-right-25 sm:max-md:-right-5 md:max-lg:-right-2 lg:max-xl:-right-3 max-sm:max-w-30 sm:max-md:max-w-65 md:max-lg:max-w-30 lg:max-xl:w-40 xl:max-1440p:w-52 1440p:w-60" : "-top-10 max-sm:max-w-20 sm:max-md:max-w-35 md:max-lg:max-w-18 lg:max-xl:w-24 xl:max-1440p:w-28 1440p:w-34 right-0 max-xs:-right-2 max-sm:-right-12 sm:max-xl:right-0 max-sm:-top-15 md:max-xl:-top-5"}`}
               />
             </div>
           </GlowCard>

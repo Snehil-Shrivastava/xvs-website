@@ -81,7 +81,9 @@ const ServicesMain = () => {
       const cleanId = currentHash.replace("#", "");
       const st = ScrollTrigger.getById(cleanId);
 
-      if (st) {
+      const isMobile = window.innerWidth < 768;
+
+      if (st && isMobile) {
         // st.start is the exact calculated scroll position where the card meets your "top+=220px" criteria
         smoother.scrollTo(st.start, smooth);
       } else {
@@ -89,7 +91,8 @@ const ServicesMain = () => {
         if (target) {
           // Fallback if ScrollTrigger is not registered (e.g. the last card, which has isLast=true)
           // "top 220px" aligns the element's top to be 220px down from the top of the viewport
-          smoother.scrollTo(target, smooth, "top 220px");
+          const offset = isMobile ? "top 20px" : "top 220px";
+          smoother.scrollTo(target, smooth, offset);
         }
       }
     };

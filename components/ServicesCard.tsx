@@ -157,24 +157,30 @@ const ServicesCard = ({
     () => {
       if (isLast) return;
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            id: services.id, // 1. Added a unique id to identify this ScrollTrigger instance
-            trigger: servicesCardRef.current,
-            start: "top top+=220px",
-            end: "+=500",
-            pin: true,
-            pinSpacing: false,
-            scrub: true,
-            // markers: true,
-          },
-        })
-        .to(servicesCardRef.current, {
-          scale: 0.9,
-          opacity: 0,
-          ease: "none",
-        });
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 768px)", () => {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              id: services.id, // 1. Added a unique id to identify this ScrollTrigger instance
+              trigger: servicesCardRef.current,
+              start: "top top+=220px",
+              end: "+=500",
+              pin: true,
+              pinSpacing: false,
+              scrub: true,
+              // markers: true,
+            },
+          })
+          .to(servicesCardRef.current, {
+            scale: 0.9,
+            opacity: 0,
+            ease: "none",
+          });
+      });
+
+      return () => mm.revert();
     },
     { scope: servicesCardRef },
   );
