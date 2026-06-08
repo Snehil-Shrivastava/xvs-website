@@ -60,7 +60,7 @@ const ServicesCarousel = () => {
           navigation.nextEl = nextRef.current;
         }
       }}
-      className="servicesSwiper"
+      className="servicesSwiper 2240p:w-4/5 1920p:max-2240p:w-[77%] 2xl:max-1920p:w-full"
     >
       {servicesData.map((services, index) => (
         <SwiperSlide
@@ -77,7 +77,6 @@ const ServicesCarousel = () => {
             <div className="w-full h-90"></div>
             <Link
               href={`/services#${services.id}`}
-              // scroll={false}
               className="text-center flex flex-col gap-5 max-md:gap-1.5 md:max-lg:gap-2 px-12 max-md:px-4 md:max-lg:px-6 xl:max-2xl:px-8 py-15 max-md:py-8 md:max-lg:py-10 lg:max-xl:py-8"
             >
               <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] lg:max-xl:text-4xl xl:max-1440p:text-5xl 1440p:text-[52px]/[56px] max-sm:leading-7 font-calSans">

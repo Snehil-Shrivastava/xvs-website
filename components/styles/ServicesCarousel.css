@@ -171,6 +171,14 @@
   width: 80%;
 }
 
+.servicesSwiper .swiper-wrapper {
+  pointer-events: none;
+}
+
+.servicesSwiper .services-slide {
+  pointer-events: auto;
+}
+
 .servicesSwiper .services-slide.swiper-slide:not(.swiper-slide-visible) {
   visibility: hidden !important;
 }
