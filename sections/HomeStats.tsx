@@ -11,7 +11,7 @@ const HomeStats = () => {
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}
-            className={`max-h-120 h-80 md:max-lg:h-60 lg:max-xl:h-80 xl:max-1440p:h-90 1440p:max-2xl:h-100 1920p:max-2240p:h-110 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
+            className={`max-h-120 h-110 md:max-lg:h-60 lg:max-xl:h-80 xl:max-1440p:h-90 1440p:max-2xl:h-100 1920p:max-2240p:h-110 max-sm:h-60 md:max-1440p:h-auto ${index === 0 ? "container-clip-tl" : index === 3 ? "container-clip-br" : ""}`}
             cardStyle={`bg-brand-dark backdrop-blur-md max-sm:px-5 sm:max-lg:px-[30px] lg:max-xl:px-12 xl:max-1440p:px-[55px] 1440p:max-2xl:px-[55px] 2xl:px-[62px] 2240p:px-[100px] max-sm:py-5 sm:max-lg:py-[30px] lg:max-xl:py-12 xl:max-1440p:py-[55px] 1440p:max-2xl:py-[55px] 2xl:py-[62px] 2240p:py-[82px] max-sm:flex max-sm:items-end flex flex-1 items-end ${index === 0 ? "content-clip-tl" : index === 3 ? "content-clip-br" : ""}`}
             cardGlowRadius="1100px"
             cardGlowIntensity="0.5"
