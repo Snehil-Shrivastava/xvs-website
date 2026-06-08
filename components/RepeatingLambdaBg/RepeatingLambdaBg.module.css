@@ -1,0 +1,53 @@
+.repeatingBgContainer {
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.repeatingBgContainer:hover .baseLayer {
+  opacity: 0.18;
+}
+
+.glowLayer {
+  /* Firefox compatibility: add -webkit- prefix */
+  -webkit-mask-image: radial-gradient(
+    circle 200px at var(--mouse-x) var(--mouse-y),
+    black 20%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 200px at var(--mouse-x) var(--mouse-y),
+    black 20%,
+    transparent 100%
+  );
+
+  /* Ensure mask is properly composited */
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+
+  filter: drop-shadow(0 0 8px var(--color-brand-orange))
+    drop-shadow(0 0 15px #fa8b1d);
+}
+
+.repeatingBgContainer:hover .glowLayer {
+  opacity: 1;
+}
+
+.glowLayer :global(path) {
+  stroke: #ffaf5f;
+}
+
+@media (min-width: 1920px) {
+  .glowLayer {
+    -webkit-mask-image: radial-gradient(
+      circle 300px at var(--mouse-x) var(--mouse-y),
+      black 20%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      circle 300px at var(--mouse-x) var(--mouse-y),
+      black 20%,
+      transparent 100%
+    );
+  }
+}

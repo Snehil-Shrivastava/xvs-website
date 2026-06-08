@@ -1,6 +1,7 @@
-.servicesSwiper.swiper {
+/* .servicesSwiper.swiper {
   overflow-y: visible !important;
   overflow-x: hidden !important;
+  padding-top: 100px;
 }
 
 .servicesSwiper > .swiper-wrapper {
@@ -11,7 +12,7 @@
 .servicesSwiper > .swiper-wrapper > .swiper-slide {
   overflow-y: visible;
   height: 660px;
-  transition: all 0.2s none;
+  width: 620px;
 }
 
 .services-slide.swiper-slide:not(.swiper-slide-active)
@@ -24,7 +25,7 @@
   visibility: hidden;
 }
 
-.servicesSwiper > .swiper-wrapper > .swiper-slide-active > .glow-card-outer {
+.servicesSwiper > .swiper-wrapper > .swiper-slide > .glow-card-outer {
   --notch: 53px;
   clip-path: polygon(
     0 var(--notch),
@@ -158,6 +159,115 @@
 
 @media (min-width: 1280px) and (max-width: 1440px) {
   .servicesSwiper > .swiper-wrapper > .swiper-slide {
-    height: 500px;
+    height: auto;
+    width: 480px;
+  }
+} */
+
+/*  testing css */
+
+.servicesSwiper {
+  padding-top: 120px;
+  width: 80%;
+}
+
+.servicesSwiper .services-slide.swiper-slide:not(.swiper-slide-visible) {
+  visibility: hidden !important;
+}
+
+.services-slide.swiper-slide-visible .glow-card-outer {
+  --notch: 53px;
+  clip-path: polygon(
+    0 var(--notch),
+    0 100%,
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
+    100% 0,
+    var(--notch) 0
+  );
+}
+
+.services-slide.swiper-slide-visible .glow-card-inner {
+  --notch: 52px;
+  clip-path: polygon(
+    0 var(--notch),
+    0 100%,
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
+    100% 0,
+    var(--notch) 0
+  );
+}
+
+.services-slide {
+  height: 660px;
+  width: 620px;
+}
+
+.services-slide.swiper-slide:not(.swiper-slide-active) .services-gif-container {
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .servicesSwiper {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .services-slide {
+    width: 250px;
+    height: 268px;
+  }
+  .services-slide.swiper-slide-visible .glow-card-outer {
+    --notch: 23px;
+  }
+
+  .services-slide.swiper-slide-visible .glow-card-inner {
+    --notch: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .servicesSwiper {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .services-slide {
+    width: 320px;
+    height: 380px;
+  }
+  .services-slide.swiper-slide-visible .glow-card-outer {
+    --notch: 33px;
+  }
+
+  .services-slide.swiper-slide-visible .glow-card-inner {
+    --notch: 32px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .servicesSwiper {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .services-slide {
+    width: 380px;
+    height: 420px;
+  }
+  .services-slide.swiper-slide-visible .glow-card-outer {
+    --notch: 43px;
+  }
+
+  .services-slide.swiper-slide-visible .glow-card-inner {
+    --notch: 42px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .servicesSwiper {
+    width: 90%;
+  }
+  .services-slide {
+    width: 480px;
+    height: 540px;
   }
 }

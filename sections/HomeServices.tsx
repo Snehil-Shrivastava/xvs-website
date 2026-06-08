@@ -14,7 +14,8 @@ const HomeServices = () => {
         }
         buttonLink="/services"
       />
-      <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 sm:max-md:h-120 md:max-lg:h-160 1440p:max-2xl:h-180 flex items-center">
+      {/* <div className="w-full max-w-450 mx-auto 2xl:min-h-100 h-7/10 max-sm:h-90 sm:max-md:h-120 md:max-lg:h-160 1440p:max-2xl:h-180 flex items-center"> */}
+      <div className="w-full max-w-450 mx-auto h-auto flex items-center">
         <Suspense fallback={null}>
           <ServicesCarousel />
         </Suspense>
