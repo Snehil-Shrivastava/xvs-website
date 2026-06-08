@@ -32,9 +32,9 @@ const TestimonialCarousel = () => {
             <Link
               href={"#"}
               target="_blank"
-              className="text-black flex flex-col gap-8 max-md:gap-4 md:max-lg:gap-6 w-7/10 max-sm:w-4/5 md:max-lg:w-4/5 lg:max-1440p:w-[85%] mx-auto pb-15 max-sm:pb-8 md:max-lg:pb-10 select-none font-poppins "
+              className="text-black flex flex-col gap-8 max-md:gap-4 md:max-lg:gap-6 lg:max-xl:gap-4 xl:max-2xl:gap-6 w-7/10 max-sm:w-4/5 md:max-lg:w-4/5 lg:max-1440p:w-[85%] mx-auto pb-15 max-sm:pb-8 md:max-lg:pb-10 select-none font-poppins "
             >
-              <q className="font-semibold w-full text-3xl max-sm:text-[12px] sm:max-md:text-base md:max-lg:text-lg lg:max-xl:text-xl text-center">
+              <q className="font-semibold w-full text-3xl max-sm:text-[12px] sm:max-md:text-base md:max-lg:text-lg lg:max-xl:text-xl xl:max-2xl:text-2xl text-center">
                 {testimonial.quote}
               </q>
 

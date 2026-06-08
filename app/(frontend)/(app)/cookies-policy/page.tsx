@@ -2,7 +2,7 @@ const Cookies = () => {
   return (
     <>
       <div className="flex items-center justify-center py-50 max-xs:py-25">
-        <div className="w-1/2 max-xs:w-[70%]">
+        <div className="w-4/5 max-xs:w-[70%] max-w-350">
           <header>
             <h1 className="text-brand font-bold text-4xl max-xs:text-[22px]">
               Cookies Policy

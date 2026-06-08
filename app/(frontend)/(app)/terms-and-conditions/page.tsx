@@ -4,7 +4,7 @@ const Terms = () => {
   return (
     <>
       <div className="flex items-center justify-center py-50 max-xs:py-25">
-        <div className="w-1/2 max-xs:w-[70%]">
+        <div className="w-4/5 max-xs:w-[70%] max-w-350">
           <header>
             <h1 className="text-brand font-bold text-4xl max-xs:text-[22px]">
               Terms & Conditions
@@ -75,7 +75,10 @@ const Terms = () => {
                 These Terms are governed by the laws of India, Uttar Pradesh.
               </p>
               <li className="mt-10">Contact</li>
-              <Link href="mailto:info@xvscreations.com">
+              <Link
+                href="mailto:info@xvscreations.com"
+                className="hover:underline"
+              >
                 info@xvscreations.com
               </Link>
             </ol>
