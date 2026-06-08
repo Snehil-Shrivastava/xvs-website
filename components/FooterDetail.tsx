@@ -34,7 +34,7 @@ const FooterDetail = () => {
             <div className="absolute w-[120%] bg-[#f7983944] h-px top-12 lg:max-xl:top-9.5 sm:max-lg:top-7.5 max-sm:top-7" />
             <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-2240p:flex-[0.55] sm:max-md:pl-10 max-sm:pl-8">
               <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl">
-                Contact
+                We are here
               </span>
               <div className="flex flex-col justify-between flex-1 md:gap-15">
                 <div className="flex gap-20 max-sm:gap-12 sm:max-md:gap-25 md:max-lg:gap-15 relative">

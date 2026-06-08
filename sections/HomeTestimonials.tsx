@@ -20,7 +20,7 @@ const HomeTestimonials = () => {
           />
         }
         buttonLink="/about#client-testimonial"
-        desc="Hear from visionaries and experts"
+        desc="Hear from the visionaries and experts"
       />
       <div className="w-full">
         <div className="bg-brand-cream h-auto w-9/10 max-w-350 mx-auto py-20 max-md:py-10 md:max-xl:py-12 content-clip-both">

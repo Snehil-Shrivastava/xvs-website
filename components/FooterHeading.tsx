@@ -35,7 +35,7 @@ const FooterHeading = () => {
           <span>Schedule A Meeting</span>
         </button>
 
-        <Link href={`/`}>
+        <Link href={`/`} className="md:hidden">
           <Image
             src={xvslogo}
             alt="xvs logo"
