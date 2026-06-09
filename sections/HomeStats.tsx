@@ -17,7 +17,7 @@ const HomeStats = () => {
             cardGlowIntensity="0.5"
             contentStyle="w-full"
           >
-            <div>
+            <div className="pointer-events-none">
               <h3 className="text-brand-cream max-sm:text-[14px] sm:max-lg:text-sm lg:max-xl:text-xl xl:max-1440p:text-2xl 1440p:max-2xl:text-2xl 2xl:text-2xl 2240p:text-[38px]">
                 {stats.cardTitle}
               </h3>
