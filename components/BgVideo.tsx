@@ -16,6 +16,7 @@ const BgVideo = ({ bgVideo }: { bgVideo: Asset }) => {
         autoPlay
         loop
         muted
+        playsInline
       />
     </div>
   );

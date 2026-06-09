@@ -68,7 +68,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none h-42">
+      <nav className="fixed inset-x-0 top-0 z-50 pointer-events-none h-42 max-sm:h-22 sm:max-md:h-30 md:max-xl:h-35">
         {/* GSAP-controlled backdrop layer — starts invisible, fades in on scroll */}
         <div
           ref={backdropRef}

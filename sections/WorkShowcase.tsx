@@ -10,8 +10,6 @@ const WorkShowcase = () => {
   const searchParams = useSearchParams() as ReadonlyURLSearchParams;
   const categoryFromURL = searchParams && searchParams.get("category");
 
-  // const [activeCategories, setActiveCategories] = useState<string[]>([]);
-
   const handleCategoryChange = (category: string) => {
     setActiveCategories(
       (prev) =>

@@ -11,7 +11,7 @@ const AboutProcess = () => {
         headingText="Process"
         desc="We keep it simple and listen..."
       />
-      <div className="max-w-450 w-full mx-auto flex justify-center max-md:flex-col gap-10 md:max-lg:gap-5">
+      <div className="max-w-450 w-full mx-auto flex justify-center max-md:flex-col gap-10 max-sm:gap-1.5 md:max-lg:gap-5">
         {aboutProcess.map((process, index) => (
           <GlowCard
             key={index}

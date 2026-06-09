@@ -204,11 +204,14 @@ const ServicesCard = ({
           aria-hidden="true"
         />
         <div
-          className={`bg-[rgba(67,67,67,0.36)] backdrop-blur-sm relative services-card-clip max-sm:h-[60vh] max-sm:min-h-158.75 flex max-sm:flex-col`}
+          className={`bg-[rgba(67,67,67,0.36)] backdrop-blur-sm relative services-card-clip max-sm:h-auto max-sm:min-h-158.75 flex max-sm:flex-col max-sm:gap-20`}
         >
-          <div className="flex-1" aria-hidden="true" />
-          <div className="flex-1">
-            <p className="max-sm:text-[15px]/[25px] sm:max-md:text-sm md:max-lg:text-[0.8rem]/[1.5rem] lg:max-xl:text-[1rem]/[1.8rem] xl:max-1440p:text-[1.25rem]/[2rem] 1440p:max-2xl:text-[1.25rem]/[2rem] 2xl:text-[1.3rem]/[2rem] 1920p:text-[1.5rem]/[2.3rem] 2240p:text-[1.8rem]/[2.8rem] font-thin max-sm:h-full w-full max-sm:mt-auto sm:ml-auto max-sm:py-8 sm:max-md:py-15 md:max-lg:py-15 lg:max-xl:py-20 xl:max-1440p:py-25 1440p:max-2xl:py-25 2xl:py-30 max-sm:px-8 sm:max-md:pr-10 md:max-lg:pr-12 lg:max-xl:pr-15 xl:max-1440p:pr-20 1440p:max-2xl:pr-20 2xl:pr-25 max-sm:flex max-sm:items-center font-poppins">
+          <div
+            className={`flex-1 ${index === 0 ? "max-sm:min-h-100" : "max-sm:min-h-50"}`}
+            aria-hidden="true"
+          />
+          <div className="sm:flex-1">
+            <p className="max-sm:text-[15px]/[25px] sm:max-md:text-sm md:max-lg:text-[0.8rem]/[1.5rem] lg:max-xl:text-[1rem]/[1.8rem] xl:max-1440p:text-[1.25rem]/[2rem] 1440p:max-2xl:text-[1.25rem]/[2rem] 2xl:text-[1.3rem]/[2rem] 1920p:text-[1.5rem]/[2.3rem] 2240p:text-[1.8rem]/[2.8rem] font-thin max-sm:h-full w-full max-sm:mt-auto sm:ml-auto max-sm:pt-0 max-sm:pb-8 sm:max-md:py-15 md:max-lg:py-15 lg:max-xl:py-20 xl:max-1440p:py-25 1440p:max-2xl:py-25 2xl:py-30 max-sm:px-8 sm:max-md:pr-10 md:max-lg:pr-12 lg:max-xl:pr-15 xl:max-1440p:pr-20 1440p:max-2xl:pr-20 2xl:pr-25 max-sm:flex max-sm:items-center font-poppins">
               {services.description}
             </p>
           </div>

@@ -31,35 +31,38 @@ const FooterDetail = () => {
         </div>
         <div className="flex-1 relative font-poppins">
           <div className="flex justify-between w-full max-md:w-full mx-auto h-full max-sm:gap-5 sm:max-md:gap-6 md:max-lg:gap-8 relative">
-            <div className="absolute w-[120%] bg-[#f7983944] h-px top-12 lg:max-xl:top-9.5 sm:max-lg:top-7.5 max-sm:top-7" />
-            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-2240p:flex-[0.55] sm:max-md:pl-10 max-sm:pl-8">
-              <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl">
+            <div className="absolute w-[120%] bg-[#f7983944] h-px top-12 xl:max-1440p:top-9 1440p:max-2xl:top-9 2xl:max-1920p:top-10.5 1920p:max-2240p:top-11 lg:max-xl:top-9.5 sm:max-lg:top-7.5 max-sm:top-7" />
+            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-lg:gap-6 max-2240p:flex-[0.55] sm:max-md:pl-10 max-sm:pl-4">
+              {/* <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl"> */}
+              <span className="font-semibold max-sm:text-[14px] sm:max-md:text-[14px] md:max-lg:text-[14px] lg:max-xl:text-[16px] xl:max-1440p:text-[18px] 1440p:max-2xl:text-[18px] 2xl:text-[22px] 2240p:text-[26px]">
                 We are here
               </span>
               <div className="flex flex-col justify-between flex-1 md:gap-15">
-                <div className="flex gap-20 max-sm:gap-12 sm:max-md:gap-25 md:max-lg:gap-15 relative">
-                  <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-lg">
+                <div className="flex gap-20 max-xs:gap-8 max-sm:gap-12 sm:max-md:gap-25 md:max-lg:gap-15 relative">
+                  {/* <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-lg"> */}
+                  <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                     <span className="font-bold">Lucknow,</span>
-                    <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-lg:text-[10px] lg:max-xl:text-sm">
+                    {/* <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-lg:text-[10px] lg:max-xl:text-sm"> */}
+                    <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                       Uttar Pradesh, India
                     </span>
                   </div>
-                  <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-lg relative">
-                    <div className="absolute w-px h-[140%] bg-[#f7983944] -left-10 max-sm:-left-5 -top-5.5 max-sm:-top-2" />
+                  <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px] relative">
+                    <div className="absolute w-px h-[140%] bg-[#f7983944] -left-10 max-xs:-left-3 max-sm:-left-5 md:max-lg:-left-5 -top-5.5 max-sm:-top-2 sm:max-md:-top-3.5 md:max-lg:-top-3.5 lg:max-xl:-top-4.5" />
                     <span className="font-bold">Sheridan,</span>
-                    <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-lg:text-[10px] lg:max-xl:text-sm">
+                    <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                       Wyoming, US
                     </span>
                   </div>
                 </div>
                 <div className="flex items-center max-md:flex-col max-md:items-start gap-10 max-md:gap-3">
-                  <h3 className="text-[60px]/[62px] max-sm:text-[28px]/[28px] sm:max-md:text-4xl md:max-lg:text-4xl lg:max-xl:text-5xl font-calSans flex flex-col max-md:flex-row max-md:gap-1.5">
-                    <span className="text-4xl max-sm:text-[28px]/[28px] sm:max-md:text-4xl md:max-lg:text-xl lg:max-xl:text-2xl">
+                  <h3 className="max-sm:text-[28px] sm:max-md:text-[28px]/[28px] md:max-lg:text-[38px]/[28px] lg:max-xl:text-[46px]/[48px] xl:max-1440p:text-[53px]/[43px] 1440p:max-2xl:text-[53px]/[42px] 2xl:text-[60px]/[50px] 2240p:text-[78px]/[82px] font-calSans flex flex-col max-md:flex-row max-md:gap-1.5">
+                    <span className="2xl:text-4xl md:max-lg:text-xl lg:max-xl:text-2xl xl:max-2xl:text-3xl">
                       Say
                     </span>
                     <span>Hi!</span>
                   </h3>
-                  <p className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base 1440p:max-2xl:text-lg text-brand-cream">
+                  <p className="flex flex-col max-sm:text-[10px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px] text-brand-cream">
                     <Link href="mailto:info@xvscreations.com">
                       info@xvscreations.com
                     </Link>
@@ -69,12 +72,12 @@ const FooterDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-md:gap-6 max-2240p:flex-[0.45]">
-              <span className="font-semibold text-[26px] max-sm:text-sm sm:max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl">
+            <div className="flex flex-col gap-8 max-sm:gap-4 sm:max-lg:gap-6 max-2240p:flex-[0.45] max-sm:pr-3">
+              <span className="font-semibold max-sm:text-[14px] sm:max-md:text-[14px] md:max-lg:text-[14px] lg:max-xl:text-[16px] xl:max-1440p:text-[18px] 1440p:max-2xl:text-[18px] 2xl:text-[22px] 2240p:text-[26px]">
                 Services
               </span>
               <div className="grid grid-cols-2 gap-x-15 md:max-lg:gap-x-8 gap-y-2 max-md:flex max-md:flex-col max-md:gap-2 text-brand-cream relative">
-                <div className="absolute h-[120%] max-sm:h-[105%] bg-[#f7983944] w-px -left-20 max-xl:-left-15 max-lg:-left-10 max-md:-left-5 max-sm:-top-2 -top-5.5" />
+                <div className="absolute h-[120%] max-sm:h-[105%] bg-[#f7983944] w-px -left-15 max-1440p:-left-10 max-xl:-left-8 max-lg:-left-5 max-md:-left-5 max-sm:-left-3 max-sm:-top-2 sm:max-md:-top-3.5 md:max-lg:-top-3.5 lg:max-xl:-top-4.5 -top-5.5" />
                 {footerServices.map((service, index) => (
                   <Link
                     key={index}
@@ -86,7 +89,7 @@ const FooterDetail = () => {
                             query: { category: service.heading },
                           }
                     }
-                    className="hover:underline text-xl max-sm:text-[10px] sm:max-lg:text-[10px] lg:max-xl:text-sm xl:max-1440p:text-base 1440p:max-2xl:text-lg"
+                    className="hover:underline max-sm:text-[10px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]"
                   >
                     {service.heading}
                   </Link>

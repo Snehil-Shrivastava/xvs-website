@@ -15,9 +15,12 @@ const FooterHeading = () => {
 
   return (
     <div className="border-b border-b-[rgba(247,152,57,0.3)] py-25 max-sm:py-10 sm:max-md:py-12 md:max-lg:py-15 lg:max-xl:py-16">
-      <div className="max-w-[85%] mx-auto flex max-md:flex-col max-md:gap-5 justify-between items-center">
-        <h2
+      <div className="w-[85%] max-sm:w-full sm:max-md:w-full md:max-lg:w-9/10 lg:max-xl:w-[95%] xl:max-1440p:w-9/10 mx-auto flex max-md:flex-col max-md:gap-5 justify-between items-center">
+        {/* <h2
           className={`text-[3.5rem]/[3.8rem] max-sm:text-[1.4rem]/[2rem] sm:max-md:text-[2rem]/[3rem] md:max-lg:text-3xl lg:max-xl:text-4xl xl:max-1440p:text-5xl tracking-wider w-[52%] max-md:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none max-md:text-center`}
+        > */}
+        <h2
+          className={`max-sm:text-[1.5rem]/[2rem] sm:max-md:text-[1.8rem]/[2.8rem] md:max-lg:text-[2rem]/[2.2rem] lg:max-xl:text-[2.5rem]/[2.8rem] xl:max-1440p:text-[3rem]/[3.2rem] 1440p:max-2xl:text-[3rem]/[3.2rem] 2xl:text-[3.5rem]/[3.8rem] tracking-wider w-[52%] max-md:w-full font-calSans md:flex md:flex-col max-sm:flex-row select-none max-md:text-center`}
         >
           <span>Let&#39;s start </span>
           <span>creating together</span>

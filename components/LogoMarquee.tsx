@@ -9,6 +9,7 @@ type LogoMarqueeProps = {
   speed?: number; // seconds for one full loop
   pauseOnHover?: boolean;
   direction?: "left" | "right";
+  mobileSpeed?: number;
 };
 
 export default function LogoMarquee({
@@ -16,6 +17,7 @@ export default function LogoMarquee({
   speed = 50,
   pauseOnHover = true,
   direction = "left",
+  mobileSpeed,
 }: LogoMarqueeProps) {
   // Duplicate the list so the seam is invisible
   const track = [...logos, ...logos];
@@ -38,9 +40,9 @@ export default function LogoMarquee({
           animation-timing-function: linear;
           animation-iteration-count: infinite;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 767px) {
           .marquee-track {
-            animation-duration: 80s;
+            animation-duration: ${mobileSpeed ? `${mobileSpeed}s` : "20s"};
           }
         }
         ${
