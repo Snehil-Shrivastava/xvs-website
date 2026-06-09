@@ -99,7 +99,7 @@ const WorkMain = ({ activeCategories }: WorkMainProps) => {
     activeCategories.length === 0
       ? WorkCardData
       : WorkCardData.filter((card) =>
-          activeCategories.every((cat) => card.category.includes(cat)),
+          activeCategories.some((cat) => card.category.includes(cat)),
         );
 
   return (
