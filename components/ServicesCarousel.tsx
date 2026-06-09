@@ -17,6 +17,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import GlowCard from "./Glowcard";
 import Image from "next/image";
 import Link from "next/link";
+import LottieAnimation from "./LottieAnimation";
 
 const ServicesCarousel = () => {
   const servicesData = HomeServicesData;
@@ -79,7 +80,8 @@ const ServicesCarousel = () => {
               href={`/services#${services.id}`}
               className="text-center flex flex-col gap-5 max-md:gap-1.5 md:max-lg:gap-2 px-12 max-md:px-4 md:max-lg:px-6 xl:max-2xl:px-8 py-15 max-md:py-8 md:max-lg:py-10 lg:max-xl:py-8 2240p:px-10"
             >
-              <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] lg:max-xl:text-4xl xl:max-1440p:text-5xl 1440p:text-[52px]/[56px] max-sm:leading-7 font-apercu-black font-bold">
+              {/* <h3 className="2240p:text-[68px]/[72px] max-sm:text-2xl sm:max-md:text-3xl md:max-lg:text-[34px]/[35px] lg:max-xl:text-4xl xl:max-1440p:text-5xl 1440p:text-[52px]/[56px] max-sm:leading-7 font-apercu-black font-bold"> */}
+              <h3 className="max-sm:text-[1.5rem]/[2rem] sm:max-md:text-4xl md:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.6rem] xl:max-1440p:text-5xl 1440p:max-2xl:text-[52px]/[52px] 2xl:max-1920p:text-5xl 1920p:max-2240p:text-6xl 2240p:text-[68px]/[72px] max-sm:leading-7 font-apercu-black font-bold">
                 {services.cardTitle}
               </h3>
               <span className="2240p:text-xl max-sm:text-[10px] sm:max-md:text-sm 1440p:text-lg font-light text-brand-cream font-apercu-regular">
@@ -87,7 +89,7 @@ const ServicesCarousel = () => {
               </span>
             </Link>
           </GlowCard>
-          <div className="absolute inset-0 pointer-events-none select-none services-gif-container will-change-transform transform-gpu backface-hidden">
+          <div className="absolute inset-0 pointer-events-none select-none services-gif-container will-change-transform transform-gpu backface-hidden max-md:hidden">
             <Image
               src={services.gifSrc}
               alt={services.gifAlt}
@@ -95,6 +97,14 @@ const ServicesCarousel = () => {
               height={350}
               unoptimized
               className={`relative services-gif ${services.gifClass}`}
+            />
+          </div>
+          <div
+            className={`${services.imgContainerClass} md:hidden services-gif-container`}
+          >
+            <LottieAnimation
+              animation={services.animationData}
+              className={`${services.animationDataClass} services-gif`}
             />
           </div>
         </SwiperSlide>
