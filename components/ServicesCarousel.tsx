@@ -87,7 +87,7 @@ const ServicesCarousel = () => {
               </span>
             </Link>
           </GlowCard>
-          <div className="absolute inset-0 pointer-events-none select-none services-gif-container">
+          <div className="absolute inset-0 pointer-events-none select-none services-gif-container will-change-transform transform-gpu backface-hidden">
             <Image
               src={services.gifSrc}
               alt={services.gifAlt}
