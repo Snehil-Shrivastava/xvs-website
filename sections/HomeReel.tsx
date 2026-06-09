@@ -80,6 +80,7 @@ const HomeReel = () => {
             autoPlay
             loop
             muted={isMuted} // Controlled dynamically by React state
+            playsInline
           />
           <div className="absolute inset-0 bg-white/50 -z-1" />
 

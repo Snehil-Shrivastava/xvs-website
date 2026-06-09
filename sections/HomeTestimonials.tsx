@@ -27,7 +27,7 @@ const HomeTestimonials = () => {
           <Suspense fallback={null}>
             <TestimonialCarousel />
           </Suspense>
-          <LogoMarquee logos={logos} mobileSpeed={50} />
+          <LogoMarquee logos={logos} mobileSpeed={70} />
         </div>
       </div>
     </div>

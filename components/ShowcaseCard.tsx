@@ -26,7 +26,7 @@ const ShowcaseCard = ({
 }) => {
   return (
     <div
-      className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 xl:max-1440p:gap-15 font-poppins ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
+      className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 xl:max-1440p:gap-15 font-poppins xl:max-1440p:h-96 1440p:max-2xl:h-111.25 2xl:max-1920p:h-130 1920p:max-2240p:h-152.5 2240p:h-162.5 ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
         className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:max-1440p:min-h-90 xl:flex-[1.5] relative`}
