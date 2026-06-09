@@ -93,6 +93,7 @@ const ServicesCarousel = () => {
               alt={services.gifAlt}
               width={600}
               height={350}
+              unoptimized
               className={`relative services-gif ${services.gifClass}`}
             />
           </div>
