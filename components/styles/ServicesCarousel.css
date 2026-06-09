@@ -48,8 +48,16 @@
   opacity: 0.4;
 }
 
+.services-slide.swiper-slide.swiper-slide-active .services-gif-container {
+  visibility: visible;
+  opacity: 1;
+}
 .services-slide.swiper-slide:not(.swiper-slide-active) .services-gif-container {
   visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.001s none,
+    visibility 0.001s allow-discrete;
 }
 
 @media (max-width: 639px) {
