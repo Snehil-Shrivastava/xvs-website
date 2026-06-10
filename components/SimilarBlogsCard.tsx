@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BlogButton from "./BlogButton";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const SimialrBlogsCard = ({
   title,
@@ -14,7 +15,7 @@ const SimialrBlogsCard = ({
   slug?: string;
 }) => {
   return (
-    <div className="flex flex-col gap-6 font-poppins">
+    <Link href={`/blogs/${slug}`} className="flex flex-col gap-6 font-poppins">
       <div className="relative w-full aspect-[2.3]">
         <div className="absolute inset-0 bg-brand-orange/10 similar-blog-img-container" />
         <Image
@@ -40,7 +41,7 @@ const SimialrBlogsCard = ({
           buttonLink={`/blogs/${slug}`}
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

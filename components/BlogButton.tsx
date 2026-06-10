@@ -12,8 +12,8 @@ const BlogButton = ({
   buttonIcon?: JSX.Element;
 }) => {
   return (
-    <Link
-      href={`${buttonLink ? buttonLink : "#"}`}
+    <div
+      // href={`${buttonLink ? buttonLink : "#"}`}
       className={`uppercase select-none inline-block`}
     >
       <span
@@ -31,7 +31,7 @@ const BlogButton = ({
           <ArrowDown className="max-1440p:w-4 max-md:w-3" />
         )}
       </span>
-    </Link>
+    </div>
   );
 };
 
