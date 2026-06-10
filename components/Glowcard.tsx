@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 interface GlowCardProps {
   children: React.ReactNode;
@@ -20,33 +20,73 @@ export default function GlowCard({
   cardGlowIntensity = "0.2",
 }: GlowCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
+  // ==========================================
+  // DESKTOP MOUSE EVENTS
+  // ==========================================
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
 
-    // Get the bounding rectangle of the card
     const rect = containerRef.current.getBoundingClientRect();
-
-    // Calculate the mouse's X and Y coordinates relative to the card
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Set CSS variables for the coordinates
     containerRef.current.style.setProperty("--mouse-x", `${x}px`);
     containerRef.current.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  // ==========================================
+  // MOBILE TOUCH EVENTS (iOS & Android)
+  // ==========================================
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+
+    const touch = e.touches[0];
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    containerRef.current.style.setProperty("--mouse-x", `${x}px`);
+    containerRef.current.style.setProperty("--mouse-y", `${y}px`);
+    setIsHovered(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+
+    const touch = e.touches[0];
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    containerRef.current.style.setProperty("--mouse-x", `${x}px`);
+    containerRef.current.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  const handleTouchEnd = () => {
+    setIsHovered(false);
   };
 
   return (
     <div
       ref={containerRef}
+      // Desktop listeners
       onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      // Mobile listeners (works flawlessly on iOS and Android)
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
       className={`relative group p-px bg-neutral-200/10 ${className ? className : "overflow-hidden"}`}
     >
       {/* 1. Glowing Border */}
-      {/* This div is behind the inner card. It shows a radial gradient that tracks the mouse. */}
-      {/* Because the inner card covers it (except for the 1px padding), it acts as a glowing border! */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${
+          isHovered ? "opacity-100" : "opacity-0"
+        }`}
         style={{
           background: `radial-gradient(
             700px circle at var(--mouse-x) var(--mouse-y),
@@ -57,14 +97,16 @@ export default function GlowCard({
       />
 
       {/* Inner Card Container */}
-      {/* Notice the slightly smaller border radius (11px vs outer 12px) for perfect nesting */}
       <div
-        className={`relative h-full w-full overflow-hidden content-clip-path ${cardStyle ? cardStyle : "bg-brand-dark backdrop-blur-md py-25 px-15"}`}
+        className={`relative h-full w-full overflow-hidden content-clip-path ${
+          cardStyle ? cardStyle : "bg-brand-dark backdrop-blur-md py-25 px-15"
+        }`}
       >
         {/* 2. Glowing Background */}
-        {/* This creates the softer illumination on the background of the card */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
           style={{
             background: `radial-gradient(
               ${cardGlowRadius} circle at var(--mouse-x) var(--mouse-y),
@@ -75,9 +117,10 @@ export default function GlowCard({
         />
 
         {/* Content */}
-        {/* z-10 ensures your text and elements stay above the background glow */}
         <div
-          className={`relative z-10 text-neutral-100 ${contentStyle ? contentStyle : "flex justify-between"}`}
+          className={`relative z-10 text-neutral-100 ${
+            contentStyle ? contentStyle : "flex justify-between"
+          }`}
         >
           {children}
         </div>
