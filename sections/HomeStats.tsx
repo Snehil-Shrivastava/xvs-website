@@ -7,7 +7,7 @@ const HomeStats = () => {
 
   return (
     <div className="flex items-center justify-center h-full font-calSans select-none">
-      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1.5 w-9/10 max-w-400">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-1.5 w-9/10 max-w-400 p-px">
         {homeStats.map((stats, index) => (
           <GlowCard
             key={index}

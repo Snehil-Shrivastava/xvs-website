@@ -11,11 +11,12 @@ const AboutProcess = () => {
         headingText="Process"
         desc="We keep it simple and listen..."
       />
-      <div className="max-w-450 w-full mx-auto flex justify-center max-md:flex-col gap-7 max-sm:gap-1.5 md:max-lg:gap-5">
+      {/* <div className="max-w-450 w-full mx-auto flex justify-center max-md:flex-col gap-7 max-sm:gap-1.5 md:max-lg:gap-5"> */}
+      <div className="max-w-400 w-auto mx-auto grid grid-cols-2 justify-center max-md:grid-cols-1 gap-7 max-sm:gap-1.5 md:max-lg:gap-5 p-px">
         {aboutProcess.map((process, index) => (
           <GlowCard
             key={index}
-            className={`backdrop-blur-sm w-180 max-lg:w-full ${index === 0 ? "container-clip-tl" : "container-clip-br"}`}
+            className={`backdrop-blur-sm w-180 max-1728p:w-full ${index === 0 ? "container-clip-tl" : "container-clip-br"}`}
             cardStyle={`bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(35,35,35,0.5))] backdrop-blur-md px-15 max-sm:px-8 md:max-lg:px-10 lg:max-xl:px-12 py-15 max-md:py-8 md:max-lg:py-6 lg:max-xl:py-8 xl:max-1440p:py-12 ${index === 0 ? "content-clip-tl" : "content-clip-br"}`}
             contentStyle="flex flex-col max-md:gap-5"
           >
