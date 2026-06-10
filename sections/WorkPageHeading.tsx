@@ -8,6 +8,11 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Prevent jumpiness on mobile due to the address bar popping in/out
+ScrollTrigger.config({
+  ignoreMobileResize: true,
+});
+
 const WorkPageHeading = () => {
   const mainContainerRef = useRef(null);
   const pinWrapperRef = useRef(null);
@@ -20,19 +25,7 @@ const WorkPageHeading = () => {
     const mm = gsap.matchMedia();
 
     const buildTimeline = (targetHeight: string, targetScale: number) => {
-      // 1. PIN THE STATIC WRAPPER (This never changes height, keeping calculations stable)
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: pinWrapperRef.current,
-          start: "top top",
-          end: "max",
-          pin: true,
-          pinSpacing: false,
-          // markers: true,
-        },
-      });
-
-      // 2. ANIMATE THE INNER CONTAINER (The visual height shrink happens here safely)
+      // ANIMATE THE INNER CONTAINER (The visual height shrink happens here safely)
       gsap
         .timeline({
           scrollTrigger: {
@@ -40,7 +33,6 @@ const WorkPageHeading = () => {
             start: "top top",
             end: "bottom center",
             scrub: 1,
-            // markers: true,
           },
         })
         .to(headingContainerRef.current, {
@@ -75,7 +67,6 @@ const WorkPageHeading = () => {
             start: "bottom center",
             end: "bottom top+=" + targetHeight,
             scrub: 1,
-            // markers: true,
           },
         })
         .to(headingContainerRef.current, {
@@ -99,16 +90,16 @@ const WorkPageHeading = () => {
   return (
     <div ref={mainContainerRef} className="relative h-full work-heading">
       {/* 
-        This is the static pin wrapper. It handles the layout 
-        heights and pinning, completely isolating ScrollTrigger from the animations.
+        This is now a native CSS fixed wrapper. Natively fixed to the top 
+        to guarantee buttery smooth performance and zero jittering on mobile.
       */}
       <div
         ref={pinWrapperRef}
-        className="h-1/2 max-sm:h-[52vh] sm:max-md:h-[52vh] z-10"
+        className="fixed top-0 inset-x-0 h-1/2 max-sm:h-[52vh] sm:max-md:h-[52vh] z-10 pointer-events-none"
       >
         <div
           ref={headingContainerRef}
-          className="flex flex-col justify-end h-full relative z-10"
+          className="flex flex-col justify-end h-full relative z-10 pointer-events-auto"
           style={{
             backgroundColor: "rgba(40,40,40,0)",
           }}
