@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "./styles/ServicesCarousel.css";
 import { useRef } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import GlowCard from "./Glowcard";
 import Image from "next/image";
 import Link from "next/link";
@@ -112,16 +112,16 @@ const ServicesCarousel = () => {
       <div
         ref={prevRef}
         aria-label="Previous Slide"
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-50 p-10 md:max-lg:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-50 p-10 md:max-lg:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden text-white/50"
       >
-        <ArrowLeft size={32} className="md:max-lg:w-5" />
+        <ChevronLeft size={32} className="md:max-lg:w-5" />
       </div>
       <div
         ref={nextRef}
         aria-label="Next Slide"
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-50 p-10 md:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-50 p-10 md:px-5 bg-brand-dark h-4/5 flex items-center justify-center cursor-pointer max-md:hidden text-white/50"
       >
-        <ArrowRight size={32} className="md:max-lg:w-5" />
+        <ChevronRight size={32} className="md:max-lg:w-5" />
       </div>
     </Swiper>
   );

@@ -46,6 +46,7 @@
 
 .services-slide.swiper-slide:not(.swiper-slide-active) {
   opacity: 0.4;
+  filter: blur(10px);
 }
 
 .services-slide.swiper-slide.swiper-slide-active .services-gif-container {

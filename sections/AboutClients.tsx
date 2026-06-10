@@ -29,7 +29,7 @@ const AboutClients = () => {
         }
         desc="Hear from the visionaries and experts"
       />
-      <div className="max-w-450 max-lg:max-w-full md:max-2240p:w-9/10 2240p:w-4/5 mx-auto bg-[#d9d3c7] content-clip-both">
+      <div className="max-w-450 max-lg:max-w-full md:max-2240p:w-9/10 2240p:w-4/5 mx-auto bg-brand-cream content-clip-both">
         <div className="grid grid-cols-5 border-b border-b-black/10 py-15 px-10 md:max-lg:py-10 md:max-lg:px-10 lg:max-1440p:px-15 select-none gap-y-12 md:max-lg:gap-y-4 lg:max-xl:gap-y-5 gap-x-5.5 md:max-lg:gap-x-0 max-sm:gap-0 max-md:hidden">
           {clientLogos.map((clientLogo, index) => (
             <div

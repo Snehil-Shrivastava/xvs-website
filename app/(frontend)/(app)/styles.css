@@ -1,9 +1,15 @@
 .contact-clip-container {
-  --notch: 51px;
+  --notch: 52px;
   clip-path: polygon(
     0 var(--notch),
     0 100%,
-    100% 100%,
+    1px 60%,
+    1px var(--notch),
+    var(--notch) 1px,
+    calc(100% - var(--notch)) 1px,
+    calc(100% - 1px) var(--notch),
+    calc(100% - 1px) calc(100% - 1px),
+    100% 60%,
     100% var(--notch),
     calc(100% - var(--notch)) 0,
     var(--notch) 0

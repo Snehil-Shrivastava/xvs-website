@@ -73,9 +73,32 @@ body {
   clip-path: polygon(0 var(--notch), 0 100%, 100% 100%, 100% 0, var(--notch) 0);
 }
 
-.content-clip-tl {
+.content-clip-tl,
+.glassdoor-container {
   --notch: 52px;
   clip-path: polygon(0 var(--notch), 0 100%, 100% 100%, 100% 0, var(--notch) 0);
+}
+
+.glassdoor-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  --notch: 52px;
+  background-color: #ffffff3f;
+  pointer-events: none;
+
+  clip-path: polygon(
+    0 var(--notch),
+    0 100%,
+    30% 100%,
+    30% 100%,
+    1px calc(100% - 1px),
+    1px var(--notch),
+    var(--notch) 1px,
+    100% 0,
+    var(--notch) 0
+  );
 }
 
 .container-clip-br {
@@ -89,7 +112,8 @@ body {
   );
 }
 
-.content-clip-br {
+.content-clip-br,
+.indeed-container {
   --notch: 52px;
   clip-path: polygon(
     0 0,
@@ -97,6 +121,30 @@ body {
     calc(100% - var(--notch)) 100%,
     100% calc(100% - var(--notch)),
     100% 0
+  );
+}
+
+.indeed-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  --notch: 52px;
+  background-color: #ffffff3f;
+  pointer-events: none;
+
+  clip-path: polygon(
+    0 0,
+    0 100%,
+    calc(100% - var(--notch)) 100%,
+    100% calc(100% - var(--notch)),
+    100% 0,
+    50% 0,
+    calc(100% - 1px) 1px,
+    calc(100% - 1px) calc(100% - var(--notch)),
+    calc(100% - var(--notch)) calc(100% - 1px),
+    1px calc(100% - 1px),
+    0 20%
   );
 }
 
@@ -121,7 +169,9 @@ body {
     --notch: 22px;
   }
 
-  .content-clip-tl {
+  .content-clip-tl,
+  .glassdoor-container,
+  .glassdoor-container::before {
     --notch: 22px;
   }
 
@@ -129,7 +179,9 @@ body {
     --notch: 22px;
   }
 
-  .content-clip-br {
+  .content-clip-br,
+  .indeed-container,
+  .indeed-container::before {
     --notch: 22px;
   }
 }
@@ -147,7 +199,9 @@ body {
     --notch: 28px;
   }
 
-  .content-clip-tl {
+  .content-clip-tl,
+  .glassdoor-container,
+  .glassdoor-container::before {
     --notch: 28px;
   }
 
@@ -155,7 +209,9 @@ body {
     --notch: 28px;
   }
 
-  .content-clip-br {
+  .content-clip-br,
+  .indeed-container,
+  .indeed-container::before {
     --notch: 28px;
   }
 }
@@ -173,7 +229,9 @@ body {
     --notch: 38px;
   }
 
-  .content-clip-tl {
+  .content-clip-tl,
+  .glassdoor-container,
+  .glassdoor-container::before {
     --notch: 38px;
   }
 
@@ -181,7 +239,9 @@ body {
     --notch: 38px;
   }
 
-  .content-clip-br {
+  .content-clip-br,
+  .indeed-container,
+  .indeed-container::before {
     --notch: 38px;
   }
 }
