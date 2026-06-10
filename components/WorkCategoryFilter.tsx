@@ -51,7 +51,7 @@ const WorkCategoryFilter = ({
       mm.add("(min-width: 1024px) and (max-width: 1279px)", () =>
         buildTimeline("209px"),
       );
-      mm.add("(min-width: 1280px)", () => buildTimeline("279px"));
+      mm.add("(min-width: 1280px)", () => buildTimeline("239px"));
     },
     { scope: categoryFilterContainerRef },
   );

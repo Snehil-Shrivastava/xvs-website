@@ -100,7 +100,7 @@ const WorkPageHeading = () => {
     mm.add("(min-width: 1024px) and (max-width: 1279px)", () =>
       buildTimeline("210px", 0.45),
     );
-    mm.add("(min-width: 1280px)", () => buildTimeline("280px", 0.45));
+    mm.add("(min-width: 1280px)", () => buildTimeline("240px", 0.45));
   }, []);
 
   return (
@@ -111,7 +111,7 @@ const WorkPageHeading = () => {
       */}
       <div
         ref={pinWrapperRef}
-        className="h-1/2 max-sm:h-[52vh] sm:max-md:h-[52vh] z-10"
+        className="h-1/2 2xl:min-h-107.5 max-sm:h-[52vh] sm:max-md:h-[52vh] z-10"
       >
         <div
           ref={headingContainerRef}
@@ -122,7 +122,7 @@ const WorkPageHeading = () => {
         >
           <h1
             ref={headingRef}
-            className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-8xl lg:max-xl:text-9xl xl:max-1440p:text-[150px] relative text-center select-none z-5 origin-bottom"
+            className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl xl:max-1440p:text-[110px] 1440p:max-1920p:text-[140px] relative text-center select-none z-5 origin-bottom"
           >
             {"SHOWCASE".split("").map((letter, index) => (
               <span
