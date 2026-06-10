@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // "use client";
 
 // import { useSearchParams } from "next/navigation";
@@ -146,29 +147,29 @@ const BlogMainClient = ({ initialBlogsData, hasSidebarSlot }: Props) => {
                     <button
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={!blogsData.hasPrevPage || isLoading}
-                      className={`flex gap-2 items-center px-6 py-2.5 rounded-full border border-neutral-700 text-sm uppercase tracking-wider font-medium transition-colors ${
+                      className={`flex gap-2 items-center px-6 py-2.5 rounded-full border border-neutral-700 max-md:border-none text-sm max-md:text-[10px] uppercase tracking-wider font-medium transition-colors ${
                         !blogsData.hasPrevPage || isLoading
                           ? "text-neutral-600 border-neutral-800 cursor-not-allowed"
-                          : "text-brand-cream hover:bg-neutral-800 hover:text-brand-orange hover:border-brand-orange cursor-pointer"
+                          : "text-brand-cream md:hover:bg-neutral-800 hover:text-brand-orange hover:border-brand-orange cursor-pointer"
                       }`}
                     >
-                      <ArrowLeft size={15} />
+                      <ArrowLeft size={15} className="max-md:w-3" />
                       <span>Previous</span>
                     </button>
-                    <span className="text-sm text-neutral-400 font-light">
+                    <span className="text-sm max-md:text-[10px] text-neutral-400 font-light">
                       Page {currentPage} of {blogsData.totalPages}
                     </span>
                     <button
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={!blogsData.hasNextPage || isLoading}
-                      className={`flex gap-2 items-center px-6 py-2.5 rounded-full border border-neutral-700 text-sm uppercase tracking-wider font-medium transition-colors ${
+                      className={`flex gap-2 items-center px-6 py-2.5 rounded-full border border-neutral-700 max-md:border-none text-sm max-md:text-[10px] uppercase tracking-wider font-medium transition-colors ${
                         !blogsData.hasNextPage || isLoading
                           ? "text-neutral-600 border-neutral-800 cursor-not-allowed"
-                          : "text-brand-cream hover:bg-neutral-800 hover:text-brand-orange hover:border-brand-orange cursor-pointer"
+                          : "text-brand-cream md:hover:bg-neutral-800 hover:text-brand-orange hover:border-brand-orange cursor-pointer"
                       }`}
                     >
                       <span>Next</span>
-                      <ArrowRight size={15} />
+                      <ArrowRight size={15} className="max-md:w-3" />
                     </button>
                   </div>
                 )}
