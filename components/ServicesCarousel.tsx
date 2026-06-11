@@ -5,7 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Swiper as SwiperType } from "swiper";
 import { NavigationOptions } from "swiper/types";
-import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Keyboard,
+  Navigation,
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,7 +18,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "./styles/ServicesCarousel.css";
 import { useRef } from "react";
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import GlowCard from "./Glowcard";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,6 +39,9 @@ const ServicesCarousel = () => {
       // autoplay={{
       //   delay: 5000,
       // }}
+      keyboard={{
+        enabled: true,
+      }}
       slidesPerView="auto"
       coverflowEffect={{
         rotate: 0,
@@ -43,7 +51,7 @@ const ServicesCarousel = () => {
         slideShadows: false,
       }}
       pagination={true}
-      modules={[EffectCoverflow, Navigation, Autoplay]}
+      modules={[EffectCoverflow, Navigation, Autoplay, Keyboard]}
       // eslint-disable-next-line react-hooks/refs
       navigation={{
         // eslint-disable-next-line react-hooks/refs
