@@ -56,7 +56,8 @@ body {
   );
 }
 
-.content-clip-both {
+.content-clip-both,
+.modal-clip {
   --notch: 52px;
   clip-path: polygon(
     0 var(--notch),
@@ -165,6 +166,10 @@ body {
     --notch: 12px;
   }
 
+  .modal-clip {
+    --notch: 0;
+  }
+
   .container-clip-tl {
     --notch: 22px;
   }
@@ -195,6 +200,10 @@ body {
     --notch: 28px;
   }
 
+  .modal-clip {
+    --notch: 0;
+  }
+
   .container-clip-tl {
     --notch: 28px;
   }
@@ -221,7 +230,8 @@ body {
     --notch: 18px;
   }
 
-  .content-clip-both {
+  .content-clip-both,
+  .modal-clip {
     --notch: 20px;
   }
 
