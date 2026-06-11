@@ -12,13 +12,12 @@
 
 // -------------------------------------------
 
-"use client"; // 1. Mark this as a client component to use React hooks
+"use client";
 
-import { useEffect } from "react"; // 2. Import useEffect
+import { useEffect } from "react";
 import ContactPage from "@/page/ContactPage";
 
 const Contact = () => {
-  // 3. Force the window to scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
