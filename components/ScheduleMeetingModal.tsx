@@ -277,7 +277,7 @@ function ScheduleModalInner() {
         {/* Outer Border wrapper for Sci-Fi cut corners */}
         <div className="relative w-full md:max-w-290 p-px shadow-2xl modal-clip pointer-events-auto max-md:h-screen">
           {/* Main Modal Container */}
-          <div className="bg-linear-[-25deg,rgba(247,152,57,0.3)_0%,rgba(121,97,73,0.3)_20%,rgba(44,44,44,0.756)_40%,rgba(29,29,29,0.734)_100%] backdrop-blur-md w-full h-full flex flex-col p-8 sm:p-12 modal-clip">
+          <div className="bg-linear-[-25deg,rgba(247,152,57,0.3)_0%,rgba(121,97,73,0.3)_20%,rgba(44,44,44,0.756)_40%,rgba(29,29,29,0.734)_100%] backdrop-blur-md w-full h-full flex flex-col max-md:px-8 max-md:pt-8 max-md:pb-4 md:p-12 modal-clip">
             {/* Close Button */}
             <button
               onClick={handleClose}
