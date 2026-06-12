@@ -262,7 +262,7 @@ function ScheduleModalInner() {
 
   return (
     <div className="fixed inset-0 z-9999 overflow-y-auto bg-black/20 backdrop-blur-lg custom-scroll font-poppins select-none pointer-events-none">
-      <div className="flex min-h-full items-center justify-center p-4 max-md:p-0 md:p-6">
+      <div className="flex min-h-full max-md:h-full items-center justify-center p-4 max-md:p-0 md:p-6">
         {/* Scrollbar Customization Scoped Style */}
         <style
           dangerouslySetInnerHTML={{
@@ -275,9 +275,9 @@ function ScheduleModalInner() {
         />
 
         {/* Outer Border wrapper for Sci-Fi cut corners */}
-        <div className="relative w-full md:max-w-290 p-px shadow-2xl modal-clip pointer-events-auto max-md:h-screen">
+        <div className="relative w-full md:max-w-290 p-px shadow-2xl modal-clip pointer-events-auto max-md:h-full">
           {/* Main Modal Container */}
-          <div className="bg-linear-[-25deg,rgba(247,152,57,0.3)_0%,rgba(121,97,73,0.3)_20%,rgba(44,44,44,0.756)_40%,rgba(29,29,29,0.734)_100%] backdrop-blur-md w-full h-full flex flex-col max-md:px-8 max-md:pt-8 max-md:pb-4 md:p-12 modal-clip">
+          <div className="bg-linear-[-25deg,rgba(247,152,57,0.3)_0%,rgba(121,97,73,0.3)_20%,rgba(44,44,44,0.756)_40%,rgba(29,29,29,0.734)_100%] backdrop-blur-md w-full h-full flex flex-col max-md:px-8 max-md:pt-8 max-md:pb-8 md:p-12 modal-clip">
             {/* Close Button */}
             <button
               onClick={handleClose}
@@ -480,7 +480,8 @@ function ScheduleModalInner() {
                           </span>
                         </div>
                       ) : (
-                        <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1 max-md:max-h-50 max-md:h-[30vh]">
+                        // <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1">
+                        <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1 max-md:max-h-60 max-md:min-h-0">
                           {allTimeSlots.length > 0 ? (
                             allTimeSlots.map((slot) => (
                               <button
@@ -515,7 +516,7 @@ function ScheduleModalInner() {
                   )}
 
                   {/* Next Step Button */}
-                  <div className="mt-auto md:mt-0 md:absolute md:bottom-0 md:right-0 max-md:flex max-md:items-center max-md:justify-between">
+                  <div className="mt-auto md:mt-0 max-md:py-2 md:absolute md:bottom-0 md:right-0 max-md:flex max-md:items-center max-md:justify-between">
                     <button
                       onClick={() => setMobileStep("date")}
                       className="md:hidden mb-6 max-md:mb-0 text-white hover:text-white flex items-center text-sm font-medium transition-colors w-fit max-md:bg-brand-orange px-6 max-md:px-4 py-2.5 rounded max-md:text-sm"
@@ -559,7 +560,7 @@ function ScheduleModalInner() {
                 </h2>
 
                 {/* Form Grid */}
-                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:h-[20vh] max-md:max-h-45">
+                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:h-[20vh] max-md:max-h-50">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="flex flex-col gap-1.5">
                       <label className="text-brand-orange text-sm max-md:text-[10px]">
