@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookies Terms | xVS Creations",
+};
+
 const Cookies = () => {
   return (
     <>

@@ -9,6 +9,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CookiesConsent from "@/components/CookiesConsent";
 import ScheduleMeetingModal from "@/components/ScheduleMeetingModal";
 
+import { GoogleTagManager } from "@next/third-parties/google";
+
 const calSans = Cal_Sans({
   variable: "--font-cal-sans",
   weight: ["400"],
@@ -57,6 +59,7 @@ export default function RootLayout({
       lang="en"
       className={`${calSans.variable} ${apercuBlack.variable} ${apercuBold.variable} ${apercuRegular.variable} ${poppins.variable} h-full antialiased`}
     >
+      <GoogleTagManager gtmId="GTM-WGTCSF6" />
       <body className="min-h-full flex flex-col">
         <Navbar />
         <SmoothScroll>

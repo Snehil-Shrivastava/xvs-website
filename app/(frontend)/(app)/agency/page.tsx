@@ -2,6 +2,11 @@ import BgVideo from "@/components/BgVideo";
 import AgencyPage from "@/page/AgencyPage";
 
 import agencyBg from "@/videos/agenciesBg.mp4";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Agency | xVS Creations",
+};
 
 const Agency = () => {
   return (

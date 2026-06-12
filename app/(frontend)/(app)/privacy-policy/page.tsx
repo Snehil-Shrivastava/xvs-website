@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | xVS Creations",
+};
+
 const Privacy = () => {
   return (
     <>

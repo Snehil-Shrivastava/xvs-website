@@ -25,7 +25,7 @@ const ImageRenderer = ({
     <div className={layoutWrapperMap[imageLayout]}>
       {images.map((img, i) => (
         <div key={i} className={img.containerClassName}>
-          <Image src={img.src} alt="" className={img.className} />
+          <Image src={img.src} alt="image" className={img.className} />
         </div>
       ))}
     </div>
