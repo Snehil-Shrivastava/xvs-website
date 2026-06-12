@@ -481,7 +481,7 @@ function ScheduleModalInner() {
                         </div>
                       ) : (
                         // <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1">
-                        <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1 max-md:max-h-60 max-md:min-h-0">
+                        <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1 max-md:max-h-[35vh] max-md:min-h-0">
                           {allTimeSlots.length > 0 ? (
                             allTimeSlots.map((slot) => (
                               <button
@@ -560,7 +560,7 @@ function ScheduleModalInner() {
                 </h2>
 
                 {/* Form Grid */}
-                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:h-[20vh] max-md:max-h-50">
+                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:min-h-0 max-md:max-h-[35vh]">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="flex flex-col gap-1.5">
                       <label className="text-brand-orange text-sm max-md:text-[10px]">
@@ -680,13 +680,13 @@ function ScheduleModalInner() {
                 </div>
 
                 {/* Actions Footer */}
-                <div className="flex items-center justify-between mt-8 max-md:mt-auto pt-4 max-md:pt-0 max-sm:text-sm">
+                <div className="flex items-center justify-between mt-8 max-md:mt-auto pt-4 max-md:py-2 max-sm:text-sm">
                   <button
                     disabled={isSubmitting}
                     onClick={() => setStep(1)}
                     className="bg-brand-orange hover:bg-brand-orange/70 text-white px-8 max-sm:px-4 py-2.5 rounded flex items-center justify-center font-medium transition-colors disabled:opacity-50"
                   >
-                    Back
+                    <ChevronLeft className="w-4 h-4 mr-1" /> Back
                   </button>
                   <button
                     disabled={!isStep2Valid || isSubmitting}
