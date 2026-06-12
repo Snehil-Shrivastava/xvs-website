@@ -538,7 +538,7 @@ function ScheduleModalInner() {
             {step === 2 && (
               <div className="flex flex-col h-full animate-in fade-in slide-in-from-right-4 duration-300 max-md:mt-2.5">
                 {/* Meeting Summary Header */}
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-8 max-md:mb-4 text-white text-sm max-md:text-[12px]">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-8 max-md:mb-6 text-white text-sm max-md:text-[12px]">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" /> <span>{duration} min</span>
                   </div>
