@@ -306,7 +306,7 @@ function ScheduleModalInner() {
 
             {/* --- STEP 1 --- */}
             {step === 1 && (
-              <div className="flex flex-col md:flex-row min-h-112.5 max-md:mt-2">
+              <div className="flex flex-col md:flex-row max-md:mt-2 max-md:h-full">
                 {/* Left Column: Calendar */}
                 <div
                   className={`w-full md:w-auto pr-0 md:pr-10 md:border-r border-zinc-700/50 flex flex-col justify-between ${mobileStep === "time" ? "hidden md:flex" : "flex"}`}
@@ -420,7 +420,7 @@ function ScheduleModalInner() {
 
                 {/* Right Column: Time Slots */}
                 <div
-                  className={`w-full md:w-auto md:flex-1 pl-0 md:pl-10 mt-10 max-md:mt-0 md:mt-0 flex flex-col relative ${mobileStep === "date" ? "hidden md:flex" : "flex"}`}
+                  className={`w-full md:w-auto max-md:h-full md:flex-1 pl-0 md:pl-10 mt-10 max-md:mt-0 md:mt-0 flex flex-col relative ${mobileStep === "date" ? "hidden md:flex" : "flex"}`}
                 >
                   {/* <button
                     onClick={() => setMobileStep("date")}
@@ -515,7 +515,7 @@ function ScheduleModalInner() {
                   )}
 
                   {/* Next Step Button */}
-                  <div className="mt-8 md:mt-0 md:absolute md:bottom-0 md:right-0 max-md:flex max-md:items-center max-md:justify-between">
+                  <div className="mt-auto md:mt-0 md:absolute md:bottom-0 md:right-0 max-md:flex max-md:items-center max-md:justify-between">
                     <button
                       onClick={() => setMobileStep("date")}
                       className="md:hidden mb-6 max-md:mb-0 text-white hover:text-white flex items-center text-sm font-medium transition-colors w-fit max-md:bg-brand-orange px-6 max-md:px-4 py-2.5 rounded max-md:text-sm"
@@ -538,7 +538,7 @@ function ScheduleModalInner() {
             {step === 2 && (
               <div className="flex flex-col h-full animate-in fade-in slide-in-from-right-4 duration-300 max-md:mt-2.5">
                 {/* Meeting Summary Header */}
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-8 max-md:mb-4 text-white text-sm max-md:text-[10px]">
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-8 max-md:mb-4 text-white text-sm max-md:text-[12px]">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" /> <span>{duration} min</span>
                   </div>
@@ -559,7 +559,7 @@ function ScheduleModalInner() {
                 </h2>
 
                 {/* Form Grid */}
-                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:h-50">
+                <div className="space-y-5 pb-1 grow overflow-y-auto pr-2 custom-scroll max-md:h-[20vh] max-md:max-h-45">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div className="flex flex-col gap-1.5">
                       <label className="text-brand-orange text-sm max-md:text-[10px]">
@@ -679,7 +679,7 @@ function ScheduleModalInner() {
                 </div>
 
                 {/* Actions Footer */}
-                <div className="flex items-center justify-between mt-8 pt-4 max-md:pt-0 max-sm:text-sm">
+                <div className="flex items-center justify-between mt-8 max-md:mt-auto pt-4 max-md:pt-0 max-sm:text-sm">
                   <button
                     disabled={isSubmitting}
                     onClick={() => setStep(1)}
