@@ -207,16 +207,6 @@ function ScheduleModalInner() {
   const endDate = endOfWeek(monthEnd, { weekStartsOn: 1 });
   const calendarDays = eachDayOfInterval({ start: startDate, end: endDate });
 
-  // const isPrevMonthDisabled =
-  //   isBefore(startOfMonth(currentMonth), startOfMonth(new Date())) ||
-  //   isSameMonth(currentMonth, new Date());
-
-  // const maxBookingDate = startOfDay(addMonths(new Date(), 1));
-  // const isNextMonthDisabled = isBefore(
-  //   maxBookingDate,
-  //   startOfMonth(addMonths(currentMonth, 1)),
-  // );
-
   const today = currentMonth // only compute when we have a real date
     ? new Date()
     : null;
@@ -422,13 +412,6 @@ function ScheduleModalInner() {
                 <div
                   className={`w-full md:w-auto max-md:h-full md:flex-1 pl-0 md:pl-10 mt-10 max-md:mt-0 md:mt-0 flex flex-col relative ${mobileStep === "date" ? "hidden md:flex" : "flex"}`}
                 >
-                  {/* <button
-                    onClick={() => setMobileStep("date")}
-                    className="md:hidden mb-6 text-zinc-400 hover:text-white flex items-center text-sm font-medium transition-colors w-fit"
-                  >
-                    <ChevronLeft className="w-4 h-4 mr-1" /> Back to Calendar
-                  </button> */}
-
                   {/* Duration & Details */}
                   <div className="flex flex-col gap-3 mb-6">
                     <div className="flex items-center gap-3 text-white">
