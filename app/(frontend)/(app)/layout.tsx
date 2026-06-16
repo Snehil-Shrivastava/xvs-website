@@ -10,7 +10,7 @@ import CookiesConsent from "@/components/CookiesConsent";
 import ScheduleMeetingModal from "@/components/ScheduleMeetingModal";
 
 import { GoogleTagManager } from "@next/third-parties/google";
-// import schemaData from "./schema-organization-website.json";
+import schemaData from "./schema-organization-website.json";
 
 const calSans = Cal_Sans({
   variable: "--font-cal-sans",
@@ -60,12 +60,12 @@ export default function RootLayout({
       lang="en"
       className={`${calSans.variable} ${apercuBlack.variable} ${apercuBold.variable} ${apercuRegular.variable} ${poppins.variable} h-full antialiased`}
     >
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(schemaData),
         }}
-      /> */}
+      />
       <GoogleTagManager gtmId="GTM-WGTCSF6" />
       <body className="min-h-full flex flex-col">
         <Navbar />
