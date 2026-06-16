@@ -105,6 +105,7 @@ const WorkPageHeading = () => {
 
   return (
     <div ref={mainContainerRef} className="relative h-full work-heading">
+      <h1 className="invisible">Our Work & Case Studies</h1>
       {/* 
         This is your original static pin wrapper. 
         It is fully preserved here, ensuring the layout never collapses or disappears.
@@ -120,7 +121,7 @@ const WorkPageHeading = () => {
             backgroundColor: "rgba(40,40,40,0)",
           }}
         >
-          <h1
+          <span
             ref={headingRef}
             className="font-calSans text-[180px] max-sm:text-5xl sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl xl:max-1440p:text-[110px] 1440p:max-1920p:text-[140px] relative text-center select-none z-5 origin-bottom"
           >
@@ -136,7 +137,7 @@ const WorkPageHeading = () => {
                 {letter}
               </span>
             ))}
-          </h1>
+          </span>
         </div>
       </div>
       <PlanetHorizon arccontainerRef={arccontainerRef} arcRef={arcRef} />

@@ -33,13 +33,16 @@ const AboutPage = () => {
     //   </div>
     // </>
     <div className="pb-50">
+      <h1 className="invisible">
+        About xVS Creations - a Creative Design Agency Since 2014
+      </h1>
       <div className="h-screen max-md:h-150 md:max-lg:h-180 flex items-center justify-center relative z-1 pointer-events-none">
         <header className="flex flex-col items-center gap-20">
-          <h1 className="text-[120px]/[130px] max-sm:text-4xl sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl font-calSans text-brand-cream text-center">
+          <span className="text-[120px]/[130px] max-sm:text-4xl sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl font-calSans text-brand-cream text-center">
             <span>Inspiration to</span>
             <br />
             <span>interpreting reality</span>
-          </h1>
+          </span>
         </header>
       </div>
       <div className="flex flex-col gap-100 max-md:gap-30 md:max-lg:gap-40 lg:max-xl:gap-50">
