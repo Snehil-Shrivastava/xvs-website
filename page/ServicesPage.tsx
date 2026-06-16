@@ -3,6 +3,7 @@ import ServicesMain from "@/sections/ServicesMain";
 const ServicesPage = () => {
   return (
     <div className="relative z-1">
+      <h1 className="invisible">Our Design Services</h1>
       <div className="h-screen max-sm:h-150 sm:max-md:h-150 md:max-lg:h-220">
         <div className="flex flex-col max-sm:gap-4 md:max-lg:gap-5 items-center justify-center h-full">
           <span className="text-[2.2rem] max-sm:text-xl sm:max-md:text-2xl md:max-lg:text-3xl font-poppins font-extralight">
