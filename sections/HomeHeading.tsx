@@ -4,10 +4,11 @@ import spinngLambda from "@/public/gifs/spinning-lambda.webp";
 const HomeHeading = () => {
   return (
     <div className="flex flex-col">
+      <h1 className="invisible">Branding, UI/UX & Web Design Agency</h1>
       <p className="text-center font-poppins font-extralight tracking-wide text-[37.5px] max-sm:text-sm sm:max-md:text-base md:max-lg:text-xl lg:max-xl:text-2xl xl:max-1440p:text-3xl 1440p:max-2xl:text-[34px] 2xl:max-2240p:text-4xl">
         Creating Unforgettable Design
       </p>
-      <h1 className="text-[20rem]/[20.5rem] max-sm:text-[4.5rem]/[4.5rem] sm:max-md:text-[7.5rem]/[7rem] md:max-lg:text-[8rem]/[7.5rem] lg:max-xl:text-[12rem]/[11.5rem] xl:max-1440p:text-[14rem]/[13rem] 1440p:max-2xl:text-[15rem]/[14rem] 2xl:max-2240p:text-[17rem]/[16rem] inline-block relative z-5 pointer-events-none font-calSans text-brand-orange-light max-sm:flex">
+      <span className="text-[20rem]/[20.5rem] max-sm:text-[4.5rem]/[4.5rem] sm:max-md:text-[7.5rem]/[7rem] md:max-lg:text-[8rem]/[7.5rem] lg:max-xl:text-[12rem]/[11.5rem] xl:max-1440p:text-[14rem]/[13rem] 1440p:max-2xl:text-[15rem]/[14rem] 2xl:max-2240p:text-[17rem]/[16rem] inline-block relative z-5 pointer-events-none font-calSans text-brand-orange-light max-sm:flex">
         <span>e</span>
         <span className="relative inline-block">
           <Image
@@ -20,7 +21,7 @@ const HomeHeading = () => {
           />
         </span>
         <span>perience</span>
-      </h1>
+      </span>
     </div>
   );
 };

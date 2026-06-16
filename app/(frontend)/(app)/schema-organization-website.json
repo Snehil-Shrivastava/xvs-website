@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://xvscreations.com/#organization",
+      "name": "xVS Creations",
+      "alternateName": [
+        "xVS Creations Private Limited",
+        "xVS Creations LLC"
+      ],
+      "url": "https://xvscreations.com",
+      "logo": "https://xvscreations.com/logo.svg",
+      "image": "https://xvscreations.com/logo.svg",
+      "description": "Global creative and branding design agency offering branding, UI/UX, graphic design, web & app development, motion graphics, and 3D design since 2014.",
+      "foundingDate": "2014",
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Vinay Sharma",
+          "jobTitle": "Founder, Chief Design Officer"
+        },
+        {
+          "@type": "Person",
+          "name": "Sanjeev Sharma",
+          "jobTitle": "Co-Founder, Chief Executive Officer"
+        }
+      ],
+      "email": "info@xvscreations.com",
+      "telephone": "+91-8115128777",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, 1/23 Rajni Khand, Sharda Nagar",
+        "addressLocality": "Lucknow",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "226002",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        "US",
+        "GB",
+        "CA",
+        "IN",
+        "SA",
+        "AE",
+        "SG",
+        "AU",
+        "NZ"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-307-296-2002",
+          "contactType": "sales",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-8115128777",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": "en"
+        }
+      ],
+      "knowsAbout": [
+        "Branding",
+        "Logo Design",
+        "UI/UX Design",
+        "Graphic Design",
+        "Web Design",
+        "Web Development",
+        "Motion Graphics",
+        "3D Animation"
+      ],
+      "sameAs": [
+        "https://www.behance.net/xVSCreations",
+        "https://www.instagram.com/xvscreations",
+        "https://dribbble.com/xvscreations",
+        "https://www.facebook.com/xVSCreations",
+        "https://www.linkedin.com/company/xvs-creations",
+        "https://x.com/xvscreations",
+        "https://www.youtube.com/@xvscreations",
+        "https://clutch.co/profile/xvs-creations"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://xvscreations.com/#website",
+      "url": "https://xvscreations.com",
+      "name": "xVS Creations",
+      "publisher": {
+        "@id": "https://xvscreations.com/#organization"
+      }
+    }
+  ]
+}
