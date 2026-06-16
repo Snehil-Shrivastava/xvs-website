@@ -5,10 +5,7 @@
       "@type": "ProfessionalService",
       "@id": "https://xvscreations.com/#organization",
       "name": "xVS Creations",
-      "alternateName": [
-        "xVS Creations Private Limited",
-        "xVS Creations LLC"
-      ],
+      "alternateName": ["xVS Creations Private Limited", "xVS Creations LLC"],
       "url": "https://xvscreations.com",
       "logo": "https://xvscreations.com/logo.svg",
       "image": "https://xvscreations.com/logo.svg",
@@ -36,17 +33,7 @@
         "postalCode": "226002",
         "addressCountry": "IN"
       },
-      "areaServed": [
-        "US",
-        "GB",
-        "CA",
-        "IN",
-        "SA",
-        "AE",
-        "SG",
-        "AU",
-        "NZ"
-      ],
+      "areaServed": ["US", "GB", "CA", "IN", "SA", "AE", "SG", "AU", "NZ"],
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -91,7 +78,8 @@
       "name": "xVS Creations",
       "publisher": {
         "@id": "https://xvscreations.com/#organization"
-      }
+      },
+      "inLanguage": "en"
     }
   ]
 }
