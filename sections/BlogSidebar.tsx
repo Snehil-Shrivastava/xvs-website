@@ -36,7 +36,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
           {recentPosts.docs.map((post) => (
             <Link
               key={post.id}
-              href={`/blogs/${post.slug}`}
+              href={`/blog/${post.slug}`}
               className="flex gap-3 group items-start"
             >
               <Image src={recentPostsBullet} alt="bullet" />
@@ -63,7 +63,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
             return (
               <Link
                 key={cat.id}
-                href={isActive ? "/blogs" : `/blogs?category=${cat.id}`}
+                href={isActive ? "/blog" : `/blog?category=${cat.id}`}
                 className={`flex items-center gap-2 group transition-colors ${
                   isActive
                     ? "text-brand-orange"
@@ -109,7 +109,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
               <Link
                 key={tag}
                 href={
-                  isActive ? "/blogs" : `/blogs?tag=${encodeURIComponent(tag!)}`
+                  isActive ? "/blog" : `/blog?tag=${encodeURIComponent(tag!)}`
                 }
                 className={`text-sm lg:text-[12px] max-lg:text-[10px] transition-colors ${
                   isActive

@@ -12,8 +12,8 @@ export const Blogs: CollectionConfig = {
   admin: { useAsTitle: "title" },
   access: { read: () => true },
   hooks: {
-    afterChange: [revalidateTag(["/blogs", "/blogs/[Slug]"])],
-    afterDelete: [revalidateTag(["/blogs", "/blogs/[slug]"])],
+    afterChange: [revalidateTag(["/blog", "/blog/[Slug]"])],
+    afterDelete: [revalidateTag(["/blog", "/blog/[slug]"])],
   },
   fields: [
     // ── Core Content ──────────────────────────────

@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   //   if (process.env.VERCEL_ENV === "production") {
   //     return [
   //       {
-  //         source: "/blogs/:path*",
+  //         source: "/blog/:path*",
   //         destination: "/",
   //         permanent: false,
   //       },

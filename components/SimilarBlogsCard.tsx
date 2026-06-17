@@ -15,7 +15,7 @@ const SimialrBlogsCard = ({
   slug?: string;
 }) => {
   return (
-    <Link href={`/blogs/${slug}`} className="flex flex-col gap-6 font-poppins">
+    <Link href={`/blog/${slug}`} className="flex flex-col gap-6 font-poppins">
       <div className="relative w-full aspect-[2.3]">
         <div className="absolute inset-0 bg-brand-orange/10 similar-blog-img-container" />
         <Image
@@ -38,7 +38,7 @@ const SimialrBlogsCard = ({
               className="max-1440p:w-5 max-md:w-4"
             />
           }
-          buttonLink={`/blogs/${slug}`}
+          buttonLink={`/blog/${slug}`}
         />
       </div>
     </Link>
