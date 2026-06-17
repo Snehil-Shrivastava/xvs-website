@@ -236,6 +236,14 @@ export interface Blog {
    * Short description shown in cards and featured section
    */
   excerpt?: string | null;
+  /**
+   * Defaults to post title if left empty
+   */
+  metaTitle?: string | null;
+  /**
+   * Recommended: 150-160 characters
+   */
+  metaDescription?: string | null;
   body: {
     root: {
       type: string;
@@ -472,6 +480,8 @@ export interface BlogsSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   excerpt?: T;
+  metaTitle?: T;
+  metaDescription?: T;
   body?: T;
   coverImage?: T;
   publishedAt?: T;

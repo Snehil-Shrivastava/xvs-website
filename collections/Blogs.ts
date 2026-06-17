@@ -3,6 +3,7 @@ import { revalidateTag } from "@/utilities/revalidate";
 import {
   EXPERIMENTAL_TableFeature,
   lexicalEditor,
+  LinkFeature,
 } from "@payloadcms/richtext-lexical";
 import { CollectionConfig } from "payload";
 
@@ -39,18 +40,49 @@ export const Blogs: CollectionConfig = {
       },
     },
     {
+      name: "metaTitle",
+      type: "text",
+      admin: {
+        description: "Defaults to post title if left empty",
+      },
+    },
+    {
+      name: "metaDescription",
+      type: "textarea",
+      admin: {
+        description: "Recommended: 150-160 characters",
+      },
+    },
+    {
       name: "body",
       type: "richText",
       required: true,
-      // editor: lexicalEditor({
-      //   features: ({ deafultFeatures, rootFeatures }) => [
-      //     ...deafultFeatures,
-      //     EXPERIMENTAL_TableFeature({}),
-      //   ],
-      // }),
       editor: lexicalEditor({
-        features({ defaultFeatures, rootFeatures }) {
-          return [...defaultFeatures, EXPERIMENTAL_TableFeature()];
+        features({ defaultFeatures }) {
+          return [
+            ...defaultFeatures,
+            EXPERIMENTAL_TableFeature(),
+            LinkFeature({
+              fields: ({ defaultFields }) => [
+                ...defaultFields,
+                {
+                  name: "rel",
+                  type: "select",
+                  hasMany: true,
+                  options: [
+                    { label: "nofollow", value: "nofollow" },
+                    { label: "noopener", value: "noopener" },
+                    { label: "noreferrer", value: "noreferrer" },
+                    { label: "sponsored", value: "sponsored" },
+                    { label: "ugc", value: "ugc" },
+                  ],
+                  admin: {
+                    description: "Link rel attribute values",
+                  },
+                },
+              ],
+            }),
+          ];
         },
       }),
     },

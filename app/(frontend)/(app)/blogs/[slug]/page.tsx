@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: PageProps) {
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: `${post.title} | xVS Creations`,
-    description: post.excerpt,
+    title: `${post.metaTitle}`,
+    description: post.metaDescription,
   };
 }
 
@@ -56,8 +56,6 @@ const IndividualBlog = async ({ params }: PageProps) => {
   if (!post) {
     return notFound();
   }
-
-  console.log("author", post.author);
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
     year: "numeric",

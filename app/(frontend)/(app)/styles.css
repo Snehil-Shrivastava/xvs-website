@@ -208,6 +208,11 @@
   color: var(--color-brand-orange-light);
 }
 
+.payload-richtext a {
+  color: var(--color-brand-orange-light);
+  text-decoration: underline;
+}
+
 .lexical-table {
   width: 100%;
 }
