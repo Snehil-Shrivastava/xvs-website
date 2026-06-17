@@ -80,6 +80,20 @@
         "@id": "https://xvscreations.com/#organization"
       },
       "inLanguage": "en"
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://xvscreations.com/blog/#blog",
+      "url": "https://xvscreations.com/blog",
+      "name": "xVS Creations Blog",
+      "description": "Insights on branding, UI/UX, web design, motion graphics, and creative strategy from the xVS Creations team.",
+      "publisher": {
+        "@id": "https://xvscreations.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://xvscreations.com/#website"
+      },
+      "inLanguage": "en"
     }
   ]
 }

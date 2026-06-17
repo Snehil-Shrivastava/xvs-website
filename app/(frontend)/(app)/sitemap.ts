@@ -1,12 +1,79 @@
-import { MetadataRoute } from "next";
+// import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// export default function sitemap(): MetadataRoute.Sitemap {
+//   return [
+//     {
+//       url: "https://xvscreations.com",
+//       lastModified: new Date(),
+//       priority: 1,
+//     },
+//     {
+//       url: "https://xvscreations.com/about",
+//       lastModified: new Date(),
+//       priority: 0.9,
+//     },
+//     {
+//       url: "https://xvscreations.com/services",
+//       lastModified: new Date(),
+//       priority: 0.8,
+//     },
+//     {
+//       url: "https://xvscreations.com/work",
+//       lastModified: new Date(),
+//       priority: 0.8,
+//     },
+//     {
+//       url: "https://xvscreations.com/agency",
+//       lastModified: new Date(),
+//       priority: 0.7,
+//     },
+//     {
+//       url: "https://xvscreations.com/terms-and-conditions",
+//       lastModified: new Date(),
+//       priority: 0.5,
+//     },
+//     {
+//       url: "https://xvscreations.com/privacy-policy",
+//       lastModified: new Date(),
+//       priority: 0.5,
+//     },
+//     {
+//       url: "https://xvscreations.com/cookies-policy",
+//       lastModified: new Date(),
+//       priority: 0.5,
+//     },
+//     {
+//       url: "https://xvscreations.com/contact",
+//       lastModified: new Date(),
+//       priority: 0.5,
+//     },
+//   ];
+// }
+
+// ------------------- sitemap with blog
+
+// app/sitemap.ts
+import { MetadataRoute } from "next";
+import { getPayload } from "payload";
+import config from "@payload-config";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const payload = await getPayload({ config });
+
+  const { docs: blogs } = await payload.find({
+    collection: "blogs",
+    limit: 1000,
+    select: { slug: true, publishedAt: true },
+  });
+
+  const blogEntries: MetadataRoute.Sitemap = blogs.map((post) => ({
+    url: `https://xvscreations.com/blog/${post.slug}`,
+    lastModified: post.publishedAt ? new Date(post.publishedAt) : new Date(),
+    priority: 0.7,
+  }));
+
   return [
-    {
-      url: "https://xvscreations.com",
-      lastModified: new Date(),
-      priority: 1,
-    },
+    { url: "https://xvscreations.com", lastModified: new Date(), priority: 1 },
     {
       url: "https://xvscreations.com/about",
       lastModified: new Date(),
@@ -28,6 +95,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: "https://xvscreations.com/blog",
+      lastModified: new Date(),
+      priority: 0.7,
+    },
+    {
+      url: "https://xvscreations.com/contact",
+      lastModified: new Date(),
+      priority: 0.5,
+    },
+    {
       url: "https://xvscreations.com/terms-and-conditions",
       lastModified: new Date(),
       priority: 0.5,
@@ -42,10 +119,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.5,
     },
-    {
-      url: "https://xvscreations.com/contact",
-      lastModified: new Date(),
-      priority: 0.5,
-    },
+    ...blogEntries,
   ];
 }
