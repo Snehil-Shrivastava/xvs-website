@@ -227,8 +227,8 @@ const BlogMainClient = ({ initialBlogsData, hasSidebarSlot }: Props) => {
   };
 
   return (
-    <div ref={containerRef} className="flex gap-20 max-lg:gap-10">
-      <div className="sm:flex-[0.7] font-poppins flex flex-col gap-50">
+    <div ref={containerRef} className="flex gap-20 max-lg:gap-10 w-full">
+      <div className="sm:flex-[0.7] font-poppins flex flex-col gap-50 w-full">
         {isFiltered ? (
           <FilteredBlogsGrid
             type={category ? "category" : "tag"}

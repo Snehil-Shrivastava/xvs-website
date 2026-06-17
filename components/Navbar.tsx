@@ -50,20 +50,18 @@ export default function Navbar() {
 
   // GSAP ScrollTrigger — fade in backdrop layer on scroll
   useGSAP(() => {
-    gsap.fromTo(
-      backdropRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: document.body,
-          start: "top top", // starts animating immediately on scroll
-          end: "+=150", // fully faded in after 150px of scroll
-          scrub: true, // ties opacity directly to scroll position
-        },
+    gsap.set(backdropRef.current, { opacity: 0 });
+
+    gsap.to(backdropRef.current, {
+      opacity: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.body,
+        start: "top top", // starts animating immediately on scroll
+        end: "+=150", // fully faded in after 150px of scroll
+        scrub: true, // ties opacity directly to scroll position
       },
-    );
+    });
   }, []);
 
   return (
@@ -74,7 +72,6 @@ export default function Navbar() {
           ref={backdropRef}
           className="absolute inset-0 pointer-events-none"
           style={{
-            opacity: 0,
             backgroundImage:
               "linear-gradient(to bottom, rgba(10, 10, 10, 1), transparent)",
             backdropFilter: "blur(12px)",

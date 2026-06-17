@@ -60,12 +60,14 @@ export default function RootLayout({
       lang="en"
       className={`${calSans.variable} ${apercuBlack.variable} ${apercuBold.variable} ${apercuRegular.variable} ${poppins.variable} h-full antialiased`}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schemaData),
-        }}
-      />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
+      </head>
       <GoogleTagManager gtmId="GTM-WGTCSF6" />
       <body className="min-h-full flex flex-col">
         <Navbar />

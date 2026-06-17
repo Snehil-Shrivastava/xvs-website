@@ -7,18 +7,18 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.1.105"],
   serverExternalPackages: ["sharp"],
   cacheComponents: true,
-  async redirects() {
-    if (process.env.VERCEL_ENV === "production") {
-      return [
-        {
-          source: "/blogs/:path*",
-          destination: "/",
-          permanent: false,
-        },
-      ];
-    }
-    return [];
-  },
+  // async redirects() {
+  //   if (process.env.VERCEL_ENV === "production") {
+  //     return [
+  //       {
+  //         source: "/blogs/:path*",
+  //         destination: "/",
+  //         permanent: false,
+  //       },
+  //     ];
+  //   }
+  //   return [];
+  // },
 };
 
 export default withPayload(withNextVideo(nextConfig));

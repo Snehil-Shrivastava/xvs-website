@@ -1,5 +1,9 @@
 import { formatSlug } from "@/utilities/formatSlug";
 import { revalidateTag } from "@/utilities/revalidate";
+import {
+  EXPERIMENTAL_TableFeature,
+  lexicalEditor,
+} from "@payloadcms/richtext-lexical";
 import { CollectionConfig } from "payload";
 
 export const Blogs: CollectionConfig = {
@@ -38,6 +42,17 @@ export const Blogs: CollectionConfig = {
       name: "body",
       type: "richText",
       required: true,
+      // editor: lexicalEditor({
+      //   features: ({ deafultFeatures, rootFeatures }) => [
+      //     ...deafultFeatures,
+      //     EXPERIMENTAL_TableFeature({}),
+      //   ],
+      // }),
+      editor: lexicalEditor({
+        features({ defaultFeatures, rootFeatures }) {
+          return [...defaultFeatures, EXPERIMENTAL_TableFeature()];
+        },
+      }),
     },
     {
       name: "coverImage",

@@ -56,7 +56,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
           </h3>
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 max-md:gap-2">
           {categories.docs.map((cat) => {
             const isActive = activeCategory === String(cat.id);
 
@@ -71,17 +71,17 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
                 }`}
               >
                 <ArrowRight
-                  className={
+                  className={`${
                     isActive
                       ? "text-brand-orange"
                       : "text-brand-orange/50 group-hover:text-brand-orange transition-colors"
-                  }
+                  } max-md:w-2`}
                 />
                 <span className="1920p:text-base xl:text-sm lg:text-[12px] max-lg:text-[10px]">
                   {cat.title}
                 </span>
                 <sup
-                  className={`text-[12px] ml-1 ${
+                  className={`text-[12px] max-lg:text-[8px] ml-1 ${
                     isActive ? "text-brand-orange/70" : "text-neutral-500"
                   }`}
                 >
@@ -101,7 +101,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
           </h3>
           <div className="border-b border-b-brand-orange flex-1 h-6" />
         </div>
-        <div className="flex flex-wrap gap-x-4 gap-y-2">
+        <div className="flex flex-wrap max-md:flex-col gap-x-4 gap-y-2">
           {uniqueTags.map((tag) => {
             const isActive = activeTag === tag;
 
@@ -111,7 +111,7 @@ const BlogSidebar = async ({ activeCategory, activeTag }: Props) => {
                 href={
                   isActive ? "/blogs" : `/blogs?tag=${encodeURIComponent(tag!)}`
                 }
-                className={`text-sm transition-colors ${
+                className={`text-sm lg:text-[12px] max-lg:text-[10px] transition-colors ${
                   isActive
                     ? "text-brand-orange"
                     : "text-neutral-500 hover:text-brand-orange"
