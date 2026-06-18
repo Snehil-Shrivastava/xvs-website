@@ -139,19 +139,43 @@ const ContactForm = () => {
         )}
 
         <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18 font-calSans">
-          <button
+          {/* <button
             type="submit"
             disabled={status === "loading"}
-            className="group relative flex items-center gap-3 z-10 transition-transform active:scale-95 cursor-pointer disabled:opacity-50"
+            className="group relative flex items-center gap-3 z-10 transition-transform active:scale-95 cursor-pointer disabled:opacity-50 bg-brand-orange hover:bg-brand-orange-light rounded-md px-5 py-1.5"
           >
-            <span className="text-3xl text-[#E89335] tracking-wide group-hover:text-[#ffaa4e] transition-colors">
+            <span className="text-3xl text-white tracking-wide group-hover:text-white transition-colors">
               {status === "loading" ? "Sending..." : "Send"}
             </span>
             <SendHorizontal
               fill="#f79839"
-              stroke="#282828"
+              stroke="#ffffff"
               strokeOpacity={0.7}
             />
+          </button> */}
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className={`group max-md:w-full cursor-pointer`}
+          >
+            <span
+              className="text-brand-orange hover:text-white bg-neutral-900/40 px-8 max-md:px-4 md:max-lg:px-6 py-2 max-sm:py-0.5 sm:max-md:py-1.5 md:max-lg:py-2 lg:max-xl:py-2.5 backdrop-blur-xs btn-clip flex items-center gap-2 max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-sm max-md:justify-center"
+              style={{
+                background:
+                  "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.5) 100%)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <span className="max-md:text-lg md:max-lg:text-sm lg:max-xl:text-xl text-3xl tracking-wider transition-colors">
+                Send
+              </span>
+              <SendHorizontal
+                // fill="#f79839"
+                // stroke="#f79839"
+                strokeOpacity={0.7}
+                className="transition-colors lg:max-xl:w-5 max-lg:w-4"
+              />
+            </span>
           </button>
         </div>
       </form>

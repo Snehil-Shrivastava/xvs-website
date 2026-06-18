@@ -14,8 +14,8 @@ const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
   const navLinksBody = NavMenuLinksBody;
   return (
     <div className="absolute inset-0 flex flex-col select-none max-sm:gap-[4dvh] sm:max-md:gap-[3dvh] md:max-lg:gap-[3dvh] lg:max-xl:gap-[5dvh] xl:max-1440p:gap-[8dvh] 1440p:max-2xl:gap-[8dvh] 2xl:gap-10 1920p:gap-20">
-      <div className="px-50 pt-20 pb-15 max-sm:pt-25 sm:max-md:pt-30 md:max-lg:pt-40 lg:max-xl:pt-45 xl:max-1440p:pt-40 xl:max-2xl:px-0 max-sm:px-4 sm:max-md:px-35 md:max-xl:px-0 max-sm:pb-10">
-        <div className="font-poppins flex items-center justify-center sm:max-md:justify-between max-sm:gap-3 sm:max-md:gap-6 md:max-lg:gap-15 gap-20 max-sm:text-[1.125rem] sm:max-lg:text-2xl lg:max-xl:text-3xl text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
+      <div className="px-50 pt-20 pb-15 max-sm:pt-25 sm:max-md:pt-30 md:max-lg:pt-40 lg:max-xl:pt-20 xl:max-1440p:pt-20 xl:max-2xl:px-0 max-sm:px-4 sm:max-md:px-35 md:max-xl:px-0 max-sm:pb-10 flex justify-center items-center">
+        <div className="font-poppins inline-flex items-center justify-center sm:max-md:justify-between max-sm:gap-3 sm:max-md:gap-6 md:max-lg:gap-15 gap-20 max-xs:text-sm xs:max-sm:text-[1.125rem] sm:max-xl:text-xl md:max-xl:text-2xl xl:max-1440p:text-3xl text-[2.3rem] font-extralight max-sm:justify-between max-sm:mx-auto">
           {mainNavLinks.map((link, index) => (
             <Link
               key={index}

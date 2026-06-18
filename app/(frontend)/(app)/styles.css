@@ -534,6 +534,13 @@ picture img {
   .similar-blog-img {
     --notch: 12px;
   }
+  .contact-clip-container {
+    --notch: 21px;
+  }
+
+  .contact-clip-content {
+    --notch: 22px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

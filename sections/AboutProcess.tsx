@@ -17,8 +17,8 @@ const AboutProcess = () => {
           <GlowCard
             key={index}
             className={`backdrop-blur-sm w-180 max-1728p:w-full ${index === 0 ? "container-clip-tl" : "container-clip-br"}`}
-            cardStyle={`bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(35,35,35,0.5))] backdrop-blur-md px-15 max-sm:px-8 md:max-lg:px-10 lg:max-xl:px-12 py-15 max-md:py-8 md:max-lg:py-6 lg:max-xl:py-8 xl:max-1440p:py-12 ${index === 0 ? "content-clip-tl" : "content-clip-br"}`}
-            contentStyle="flex flex-col max-md:gap-5"
+            cardStyle={`bg-[radial-gradient(circle_at_bottom_right,_rgb(15,15,15,0.5),_rgba(35,35,35,0.5))] backdrop-blur-md px-15 max-sm:px-8 md:max-lg:px-10 lg:max-xl:px-12 py-10 max-md:py-8 md:max-lg:py-6 lg:max-xl:py-8 xl:max-1440p:py-12 ${index === 0 ? "content-clip-tl" : "content-clip-br"}`}
+            contentStyle="flex flex-col max-md:gap-5 xl:gap-8"
           >
             <div
               className={`flex items-center ${index === 1 ? "md:max-lg:gap-5 lg:max-xl:gap-3" : "md:max-lg:gap-3"}`}
@@ -33,11 +33,11 @@ const AboutProcess = () => {
                   fill
                 />
               </div>
-              <span className="font-calSans text-brand-cream text-[64px] max-sm:text-3xl sm:max-md:text-4xl md:max-xl:text-2xl">
+              <span className="font-calSans text-brand-cream text-[64px] max-sm:text-3xl sm:max-md:text-4xl md:max-xl:text-2xl tracking-wider">
                 {process.cardTitle}
               </span>
             </div>
-            <p className="w-full text-2xl font-poppins font-light max-sm:text-sm sm:max-md:text-lg md:max-xl:text-sm lg:max-xl:text-base">
+            <p className="w-full text-2xl/relaxed font-poppins font-light max-sm:text-sm sm:max-md:text-lg md:max-xl:text-sm lg:max-xl:text-base  tracking-wider">
               {process.cardDesc}
             </p>
           </GlowCard>
