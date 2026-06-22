@@ -24,7 +24,7 @@ const ShowcaseCard = ({
 }: {
   card: WorkCardType;
   index: number;
-  btnTxt: string;
+  btnTxt?: string;
 }) => {
   return (
     <div
