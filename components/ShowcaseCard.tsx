@@ -20,9 +20,11 @@ interface WorkCardType {
 const ShowcaseCard = ({
   card,
   index,
+  btnTxt,
 }: {
   card: WorkCardType;
   index: number;
+  btnTxt: string;
 }) => {
   return (
     <div
@@ -50,7 +52,7 @@ const ShowcaseCard = ({
           </div>
         </div>
         {card.description}
-        {card.links.length > 0 && (
+        {card.links.length > 0 && !btnTxt && (
           <div className="flex gap-5 1920p:gap-10 mt-auto">
             {card.links.map((link, index) => (
               <Link
@@ -74,6 +76,30 @@ const ShowcaseCard = ({
                 </span>
               </Link>
             ))}
+          </div>
+        )}
+        {btnTxt && (
+          <div className="flex gap-5 1920p:gap-10 mt-auto">
+            <Link
+              key={index}
+              href={`#`}
+              target="_blank"
+              className={`font-extralight text-brand-orange cursor-pointer uppercase btn-clip select-none`}
+            >
+              <span
+                className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-md:px-4 py-4 max-md:py-1.5 md:max-lg:py-2.5 backdrop-blur-xs flex gap-2 max-sm:gap-1 max-sm:text-[10px] sm:max-md:text-sm items-center"
+                style={{
+                  background:
+                    "radial-gradient(circle,rgba(247, 152, 57, 0.2) 0%, rgba(255, 173, 64, 0.15) 18%, rgba(100, 100, 100, 0.3) 100%)",
+                  backdropFilter: "blur(5px)",
+                }}
+              >
+                <span className="text-nowrap">{btnTxt}</span>
+                <span className="text-nowrap">
+                  <ArrowUpRight className="max-sm:w-4 sm:max-lg:w-5" />
+                </span>
+              </span>
+            </Link>
           </div>
         )}
         <div className="max-sm:text-[12px] sm:max-md:text-[14px] md:max-lg:text-[14px] lg:max-xl:text-[16px] xl:max-1440p:text-sm 1440p:max-2xl:text-sm 2xl:text-base 1920p:text-lg 2240p:text-xl font-light text-brand-orange flex gap-4 mt-auto">

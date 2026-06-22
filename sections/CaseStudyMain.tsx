@@ -7,7 +7,12 @@ const CaseStudyMain = () => {
       <div>
         <div className="flex flex-col gap-30">
           {WorkCardData.map((card, index) => (
-            <ShowcaseCard key={index} card={card} index={index} />
+            <ShowcaseCard
+              key={index}
+              card={card}
+              index={index}
+              btnTxt="Read More"
+            />
           ))}
         </div>
       </div>

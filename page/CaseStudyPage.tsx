@@ -7,7 +7,7 @@ const CaseStudyPage = () => {
       <div className="h-[65vh] max-md:h-150 md:max-lg:h-screen">
         <div className="flex flex-col max-sm:gap-4 md:max-lg:gap-5 gap-8 items-center justify-center h-full">
           <h3 className="font-calSans text-[9rem]/[9.5rem] max-sm:text-[40px]/[44px] sm:max-md:text-6xl md:max-lg:text-7xl lg:max-xl:text-8xl xl:max-2xl:text-9xl text-brand-cream text-center select-none">
-            <span>Case Study</span>
+            <span>Case Studies</span>
           </h3>
           {/* <span className="text-[22px] max-sm:text-xl sm:max-md:text-2xl md:max-lg:text-3xl font-poppins font-light">
             Creative insights & design stories
