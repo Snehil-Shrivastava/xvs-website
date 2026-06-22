@@ -29,7 +29,7 @@ const ShowcaseCard = ({
       className={`flex max-xl:flex-col justify-between gap-25 max-sm:gap-10 sm:max-lg:gap-8 lg:max-xl:gap-10 xl:max-1440p:gap-15 font-poppins xl:max-1440p:h-96 1440p:max-2xl:h-111.25 2xl:max-1920p:h-130 1920p:max-2240p:h-152.5 2240p:h-162.5 ${index % 2 !== 0 ? "xl:flex-row-reverse" : ""}`}
     >
       <div
-        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:max-1440p:min-h-90 xl:flex-[1.5] relative`}
+        className={`h-inherit max-sm:h-50 sm:max-lg:h-100 lg:max-xl:h-120 xl:max-1440p:min-h-90 xl:flex-[1.5] relative select-none`}
       >
         <Image
           src={card.image}
@@ -57,7 +57,7 @@ const ShowcaseCard = ({
                 key={index}
                 href={link.linkURL}
                 target="_blank"
-                className={`font-extralight text-brand-orange cursor-pointer uppercase btn-clip`}
+                className={`font-extralight text-brand-orange cursor-pointer uppercase btn-clip select-none`}
               >
                 <span
                   className="text-brand-orange tracking-wider font-medium bg-neutral-900/40 px-8 max-md:px-4 py-4 max-md:py-1.5 md:max-lg:py-2.5 backdrop-blur-xs flex gap-2 max-sm:gap-1 max-sm:text-[10px] sm:max-md:text-sm items-center"
