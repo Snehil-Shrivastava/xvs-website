@@ -105,7 +105,8 @@ function ScheduleModalInner() {
 
   // Fetch Availability from API
   useEffect(() => {
-    if (!isModalOpen || !timeZone) return;
+    // if (!isModalOpen || !timeZone) return;
+    if (!timeZone) return;
 
     const fetchAvailability = async () => {
       setIsLoadingSlots(true);
@@ -134,9 +135,9 @@ function ScheduleModalInner() {
     fetchAvailability();
     // Reset selected time when duration changes because the slots map changes
     setSelectedTime(null);
-  }, [currentMonth, duration, timeZone, isModalOpen]);
+  }, [currentMonth, duration, timeZone]);
 
-  if (!isModalOpen) return null;
+  // if (!isModalOpen) return null;
 
   // --- Handlers ---
   const handleClose = () => {
@@ -251,7 +252,9 @@ function ScheduleModalInner() {
     formData.notes.trim() !== "";
 
   return (
-    <div className="fixed inset-0 z-9999 overflow-y-auto bg-black/20 backdrop-blur-lg custom-scroll font-poppins select-none pointer-events-none">
+    <div
+      className={`fixed inset-0 z-9999 overflow-y-auto bg-black/20 backdrop-blur-lg custom-scroll font-poppins select-none pointer-events-none ${isModalOpen ? "" : "hidden"}`}
+    >
       <div className="flex min-h-full max-md:h-full items-center justify-center p-4 max-md:p-0 md:p-6">
         {/* Scrollbar Customization Scoped Style */}
         <style
@@ -463,7 +466,6 @@ function ScheduleModalInner() {
                           </span>
                         </div>
                       ) : (
-                        // <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1">
                         <div className="grid grid-cols-2 gap-3 overflow-y-auto max-h-70 pr-2 custom-scroll mb-16 max-md:mb-1 max-md:max-h-[35vh] max-md:min-h-0">
                           {allTimeSlots.length > 0 ? (
                             allTimeSlots.map((slot) => (
