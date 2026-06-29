@@ -191,6 +191,7 @@
 
 .blog-body p {
   font-size: 20px;
+  line-height: 38px;
 }
 
 .payload-richtext h2 {
@@ -215,6 +216,15 @@
 
 .lexical-table {
   width: 100%;
+}
+
+.lexical-table th,
+.lexical-table td {
+  padding: 12px !important;
+}
+
+.lexical-table h5 {
+  font-size: 24px;
 }
 
 .lexical-table-row th {
@@ -363,6 +373,9 @@ picture img {
   .blog-body p {
     font-size: 16px;
   }
+  .lexical-table h5 {
+    font-size: 20px;
+  }
   .payload-richtext h2 {
     font-size: 32px;
     margin-top: 52px;
@@ -469,6 +482,9 @@ picture img {
   }
   .blog-body p {
     font-size: 12px;
+  }
+  .lexical-table h5 {
+    font-size: 16px;
   }
   .list-number li,
   .list-bullet li {
