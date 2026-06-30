@@ -205,6 +205,11 @@
   color: var(--color-brand-orange-light);
 }
 
+.payload-richtext h5 {
+  font-size: 22px;
+  color: var(--color-brand-orange-light);
+}
+
 .payload-richtext hr {
   color: var(--color-brand-orange-light);
 }
@@ -223,7 +228,7 @@
   padding: 12px !important;
 }
 
-.lexical-table h5 {
+.lexical-table h6 {
   font-size: 24px;
 }
 
@@ -373,7 +378,7 @@ picture img {
   .blog-body p {
     font-size: 16px;
   }
-  .lexical-table h5 {
+  .lexical-table h6 {
     font-size: 20px;
   }
   .payload-richtext h2 {
@@ -483,7 +488,7 @@ picture img {
   .blog-body p {
     font-size: 12px;
   }
-  .lexical-table h5 {
+  .lexical-table h6 {
     font-size: 16px;
   }
   .list-number li,
