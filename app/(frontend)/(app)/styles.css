@@ -377,6 +377,7 @@ picture img {
   }
   .blog-body p {
     font-size: 16px;
+    line-height: 28px;
   }
   .lexical-table h6 {
     font-size: 20px;
@@ -387,6 +388,9 @@ picture img {
   }
   .payload-richtext h4 {
     font-size: 20px;
+  }
+  .payload-richtext h5 {
+    font-size: 16px;
   }
   .lexical-table p {
     font-size: 14px;
@@ -485,8 +489,12 @@ picture img {
   .payload-richtext h4 {
     font-size: 16px;
   }
+  .payload-richtext h5 {
+    font-size: 12px;
+  }
   .blog-body p {
     font-size: 12px;
+    line-height: 24px;
   }
   .lexical-table h6 {
     font-size: 16px;
