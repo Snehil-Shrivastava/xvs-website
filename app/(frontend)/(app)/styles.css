@@ -200,6 +200,12 @@
   color: var(--color-brand-orange);
 }
 
+.payload-richtext h3 {
+  font-size: 28px;
+  margin-top: 42px;
+  color: var(--color-brand-cream);
+}
+
 .payload-richtext h4 {
   font-size: 26px;
   color: var(--color-brand-orange-light);
@@ -386,6 +392,10 @@ picture img {
     font-size: 32px;
     margin-top: 52px;
   }
+  .payload-richtext h3 {
+    font-size: 26px;
+    margin-top: 32px;
+  }
   .payload-richtext h4 {
     font-size: 20px;
   }
@@ -482,6 +492,10 @@ picture img {
   .payload-richtext h2 {
     font-size: 20px;
     margin-top: 32px;
+  }
+  .payload-richtext h3 {
+    font-size: 16px;
+    margin-top: 22px;
   }
   .lexical-table p {
     font-size: 10px;
