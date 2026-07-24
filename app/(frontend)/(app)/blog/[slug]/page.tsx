@@ -112,6 +112,70 @@ const faqData: Record<string, { question: string; answer: string }[]> = {
         "Yes, as a forward investment. AI referrals are still around 1% of traffic, but they're growing several hundred percent year over year and tend to convert better than average. The structural work that earns AI citations also improves your normal SEO, so you're not betting on one channel.",
     },
   ],
+  "a-logo-is-not-a-brand": [
+    {
+      question: "Is a logo a brand?",
+      answer:
+        "No. A logo is a visual identifier—one part of a brand. Your brand is the full impression people hold of you: your promise, positioning, voice, and the experience and trust you build. The logo represents the brand; it doesn't replace the strategy, messaging, and consistency that create it.",
+    },
+    {
+      question: "What comes first, the logo or the brand strategy?",
+      answer:
+        "Strategy comes first, always. Strategy defines who you serve and what you stand for; positioning and messaging turn that into words; a visual system turns the words into a look; and the logo comes last, as the mark that compresses all of it. Designed first, a logo is decoration without meaning.",
+    },
+    {
+      question: "What are the elements of a brand identity?",
+      answer:
+        "A brand identity is a system, not a single asset: brand strategy (purpose, audience, differentiator), positioning and messaging, verbal identity (name, voice, tagline), and a visual system (logo, color, typography, imagery, and the rules for using them consistently). The logo is one element within that system.",
+    },
+    {
+      question: "What is a minimum viable brand?",
+      answer:
+        "A minimum viable brand is the smallest complete version of your brand you can launch with—a clear strategy, a sharp position, and a consistent look that's good enough to go to market, without over-polishing. You get the foundation right, ship it, and refine it with real customer feedback instead of perfecting it in a vacuum.",
+    },
+    {
+      question: "Can I use an AI-generated or DIY logo for my business?",
+      answer:
+        "Yes, especially early on, as long as the strategy underneath it is sound. Just be diligent about deliverables: most DIY and AI tools give you a flat PNG, and you'll eventually need a true vector file (.svg, .eps, or .ai) that's genuinely editable—not a PNG wrapped in an SVG. Verify that before you rely on it.",
+    },
+    {
+      question: "What file format should my logo be?",
+      answer:
+        "Keep the master as a vector (.ai or .eps), and use .svg and .png for web and .eps/.pdf for print. A vector scales to any size—from a favicon to a billboard—without blurring. If a logo only exists as a JPEG or PNG, you don't yet have a production-ready logo.",
+    },
+  ],
+  "how-to-choose-a-web-design-agency": [
+    {
+      question: "How do I choose a web design agency?",
+      answer:
+        "Shortlist agencies with real portfolios and verified reviews on platforms like Clutch, then judge them on the first call by the questions they ask you. A good agency asks about your goals, customers, scope, and feedback process before quoting. If they lead with a price or a guarantee, keep looking.",
+    },
+    {
+      question: "What questions should a web design agency ask me?",
+      answer:
+        "Expect questions about your website's one job and success metrics, your exact customer, why you're doing this now, what's working on your current site, your competitors, what's out of scope for version one, who gives feedback and how fast, and what happens after launch. Those questions are how a real plan gets made.",
+    },
+    {
+      question: "What are the red flags when hiring a web design agency?",
+      answer:
+        "An instant quote with no discovery, guaranteed Google rankings, agreeing to every request without pushback, a vague or missing scope document, and no clear communication plan. Each one predicts a specific failure: template work, broken promises, mid-project surprises, scope disputes, and silence.",
+    },
+    {
+      question: "How much does a web design agency cost?",
+      answer:
+        "In the US, freelancers typically charge $1,500 to $5,000, boutique agencies around $6,000 to $15,000, and full custom agency builds $15,000 to $40,000 or more. Compare quotes only if they're based on the same discovery answers, and treat a far-below-market quote as a sign something was left out.",
+    },
+    {
+      question: "Should I hire an agency or a freelancer for my website?",
+      answer:
+        "A freelancer suits simple sites on tight budgets. An agency earns its cost when the site is a core sales tool that needs strategy, design, development, and content working together. Either way, apply the same test: judge them by the quality of the questions they ask you.",
+    },
+    {
+      question: "How do I know if a web design agency is good?",
+      answer:
+        "Check for a verified track record with reviews, named clients, and live sites, then watch their behavior: good agencies ask before they answer, push back when your timeline or scope is unrealistic, define what's excluded, and set a communication schedule. Honesty in the sales call predicts honesty in the project.",
+    },
+  ],
 };
 
 const IndividualBlog = async ({ params }: PageProps) => {
@@ -161,9 +225,6 @@ const IndividualBlog = async ({ params }: PageProps) => {
                 <h1 className="font-calSans text-brand-orange text-[42px]/[50px] max-2xl:text-4xl max-lg:text-3xl max-md:text-2xl flex-[0.6]">
                   {post.title}
                 </h1>
-                {/* <p className="text-xl max-md:text-base max-sm:text-sm">
-                By {post.author.name}
-              </p> */}
               </div>
               <p className="text-brand-orange text-2xl max-2xl:text-xl max-lg:text-lg max-md:text-sm">
                 {/* @ts-expect-error category title */}
