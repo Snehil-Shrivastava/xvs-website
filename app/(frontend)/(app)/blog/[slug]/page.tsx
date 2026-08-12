@@ -176,6 +176,35 @@ const faqData: Record<string, { question: string; answer: string }[]> = {
         "Check for a verified track record with reviews, named clients, and live sites, then watch their behavior: good agencies ask before they answer, push back when your timeline or scope is unrealistic, define what's excluded, and set a communication schedule. Honesty in the sales call predicts honesty in the project.",
     },
   ],
+  "what-makes-a-website-look-premium": [
+    {
+      question: "What makes a website look expensive?",
+      answer:
+        "Mostly restraint and craft, not budget. Generous space around a few important things, a small palette of colors that agree, one good typeface at a comfortable size, smooth and subtle motion, obvious navigation, and real high-quality images. Do those well and even a low-cost site reads as premium.",
+    },
+    {
+      question: "Why does my website look cheap even though I paid for it?",
+      answer:
+        "Usually because it tries to show too much at once, uses too many colors or fonts, leans on generic stock photos, or animates in a janky way. The budget doesn't fix those. Cutting clutter, tightening the palette, improving the type, and speeding up the site almost always do.",
+    },
+    {
+      question: "Does a premium look actually matter for conversions?",
+      answer:
+        "Yes. People judge credibility partly on design within the first fraction of a second, and a site that reads as cheap loses trust before anyone reads a word. Looking considered and trustworthy is the first thing that decides whether a visitor stays.",
+    },
+    {
+      question:
+        "What's the single easiest way to make my site look more premium?",
+      answer:
+        "Remove things and add space. Take clutter off the homepage until the most important element clearly stands out. It costs nothing, and it moves the needle more than any new color, font, or effect you could add.",
+    },
+    {
+      question:
+        "Do I need custom fonts or expensive photography to look premium?",
+      answer:
+        "No. One well-chosen typeface, sized and spaced with care, looks premium even if it's free. A handful of real, consistent photos of your actual work usually beats expensive-looking stock. Consistency and restraint read as premium far more than price does.",
+    },
+  ],
 };
 
 const IndividualBlog = async ({ params }: PageProps) => {
