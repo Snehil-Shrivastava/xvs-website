@@ -43,11 +43,13 @@ const FeaturedBlog = ({ posts }: { posts: PostType[] }) => {
               <h2 className="font-calSans 1920p:text-3xl xl:text-2xl lg:text-xl max-lg:text-lg flex-[0.65]">
                 {post.title}
               </h2>
-              <div className="flex-[0.35] flex gap-5 gap-y-0.5 flex-wrap text-sm max-xl:text-[12px] text-neutral-400">
-                {post.tags?.map((tag, i) => (
-                  <span key={i}>#{tag.tag}</span>
-                ))}
-              </div>
+              {post.tags && (
+                <div className="flex-[0.35] flex gap-5 gap-y-0.5 flex-wrap text-sm max-xl:text-[12px] text-neutral-400">
+                  {post.tags?.map((tag, i) => (
+                    <span key={i}>#{tag.tag}</span>
+                  ))}
+                </div>
+              )}
             </div>
             <p className="text-brand-orange text-lg max-xl:text-sm">
               {post.categories?.map((cat) => cat.title).join(", ")}

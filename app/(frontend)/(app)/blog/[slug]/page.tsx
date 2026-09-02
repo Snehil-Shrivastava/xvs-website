@@ -205,6 +205,33 @@ const faqData: Record<string, { question: string; answer: string }[]> = {
         "No. One well-chosen typeface, sized and spaced with care, looks premium even if it's free. A handful of real, consistent photos of your actual work usually beats expensive-looking stock. Consistency and restraint read as premium far more than price does.",
     },
   ],
+  "ai-draft-not-a-design": [
+    {
+      question: "Can AI design a website?",
+      answer:
+        "AI can draft one, fast. It generates a competent first version from patterns it has seen. But a draft isn't a finished design; it hasn't been shaped around your specific customers or tested with real users, and that's where usability and conversions actually come from. Use AI for the draft, then iterate toward the design.",
+    },
+    {
+      question: "Why do AI-generated designs look generic?",
+      answer:
+        "Because they're built from the average of existing work. AI predicts the most likely next element, and the most likely thing is the common thing, so you get familiar layouts and interchangeable copy. It's fine as a starting point; it only reads as generic when nobody refines it for a specific audience.",
+    },
+    {
+      question: "Do I still need a designer if I have AI?",
+      answer:
+        "For a rough draft, maybe not. For a site that has to convert, yes. The value lives in the iteration: testing, prioritizing, and fixing what real users struggle with. AI produces version one; human judgment is what turns version one into something that works.",
+    },
+    {
+      question: "What is AI actually good for in design?",
+      answer:
+        "Killing the blank page and clearing busywork. It's excellent at turning an idea into a visual draft you can react to, and at slow tasks like background removal or image upscaling. The trick is using it to start faster, not to skip the design work that comes after.",
+    },
+    {
+      question: "How do I make an AI design look less generic?",
+      answer:
+        "Stop treating the first output as final. Give it a specific audience, rewrite the copy around your customer's real worry, cut whatever doesn't earn its place, and test it on actual users. That refinement is what removes the template feeling. The refinement is the design.",
+    },
+  ],
 };
 
 const IndividualBlog = async ({ params }: PageProps) => {
