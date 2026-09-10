@@ -174,28 +174,57 @@
 "use client";
 
 import { SendHorizontal } from "lucide-react";
-import { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import Script from "next/script";
+import { useState } from "react";
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void;
+      execute: (
+        siteKey: string,
+        options: { action: string },
+      ) => Promise<string>;
+    };
+  }
+}
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
 
 const ContactForm = () => {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMsg, setErrorMsg] = useState("");
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const getCaptchaToken = (): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      if (!window.grecaptcha) {
+        reject(new Error("reCAPTCHA not loaded yet. Please try again."));
+        return;
+      }
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute(RECAPTCHA_SITE_KEY, { action: "contact_form" })
+          .then(resolve)
+          .catch(reject);
+      });
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
 
-    if (!captchaToken) {
-      setErrorMsg("Please complete the CAPTCHA before submitting.");
+    let captchaToken: string;
+    try {
+      captchaToken = await getCaptchaToken();
+    } catch {
+      setErrorMsg("Could not verify CAPTCHA. Please refresh and try again.");
       setStatus("error");
       return;
     }
-
-    setStatus("loading");
-    setErrorMsg("");
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -218,20 +247,14 @@ const ContactForm = () => {
       if (!res.ok) {
         setErrorMsg(result.error || "Something went wrong.");
         setStatus("error");
-        recaptchaRef.current?.reset();
-        setCaptchaToken(null);
         return;
       }
 
       setStatus("success");
       (e.target as HTMLFormElement).reset();
-      recaptchaRef.current?.reset();
-      setCaptchaToken(null);
     } catch {
       setErrorMsg("Network error. Please try again.");
       setStatus("error");
-      recaptchaRef.current?.reset();
-      setCaptchaToken(null);
     }
   };
 
@@ -328,21 +351,16 @@ const ContactForm = () => {
           <p className="text-red-400 text-sm">{errorMsg}</p>
         )}
 
-        {/* reCAPTCHA */}
-        <div className="flex justify-start">
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
-            onChange={(token) => setCaptchaToken(token)}
-            onExpired={() => setCaptchaToken(null)}
-            theme="dark"
-          />
-        </div>
+        {/* reCAPTCHA v3 script (invisible, no widget UI) */}
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
 
         <div className="relative flex justify-end items-center mt-6 pb-2 pr-8 w-full h-18 font-calSans">
           <button
             type="submit"
-            disabled={status === "loading" || !captchaToken}
+            disabled={status === "loading"}
             className={`group max-md:w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
           >
             <span
@@ -363,6 +381,29 @@ const ContactForm = () => {
             </span>
           </button>
         </div>
+
+        {/* Required disclosure since the reCAPTCHA v3 badge may be hidden via CSS */}
+        <p className="text-xs text-neutral-500 text-right">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-neutral-300"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-neutral-300"
+          >
+            Terms of Service
+          </a>{" "}
+          apply.
+        </p>
       </form>
     </div>
   );

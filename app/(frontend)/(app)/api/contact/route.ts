@@ -138,6 +138,29 @@ export async function POST(request: Request) {
       );
     }
 
+    // v3 returns a score from 0.0 (bot) to 1.0 (human) instead of pass/fail.
+    // 0.5 is Google's suggested default threshold — tune based on your traffic.
+    const RECAPTCHA_SCORE_THRESHOLD = 0.5;
+    if (
+      typeof verifyData.score === "number" &&
+      verifyData.score < RECAPTCHA_SCORE_THRESHOLD
+    ) {
+      console.warn("reCAPTCHA low score:", verifyData.score);
+      return NextResponse.json(
+        { error: "CAPTCHA verification failed. Please try again." },
+        { status: 400 },
+      );
+    }
+
+    // Optional but recommended: confirm the action matches what the client sent
+    if (verifyData.action && verifyData.action !== "contact_form") {
+      console.warn("reCAPTCHA action mismatch:", verifyData.action);
+      return NextResponse.json(
+        { error: "CAPTCHA verification failed. Please try again." },
+        { status: 400 },
+      );
+    }
+
     const userEmailPromise = resend.emails.send({
       from: "mail@xvscreations.in",
       to: [email],
