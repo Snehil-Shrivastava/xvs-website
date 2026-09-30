@@ -1,4 +1,3 @@
-// import RepeatingLambdaBg from "@/components/RepeatingLambdaBg";
 import RepeatingLambdaBg from "@/components/RepeatingLambdaBg/RepeatingLambda";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import SplashScreenManager from "@/components/SplashScreenManager";
@@ -51,7 +50,6 @@ export default function Home() {
     <>
       <SchemaMarkup schema={schema} />
       <SplashScreenManager>
-        {/* <RepeatingLambdaBg /> */}
         <RepeatingLambdaBg />
         <HomePage />
       </SplashScreenManager>
