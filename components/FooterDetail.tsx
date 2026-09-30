@@ -43,10 +43,10 @@ const FooterDetail = () => {
                   <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                     <span className="font-bold">Lucknow,</span>
                     {/* <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-lg:text-[10px] lg:max-xl:text-sm"> */}
-                    {/* <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
-                      Uttar Pradesh, India
-                    </span> */}
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
+                      Uttar Pradesh, India
+                    </span>
+                    {/* <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                       Ground Floor, 1/626 Ratan Khand
                     </span>
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
@@ -54,7 +54,7 @@ const FooterDetail = () => {
                     </span>
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                       Uttar Pradesh (226012)
-                    </span>
+                    </span> */}
                   </div>
                   <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px] relative">
                     <div className="absolute w-px h-[140%] bg-[#f7983944] -left-10 max-xs:-left-3 max-sm:-left-5 md:max-lg:-left-5 -top-5.5 max-sm:-top-2 sm:max-md:-top-3.5 md:max-lg:-top-3.5 lg:max-xl:-top-4.5" />
