@@ -42,8 +42,6 @@ import { getFeaturedBlog } from "@/lib/blog-queries";
 
 export const metadata: Metadata = {
   title: "Blog | xVS Creations",
-  description:
-    "Creative insights and design stories on branding, UI/UX and motion graphics from the xVS Creations team.", // edit to taste
   alternates: { canonical: "/blog" }, // needs metadataBase in the root layout
 };
 
