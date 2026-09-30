@@ -27,17 +27,17 @@
       "telephone": "+91-8115128777",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, 1/23 Rajni Khand, Sharda Nagar",
+        "streetAddress": "Ground Floor, 1/626 Ratan Khand, Sharda Nagar",
         "addressLocality": "Lucknow",
         "addressRegion": "Uttar Pradesh",
-        "postalCode": "226002",
+        "postalCode": "226012",
         "addressCountry": "IN"
       },
       "areaServed": ["US", "GB", "CA", "IN", "SA", "AE", "SG", "AU", "NZ"],
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+1-307-296-2002",
+          "telephone": "+1-307-414-8699",
           "contactType": "sales",
           "areaServed": "US",
           "availableLanguage": "en"

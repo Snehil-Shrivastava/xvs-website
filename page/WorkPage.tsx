@@ -2,16 +2,23 @@ import WorkPageHeading from "@/sections/WorkPageHeading";
 import WorkShowcase from "@/sections/WorkShowcase";
 import { Suspense } from "react";
 
-const WorkPage = () => {
+type Props = {
+  searchParams: Promise<{ category?: string | string[] }>;
+};
+
+const WorkPage = async ({ searchParams }: Props) => {
+  const { category } = (await searchParams) ?? {};
+  const initialCategory = Array.isArray(category) ? category[0] : category;
   return (
     <div className="relative z-1">
       <div className="h-screen">
         <WorkPageHeading />
       </div>
       <div className="min-h-screen work-showcase">
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <WorkShowcase />
-        </Suspense>
+        </Suspense> */}
+        <WorkShowcase initialCategory={initialCategory ?? null} />
       </div>
     </div>
   );

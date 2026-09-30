@@ -38,7 +38,7 @@ const FooterDetail = () => {
                 We are here
               </span>
               <div className="flex flex-col justify-between flex-1 md:gap-15">
-                <div className="flex gap-20 max-xs:gap-8 max-sm:gap-12 sm:max-md:gap-25 md:max-lg:gap-15 relative">
+                <div className="flex gap-20 max-xs:gap-8 max-sm:gap-12 sm:max-md:gap-25 md:max-lg:gap-15 xl:max-1440p:gap-15 relative">
                   {/* <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-lg"> */}
                   <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
                     <span className="font-bold">Lucknow,</span>
@@ -47,13 +47,13 @@ const FooterDetail = () => {
                       Uttar Pradesh, India
                     </span> */}
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
-                      Ground Floor
+                      Ground Floor, 1/626 Ratan Khand
                     </span>
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
-                      1/626 Ratan Khand, Sharda Nagar
+                      Sharda Nagar, Lucknow
                     </span>
                     <span className="text-brand-cream text-base max-sm:text-[8px] sm:max-md:text-[10px] md:max-lg:text-[10px] lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px]">
-                      Lucknow, Uttar Pradesh (226012)
+                      Uttar Pradesh (226012)
                     </span>
                   </div>
                   <div className="flex flex-col text-xl max-sm:text-[10px] sm:max-lg:text-sm lg:max-xl:text-[12px] xl:max-1440p:text-[14px] 1440p:max-2xl:text-[14px] 2xl:text-[16px] 2240p:text-[20px] relative">
@@ -76,7 +76,7 @@ const FooterDetail = () => {
                       info@xvscreations.com
                     </Link>
                     <Link href="tel:+918115128777">+91-8115128777</Link>
-                    <Link href="tel:+13072962002">+1 (307) 414-8699</Link>
+                    <Link href="tel:+13074148699">+1 (307) 414-8699</Link>
                   </p>
                 </div>
               </div>
