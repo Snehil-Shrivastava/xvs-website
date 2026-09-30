@@ -18,9 +18,7 @@ const schema = {
     "Explore our portfolio featuring branding campaigns, UI/UX for mobile and web, responsive websites, custom motion graphics, and 3D animation projects.",
 };
 
-type searchParams = Promise<{ category?: string | string[] }>;
-
-const Work = ({ searchParams }: { searchParams: searchParams }) => {
+const Work = () => {
   return (
     <div>
       <SchemaMarkup schema={schema} />
@@ -32,7 +30,7 @@ const Work = ({ searchParams }: { searchParams: searchParams }) => {
           wanderDistance={150}
         />
       </div>
-      <WorkPage searchParams={searchParams} />
+      <WorkPage />
     </div>
   );
 };

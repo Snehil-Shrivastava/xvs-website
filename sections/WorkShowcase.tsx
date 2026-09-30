@@ -1,25 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
 // import { ReadonlyURLSearchParams, useSearchParams } from "next/navigation";
 import WorkCategoryFilter from "@/components/WorkCategoryFilter";
 import WorkMain from "@/components/WorkMain";
 import { WorkCategories } from "@/lib/data";
+import CategoryUrlSync from "@/components/CategoryUrlSync";
 
 const toActive = (cat: string | null) =>
   cat && WorkCategories.includes(cat) ? [cat] : [];
 
-const WorkShowcase = ({
-  initialCategory,
-}: {
-  initialCategory: string | null;
-}) => {
+const WorkShowcase = () => {
   // const searchParams = useSearchParams() as ReadonlyURLSearchParams;
   // const categoryFromURL = searchParams && searchParams.get("category");
 
-  const [activeCategories, setActiveCategories] = useState<string[]>(
-    toActive(initialCategory),
-  );
+  const [activeCategories, setActiveCategories] = useState<string[]>([]);
 
   // Track if the change was initiated by a user click
   const [shouldScroll, setShouldScroll] = useState(false);
@@ -38,14 +33,23 @@ const WorkShowcase = ({
     setActiveCategories([]);
   };
 
-  useEffect(() => {
-    // const cat = searchParams.get("category");
-    setActiveCategories(toActive(initialCategory));
-    setShouldScroll(false); // Prevent scrolling on initial mount or back/forward actions
-  }, [initialCategory]);
+  // useEffect(() => {
+  //   // const cat = searchParams.get("category");
+  //   setActiveCategories(toActive(initialCategory));
+  //   setShouldScroll(false); // Prevent scrolling on initial mount or back/forward actions
+  // }, [initialCategory]);
+
+  // Called when the URL's ?category= changes (footer links, back/forward)
+  const syncFromUrl = useCallback((cats: string[]) => {
+    setActiveCategories(cats);
+    setShouldScroll(false); // no auto-scroll on load or back/forward
+  }, []);
 
   return (
     <>
+      <Suspense fallback={null}>
+        <CategoryUrlSync onChange={syncFromUrl} />
+      </Suspense>
       <WorkCategoryFilter
         categories={WorkCategories}
         activeCategories={activeCategories}
